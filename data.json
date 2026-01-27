@@ -51,16 +51,12 @@
   },
   "workoutDistribution": {
     "labels": [
-      "Walking",
-      "Active",
-      "Rest",
-      "Light"
+      "walking",
+      "hiking"
     ],
     "values": [
-      14,
-      8,
-      5,
-      3
+      2,
+      2
     ]
   },
   "weeklyComparison": {
@@ -137,7 +133,7 @@
     "dailyAvgSteps": 4325,
     "avgHeartRate": 46,
     "activeDays": 2,
-    "totalWorkouts": 0,
+    "totalWorkouts": 4,
     "bestDaySteps": 14299,
     "bestDayLabel": "Wed",
     "caloriesPerDay": 475,
