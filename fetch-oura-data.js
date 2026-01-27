@@ -91,7 +91,7 @@ async function main() {
   }
 
   // Save to file
-  const fitnessDataDir = path.join(__dirname, '..', 'fitness-data');
+  const fitnessDataDir = path.join(__dirname, 'fitness-data');
   if (!fs.existsSync(fitnessDataDir)) {
     fs.mkdirSync(fitnessDataDir, { recursive: true });
   }

@@ -7,7 +7,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Find the most recent oura_sync file
-const fitnessDataDir = path.join(__dirname, '..', 'fitness-data');
+const fitnessDataDir = path.join(__dirname, 'fitness-data');
 const ouraFiles = fs.readdirSync(fitnessDataDir)
   .filter(f => f.startsWith('oura_sync_') && f.endsWith('.json'))
   .sort()
