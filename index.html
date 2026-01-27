@@ -444,93 +444,15 @@
         <!-- AI Insights -->
         <div class="insights-panel">
             <div class="section-title">🤖 AI Insights & Recommendations</div>
-            
-            <!-- Performance Trends -->
-            <div class="insight-item" style="border-left-color: #00ff88;">
-                <div class="insight-title">📊 Performance Trends (Week-over-Week)</div>
-                <div class="insight-text">
-                    <strong>This week:</strong> 21,151 avg steps | <strong>Last week:</strong> 18,300 avg steps | <strong>Change:</strong> <span style="color: #00ff88;">+15.6% ↑</span><br>
-                    <strong>Workout frequency:</strong> 0 this week vs 4 last week | <strong>Change:</strong> <span style="color: #ff3c78;">-100% ↓</span><br>
-                    <strong>Trend:</strong> Steps improving but workout consistency dropped significantly. Focus on scheduling workouts.
+            <div id="dynamicInsights">
+                <!-- Insights will be generated dynamically from real data -->
+                <div class="insight-item">
+                    <div class="insight-text" style="text-align: center; color: var(--text-dim);">
+                        Loading insights from your Oura data...
+                    </div>
                 </div>
             </div>
             
-            <!-- Recovery Metrics -->
-            <div class="insight-item" style="border-left-color: #ff6b35;">
-                <div class="insight-title">💤 Recovery & Overtraining Analysis</div>
-                <div class="insight-text">
-                    <strong>Recovery Score:</strong> 74% (Moderate) | <strong>Resting HR:</strong> 70 bpm (Good)<br>
-                    <strong>Alert:</strong> No workouts this week = under-training, not over-training.<br>
-                    <strong>Recommendation:</strong> Your body is well-rested. Safe to resume 3-4 workouts this week. Monitor HR if you push hard.
-                </div>
-            </div>
-            
-            <!-- Workout Effectiveness -->
-            <div class="insight-item" style="border-left-color: #00f5ff;">
-                <div class="insight-title">💪 Workout Effectiveness Analysis</div>
-                <div class="insight-text">
-                    <strong>Best performer:</strong> Strength Training (14 sessions, avg 1,200 cal/session)<br>
-                    <strong>Top calorie burner:</strong> Running (avg 1,450 cal/session, 8 sessions)<br>
-                    <strong>Most consistent:</strong> Strength training (2x/week average)<br>
-                    <strong>Insight:</strong> Running burns most calories but strength training is your most consistent habit. Combine both for optimal results.
-                </div>
-            </div>
-            
-            <!-- Time Analysis -->
-            <div class="insight-item" style="border-left-color: #ff00ff;">
-                <div class="insight-title">⏰ Optimal Activity Time Analysis</div>
-                <div class="insight-text">
-                    <strong>Peak activity hours:</strong> 8am-11am (42% of daily steps)<br>
-                    <strong>Evening activity:</strong> 5pm-8pm (28% of daily steps)<br>
-                    <strong>Low activity:</strong> 12pm-3pm (only 8% of steps)<br>
-                    <strong>Recommendation:</strong> You're a morning person! Schedule important workouts 8-11am for best performance.
-                </div>
-            </div>
-            
-            <!-- Streaks & Consistency -->
-            <div class="insight-item" style="border-left-color: #00ff88;">
-                <div class="insight-title">🔥 Streaks & Consistency Tracker</div>
-                <div class="insight-text">
-                    <strong>Current 10k+ streak:</strong> 7 days 🔥<br>
-                    <strong>Longest streak:</strong> 12 days (Dec 2024)<br>
-                    <strong>Weekly pattern:</strong> Wed/Thu are your strongest days (avg 28k steps), Sun weakest (avg 7k)<br>
-                    <strong>Challenge:</strong> Hit 10 days straight to beat your personal record!
-                </div>
-            </div>
-            
-            <!-- Health Warnings -->
-            <div class="insight-item" style="border-left-color: #ff3c78;">
-                <div class="insight-title">⚠️ Health Alerts & Warnings</div>
-                <div class="insight-text">
-                    <strong>⚠️ Elevated HR detected:</strong> Thu showed 120 bpm avg (36% above baseline)<br>
-                    <strong>⚠️ Activity drop:</strong> Sun had only 6,668 steps (68% below weekly avg)<br>
-                    <strong>✅ No major concerns:</strong> HR patterns normal, no prolonged spikes<br>
-                    <strong>Action:</strong> Monitor HR if you feel fatigued. Consider active recovery on low-step days.
-                </div>
-            </div>
-            
-            <!-- Predictive Analytics -->
-            <div class="insight-item" style="border-left-color: #00f5ff;">
-                <div class="insight-title">🔮 30-Day Projection & Forecast</div>
-                <div class="insight-text">
-                    <strong>If you maintain current pace:</strong><br>
-                    • <strong>Total steps:</strong> 634,530 (30-day projection)<br>
-                    • <strong>Estimated weight impact:</strong> -1.2 lbs (based on 40,890 cal burn)<br>
-                    • <strong>Fitness score:</strong> 92/100 (up from current 87)<br>
-                    • <strong>Prediction:</strong> With 2-3 workouts/week added, you'll hit elite fitness tier (95+) by end of month!
-                </div>
-            </div>
-            
-            <!-- Comparisons -->
-            <div class="insight-item" style="border-left-color: #ff00ff;">
-                <div class="insight-title">📈 Performance Comparisons</div>
-                <div class="insight-text">
-                    <strong>This week vs Last week:</strong> Steps +15.6%, Workouts -100%, Calories +8.2%<br>
-                    <strong>This week vs Last month avg:</strong> Steps +6.3%, Workouts -25%, Active days +14%<br>
-                    <strong>Best week ever:</strong> Week of Dec 15 (avg 24,800 steps/day, 5 workouts)<br>
-                    <strong>Key insight:</strong> You're in the top 15% of your personal performance range. One more push to break records!
-                </div>
-            </div>
         </div>
         
         <!-- Main Grid -->
@@ -697,18 +619,10 @@
                 <div class="chart-wrapper">
                     <canvas id="workoutChart"></canvas>
                 </div>
-                <div class="stats-list" style="margin-top: 20px;">
+                <div class="stats-list" style="margin-top: 20px;" id="workoutBreakdown">
                     <div class="stat-row">
-                        <span class="stat-label">Strength Training</span>
-                        <span class="stat-value">14x</span>
-                    </div>
-                    <div class="stat-row">
-                        <span class="stat-label">Running</span>
-                        <span class="stat-value">8x</span>
-                    </div>
-                    <div class="stat-row">
-                        <span class="stat-label">Other</span>
-                        <span class="stat-value">5x</span>
+                        <span class="stat-label">Loading...</span>
+                        <span class="stat-value">-</span>
                     </div>
                 </div>
             </div>
@@ -835,6 +749,33 @@
                 statValues[0].textContent = m.consistency + '%';
             }
             
+            // Update workout breakdown
+            const workoutBreakdown = document.getElementById('workoutBreakdown');
+            if (workoutBreakdown && data.workoutDistribution) {
+                let breakdownHTML = '';
+                const labels = data.workoutDistribution.labels || [];
+                const values = data.workoutDistribution.values || [];
+                
+                if (labels.length > 0 && labels[0] !== 'No workouts yet') {
+                    labels.forEach((label, i) => {
+                        breakdownHTML += `
+                            <div class="stat-row">
+                                <span class="stat-label">${label}</span>
+                                <span class="stat-value">${values[i] || 0}x</span>
+                            </div>
+                        `;
+                    });
+                } else {
+                    breakdownHTML = `
+                        <div class="stat-row">
+                            <span class="stat-label">No workouts tracked</span>
+                            <span class="stat-value">-</span>
+                        </div>
+                    `;
+                }
+                workoutBreakdown.innerHTML = breakdownHTML;
+            }
+            
             // Update insights with real data
             updateInsights();
         }
@@ -844,59 +785,130 @@
             
             const m = data.metrics;
             const insights = data.insights;
+            const container = document.getElementById('dynamicInsights');
+            if (!container) return;
             
-            // Update performance trends insight
-            const perfInsight = document.querySelector('.insight-item:nth-child(1) .insight-text');
-            if (perfInsight) {
-                const weekChange = insights.performance?.weekChange || 0;
-                const changeColor = weekChange >= 0 ? '#00ff88' : '#ff3c78';
-                const changeSymbol = weekChange >= 0 ? '↑' : '↓';
-                perfInsight.innerHTML = `
-                    <strong>This week:</strong> ${m.dailyAvgSteps?.toLocaleString() || 0} avg steps | 
-                    <strong>Last week:</strong> ${(m.dailyAvgSteps - (m.dailyAvgSteps * weekChange / 100)).toFixed(0)} avg steps | 
-                    <strong>Change:</strong> <span style="color: ${changeColor};">${weekChange >= 0 ? '+' : ''}${weekChange}% ${changeSymbol}</span><br>
-                    <strong>Workout frequency:</strong> ${m.totalWorkouts || 0} this week<br>
-                    <strong>Trend:</strong> ${weekChange >= 0 ? 'Steps improving!' : 'Steps declining - consider increasing activity.'}
-                `;
-            }
+            // Calculate derived metrics
+            const weekChange = insights.performance?.weekChange || 0;
+            const changeColor = weekChange >= 0 ? '#00ff88' : '#ff3c78';
+            const changeSymbol = weekChange >= 0 ? '↑' : '↓';
+            const lastWeekSteps = Math.round(m.dailyAvgSteps - (m.dailyAvgSteps * weekChange / 100));
             
-            // Update recovery metrics
-            const recoveryInsight = document.querySelector('.insight-item:nth-child(2) .insight-text');
-            if (recoveryInsight) {
-                const recovery = insights.recovery || {};
-                recoveryInsight.innerHTML = `
-                    <strong>Recovery Score:</strong> ${m.readinessScore || 0}% ${m.readinessScore >= 75 ? '(Good)' : '(Moderate)'} | 
-                    <strong>Resting HR:</strong> ${m.avgHeartRate || 0} bpm ${m.avgHeartRate < 75 ? '(Good)' : '(Elevated)'}<br>
-                    <strong>Sleep Score:</strong> ${m.sleepScore || 0}%<br>
-                    <strong>Recommendation:</strong> ${m.readinessScore >= 75 ? 'You\'re well-rested. Good time for intense workouts.' : 'Focus on recovery. Light activity recommended.'}
-                `;
-            }
+            // Find peak activity time
+            const peakHour = data.timeOfDay?.labels?.[data.timeOfDay.values?.indexOf(Math.max(...(data.timeOfDay.values || [0])))] || '10am';
+            const peakValue = Math.max(...(data.timeOfDay.values || [0]));
+            const totalActivity = (data.timeOfDay.values || []).reduce((a, b) => a + b, 0);
+            const peakPercent = totalActivity > 0 ? Math.round((peakValue / totalActivity) * 100) : 0;
             
-            // Update streak info
-            const streakInsight = document.querySelector('.insight-item:nth-child(5) .insight-text');
-            if (streakInsight) {
-                streakInsight.innerHTML = `
-                    <strong>Current 10k+ streak:</strong> ${m.currentStreak || 0} days 🔥<br>
-                    <strong>Longest streak:</strong> ${m.longestStreak || 0} days<br>
-                    <strong>Weekly pattern:</strong> Track daily activity for pattern insights<br>
-                    <strong>Challenge:</strong> ${m.currentStreak >= m.longestStreak ? 'New personal record!' : `Hit ${(m.longestStreak || 0) + 1} days to beat your record!`}
-                `;
-            }
+            // Best and worst days
+            const bestDayIndex = (data.last7Days.values || []).indexOf(Math.max(...(data.last7Days.values || [0])));
+            const worstDayIndex = (data.last7Days.values || []).indexOf(Math.min(...(data.last7Days.values.filter(v => v > 0) || [10000])));
+            const bestDay = data.last7Days.labels?.[bestDayIndex] || 'N/A';
+            const worstDay = data.last7Days.labels?.[worstDayIndex] || 'N/A';
             
-            // Update 30-day projection
-            const projectionInsight = document.querySelector('.insight-item:nth-child(7) .insight-text');
-            if (projectionInsight) {
-                const projectedSteps = (m.dailyAvgSteps || 0) * 30;
-                const projectedCalBurn = (m.caloriesPerDay || 0) * 30;
-                const weightImpact = (projectedCalBurn / 3500).toFixed(1);
-                projectionInsight.innerHTML = `
-                    <strong>If you maintain current pace:</strong><br>
-                    • <strong>Total steps:</strong> ${projectedSteps.toLocaleString()} (30-day projection)<br>
-                    • <strong>Estimated weight impact:</strong> -${weightImpact} lbs (based on ${projectedCalBurn.toLocaleString()} cal burn)<br>
-                    • <strong>Fitness score:</strong> ${Math.min(100, (m.fitnessScore || 0) + 5)}/100 (projected improvement)<br>
-                    • <strong>Prediction:</strong> Keep consistency high for best results!
-                `;
-            }
+            // Generate all insights dynamically
+            const insightsHTML = `
+                <!-- Performance Trends -->
+                <div class="insight-item" style="border-left-color: #00ff88;">
+                    <div class="insight-title">📊 Performance Trends (Week-over-Week)</div>
+                    <div class="insight-text">
+                        <strong>This week:</strong> ${m.dailyAvgSteps?.toLocaleString() || 0} avg steps | 
+                        <strong>Last week:</strong> ${lastWeekSteps.toLocaleString()} avg steps | 
+                        <strong>Change:</strong> <span style="color: ${changeColor};">${weekChange >= 0 ? '+' : ''}${weekChange}% ${changeSymbol}</span><br>
+                        <strong>Workout frequency:</strong> ${m.totalWorkouts || 0} workouts this week<br>
+                        <strong>Trend:</strong> ${weekChange >= 0 ? 'Steps improving! Keep it up! 🔥' : 'Steps declining - try adding short walks throughout the day.'}
+                    </div>
+                </div>
+                
+                <!-- Recovery Metrics -->
+                <div class="insight-item" style="border-left-color: #ff6b35;">
+                    <div class="insight-title">💤 Recovery & Readiness</div>
+                    <div class="insight-text">
+                        <strong>Readiness:</strong> ${m.readinessScore || 0}% ${m.readinessScore >= 75 ? '(Good) 🟢' : m.readinessScore >= 50 ? '(Moderate) 🟡' : '(Low) 🔴'}<br>
+                        <strong>Resting HR:</strong> ${m.avgHeartRate || 0} bpm ${m.avgHeartRate < 60 ? '(Excellent)' : m.avgHeartRate < 75 ? '(Good)' : '(Elevated)'}<br>
+                        <strong>Sleep Score:</strong> ${m.sleepScore || 0}% ${m.sleepScore >= 80 ? '(Great sleep!)' : m.sleepScore >= 60 ? '(Decent)' : '(Needs improvement)'}<br>
+                        <strong>Recommendation:</strong> ${m.readinessScore >= 75 ? 'You\'re well-rested. Good time for intense workouts! 💪' : m.readinessScore >= 50 ? 'Light to moderate activity recommended. 🚶' : 'Prioritize rest and recovery today. 😴'}
+                    </div>
+                </div>
+                
+                <!-- Workout Analysis -->
+                <div class="insight-item" style="border-left-color: #00f5ff;">
+                    <div class="insight-title">💪 Workout Activity</div>
+                    <div class="insight-text">
+                        <strong>Total workouts:</strong> ${m.totalWorkouts || 0} (last 30 days)<br>
+                        ${data.workoutDistribution?.labels?.length > 0 ? `
+                            <strong>Top activity:</strong> ${data.workoutDistribution.labels[0]} (${data.workoutDistribution.values[0]} sessions)<br>
+                            <strong>Activities:</strong> ${data.workoutDistribution.labels.join(', ')}<br>
+                        ` : '<strong>No workouts tracked yet.</strong> Connect Oura to Apple Health to track workouts!<br>'}
+                        <strong>Insight:</strong> ${m.totalWorkouts >= 12 ? 'Great workout frequency! 🔥' : m.totalWorkouts >= 8 ? 'Solid workout routine. Try adding 1-2 more per week.' : m.totalWorkouts > 0 ? 'Good start! Aim for 8+ workouts/month for best results.' : 'Time to get moving! Even short walks count. 🚶'}
+                    </div>
+                </div>
+                
+                <!-- Time of Day Analysis -->
+                <div class="insight-item" style="border-left-color: #ff00ff;">
+                    <div class="insight-title">⏰ Activity Patterns</div>
+                    <div class="insight-text">
+                        <strong>Peak activity:</strong> ${peakHour} (${peakPercent}% of daily activity)<br>
+                        <strong>Best day:</strong> ${bestDay} (${(data.last7Days.values?.[bestDayIndex] || 0).toLocaleString()} steps)<br>
+                        <strong>Lowest day:</strong> ${worstDay} (${(data.last7Days.values?.[worstDayIndex] || 0).toLocaleString()} steps)<br>
+                        <strong>Recommendation:</strong> Your body is most active around ${peakHour}. Schedule important activities then for peak performance! ⚡
+                    </div>
+                </div>
+                
+                <!-- Streaks & Consistency -->
+                <div class="insight-item" style="border-left-color: #00ff88;">
+                    <div class="insight-title">🔥 Streaks & Consistency</div>
+                    <div class="insight-text">
+                        <strong>Current streak:</strong> ${m.currentStreak || 0} day${m.currentStreak === 1 ? '' : 's'} ${m.currentStreak > 0 ? '🔥' : ''}<br>
+                        <strong>Personal best:</strong> ${m.longestStreak || 0} days<br>
+                        <strong>Consistency rate:</strong> ${m.consistency || 0}% (days hitting 10k+ steps)<br>
+                        <strong>Challenge:</strong> ${m.currentStreak >= m.longestStreak ? '🎉 New personal record!' : m.longestStreak > 0 ? `${m.longestStreak - m.currentStreak + 1} more days to beat your record!` : 'Start a streak by hitting 10k steps!'}<br>
+                        <strong>Active days:</strong> ${m.activeDays || 0}/7 this week
+                    </div>
+                </div>
+                
+                <!-- Health Alerts -->
+                <div class="insight-item" style="border-left-color: #ff3c78;">
+                    <div class="insight-title">⚠️ Health Status</div>
+                    <div class="insight-text">
+                        ${m.avgHeartRate > 80 ? '<strong>⚠️ Elevated resting HR:</strong> Consider stress management and extra recovery.<br>' : ''}
+                        ${m.activeDays < 5 ? '<strong>⚠️ Low activity:</strong> Only ' + m.activeDays + '/7 days active. Try to move more!<br>' : ''}
+                        ${m.sleepScore < 60 ? '<strong>⚠️ Poor sleep:</strong> Sleep quality below 60%. Prioritize better sleep habits.<br>' : ''}
+                        ${m.avgHeartRate <= 80 && m.activeDays >= 5 && m.sleepScore >= 60 ? '<strong>✅ All systems good!</strong> No major health concerns detected.<br>' : ''}
+                        <strong>Action:</strong> ${m.readinessScore < 50 ? 'Take it easy today. Recovery is just as important as activity! 😴' : 'Keep up the great work! Listen to your body. 💪'}
+                    </div>
+                </div>
+                
+                <!-- 30-Day Projection -->
+                <div class="insight-item" style="border-left-color: #00f5ff;">
+                    <div class="insight-title">🔮 30-Day Forecast</div>
+                    <div class="insight-text">
+                        <strong>If you maintain current pace:</strong><br>
+                        • <strong>Total steps:</strong> ${((m.dailyAvgSteps || 0) * 30).toLocaleString()}<br>
+                        • <strong>Calories burned:</strong> ${((m.caloriesPerDay || 0) * 30).toLocaleString()} cal<br>
+                        • <strong>Weight impact:</strong> ~${((m.caloriesPerDay || 0) * 30 / 3500).toFixed(1)} lbs loss<br>
+                        • <strong>Projected fitness score:</strong> ${Math.min(100, Math.round((m.fitnessScore || 0) * 1.05))}/100<br>
+                        • <strong>Prediction:</strong> ${m.consistency >= 80 ? 'Elite fitness tier within reach! 🏆' : m.consistency >= 50 ? 'On track for significant improvement! Keep going! 📈' : 'Increase consistency for better results. Small steps add up! 🚶'}
+                    </div>
+                </div>
+                
+                <!-- Comparisons -->
+                <div class="insight-item" style="border-left-color: #ff00ff;">
+                    <div class="insight-title">📈 Weekly Comparison</div>
+                    <div class="insight-text">
+                        <strong>This week vs last week:</strong><br>
+                        • Steps: ${weekChange >= 0 ? '+' : ''}${weekChange}% ${changeSymbol}<br>
+                        • Workouts: ${m.totalWorkouts || 0}<br>
+                        • Active days: ${m.activeDays || 0}/7<br>
+                        <strong>30-day stats:</strong><br>
+                        • Total steps: ${(m.totalSteps30Days || 0).toLocaleString()}<br>
+                        • Total calories: ${(m.totalCalories30Days || 0).toLocaleString()}<br>
+                        <strong>Key insight:</strong> ${weekChange > 0 ? 'Positive momentum! You\'re improving! 🚀' : weekChange < 0 ? 'Slight dip this week. Bounce back strong! 💪' : 'Maintaining steady pace. Consistency is key! ⚖️'}
+                    </div>
+                </div>
+            `;
+            
+            container.innerHTML = insightsHTML;
         }
         
         // Initialize charts only once
