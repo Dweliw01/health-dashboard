@@ -26,6 +26,8 @@ const ouraData = JSON.parse(fs.readFileSync(latestFile, 'utf8'));
 const dailyActivity = ouraData.data.daily_activity.data || [];
 const dailySleep = ouraData.data.daily_sleep.data || [];
 const dailyReadiness = ouraData.data.daily_readiness.data || [];
+const workouts = ouraData.data.workout.data || [];
+const sessions = ouraData.data.session.data || [];
 
 // Helper: Get last N days
 function getLastNDays(arr, n) {
@@ -129,10 +131,27 @@ const dashboardData = {
       return Math.round(60 + (activityScore * 0.5));
     })
   },
-  workoutDistribution: {
-    labels: ["Walking", "Active", "Rest", "Light"],
-    values: [14, 8, 5, 3]
-  },
+  workoutDistribution: (() => {
+    // Process real workout data from Oura (includes Apple Health if synced)
+    const workoutTypes = {};
+    workouts.forEach(w => {
+      const type = w.activity || 'Other';
+      workoutTypes[type] = (workoutTypes[type] || 0) + 1;
+    });
+    
+    // If no workouts, use placeholder
+    if (Object.keys(workoutTypes).length === 0) {
+      return {
+        labels: ["No workouts yet"],
+        values: [0]
+      };
+    }
+    
+    return {
+      labels: Object.keys(workoutTypes),
+      values: Object.values(workoutTypes)
+    };
+  })(),
   weeklyComparison: {
     labels: ["Week 1", "Week 2", "Week 3", "Week 4 (Current)"],
     steps: [week1Avg, week2Avg, week3Avg, week4Avg],
@@ -162,7 +181,7 @@ const dashboardData = {
     dailyAvgSteps: avgSteps7Days,
     avgHeartRate: restingHR,
     activeDays: last7Days.filter(d => d.steps >= 5000).length,
-    totalWorkouts: 0,
+    totalWorkouts: workouts.length, // Real workout count from Oura
     bestDaySteps: bestDay.steps || 0,
     bestDayLabel: bestDayLabel,
     caloriesPerDay: avgCalories7Days,
