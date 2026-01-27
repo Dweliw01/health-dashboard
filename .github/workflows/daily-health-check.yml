@@ -1,0 +1,76 @@
+name: Daily Health Check-In
+
+on:
+  schedule:
+    # Run every day at 8:00 AM UTC (4am ET, 1am PT)
+    - cron: '0 8 * * *'
+  workflow_dispatch:  # Manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  health-check:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      
+      - name: Run health check analysis
+        run: |
+          cd daily-monitor
+          node health-check.js || true
+      
+      - name: Generate daily report
+        id: report
+        run: |
+          cd daily-monitor
+          
+          if [ -f latest-report.json ]; then
+            HEALTH_SCORE=$(cat latest-report.json | jq -r '.healthScore')
+            SLEEP_SCORE=$(cat latest-report.json | jq -r '.metrics.sleepScore // 0')
+            READINESS=$(cat latest-report.json | jq -r '.metrics.readinessScore // 0')
+            AVG_STEPS=$(cat latest-report.json | jq -r '.metrics.dailyAvgSteps // 0')
+            ALERT_COUNT=$(cat latest-report.json | jq '.alerts | length')
+            
+            echo "health_score=$HEALTH_SCORE" >> $GITHUB_OUTPUT
+            echo "sleep_score=$SLEEP_SCORE" >> $GITHUB_OUTPUT
+            echo "readiness=$READINESS" >> $GITHUB_OUTPUT
+            echo "avg_steps=$AVG_STEPS" >> $GITHUB_OUTPUT
+            echo "alert_count=$ALERT_COUNT" >> $GITHUB_OUTPUT
+            
+            # Save report with date
+            cp latest-report.json "report-$(date +%Y-%m-%d).json"
+            
+            echo "✅ Report generated successfully"
+          else
+            echo "❌ Report not found"
+            exit 1
+          fi
+      
+      - name: Commit daily report
+        run: |
+          git config user.name "Health Monitor Bot"
+          git config user.email "health-bot@github-actions"
+          git add daily-monitor/report-*.json daily-monitor/latest-report.json
+          
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "📊 Daily health check: $(date +%Y-%m-%d) - Score: ${{ steps.report.outputs.health_score }}/100"
+            git push
+          fi
+      
+      - name: Summary
+        run: |
+          echo "🏆 Health Score: ${{ steps.report.outputs.health_score }}/100"
+          echo "😴 Sleep: ${{ steps.report.outputs.sleep_score }}%"
+          echo "⚡ Readiness: ${{ steps.report.outputs.readiness }}%"
+          echo "👟 Avg Steps: ${{ steps.report.outputs.avg_steps }}"
+          echo "⚠️ Alerts: ${{ steps.report.outputs.alert_count }}"
