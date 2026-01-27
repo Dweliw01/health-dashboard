@@ -6,6 +6,9 @@ on:
     - cron: '0 */6 * * *'
   workflow_dispatch:  # Manual trigger button in GitHub Actions
 
+permissions:
+  contents: write  # Allow pushing commits
+
 jobs:
   sync-and-deploy:
     runs-on: ubuntu-latest
