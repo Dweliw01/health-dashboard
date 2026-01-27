@@ -1,7 +1,8 @@
 {
+  "lastUpdated": "2026-01-27T19:17:57.619Z",
   "today": {
     "steps": 11118,
-    "avgHeartRate": 46,
+    "avgHeartRate": 103,
     "calories": 639
   },
   "thisWeek": {
@@ -11,13 +12,13 @@
   },
   "last7Days": {
     "labels": [
+      "Mon",
       "Tue",
       "Wed",
       "Thu",
       "Fri",
       "Sat",
-      "Sun",
-      "Tue"
+      "Mon"
     ],
     "values": [
       0,
@@ -31,28 +32,46 @@
   },
   "heartRateTrends": {
     "labels": [
-      "Tue",
+      "Sun",
+      "Mon",
       "Wed",
       "Thu",
-      "Fri",
-      "Sat",
       "Sun",
+      "Mon",
       "Tue"
     ],
     "values": [
-      99,
-      97,
-      94,
+      86,
+      100,
       98,
+      89,
+      106,
       97,
-      98,
-      97
+      103
+    ],
+    "max": [
+      122,
+      116,
+      169,
+      109,
+      119,
+      155,
+      160
+    ],
+    "min": [
+      49,
+      65,
+      50,
+      57,
+      93,
+      53,
+      52
     ]
   },
   "workoutDistribution": {
     "labels": [
-      "walking",
-      "hiking"
+      "Walking",
+      "Hiking"
     ],
     "values": [
       2,
@@ -64,30 +83,30 @@
       "Week 1",
       "Week 2",
       "Week 3",
-      "Week 4 (Current)"
+      "This Week"
     ],
     "steps": [
-      8428,
-      9009,
-      9396,
+      10086,
+      14404,
+      10619,
       4325
     ],
     "workouts": [
+      0,
       3,
-      4,
-      4,
+      1,
       0
     ],
     "calories": [
-      404,
-      437,
-      456,
+      644,
+      1043,
+      723,
       475
     ]
   },
   "projection": {
     "labels": [
-      "Day 0",
+      "Now",
       "Day 10",
       "Day 20",
       "Day 30"
@@ -100,9 +119,9 @@
     ],
     "projected": [
       4325,
-      4412,
-      4455,
-      4498
+      3049,
+      2411,
+      1773
     ]
   },
   "timeOfDay": {
@@ -131,30 +150,60 @@
   },
   "metrics": {
     "dailyAvgSteps": 4325,
-    "avgHeartRate": 46,
+    "avgHeartRate": 97,
+    "restingHR": 46,
     "activeDays": 2,
     "totalWorkouts": 4,
     "bestDaySteps": 14299,
     "bestDayLabel": "Wed",
     "caloriesPerDay": 475,
     "currentStreak": 1,
-    "longestStreak": 12,
-    "fitnessScore": 74,
+    "longestStreak": 8,
+    "fitnessScore": 68,
+    "activityScore": 74,
     "sleepScore": 66,
     "readinessScore": 74,
-    "consistency": 29,
+    "consistency": 55,
     "totalSteps30Days": 280933,
-    "totalCalories30Days": 20488
+    "totalCalories30Days": 20488,
+    "daysTracked": 29
   },
   "insights": {
     "performance": {
-      "weekChange": -54,
-      "monthChange": -55
+      "weekChange": -59,
+      "monthChange": -55,
+      "trend": "declining"
     },
     "recovery": {
       "readinessScore": 74,
       "restingHR": 46,
       "sleepScore": 66
     }
-  }
+  },
+  "alerts": [
+    {
+      "type": "warning",
+      "title": "HR Spike Detected",
+      "message": "Wed: 169 bpm peak",
+      "severity": "medium"
+    },
+    {
+      "type": "warning",
+      "title": "HR Spike Detected",
+      "message": "Mon: 155 bpm peak",
+      "severity": "medium"
+    },
+    {
+      "type": "warning",
+      "title": "HR Spike Detected",
+      "message": "Tue: 160 bpm peak",
+      "severity": "medium"
+    },
+    {
+      "type": "warning",
+      "title": "Workout Gap",
+      "message": "No workouts logged this week",
+      "severity": "medium"
+    }
+  ]
 }
