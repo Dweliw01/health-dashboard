@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Apple Health Data</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 500px;
+            width: 100%;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+        .upload-zone {
+            border: 3px dashed #667eea;
+            border-radius: 15px;
+            padding: 40px 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-bottom: 20px;
+        }
+        .upload-zone:hover {
+            border-color: #764ba2;
+            background: #f8f9ff;
+        }
+        .upload-zone.dragover {
+            background: #f0f3ff;
+            border-color: #764ba2;
+        }
+        .upload-icon {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+        input[type="file"] {
+            display: none;
+        }
+        button {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        button:hover {
+            transform: translateY(-2px);
+        }
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        .status {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 500;
+            display: none;
+        }
+        .status.success {
+            background: #d4edda;
+            color: #155724;
+            display: block;
+        }
+        .status.error {
+            background: #f8d7da;
+            color: #721c24;
+            display: block;
+        }
+        .status.loading {
+            background: #d1ecf1;
+            color: #0c5460;
+            display: block;
+        }
+        .file-info {
+            margin-top: 15px;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            font-size: 14px;
+            color: #666;
+            display: none;
+        }
+        .instructions {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8f9ff;
+            border-radius: 10px;
+            font-size: 13px;
+            color: #555;
+        }
+        .instructions h3 {
+            font-size: 14px;
+            margin-bottom: 10px;
+            color: #667eea;
+        }
+        .instructions ol {
+            margin-left: 20px;
+        }
+        .instructions li {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🍎 Upload Apple Health Data</h1>
+        <p class="subtitle">Export from Health app → Upload here → Dashboard updates automatically</p>
+        
+        <div class="upload-zone" id="dropZone">
+            <div class="upload-icon">📱</div>
+            <p><strong>Drop your export.xml here</strong></p>
+            <p style="font-size: 14px; color: #999; margin-top: 8px;">or click to browse</p>
+        </div>
+        
+        <input type="file" id="fileInput" accept=".xml,.json,.zip">
+        
+        <div class="file-info" id="fileInfo"></div>
+        
+        <button id="uploadBtn" disabled>Upload to Dashboard</button>
+        
+        <div class="status" id="status"></div>
+        
+        <div class="instructions">
+            <h3>📋 How to Export from iPhone:</h3>
+            <ol>
+                <li>Open <strong>Health</strong> app</li>
+                <li>Tap your <strong>profile picture</strong> (top right)</li>
+                <li>Scroll down → <strong>Export All Health Data</strong></li>
+                <li>Wait for export (5-10 min)</li>
+                <li>Unzip and upload <code>export.xml</code> here</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        const dropZone = document.getElementById('dropZone');
+        const fileInput = document.getElementById('fileInput');
+        const uploadBtn = document.getElementById('uploadBtn');
+        const status = document.getElementById('status');
+        const fileInfo = document.getElementById('fileInfo');
+        let selectedFile = null;
+
+        // Click to browse
+        dropZone.addEventListener('click', () => fileInput.click());
+
+        // Drag and drop
+        dropZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            dropZone.classList.add('dragover');
+        });
+
+        dropZone.addEventListener('dragleave', () => {
+            dropZone.classList.remove('dragover');
+        });
+
+        dropZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dropZone.classList.remove('dragover');
+            const file = e.dataTransfer.files[0];
+            handleFile(file);
+        });
+
+        fileInput.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            handleFile(file);
+        });
+
+        function handleFile(file) {
+            if (!file) return;
+            
+            selectedFile = file;
+            fileInfo.textContent = `📄 ${file.name} (${(file.size / 1024 / 1024).toFixed(2)} MB)`;
+            fileInfo.style.display = 'block';
+            uploadBtn.disabled = false;
+            status.style.display = 'none';
+        }
+
+        uploadBtn.addEventListener('click', async () => {
+            if (!selectedFile) return;
+
+            // Show loading status
+            status.className = 'status loading';
+            status.textContent = '⏳ Processing and uploading...';
+            uploadBtn.disabled = true;
+
+            try {
+                // Read file
+                const text = await selectedFile.text();
+                
+                // Convert to JSON (simplified - in production you'd parse XML properly)
+                const healthData = {
+                    uploadDate: new Date().toISOString(),
+                    filename: selectedFile.name,
+                    size: selectedFile.size,
+                    rawData: text.substring(0, 10000) // First 10KB for demo
+                };
+
+                // Upload to GitHub API
+                const date = new Date().toISOString().split('T')[0];
+                const content = btoa(JSON.stringify(healthData, null, 2));
+                
+                const response = await fetch(`https://api.github.com/repos/Dweliw01/health-dashboard/contents/fitness-data/apple_health_${date}.json`, {
+                    method: 'PUT',
+                    headers: {
+                        'Authorization': 'Bearer YOUR_GITHUB_TOKEN',
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        message: `📱 Apple Health upload: ${date}`,
+                        content: content,
+                        branch: 'main'
+                    })
+                });
+
+                if (response.ok) {
+                    status.className = 'status success';
+                    status.textContent = '✅ Uploaded successfully! Dashboard will update in ~1 minute.';
+                } else {
+                    throw new Error('Upload failed');
+                }
+            } catch (error) {
+                status.className = 'status error';
+                status.textContent = '❌ Upload failed. Please use iOS Shortcut method instead.';
+                console.error(error);
+            } finally {
+                uploadBtn.disabled = false;
+            }
+        });
+    </script>
+</body>
+</html>
