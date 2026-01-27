@@ -24,11 +24,23 @@ console.log(`Using data from: ${ouraFiles[0]}`);
 
 // Load Oura data
 const ouraData = JSON.parse(fs.readFileSync(latestFile, 'utf8'));
+
+// Core data
 const dailyActivity = ouraData.data.daily_activity.data || [];
 const dailySleep = ouraData.data.daily_sleep.data || [];
 const dailyReadiness = ouraData.data.daily_readiness.data || [];
 const workouts = ouraData.data.workout.data || [];
 const heartRateData = ouraData.data.heartrate.data || [];
+const detailedSleep = ouraData.data.sleep.data || [];
+const sessions = ouraData.data.session?.data || [];
+const tags = ouraData.data.tag?.data || [];
+
+// Extended data (may not be available)
+const extended = ouraData.extended || {};
+const dailyStress = extended.daily_stress?.data || [];
+const dailySpo2 = extended.daily_spo2?.data || [];
+const dailyResilience = extended.daily_resilience?.data || [];
+const vo2MaxData = extended.vo2_max?.data || [];
 
 // Helper functions
 function avg(arr) {
@@ -39,6 +51,171 @@ function getDayLabel(dateStr) {
   const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
   const date = new Date(dateStr);
   return days[date.getDay()];
+}
+
+// Process HRV data from detailed sleep records
+function processHRV(sleepData) {
+  const hrvRecords = sleepData
+    .filter(s => s.average_hrv != null)
+    .map(s => ({
+      day: s.day,
+      avgHrv: s.average_hrv,
+      lowestHR: s.lowest_heart_rate
+    }))
+    .sort((a, b) => a.day.localeCompare(b.day));
+
+  if (hrvRecords.length === 0) {
+    return { current: null, trend7Days: [], avg7Days: null, avg30Days: null, baseline: null, status: 'no_data' };
+  }
+
+  const last7 = hrvRecords.slice(-7);
+  const last30 = hrvRecords.slice(-30);
+  const current = hrvRecords[hrvRecords.length - 1]?.avgHrv || null;
+  const avg7Days = last7.length > 0 ? Math.round(avg(last7.map(h => h.avgHrv))) : null;
+  const avg30Days = last30.length > 0 ? Math.round(avg(last30.map(h => h.avgHrv))) : null;
+  const baseline = avg30Days;
+
+  // Determine status based on current vs baseline
+  let status = 'normal';
+  if (current && baseline) {
+    const deviation = ((current - baseline) / baseline) * 100;
+    if (deviation < -15) status = 'low';
+    else if (deviation > 15) status = 'high';
+  }
+
+  return {
+    current,
+    trend7Days: last7.map(h => h.avgHrv),
+    trend30Days: last30.map(h => h.avgHrv),
+    avg7Days,
+    avg30Days,
+    baseline,
+    status,
+    records: hrvRecords
+  };
+}
+
+// Process sleep stages from detailed sleep records
+function processSleepStages(sleepData) {
+  const stageRecords = sleepData
+    .filter(s => s.deep_sleep_duration != null)
+    .map(s => ({
+      day: s.day,
+      deep: Math.round((s.deep_sleep_duration || 0) / 60),
+      rem: Math.round((s.rem_sleep_duration || 0) / 60),
+      light: Math.round((s.light_sleep_duration || 0) / 60),
+      awake: Math.round((s.awake_time || 0) / 60),
+      total: Math.round((s.total_sleep_duration || 0) / 60),
+      efficiency: s.efficiency || null,
+      latency: Math.round((s.latency || 0) / 60),
+      breathRate: s.average_breath || null
+    }))
+    .sort((a, b) => a.day.localeCompare(b.day));
+
+  if (stageRecords.length === 0) {
+    return { last7Days: [], avgDeep: null, avgRem: null, avgEfficiency: null };
+  }
+
+  const last7 = stageRecords.slice(-7);
+  const last30 = stageRecords.slice(-30);
+
+  return {
+    last7Days: last7,
+    last30Days: last30,
+    avgDeep: Math.round(avg(last30.map(s => s.deep))),
+    avgRem: Math.round(avg(last30.map(s => s.rem))),
+    avgLight: Math.round(avg(last30.map(s => s.light))),
+    avgEfficiency: Math.round(avg(last30.filter(s => s.efficiency).map(s => s.efficiency))),
+    avgLatency: Math.round(avg(last30.filter(s => s.latency).map(s => s.latency))),
+    avgBreathRate: last30.filter(s => s.breathRate).length > 0
+      ? Number(avg(last30.filter(s => s.breathRate).map(s => s.breathRate)).toFixed(1))
+      : null
+  };
+}
+
+// Process stress data
+function processStress(stressData) {
+  if (!stressData || stressData.length === 0) {
+    return { available: false };
+  }
+
+  const records = stressData
+    .map(s => ({
+      day: s.day,
+      stressHigh: s.stress_high || 0,
+      recoveryHigh: s.recovery_high || 0,
+      daySummary: s.day_summary || 'unknown'
+    }))
+    .sort((a, b) => a.day.localeCompare(b.day));
+
+  const last7 = records.slice(-7);
+  const today = records[records.length - 1] || null;
+
+  return {
+    available: true,
+    today: today ? {
+      stressMinutes: today.stressHigh,
+      recoveryMinutes: today.recoveryHigh,
+      summary: today.daySummary
+    } : null,
+    trend7Days: last7.map(s => s.daySummary),
+    avgStressMinutes: Math.round(avg(last7.map(s => s.stressHigh))),
+    avgRecoveryMinutes: Math.round(avg(last7.map(s => s.recoveryHigh))),
+    records: records.slice(-30)
+  };
+}
+
+// Process SpO2 data
+function processSpo2(spo2Data) {
+  if (!spo2Data || spo2Data.length === 0) {
+    return { available: false };
+  }
+
+  const records = spo2Data
+    .filter(s => s.spo2_percentage?.average != null)
+    .map(s => ({
+      day: s.day,
+      average: s.spo2_percentage.average
+    }))
+    .sort((a, b) => a.day.localeCompare(b.day));
+
+  if (records.length === 0) {
+    return { available: false };
+  }
+
+  const last7 = records.slice(-7);
+  const current = records[records.length - 1]?.average || null;
+
+  return {
+    available: true,
+    current,
+    trend7Days: last7.map(s => s.average),
+    baseline: Number(avg(records.map(s => s.average)).toFixed(1))
+  };
+}
+
+// Process readiness contributors
+function processReadinessContributors(readinessData) {
+  const latest = readinessData[readinessData.length - 1];
+  if (!latest || !latest.contributors) {
+    return null;
+  }
+
+  const c = latest.contributors;
+  return {
+    day: latest.day,
+    score: latest.score,
+    activityBalance: c.activity_balance || null,
+    bodyTemperature: c.body_temperature || null,
+    hrvBalance: c.hrv_balance || null,
+    previousDayActivity: c.previous_day_activity || null,
+    previousNight: c.previous_night || null,
+    recoveryIndex: c.recovery_index || null,
+    restingHeartRate: c.resting_heart_rate || null,
+    sleepBalance: c.sleep_balance || null,
+    tempDeviation: latest.temperature_deviation || null,
+    tempTrend: latest.temperature_trend_deviation || null
+  };
 }
 
 // Get last 7 days of activity data
@@ -222,6 +399,13 @@ function processWorkouts() {
 
 const workoutDistribution = processWorkouts();
 
+// Process expanded Oura data
+const hrvData = processHRV(detailedSleep);
+const sleepStages = processSleepStages(detailedSleep);
+const stressData = processStress(dailyStress);
+const spo2Data = processSpo2(dailySpo2);
+const readinessBreakdown = processReadinessContributors(dailyReadiness);
+
 // Calculate active days (days with 5000+ steps)
 const activeDays = last7Days.filter(d => d.steps >= 5000).length;
 
@@ -243,9 +427,58 @@ const lastWeekAvg = weeklyComparison.steps[2] || thisWeekAvg;
 const weekChange = lastWeekAvg > 0 ? Math.round(((thisWeekAvg - lastWeekAvg) / lastWeekAvg) * 100) : 0;
 const monthChange = avgSteps30Days > 0 ? Math.round(((avgSteps7Days - avgSteps30Days) / avgSteps30Days) * 100) : 0;
 
-// Generate health alerts from real data
-function generateAlerts() {
+// Generate health alerts from real data (enhanced with HRV)
+function generateAlerts(hrvInfo, sleepStageInfo, stressInfo) {
   const alerts = [];
+
+  // HRV alerts (highest priority)
+  if (hrvInfo && hrvInfo.current && hrvInfo.baseline) {
+    const hrvDeviation = ((hrvInfo.current - hrvInfo.baseline) / hrvInfo.baseline) * 100;
+    if (hrvDeviation < -20) {
+      alerts.push({
+        type: 'warning',
+        title: 'HRV Significantly Low',
+        message: `${hrvInfo.current}ms vs ${hrvInfo.baseline}ms baseline (${Math.round(hrvDeviation)}%)`,
+        severity: 'high',
+        category: 'recovery'
+      });
+    } else if (hrvDeviation < -10) {
+      alerts.push({
+        type: 'warning',
+        title: 'HRV Below Baseline',
+        message: `${hrvInfo.current}ms vs ${hrvInfo.baseline}ms baseline`,
+        severity: 'medium',
+        category: 'recovery'
+      });
+    }
+  }
+
+  // Deep sleep alert
+  if (sleepStageInfo && sleepStageInfo.last7Days?.length > 0) {
+    const recentDeep = sleepStageInfo.last7Days[sleepStageInfo.last7Days.length - 1]?.deep;
+    if (recentDeep && recentDeep < 60) {
+      alerts.push({
+        type: 'warning',
+        title: 'Low Deep Sleep',
+        message: `${recentDeep} min last night (target: 90+ min)`,
+        severity: 'medium',
+        category: 'sleep'
+      });
+    }
+  }
+
+  // Stress alert
+  if (stressInfo && stressInfo.available && stressInfo.today) {
+    if (stressInfo.today.stressMinutes > 300) {
+      alerts.push({
+        type: 'warning',
+        title: 'High Stress Day',
+        message: `${Math.round(stressInfo.today.stressMinutes / 60)}h in high stress`,
+        severity: 'medium',
+        category: 'stress'
+      });
+    }
+  }
 
   // Check for HR spikes
   const avgHR = avg(dailyHRTrends.map(d => d.avgHR));
@@ -255,7 +488,8 @@ function generateAlerts() {
         type: 'warning',
         title: 'HR Spike Detected',
         message: `${getDayLabel(d.day)}: ${d.maxHR} bpm peak`,
-        severity: 'medium'
+        severity: 'medium',
+        category: 'activity'
       });
     }
   });
@@ -267,7 +501,8 @@ function generateAlerts() {
         type: 'warning',
         title: 'Low Activity Day',
         message: `${getDayLabel(d.day)}: ${d.steps.toLocaleString()} steps`,
-        severity: 'low'
+        severity: 'low',
+        category: 'activity'
       });
     }
   });
@@ -283,31 +518,38 @@ function generateAlerts() {
       type: 'warning',
       title: 'Workout Gap',
       message: 'No workouts logged this week',
-      severity: 'medium'
+      severity: 'medium',
+      category: 'activity'
     });
   }
 
-  // Check sleep
+  // Check sleep score
   if (avgSleepScore < 60) {
     alerts.push({
       type: 'warning',
       title: 'Sleep Quality Low',
       message: `Average sleep score: ${avgSleepScore}%`,
-      severity: 'medium'
+      severity: 'medium',
+      category: 'sleep'
     });
   }
+
+  // Sort by severity
+  const severityOrder = { high: 0, medium: 1, low: 2, none: 3 };
+  alerts.sort((a, b) => severityOrder[a.severity] - severityOrder[b.severity]);
 
   // All clear if no alerts
   if (alerts.length === 0) {
     alerts.push({
       type: 'success',
-      title: 'All Systems Good',
+      title: 'All Systems Normal',
       message: 'No health concerns detected',
-      severity: 'none'
+      severity: 'none',
+      category: 'general'
     });
   }
 
-  return alerts.slice(0, 4); // Max 4 alerts
+  return alerts.slice(0, 5);
 }
 
 // Generate output data
@@ -381,7 +623,14 @@ const dashboardData = {
       sleepScore: avgSleepScore
     }
   },
-  alerts: generateAlerts()
+  alerts: generateAlerts(hrvData, sleepStages, stressData),
+
+  // Expanded Oura data
+  hrv: hrvData,
+  sleepStages: sleepStages,
+  stress: stressData,
+  spo2: spo2Data,
+  readinessBreakdown: readinessBreakdown
 };
 
 // Write to file
@@ -390,13 +639,26 @@ fs.writeFileSync(
   JSON.stringify(dashboardData, null, 2)
 );
 
-console.log('Oura data processed successfully!');
-console.log(`  Avg steps (7 days): ${avgSteps7Days}`);
-console.log(`  Resting HR: ${restingHR}`);
-console.log(`  Current streak: ${streaks.currentStreak} days`);
-console.log(`  Longest streak: ${streaks.longestStreak} days`);
-console.log(`  Sleep score: ${avgSleepScore}`);
-console.log(`  Readiness score: ${avgReadinessScore}`);
-console.log(`  Fitness score: ${fitnessScore}`);
-console.log(`  Active days: ${activeDays}/7`);
-console.log(`  Workouts: ${workouts.length} total`);
+console.log('[PROCESSED] Oura data ready\n');
+console.log('Core Metrics:');
+console.log(`  Steps (7d avg):     ${avgSteps7Days.toLocaleString()}`);
+console.log(`  Resting HR:         ${restingHR} bpm`);
+console.log(`  Sleep score:        ${avgSleepScore}`);
+console.log(`  Readiness score:    ${avgReadinessScore}`);
+console.log(`  Fitness score:      ${fitnessScore}`);
+console.log(`  Active days:        ${activeDays}/7`);
+console.log(`  Workouts:           ${workouts.length} total`);
+console.log(`  Streaks:            ${streaks.currentStreak} current / ${streaks.longestStreak} longest`);
+
+console.log('\nExpanded Metrics:');
+console.log(`  HRV (current):      ${hrvData.current || 'N/A'} ms`);
+console.log(`  HRV (baseline):     ${hrvData.baseline || 'N/A'} ms`);
+console.log(`  HRV status:         ${hrvData.status}`);
+console.log(`  Deep sleep (avg):   ${sleepStages.avgDeep || 'N/A'} min`);
+console.log(`  REM sleep (avg):    ${sleepStages.avgRem || 'N/A'} min`);
+console.log(`  Sleep efficiency:   ${sleepStages.avgEfficiency || 'N/A'}%`);
+console.log(`  Breath rate:        ${sleepStages.avgBreathRate || 'N/A'} /min`);
+console.log(`  Stress data:        ${stressData.available ? 'Available' : 'Not available'}`);
+console.log(`  SpO2 data:          ${spo2Data.available ? spo2Data.current + '%' : 'Not available'}`);
+
+console.log('\nOutput: data.json');

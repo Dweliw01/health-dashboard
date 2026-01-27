@@ -2,8 +2,8 @@ name: Sync Oura Data & Update Dashboard
 
 on:
   schedule:
-    # Runs every 6 hours: 12am, 6am, 12pm, 6pm UTC
-    - cron: '0 */6 * * *'
+    # Runs every hour for real-time data updates
+    - cron: '0 * * * *'
   workflow_dispatch:  # Manual trigger button in GitHub Actions
 
 permissions:
@@ -67,4 +67,4 @@ jobs:
       - name: Deployment complete
         run: |
           echo "🚀 Vercel will auto-deploy in ~30 seconds"
-          echo "📊 Next sync in 6 hours"
+          echo "📊 Next sync in 1 hour"

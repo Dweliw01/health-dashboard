@@ -218,6 +218,629 @@
             background: rgba(239, 68, 68, 0.1);
         }
 
+        /* Nutrition Section */
+        .nutrition-section {
+            margin: 32px 0;
+        }
+
+        .nutrition-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+
+        .nutrition-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .nutrition-card-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+
+        .nutrition-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nutrition-icon.water { background: rgba(6, 182, 212, 0.15); color: #06b6d4; }
+        .nutrition-icon.protein { background: rgba(239, 68, 68, 0.15); color: #ef4444; }
+        .nutrition-icon.quality { background: rgba(16, 185, 129, 0.15); color: #10b981; }
+        .nutrition-icon.meal { background: rgba(139, 92, 246, 0.15); color: #8b5cf6; }
+
+        .nutrition-card-title {
+            font-size: 14px;
+            font-weight: 600;
+            flex: 1;
+        }
+
+        .nutrition-percentage {
+            font-size: 14px;
+            font-weight: 600;
+            color: #06b6d4;
+        }
+
+        /* Water Tracker */
+        .water-progress-container {
+            display: flex;
+            align-items: baseline;
+            gap: 6px;
+            margin-bottom: 8px;
+        }
+
+        .water-count {
+            font-size: 32px;
+            font-weight: 700;
+            color: #06b6d4;
+        }
+
+        .water-goal {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .water-progress-bar {
+            height: 8px;
+            background: var(--bg-elevated);
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 8px;
+        }
+
+        .water-progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #06b6d4, #22d3ee);
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+
+        .water-remaining {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+        }
+
+        .water-buttons {
+            display: flex;
+            gap: 8px;
+        }
+
+        .water-btn {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            background: var(--bg-elevated);
+            color: var(--text-primary);
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .water-btn:hover {
+            background: rgba(6, 182, 212, 0.15);
+            border-color: #06b6d4;
+        }
+
+        .water-btn.minus:hover {
+            background: rgba(239, 68, 68, 0.15);
+            border-color: #ef4444;
+        }
+
+        /* Protein Tracker */
+        .protein-estimate {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .protein-label {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+        }
+
+        .protein-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .protein-btn {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 14px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            background: var(--bg-elevated);
+            color: var(--text-primary);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .protein-btn:hover {
+            background: rgba(239, 68, 68, 0.1);
+            border-color: rgba(239, 68, 68, 0.3);
+        }
+
+        .protein-btn.active {
+            background: rgba(239, 68, 68, 0.15);
+            border-color: #ef4444;
+        }
+
+        .protein-level {
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .protein-range {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        /* Food Quality */
+        .quality-score {
+            font-size: 18px;
+            font-weight: 700;
+            color: #10b981;
+        }
+
+        .quality-label {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+        }
+
+        .quality-buttons {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+
+        .quality-btn {
+            flex: 1;
+            padding: 12px 8px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            background: var(--bg-elevated);
+            color: var(--text-primary);
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .quality-btn:hover {
+            background: rgba(16, 185, 129, 0.1);
+            border-color: rgba(16, 185, 129, 0.3);
+        }
+
+        .quality-btn.active {
+            background: rgba(16, 185, 129, 0.15);
+            border-color: #10b981;
+            color: #10b981;
+        }
+
+        .quality-description {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-align: center;
+        }
+
+        /* Meal Logger */
+        .meal-count {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+        }
+
+        .meal-log-btn {
+            width: 100%;
+            padding: 14px;
+            border: 2px dashed var(--border);
+            border-radius: 10px;
+            background: transparent;
+            color: var(--text-secondary);
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .meal-log-btn:hover {
+            border-color: #8b5cf6;
+            color: #8b5cf6;
+            background: rgba(139, 92, 246, 0.05);
+        }
+
+        .meals-list {
+            margin-top: 12px;
+        }
+
+        .meal-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px;
+            background: var(--bg-elevated);
+            border-radius: 8px;
+            margin-top: 8px;
+        }
+
+        .meal-item-time {
+            font-size: 12px;
+            color: var(--text-muted);
+            min-width: 50px;
+        }
+
+        .meal-item-desc {
+            flex: 1;
+            font-size: 13px;
+        }
+
+        .meal-item-protein {
+            font-size: 12px;
+            color: #ef4444;
+            font-weight: 500;
+        }
+
+        @media (max-width: 1200px) {
+            .nutrition-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .nutrition-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Trends Section */
+        .trends-section {
+            margin: 32px 0;
+        }
+
+        .time-range-selector {
+            display: flex;
+            gap: 4px;
+            background: var(--bg-elevated);
+            padding: 4px;
+            border-radius: 8px;
+        }
+
+        .range-btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 6px;
+            background: transparent;
+            color: var(--text-secondary);
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .range-btn:hover {
+            color: var(--text-primary);
+        }
+
+        .range-btn.active {
+            background: var(--accent);
+            color: white;
+        }
+
+        .comparison-grid {
+            display: grid;
+            gap: 16px;
+        }
+
+        .comparison-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .comparison-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .comparison-period {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .vs-label {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+        }
+
+        .comparison-metrics {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+
+        .comparison-item {
+            text-align: center;
+        }
+
+        .comparison-label {
+            display: block;
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+        }
+
+        .comparison-values {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .current-value {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .comparison-delta {
+            font-size: 12px;
+            font-weight: 600;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        .comparison-delta.positive {
+            color: #10b981;
+            background: rgba(16, 185, 129, 0.1);
+        }
+
+        .comparison-delta.negative {
+            color: #ef4444;
+            background: rgba(239, 68, 68, 0.1);
+        }
+
+        .comparison-delta.neutral {
+            color: var(--text-muted);
+            background: var(--bg-elevated);
+        }
+
+        .previous-value {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        /* Records Section */
+        .records-section {
+            margin: 32px 0;
+        }
+
+        .records-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+
+        .record-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px;
+            text-align: center;
+        }
+
+        .record-icon {
+            width: 40px;
+            height: 40px;
+            margin: 0 auto 12px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(99, 102, 241, 0.15);
+            color: var(--accent);
+        }
+
+        .record-label {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+        }
+
+        .record-value {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+
+        .record-unit {
+            font-size: 14px;
+            font-weight: 400;
+            color: var(--text-secondary);
+        }
+
+        .record-date {
+            font-size: 11px;
+            color: var(--text-muted);
+        }
+
+        .record-current {
+            font-size: 11px;
+            color: var(--accent);
+            margin-top: 8px;
+        }
+
+        /* Milestones Section */
+        .milestones-section {
+            margin: 32px 0;
+        }
+
+        .btn-text {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 12px;
+            background: transparent;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            color: var(--text-secondary);
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-text:hover {
+            background: var(--bg-elevated);
+            color: var(--text-primary);
+            border-color: var(--accent);
+        }
+
+        .milestones-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .milestone-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .milestone-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+
+        .milestone-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .milestone-icon.steps { background: rgba(99, 102, 241, 0.15); color: var(--accent); }
+        .milestone-icon.workouts { background: rgba(245, 158, 11, 0.15); color: #f59e0b; }
+        .milestone-icon.streak { background: rgba(239, 68, 68, 0.15); color: #ef4444; }
+
+        .milestone-title {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .milestone-achieved {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 12px;
+        }
+
+        .milestone-badge {
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .milestone-badge.earned {
+            background: rgba(16, 185, 129, 0.15);
+            color: #10b981;
+        }
+
+        .milestone-badge.next {
+            background: var(--bg-elevated);
+            color: var(--text-muted);
+            border: 1px dashed var(--border);
+        }
+
+        .milestone-progress {
+            margin-top: 12px;
+        }
+
+        .milestone-progress-bar {
+            height: 6px;
+            background: var(--bg-elevated);
+            border-radius: 3px;
+            overflow: hidden;
+            margin-bottom: 8px;
+        }
+
+        .milestone-progress-fill {
+            height: 100%;
+            background: var(--accent);
+            border-radius: 3px;
+            transition: width 0.3s ease;
+        }
+
+        .milestone-progress-text {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        .milestone-current {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        @media (max-width: 1200px) {
+            .comparison-metrics {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .records-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .milestones-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .comparison-metrics {
+                grid-template-columns: 1fr;
+            }
+            .records-grid {
+                grid-template-columns: 1fr;
+            }
+            .milestones-grid {
+                grid-template-columns: 1fr;
+            }
+            .time-range-selector {
+                flex-wrap: wrap;
+            }
+        }
+
         /* Alerts Section */
         .alerts-section {
             margin: 32px 0;
@@ -452,6 +1075,1608 @@
             min-height: 200px;
             color: var(--text-muted);
         }
+
+        /* Settings Button */
+        .settings-btn {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 10px 16px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .settings-btn:hover {
+            background: var(--bg-card);
+            color: var(--text-primary);
+        }
+
+        .settings-btn svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        /* Goals Summary Bar */
+        .goals-summary {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin-bottom: 24px;
+        }
+
+        .goals-summary-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .goals-summary-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .goals-summary-score {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .goals-summary-dots {
+            display: flex;
+            gap: 4px;
+        }
+
+        .goals-summary-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--bg-elevated);
+        }
+
+        .goals-summary-dot.achieved {
+            background: var(--success);
+        }
+
+        .goals-summary-text {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        .goals-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+        }
+
+        .goals-category {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .goals-category-label {
+            font-size: 12px;
+            color: var(--text-muted);
+            font-weight: 500;
+            min-width: 70px;
+        }
+
+        .goals-category-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .goal-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 500;
+            background: var(--bg-elevated);
+            color: var(--text-secondary);
+        }
+
+        .goal-chip.achieved {
+            background: rgba(16, 185, 129, 0.15);
+            color: var(--success);
+        }
+
+        .goal-chip.missed {
+            background: rgba(239, 68, 68, 0.1);
+            color: var(--text-muted);
+        }
+
+        .goal-chip svg {
+            width: 12px;
+            height: 12px;
+        }
+
+        /* Progress Bar in Metric Cards */
+        .metric-progress {
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid var(--border);
+        }
+
+        .metric-progress-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 6px;
+        }
+
+        .metric-progress-label {
+            font-size: 11px;
+            color: var(--text-muted);
+        }
+
+        .metric-progress-value {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--text-secondary);
+        }
+
+        .metric-progress-bar {
+            height: 4px;
+            background: var(--bg-elevated);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .metric-progress-fill {
+            height: 100%;
+            border-radius: 2px;
+            transition: width 0.3s ease;
+        }
+
+        .metric-progress-fill.low {
+            background: var(--danger);
+        }
+
+        .metric-progress-fill.medium {
+            background: var(--warning);
+        }
+
+        .metric-progress-fill.high {
+            background: var(--success);
+        }
+
+        /* Modal Styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.2s ease;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            width: 90%;
+            max-width: 600px;
+            max-height: 85vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transform: scale(0.95);
+            transition: transform 0.2s ease;
+        }
+
+        .modal-overlay.active .modal {
+            transform: scale(1);
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 24px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .modal-title {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+
+        .modal-close:hover {
+            background: var(--bg-elevated);
+            color: var(--text-primary);
+        }
+
+        .modal-body {
+            padding: 24px;
+            overflow-y: auto;
+            flex: 1;
+        }
+
+        .modal-footer {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            padding: 16px 24px;
+            border-top: 1px solid var(--border);
+            background: var(--bg-card);
+        }
+
+        .modal-footer-left {
+            display: flex;
+            gap: 8px;
+        }
+
+        .modal-footer-right {
+            display: flex;
+            gap: 8px;
+        }
+
+        /* Form Elements */
+        .form-section {
+            margin-bottom: 24px;
+        }
+
+        .form-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .form-section-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .form-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .form-row:last-child {
+            border-bottom: none;
+        }
+
+        .form-label {
+            flex: 1;
+        }
+
+        .form-label-text {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-primary);
+            margin-bottom: 2px;
+        }
+
+        .form-label-hint {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+
+        .form-input-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .form-input {
+            width: 100px;
+            padding: 8px 12px;
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            color: var(--text-primary);
+            font-size: 14px;
+            text-align: right;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        .form-unit {
+            font-size: 12px;
+            color: var(--text-muted);
+            min-width: 60px;
+        }
+
+        .form-toggle {
+            position: relative;
+            width: 44px;
+            height: 24px;
+        }
+
+        .form-toggle input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .form-toggle-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--bg-elevated);
+            border-radius: 24px;
+            transition: 0.2s;
+        }
+
+        .form-toggle-slider:before {
+            position: absolute;
+            content: "";
+            height: 18px;
+            width: 18px;
+            left: 3px;
+            bottom: 3px;
+            background: var(--text-muted);
+            border-radius: 50%;
+            transition: 0.2s;
+        }
+
+        .form-toggle input:checked + .form-toggle-slider {
+            background: var(--accent);
+        }
+
+        .form-toggle input:checked + .form-toggle-slider:before {
+            background: white;
+            transform: translateX(20px);
+        }
+
+        /* Buttons */
+        .btn {
+            padding: 10px 16px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-light);
+        }
+
+        .btn-secondary {
+            background: var(--bg-elevated);
+            color: var(--text-secondary);
+            border: 1px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+            background: var(--bg-card);
+            color: var(--text-primary);
+        }
+
+        .btn-danger {
+            background: rgba(239, 68, 68, 0.15);
+            color: var(--danger);
+        }
+
+        .btn-danger:hover {
+            background: rgba(239, 68, 68, 0.25);
+        }
+
+        /* HRV Card Enhancement */
+        .metric-card.hrv .metric-icon {
+            background: rgba(16, 185, 129, 0.15);
+        }
+
+        .metric-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 11px;
+            font-weight: 500;
+            padding: 4px 8px;
+            border-radius: 4px;
+            margin-top: 8px;
+        }
+
+        .metric-status.normal {
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--success);
+        }
+
+        .metric-status.low {
+            background: rgba(239, 68, 68, 0.1);
+            color: var(--danger);
+        }
+
+        .metric-status.high {
+            background: rgba(99, 102, 241, 0.1);
+            color: var(--accent);
+        }
+
+        /* Additional responsive adjustments */
+        @media (max-width: 640px) {
+            .goals-categories {
+                grid-template-columns: 1fr;
+            }
+
+            .modal {
+                width: 95%;
+                max-height: 90vh;
+            }
+
+            .form-row {
+                flex-wrap: wrap;
+            }
+
+            .form-label {
+                flex-basis: 100%;
+                margin-bottom: 8px;
+            }
+        }
+
+        /* ===== Morning Coach Styles ===== */
+        .morning-coach {
+            margin-bottom: 32px;
+        }
+
+        .coach-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .coach-greeting {
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .coach-date {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        .coach-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .coach-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px;
+        }
+
+        .coach-card.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .coach-card-title {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 16px;
+        }
+
+        /* Readiness Card */
+        .readiness-main {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            margin-bottom: 20px;
+        }
+
+        .readiness-score-circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 3px solid;
+        }
+
+        .readiness-score-value {
+            font-size: 32px;
+            font-weight: 700;
+        }
+
+        .readiness-dots {
+            display: flex;
+            gap: 4px;
+            margin-top: 4px;
+        }
+
+        .readiness-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--text-muted);
+        }
+
+        .readiness-dot.active {
+            background: currentColor;
+        }
+
+        .readiness-info {
+            flex: 1;
+        }
+
+        .readiness-label {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .readiness-description {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        /* Recovery Factors */
+        .recovery-factors {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+
+        .recovery-factor {
+            background: var(--bg-elevated);
+            border-radius: 10px;
+            padding: 14px;
+            text-align: center;
+        }
+
+        .recovery-factor.good {
+            border-left: 3px solid var(--success);
+        }
+
+        .recovery-factor.normal {
+            border-left: 3px solid var(--text-muted);
+        }
+
+        .recovery-factor.warning {
+            border-left: 3px solid var(--warning);
+        }
+
+        .recovery-factor.low {
+            border-left: 3px solid var(--danger);
+        }
+
+        .recovery-factor-icon {
+            width: 24px;
+            height: 24px;
+            margin: 0 auto 8px;
+            color: var(--text-secondary);
+        }
+
+        .recovery-factor-value {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .recovery-factor-label {
+            font-size: 11px;
+            color: var(--text-muted);
+        }
+
+        .recovery-factor-status {
+            font-size: 10px;
+            margin-top: 4px;
+            font-weight: 500;
+        }
+
+        /* Workout Suggestion */
+        .workout-suggestion {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 16px;
+            background: var(--bg-elevated);
+            border-radius: 10px;
+            margin-top: 16px;
+        }
+
+        .workout-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .workout-icon svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .workout-info {
+            flex: 1;
+        }
+
+        .workout-label {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .workout-duration {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        .workout-reason {
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-top: 4px;
+        }
+
+        /* Priority Card */
+        .priority-card {
+            border-left: 4px solid;
+        }
+
+        .priority-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .priority-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .priority-icon svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .priority-title {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .priority-action {
+            font-size: 14px;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+
+        .priority-reason {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        /* Summary Cards */
+        .summary-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .summary-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .summary-item:last-child {
+            border-bottom: none;
+        }
+
+        .summary-label {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        .summary-value {
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .coach-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .recovery-factors {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .readiness-main {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .recovery-factors {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .summary-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ===== Check-in FAB and Modal ===== */
+        .checkin-fab {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: var(--accent);
+            border: none;
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 100;
+            transition: all 0.2s;
+        }
+
+        .checkin-fab:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 16px rgba(99, 102, 241, 0.5);
+        }
+
+        .checkin-fab svg {
+            width: 24px;
+            height: 24px;
+            color: white;
+        }
+
+        .checkin-fab.not-checked-in {
+            animation: fabPulse 2s infinite;
+        }
+
+        .checkin-fab.checked-in {
+            background: var(--success);
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+        }
+
+        @keyframes fabPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.08); }
+        }
+
+        .checkin-fab-badge {
+            position: absolute;
+            top: -4px;
+            right: -4px;
+            width: 20px;
+            height: 20px;
+            background: var(--danger);
+            border-radius: 50%;
+            font-size: 11px;
+            font-weight: 600;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Check-in Modal Styles */
+        .checkin-modal .modal {
+            max-width: 500px;
+        }
+
+        .checkin-section {
+            margin-bottom: 28px;
+        }
+
+        .checkin-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .checkin-section-title {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 14px;
+        }
+
+        /* Workout Yes/No Toggle */
+        .workout-toggle {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .workout-toggle-btn {
+            flex: 1;
+            padding: 16px;
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            background: var(--bg-elevated);
+            color: var(--text-secondary);
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-align: center;
+        }
+
+        .workout-toggle-btn:hover {
+            border-color: var(--accent);
+        }
+
+        .workout-toggle-btn.selected {
+            border-color: var(--accent);
+            background: rgba(99, 102, 241, 0.1);
+            color: var(--accent);
+        }
+
+        .workout-toggle-btn.selected.no {
+            border-color: var(--text-muted);
+            background: var(--bg-card);
+            color: var(--text-secondary);
+        }
+
+        /* Workout Details */
+        .workout-details {
+            display: none;
+            padding: 16px;
+            background: var(--bg-elevated);
+            border-radius: 12px;
+            margin-top: 12px;
+        }
+
+        .workout-details.visible {
+            display: block;
+        }
+
+        .workout-types {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+
+        .workout-type-btn {
+            padding: 10px 16px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            background: var(--bg-card);
+            color: var(--text-secondary);
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .workout-type-btn:hover {
+            border-color: var(--accent);
+        }
+
+        .workout-type-btn.selected {
+            border-color: var(--accent);
+            background: rgba(99, 102, 241, 0.1);
+            color: var(--accent);
+        }
+
+        .workout-row {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 12px;
+        }
+
+        .workout-row label {
+            font-size: 13px;
+            color: var(--text-secondary);
+            min-width: 70px;
+        }
+
+        .workout-duration-input {
+            width: 80px;
+            padding: 10px 12px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .workout-duration-input:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        .intensity-btns {
+            display: flex;
+            gap: 8px;
+            flex: 1;
+        }
+
+        .intensity-btn {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            background: var(--bg-card);
+            color: var(--text-secondary);
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .intensity-btn:hover {
+            border-color: var(--accent);
+        }
+
+        .intensity-btn.selected {
+            border-color: var(--accent);
+            background: rgba(99, 102, 241, 0.1);
+            color: var(--accent);
+        }
+
+        /* Energy Rating */
+        .energy-rating {
+            display: flex;
+            justify-content: space-between;
+            gap: 8px;
+        }
+
+        .energy-btn {
+            flex: 1;
+            padding: 16px 8px;
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            background: var(--bg-elevated);
+            cursor: pointer;
+            transition: all 0.2s;
+            text-align: center;
+        }
+
+        .energy-btn:hover {
+            border-color: var(--accent);
+        }
+
+        .energy-btn.selected {
+            border-color: var(--accent);
+            background: rgba(99, 102, 241, 0.1);
+        }
+
+        .energy-value {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+
+        .energy-label {
+            font-size: 10px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+        }
+
+        /* Tags */
+        .tags-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag-btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 14px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            background: var(--bg-elevated);
+            color: var(--text-secondary);
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .tag-btn:hover {
+            border-color: var(--text-muted);
+        }
+
+        .tag-btn.selected {
+            border-color: var(--accent);
+            background: rgba(99, 102, 241, 0.1);
+            color: var(--accent);
+        }
+
+        .tag-btn svg {
+            width: 14px;
+            height: 14px;
+        }
+
+        /* Notes */
+        .notes-textarea {
+            width: 100%;
+            padding: 14px;
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            color: var(--text-primary);
+            font-size: 14px;
+            font-family: inherit;
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .notes-textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        .notes-counter {
+            text-align: right;
+            font-size: 11px;
+            color: var(--text-muted);
+            margin-top: 6px;
+        }
+
+        /* Streak Display */
+        .checkin-streak {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px;
+            background: var(--bg-elevated);
+            border-radius: 8px;
+            margin-top: 16px;
+        }
+
+        .checkin-streak svg {
+            width: 18px;
+            height: 18px;
+            color: var(--warning);
+        }
+
+        .checkin-streak-text {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        .checkin-streak-value {
+            color: var(--warning);
+            font-weight: 700;
+        }
+
+        /* Header Check-in Indicator */
+        .header-checkin-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 14px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text-secondary);
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .header-checkin-btn:hover {
+            background: var(--bg-card);
+            color: var(--text-primary);
+        }
+
+        .header-checkin-btn.checked {
+            background: rgba(16, 185, 129, 0.1);
+            border-color: rgba(16, 185, 129, 0.3);
+            color: var(--success);
+        }
+
+        .header-checkin-btn svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        /* AI Insights Section */
+        .ai-insights-section {
+            margin: 32px 0;
+        }
+
+        .insights-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+        }
+
+        .insight-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px;
+        }
+
+        .insight-card.daily-insight {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.08) 0%, var(--bg-card) 100%);
+            border-color: rgba(99, 102, 241, 0.2);
+        }
+
+        .insight-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .insight-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(99, 102, 241, 0.15);
+            color: var(--accent-light);
+        }
+
+        .insight-icon svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .insight-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .insight-subtitle {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        .insight-content {
+            margin-bottom: 16px;
+        }
+
+        .insight-text {
+            font-size: 15px;
+            color: var(--text-primary);
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+
+        .insight-action {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 12px 14px;
+            background: rgba(99, 102, 241, 0.1);
+            border-radius: 10px;
+            border-left: 3px solid var(--accent);
+        }
+
+        .insight-action-icon {
+            color: var(--accent-light);
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .insight-action-icon svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .insight-action-text {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+
+        .insight-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 12px;
+            border-top: 1px solid var(--border);
+        }
+
+        .insight-datapoint {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        .insight-refresh {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 10px;
+            background: transparent;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            color: var(--text-secondary);
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .insight-refresh:hover {
+            background: var(--bg-elevated);
+            color: var(--text-primary);
+        }
+
+        .insight-refresh svg {
+            width: 14px;
+            height: 14px;
+        }
+
+        .insight-refresh.loading svg {
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* Prediction Card */
+        .prediction-card {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .prediction-value {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .prediction-score {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--accent-light);
+            line-height: 1;
+        }
+
+        .prediction-label {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 8px;
+        }
+
+        .prediction-confidence {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-top: 8px;
+        }
+
+        .confidence-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--text-muted);
+        }
+
+        .confidence-dot.high { background: var(--success); }
+        .confidence-dot.medium { background: var(--warning); }
+        .confidence-dot.low { background: var(--danger); }
+
+        .prediction-details {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            padding-top: 16px;
+            border-top: 1px solid var(--border);
+        }
+
+        .prediction-item {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        .prediction-item strong {
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        .prediction-warning {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            padding: 10px 12px;
+            background: rgba(245, 158, 11, 0.1);
+            border-radius: 8px;
+            font-size: 12px;
+            color: var(--warning);
+        }
+
+        .prediction-warning svg {
+            width: 14px;
+            height: 14px;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        /* Ask AI Section */
+        .ask-ai-section {
+            margin-top: 20px;
+        }
+
+        .ask-ai-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px;
+        }
+
+        .ask-ai-input-wrapper {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .ask-ai-input {
+            flex: 1;
+            padding: 12px 16px;
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            color: var(--text-primary);
+            font-size: 14px;
+            font-family: inherit;
+        }
+
+        .ask-ai-input:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        .ask-ai-input::placeholder {
+            color: var(--text-muted);
+        }
+
+        .ask-ai-btn {
+            padding: 12px 20px;
+            background: var(--accent);
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .ask-ai-btn:hover {
+            background: var(--accent-light);
+        }
+
+        .ask-ai-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .ask-ai-btn svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .ask-ai-examples {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+
+        .ask-ai-example {
+            padding: 6px 12px;
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            font-size: 12px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .ask-ai-example:hover {
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            border-color: var(--accent);
+        }
+
+        .ask-ai-response {
+            display: none;
+            padding: 16px;
+            background: var(--bg-elevated);
+            border-radius: 10px;
+            border-left: 3px solid var(--accent);
+        }
+
+        .ask-ai-response.visible {
+            display: block;
+        }
+
+        .ask-ai-response-text {
+            font-size: 14px;
+            line-height: 1.6;
+            color: var(--text-primary);
+        }
+
+        .ask-ai-response-loading {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-muted);
+        }
+
+        .ask-ai-response-loading svg {
+            width: 16px;
+            height: 16px;
+            animation: spin 1s linear infinite;
+        }
+
+        /* Correlations Grid */
+        .correlations-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-top: 20px;
+        }
+
+        .correlation-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px;
+        }
+
+        .correlation-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+
+        .correlation-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg-elevated);
+        }
+
+        .correlation-icon svg {
+            width: 16px;
+            height: 16px;
+            color: var(--text-secondary);
+        }
+
+        .correlation-icon.positive { background: rgba(16, 185, 129, 0.15); }
+        .correlation-icon.positive svg { color: var(--success); }
+        .correlation-icon.negative { background: rgba(239, 68, 68, 0.15); }
+        .correlation-icon.negative svg { color: var(--danger); }
+        .correlation-icon.warning { background: rgba(245, 158, 11, 0.15); }
+        .correlation-icon.warning svg { color: var(--warning); }
+
+        .correlation-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .correlation-text {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        .correlation-recommendation {
+            margin-top: 10px;
+            padding: 8px 10px;
+            background: var(--bg-elevated);
+            border-radius: 6px;
+            font-size: 12px;
+            color: var(--accent-light);
+        }
+
+        @media (max-width: 900px) {
+            .insights-grid {
+                grid-template-columns: 1fr;
+            }
+            .correlations-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
@@ -462,8 +2687,272 @@
                 <h1>Health Dashboard</h1>
                 <p class="subtitle">Your fitness metrics at a glance</p>
             </div>
-            <div class="last-updated" id="lastUpdated">Loading...</div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+                <div class="last-updated" id="lastUpdated">Loading...</div>
+                <button class="settings-btn" onclick="openSettingsModal()">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+                        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1Z"/>
+                    </svg>
+                    Goals
+                </button>
+            </div>
         </header>
+
+        <!-- Goals Summary Bar -->
+        <section class="goals-summary" id="goalsSummary" style="display: none;">
+            <div class="goals-summary-header">
+                <div class="goals-summary-title">Today's Goals</div>
+                <div class="goals-summary-score">
+                    <div class="goals-summary-dots" id="goalsDots"></div>
+                    <span class="goals-summary-text" id="goalsText">-- achieved</span>
+                </div>
+            </div>
+            <div class="goals-categories" id="goalsCategories"></div>
+        </section>
+
+        <!-- AI Insights Section -->
+        <section class="ai-insights-section" id="aiInsightsSection">
+            <div class="section-header">
+                <h2 class="section-title">AI Coach</h2>
+            </div>
+
+            <div class="insights-grid">
+                <!-- Daily Insight Card -->
+                <div class="insight-card daily-insight" id="dailyInsightCard">
+                    <div class="insight-header">
+                        <div class="insight-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 16v-4M12 8h.01"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="insight-title">Today's Insight</div>
+                            <div class="insight-subtitle">Personalized for you</div>
+                        </div>
+                    </div>
+                    <div class="insight-content">
+                        <div class="insight-text" id="insightText">Analyzing your data...</div>
+                        <div class="insight-action" id="insightAction">
+                            <div class="insight-action-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="9 18 15 12 9 6"/>
+                                </svg>
+                            </div>
+                            <div class="insight-action-text" id="insightActionText">Loading recommendation...</div>
+                        </div>
+                    </div>
+                    <div class="insight-footer">
+                        <div class="insight-datapoint" id="insightDatapoint">Based on your health data</div>
+                        <button class="insight-refresh" id="refreshInsightBtn" onclick="refreshDailyInsight()">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M23 4v6h-6M1 20v-6h6"/>
+                                <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+                            </svg>
+                            Refresh
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tomorrow's Prediction Card -->
+                <div class="insight-card prediction-card" id="predictionCard">
+                    <div class="insight-header">
+                        <div class="insight-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12 6 12 12 16 14"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="insight-title">Tomorrow's Forecast</div>
+                            <div class="insight-subtitle">Based on today's data</div>
+                        </div>
+                    </div>
+                    <div class="prediction-value">
+                        <div class="prediction-score" id="predictionScore">--</div>
+                        <div class="prediction-label">Predicted Readiness</div>
+                        <div class="prediction-confidence">
+                            <span class="confidence-dot" id="confidenceDot"></span>
+                            <span id="confidenceText">Calculating...</span>
+                        </div>
+                    </div>
+                    <div class="prediction-details">
+                        <div class="prediction-item" id="predictionRecommendation">
+                            <strong>Recommendation:</strong> <span>Loading...</span>
+                        </div>
+                        <div class="prediction-item" id="predictionTip">
+                            <strong>Tip:</strong> <span>Loading...</span>
+                        </div>
+                        <div class="prediction-warning" id="predictionWarning" style="display: none;">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+                                <line x1="12" y1="9" x2="12" y2="13"/>
+                                <line x1="12" y1="17" x2="12.01" y2="17"/>
+                            </svg>
+                            <span id="predictionWarningText"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Correlations Grid -->
+            <div class="correlations-grid" id="correlationsGrid">
+                <!-- Correlations will be populated by JS -->
+            </div>
+
+            <!-- Ask AI Section -->
+            <div class="ask-ai-section">
+                <div class="ask-ai-card">
+                    <div class="insight-header">
+                        <div class="insight-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="insight-title">Ask Your Data</div>
+                            <div class="insight-subtitle">Get AI-powered answers about your health</div>
+                        </div>
+                    </div>
+                    <div class="ask-ai-input-wrapper">
+                        <input type="text" class="ask-ai-input" id="askAiInput" placeholder="Ask a question about your health data...">
+                        <button class="ask-ai-btn" id="askAiBtn" onclick="askAI()">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="22" y1="2" x2="11" y2="13"/>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                            </svg>
+                            Ask
+                        </button>
+                    </div>
+                    <div class="ask-ai-examples">
+                        <span class="ask-ai-example" onclick="setAskQuestion('What affects my sleep the most?')">What affects my sleep?</span>
+                        <span class="ask-ai-example" onclick="setAskQuestion('How does my step count impact my readiness?')">Steps vs readiness?</span>
+                        <span class="ask-ai-example" onclick="setAskQuestion('When am I most active during the week?')">Most active day?</span>
+                        <span class="ask-ai-example" onclick="setAskQuestion('What is my HRV trend telling me?')">HRV analysis</span>
+                    </div>
+                    <div class="ask-ai-response" id="askAiResponse">
+                        <div class="ask-ai-response-text" id="askAiResponseText"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Morning Coach Section -->
+        <section class="morning-coach" id="morningCoach">
+            <div class="coach-header">
+                <div class="coach-greeting" id="coachGreeting">Good morning</div>
+                <div class="coach-date" id="coachDate"></div>
+            </div>
+
+            <div class="coach-grid">
+                <!-- Readiness Card -->
+                <div class="coach-card" id="readinessCard">
+                    <div class="coach-card-title">Today's Readiness</div>
+                    <div class="readiness-main">
+                        <div class="readiness-score-circle" id="readinessCircle" style="border-color: var(--success); color: var(--success);">
+                            <div class="readiness-score-value" id="readinessScoreValue">--</div>
+                            <div class="readiness-dots" id="readinessDots"></div>
+                        </div>
+                        <div class="readiness-info">
+                            <div class="readiness-label" id="readinessLabel">Loading...</div>
+                            <div class="readiness-description" id="readinessDescription"></div>
+                        </div>
+                    </div>
+
+                    <div class="coach-card-title" style="margin-top: 20px;">Recovery Factors</div>
+                    <div class="recovery-factors" id="recoveryFactors"></div>
+
+                    <div class="workout-suggestion" id="workoutSuggestion"></div>
+                </div>
+
+                <!-- Priority Card -->
+                <div class="coach-card priority-card" id="priorityCard" style="border-left-color: var(--accent);">
+                    <div class="coach-card-title">Your Priority Today</div>
+                    <div class="priority-header">
+                        <div class="priority-icon" id="priorityIcon" style="background: rgba(99, 102, 241, 0.15);">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 6v6l4 2"/>
+                            </svg>
+                        </div>
+                        <div class="priority-title" id="priorityTitle">Loading...</div>
+                    </div>
+                    <div class="priority-action" id="priorityAction"></div>
+                    <div class="priority-reason" id="priorityReason"></div>
+                </div>
+
+                <!-- Last Night Summary -->
+                <div class="coach-card">
+                    <div class="coach-card-title">Last Night</div>
+                    <div class="summary-grid" id="lastNightSummary">
+                        <div>
+                            <div class="summary-item">
+                                <span class="summary-label">Sleep Score</span>
+                                <span class="summary-value" id="lastSleepScore">--</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">HRV</span>
+                                <span class="summary-value" id="lastHrv">-- ms</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">Deep Sleep</span>
+                                <span class="summary-value" id="lastDeep">-- min</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="summary-item">
+                                <span class="summary-label">REM Sleep</span>
+                                <span class="summary-value" id="lastRem">-- min</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">Efficiency</span>
+                                <span class="summary-value" id="lastEfficiency">--%</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">Breath Rate</span>
+                                <span class="summary-value" id="lastBreath">--/min</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- This Week Summary -->
+                <div class="coach-card">
+                    <div class="coach-card-title">This Week</div>
+                    <div class="summary-grid" id="thisWeekSummary">
+                        <div>
+                            <div class="summary-item">
+                                <span class="summary-label">Workouts</span>
+                                <span class="summary-value" id="weekWorkouts">--/4</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">Avg Steps</span>
+                                <span class="summary-value" id="weekSteps">--</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">Active Days</span>
+                                <span class="summary-value" id="weekActiveDays">--/7</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="summary-item">
+                                <span class="summary-label">Avg HRV</span>
+                                <span class="summary-value" id="weekHrv">-- ms</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">Avg Deep</span>
+                                <span class="summary-value" id="weekDeep">-- min</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">Sleep Avg</span>
+                                <span class="summary-value" id="weekSleep">--</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- Score Hero Section -->
         <section class="score-hero">
@@ -499,29 +2988,205 @@
             </div>
 
             <div class="key-metrics">
-                <div class="metric-card">
-                    <div class="metric-icon steps">&#128102;</div>
+                <div class="metric-card" id="stepsCard">
+                    <div class="metric-icon steps">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M13 4v16M7 4v16M19 4v16M4 8h4M4 16h4M16 8h4M16 16h4"/>
+                        </svg>
+                    </div>
                     <div class="metric-value" id="avgSteps">--</div>
                     <div class="metric-label">Avg Daily Steps</div>
                     <div class="metric-change" id="stepsChange">--</div>
                 </div>
+                <div class="metric-card" id="hrvCard">
+                    <div class="metric-icon" style="background: rgba(16, 185, 129, 0.15);">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                        </svg>
+                    </div>
+                    <div class="metric-value" id="hrvValue">-- ms</div>
+                    <div class="metric-label">HRV</div>
+                    <div class="metric-change positive" id="hrvBaseline">Baseline: --</div>
+                    <div class="metric-status normal" id="hrvStatus">--</div>
+                </div>
+                <div class="metric-card" id="sleepCard">
+                    <div class="metric-icon" style="background: rgba(139, 92, 246, 0.15);">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="2">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                        </svg>
+                    </div>
+                    <div class="metric-value" id="sleepScoreValue">--</div>
+                    <div class="metric-label">Sleep Score</div>
+                    <div class="metric-change positive" id="sleepTrend">--</div>
+                </div>
+                <div class="metric-card" id="deepSleepCard">
+                    <div class="metric-icon" style="background: rgba(139, 92, 246, 0.15);">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="10" rx="2"/>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                        </svg>
+                    </div>
+                    <div class="metric-value" id="deepSleepValue">-- min</div>
+                    <div class="metric-label">Deep Sleep</div>
+                    <div class="metric-change positive" id="deepSleepAvg">Avg: --</div>
+                </div>
+            </div>
+            <div class="key-metrics" style="margin-top: 16px;">
                 <div class="metric-card">
-                    <div class="metric-icon heart">&#10084;</div>
+                    <div class="metric-icon heart">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                        </svg>
+                    </div>
                     <div class="metric-value" id="avgHR">--</div>
                     <div class="metric-label">Avg Heart Rate</div>
                     <div class="metric-change positive" id="restingHR">Resting: --</div>
                 </div>
                 <div class="metric-card">
-                    <div class="metric-icon active">&#9889;</div>
+                    <div class="metric-icon active">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                        </svg>
+                    </div>
                     <div class="metric-value" id="activeDays">--/7</div>
                     <div class="metric-label">Active Days</div>
                     <div class="metric-change" id="consistencyBadge">--% consistency</div>
                 </div>
                 <div class="metric-card">
-                    <div class="metric-icon workout">&#127947;</div>
+                    <div class="metric-icon workout">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2">
+                            <path d="M6.5 6.5h11M6.5 17.5h11M4 12h16M12 4v16"/>
+                        </svg>
+                    </div>
                     <div class="metric-value" id="totalWorkouts">--</div>
                     <div class="metric-label">Workouts (30d)</div>
                     <div class="metric-change" id="thisWeekWorkouts">This week: --</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon" style="background: rgba(99, 102, 241, 0.15);">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <div class="metric-value" id="readinessValue">--</div>
+                    <div class="metric-label">Readiness</div>
+                    <div class="metric-change positive" id="readinessTrend">--</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nutrition Tracking -->
+        <section class="nutrition-section" id="nutritionSection">
+            <div class="section-header">
+                <h2 class="section-title">Nutrition Today</h2>
+            </div>
+            <div class="nutrition-grid">
+                <!-- Water Tracker -->
+                <div class="nutrition-card water-card">
+                    <div class="nutrition-card-header">
+                        <div class="nutrition-icon water">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+                            </svg>
+                        </div>
+                        <div class="nutrition-card-title">Water</div>
+                        <div class="nutrition-percentage" id="waterPercentage">0%</div>
+                    </div>
+                    <div class="water-progress-container">
+                        <div class="water-count" id="waterCount">0</div>
+                        <div class="water-goal">/ <span id="waterGoal">8</span> glasses</div>
+                    </div>
+                    <div class="water-progress-bar">
+                        <div class="water-progress-fill" id="waterProgressFill" style="width: 0%"></div>
+                    </div>
+                    <div class="water-remaining" id="waterRemaining">8 glasses to go</div>
+                    <div class="water-buttons">
+                        <button class="water-btn minus" id="waterMinus" title="Remove 1 glass">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                                <line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </button>
+                        <button class="water-btn plus" id="waterPlus1" title="Add 1 glass">+1</button>
+                        <button class="water-btn plus" id="waterPlus2" title="Add 2 glasses">+2</button>
+                    </div>
+                </div>
+
+                <!-- Protein Tracker -->
+                <div class="nutrition-card protein-card">
+                    <div class="nutrition-card-header">
+                        <div class="nutrition-icon protein">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                            </svg>
+                        </div>
+                        <div class="nutrition-card-title">Protein</div>
+                        <div class="protein-estimate" id="proteinEstimate">--</div>
+                    </div>
+                    <div class="protein-label">How was your protein intake today?</div>
+                    <div class="protein-buttons">
+                        <button class="protein-btn" data-rating="low" id="proteinLow">
+                            <span class="protein-level">Low</span>
+                            <span class="protein-range">&lt;100g</span>
+                        </button>
+                        <button class="protein-btn" data-rating="medium" id="proteinMedium">
+                            <span class="protein-level">Medium</span>
+                            <span class="protein-range">100-140g</span>
+                        </button>
+                        <button class="protein-btn" data-rating="high" id="proteinHigh">
+                            <span class="protein-level">High</span>
+                            <span class="protein-range">140g+</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Food Quality -->
+                <div class="nutrition-card quality-card">
+                    <div class="nutrition-card-header">
+                        <div class="nutrition-icon quality">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                                <path d="M2 17l10 5 10-5"/>
+                                <path d="M2 12l10 5 10-5"/>
+                            </svg>
+                        </div>
+                        <div class="nutrition-card-title">Food Quality</div>
+                        <div class="quality-score" id="qualityScore">--</div>
+                    </div>
+                    <div class="quality-label">How clean was your eating today?</div>
+                    <div class="quality-buttons">
+                        <button class="quality-btn" data-quality="1" title="Mostly processed/junk">1</button>
+                        <button class="quality-btn" data-quality="2" title="More processed than whole">2</button>
+                        <button class="quality-btn" data-quality="3" title="Balanced mix">3</button>
+                        <button class="quality-btn" data-quality="4" title="Mostly whole foods">4</button>
+                        <button class="quality-btn" data-quality="5" title="All whole foods">5</button>
+                    </div>
+                    <div class="quality-description" id="qualityDescription">Rate your food choices</div>
+                </div>
+
+                <!-- Meal Logger -->
+                <div class="nutrition-card meal-card">
+                    <div class="nutrition-card-header">
+                        <div class="nutrition-icon meal">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                                <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
+                                <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+                                <line x1="6" y1="1" x2="6" y2="4"/>
+                                <line x1="10" y1="1" x2="10" y2="4"/>
+                                <line x1="14" y1="1" x2="14" y2="4"/>
+                            </svg>
+                        </div>
+                        <div class="nutrition-card-title">Log Meal</div>
+                    </div>
+                    <div class="meal-count" id="mealCount">0 meals logged today</div>
+                    <button class="meal-log-btn" id="logMealBtn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            <circle cx="8.5" cy="8.5" r="1.5"/>
+                            <polyline points="21 15 16 10 5 21"/>
+                        </svg>
+                        <span>Add Photo or Description</span>
+                    </button>
+                    <div class="meals-list" id="mealsList"></div>
                 </div>
             </div>
         </section>
@@ -583,14 +3248,25 @@
         <section class="stats-grid">
             <div class="stat-card">
                 <div class="stat-header">
-                    <span class="stat-header-icon">&#128197;</span>
+                    <span class="stat-header-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="16" y1="2" x2="16" y2="6"/>
+                            <line x1="8" y1="2" x2="8" y2="6"/>
+                            <line x1="3" y1="10" x2="21" y2="10"/>
+                        </svg>
+                    </span>
                     <span class="stat-header-title">Weekly Heatmap</span>
                 </div>
                 <div class="heatmap-grid" id="heatmapGrid"></div>
             </div>
             <div class="stat-card">
                 <div class="stat-header">
-                    <span class="stat-header-icon">&#128293;</span>
+                    <span class="stat-header-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                    </span>
                     <span class="stat-header-title">Streaks</span>
                 </div>
                 <div class="stat-row">
@@ -608,7 +3284,13 @@
             </div>
             <div class="stat-card">
                 <div class="stat-header">
-                    <span class="stat-header-icon">&#128200;</span>
+                    <span class="stat-header-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="20" x2="12" y2="10"/>
+                            <line x1="18" y1="20" x2="18" y2="4"/>
+                            <line x1="6" y1="20" x2="6" y2="16"/>
+                        </svg>
+                    </span>
                     <span class="stat-header-title">30-Day Totals</span>
                 </div>
                 <div class="stat-row">
@@ -625,7 +3307,209 @@
                 </div>
             </div>
         </section>
+
+        <!-- Long-term Trends Section -->
+        <section class="trends-section" id="trendsSection">
+            <div class="section-header">
+                <h2 class="section-title">Trends & Progress</h2>
+                <div class="time-range-selector" id="timeRangeSelector">
+                    <button class="range-btn active" data-range="7d">7D</button>
+                    <button class="range-btn" data-range="30d">30D</button>
+                    <button class="range-btn" data-range="90d">90D</button>
+                </div>
+            </div>
+
+            <!-- Period Comparison -->
+            <div class="comparison-grid">
+                <div class="comparison-card">
+                    <div class="comparison-header">
+                        <span class="comparison-period" id="currentPeriodLabel">This Week</span>
+                        <span class="vs-label">vs</span>
+                        <span class="comparison-period" id="previousPeriodLabel">Last Week</span>
+                    </div>
+                    <div class="comparison-metrics" id="comparisonMetrics">
+                        <div class="comparison-item">
+                            <span class="comparison-label">Avg Steps</span>
+                            <div class="comparison-values">
+                                <span class="current-value" id="compStepsCurrent">--</span>
+                                <span class="comparison-delta positive" id="compStepsDelta">--</span>
+                                <span class="previous-value" id="compStepsPrevious">--</span>
+                            </div>
+                        </div>
+                        <div class="comparison-item">
+                            <span class="comparison-label">Avg Sleep</span>
+                            <div class="comparison-values">
+                                <span class="current-value" id="compSleepCurrent">--</span>
+                                <span class="comparison-delta positive" id="compSleepDelta">--</span>
+                                <span class="previous-value" id="compSleepPrevious">--</span>
+                            </div>
+                        </div>
+                        <div class="comparison-item">
+                            <span class="comparison-label">Avg HRV</span>
+                            <div class="comparison-values">
+                                <span class="current-value" id="compHrvCurrent">--</span>
+                                <span class="comparison-delta positive" id="compHrvDelta">--</span>
+                                <span class="previous-value" id="compHrvPrevious">--</span>
+                            </div>
+                        </div>
+                        <div class="comparison-item">
+                            <span class="comparison-label">Workouts</span>
+                            <div class="comparison-values">
+                                <span class="current-value" id="compWorkoutsCurrent">--</span>
+                                <span class="comparison-delta positive" id="compWorkoutsDelta">--</span>
+                                <span class="previous-value" id="compWorkoutsPrevious">--</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Personal Records Section -->
+        <section class="records-section" id="recordsSection">
+            <div class="section-header">
+                <h2 class="section-title">Personal Records</h2>
+            </div>
+            <div class="records-grid" id="recordsGrid">
+                <!-- Records will be populated by JS -->
+            </div>
+        </section>
+
+        <!-- Milestones Section -->
+        <section class="milestones-section" id="milestonesSection">
+            <div class="section-header">
+                <h2 class="section-title">Milestones</h2>
+                <button class="btn-text" id="exportDataBtn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                        <polyline points="7 10 12 15 17 10"/>
+                        <line x1="12" y1="15" x2="12" y2="3"/>
+                    </svg>
+                    Export Data
+                </button>
+            </div>
+            <div class="milestones-grid" id="milestonesGrid">
+                <!-- Milestones will be populated by JS -->
+            </div>
+        </section>
     </div>
+
+    <!-- Goals Settings Modal -->
+    <div class="modal-overlay" id="settingsModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2 class="modal-title">Goal Settings</h2>
+                <button class="modal-close" onclick="closeSettingsModal()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 6L6 18M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-body" id="settingsForm"></div>
+            <div class="modal-footer">
+                <div class="modal-footer-left">
+                    <button class="btn btn-danger" onclick="resetGoals()">Reset Defaults</button>
+                </div>
+                <div class="modal-footer-right">
+                    <button class="btn btn-secondary" onclick="closeSettingsModal()">Cancel</button>
+                    <button class="btn btn-primary" onclick="saveGoals()">Save Goals</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Check-in FAB Button -->
+    <button class="checkin-fab not-checked-in" id="checkinFab" onclick="openCheckinModal()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 5v14M5 12h14"/>
+        </svg>
+    </button>
+
+    <!-- Check-in Modal -->
+    <div class="modal-overlay checkin-modal" id="checkinModal">
+        <div class="modal">
+            <div class="modal-header">
+                <div>
+                    <h2 class="modal-title">Daily Check-in</h2>
+                    <div style="font-size: 13px; color: var(--text-muted); margin-top: 4px;" id="checkinDate"></div>
+                </div>
+                <button class="modal-close" onclick="closeCheckinModal()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 6L6 18M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Workout Section -->
+                <div class="checkin-section">
+                    <div class="checkin-section-title">Did you work out today?</div>
+                    <div class="workout-toggle">
+                        <button class="workout-toggle-btn" id="workoutYes" onclick="setWorkout(true)">Yes</button>
+                        <button class="workout-toggle-btn" id="workoutNo" onclick="setWorkout(false)">No</button>
+                    </div>
+                    <div class="workout-details" id="workoutDetails">
+                        <div class="checkin-section-title" style="margin-top: 0;">Type</div>
+                        <div class="workout-types" id="workoutTypes"></div>
+                        <div class="workout-row">
+                            <label>Duration</label>
+                            <input type="number" class="workout-duration-input" id="workoutDuration" placeholder="45" min="0" max="300"> min
+                        </div>
+                        <div class="workout-row">
+                            <label>Intensity</label>
+                            <div class="intensity-btns" id="intensityBtns"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Energy Section -->
+                <div class="checkin-section">
+                    <div class="checkin-section-title">How's your energy?</div>
+                    <div class="energy-rating" id="energyRating"></div>
+                </div>
+
+                <!-- Tags Section -->
+                <div class="checkin-section">
+                    <div class="checkin-section-title">Any tags for today? (optional)</div>
+                    <div class="tags-grid" id="tagsGrid"></div>
+                </div>
+
+                <!-- Notes Section -->
+                <div class="checkin-section">
+                    <div class="checkin-section-title">Notes (optional)</div>
+                    <textarea class="notes-textarea" id="checkinNotes" placeholder="How did today go?" maxlength="280"></textarea>
+                    <div class="notes-counter"><span id="notesCount">0</span>/280</div>
+                </div>
+
+                <!-- Streak Display -->
+                <div class="checkin-streak" id="checkinStreak">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/>
+                    </svg>
+                    <span class="checkin-streak-text">Streak: <span class="checkin-streak-value" id="streakValue">0</span> days</span>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="modal-footer-left"></div>
+                <div class="modal-footer-right">
+                    <button class="btn btn-secondary" onclick="closeCheckinModal()">Cancel</button>
+                    <button class="btn btn-primary" onclick="saveCheckin()">Save Check-in</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include Goals Manager -->
+    <script src="goals-manager.js"></script>
+    <!-- Include Recommendation Engine -->
+    <script src="recommendation-engine.js"></script>
+    <!-- Include Check-in Manager -->
+    <script src="checkin-manager.js"></script>
+    <!-- Include Nutrition Manager -->
+    <script src="nutrition-manager.js"></script>
+    <!-- Include Analytics Engine -->
+    <script src="analytics-engine.js"></script>
+    <!-- Include AI Insights Engine -->
+    <script src="insights-engine.js"></script>
 
     <script>
         let data = null;
@@ -639,8 +3523,15 @@
                     const res = await fetch(path);
                     if (!res.ok) throw new Error(`HTTP ${res.status}`);
                     data = await res.json();
+                    window.dashboardData = data; // Make available to InsightsEngine
                     console.log('Data loaded:', data);
                     renderDashboard();
+                    renderGoalsSummary();
+                    renderMorningCoach();
+                    initCheckinUI();
+                    initNutritionUI();
+                    initTrendsUI();
+                    initAIInsights();
                     return;
                 } catch (err) {
                     console.warn('Failed to load from', path);
@@ -649,6 +3540,751 @@
 
             document.getElementById('lastUpdated').textContent = 'Error loading data';
         }
+
+        // ===== Goals Integration =====
+
+        function getCurrentMetrics() {
+            if (!data) return {};
+            const m = data.metrics || {};
+            return {
+                dailySteps: m.dailyAvgSteps || 0,
+                weeklyWorkouts: data.thisWeek?.workouts || 0,
+                activeDays: m.activeDays || 0,
+                readinessScore: m.readinessScore || 0,
+                sleepScore: m.sleepScore || 0,
+                hrvBaseline: data.hrv?.current || 0,
+                deepSleepMinutes: data.sleepStages?.last7Days?.[data.sleepStages?.last7Days?.length - 1]?.deep || 0,
+                sleepEfficiency: data.sleepStages?.avgEfficiency || 0,
+                remSleepMinutes: data.sleepStages?.last7Days?.[data.sleepStages?.last7Days?.length - 1]?.rem || 0,
+                maxStressMinutes: data.stress?.today?.stressMinutes || 0,
+                minRecoveryMinutes: data.stress?.today?.recoveryMinutes || 0
+            };
+        }
+
+        function renderGoalsSummary() {
+            if (!data || typeof GoalsManager === 'undefined') return;
+
+            const currentMetrics = getCurrentMetrics();
+            const summary = GoalsManager.calculateDailySummary(currentMetrics);
+
+            if (summary.total === 0) {
+                document.getElementById('goalsSummary').style.display = 'none';
+                return;
+            }
+
+            document.getElementById('goalsSummary').style.display = 'block';
+
+            // Render dots
+            const dotsHtml = summary.details.map(d =>
+                `<div class="goals-summary-dot ${d.achieved ? 'achieved' : ''}"></div>`
+            ).join('');
+            document.getElementById('goalsDots').innerHTML = dotsHtml;
+
+            // Summary text
+            document.getElementById('goalsText').textContent =
+                `${summary.achieved}/${summary.total} achieved`;
+
+            // Render categories
+            const categories = GoalsManager.categories;
+            let categoriesHtml = '';
+
+            Object.entries(summary.byCategory).forEach(([catKey, catData]) => {
+                const cat = categories[catKey] || { label: catKey };
+                const categoryGoals = summary.details.filter(d => d.category === catKey);
+
+                const chipsHtml = categoryGoals.map(goal => {
+                    const icon = goal.achieved
+                        ? '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>'
+                        : '';
+                    return `<span class="goal-chip ${goal.achieved ? 'achieved' : 'missed'}">${icon}${goal.label} (${goal.percentage}%)</span>`;
+                }).join('');
+
+                categoriesHtml += `
+                    <div class="goals-category">
+                        <span class="goals-category-label">${cat.label}</span>
+                        <div class="goals-category-items">${chipsHtml}</div>
+                    </div>
+                `;
+            });
+
+            document.getElementById('goalsCategories').innerHTML = categoriesHtml;
+        }
+
+        function renderMetricProgress(elementId, metric, currentValue) {
+            if (typeof GoalsManager === 'undefined') return;
+
+            const progress = GoalsManager.getProgress(metric, currentValue);
+            if (!progress) return;
+
+            const container = document.getElementById(elementId);
+            if (!container) return;
+
+            // Find or create progress section
+            let progressSection = container.querySelector('.metric-progress');
+            if (!progressSection) {
+                progressSection = document.createElement('div');
+                progressSection.className = 'metric-progress';
+                container.appendChild(progressSection);
+            }
+
+            const pct = Math.min(progress.percentage, 100);
+            const colorClass = pct < 50 ? 'low' : pct < 80 ? 'medium' : 'high';
+
+            progressSection.innerHTML = `
+                <div class="metric-progress-header">
+                    <span class="metric-progress-label">Goal: ${progress.target.toLocaleString()}</span>
+                    <span class="metric-progress-value">${progress.percentage}%</span>
+                </div>
+                <div class="metric-progress-bar">
+                    <div class="metric-progress-fill ${colorClass}" style="width: ${pct}%"></div>
+                </div>
+            `;
+        }
+
+        // Settings Modal Functions
+        function openSettingsModal() {
+            if (typeof GoalsManager === 'undefined') {
+                console.error('GoalsManager not loaded');
+                return;
+            }
+
+            renderSettingsForm();
+            document.getElementById('settingsModal').classList.add('active');
+        }
+
+        function closeSettingsModal() {
+            document.getElementById('settingsModal').classList.remove('active');
+        }
+
+        function renderSettingsForm() {
+            const byCategory = GoalsManager.getGoalsByCategory();
+            let html = '';
+
+            Object.entries(byCategory).forEach(([catKey, category]) => {
+                html += `<div class="form-section">
+                    <div class="form-section-title">${category.label}</div>`;
+
+                category.goals.forEach(goal => {
+                    const hint = getGoalHint(goal.key);
+                    html += `
+                        <div class="form-row">
+                            <div class="form-label">
+                                <div class="form-label-text">${goal.label}</div>
+                                ${hint ? `<div class="form-label-hint">${hint}</div>` : ''}
+                            </div>
+                            <div class="form-input-group">
+                                <input type="number"
+                                    class="form-input"
+                                    id="goal-${goal.key}"
+                                    value="${goal.target}"
+                                    min="0"
+                                    ${goal.autoBaseline ? 'data-auto="true"' : ''}>
+                                <span class="form-unit">${goal.unit || ''}</span>
+                                <label class="form-toggle">
+                                    <input type="checkbox"
+                                        id="enabled-${goal.key}"
+                                        ${goal.enabled ? 'checked' : ''}>
+                                    <span class="form-toggle-slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    `;
+                });
+
+                html += '</div>';
+            });
+
+            // Add Nutrition Goals section
+            if (typeof NutritionManager !== 'undefined') {
+                const nutritionGoals = NutritionManager.getGoals();
+                html += `
+                    <div class="form-section">
+                        <div class="form-section-title">Nutrition</div>
+                        <div class="form-row">
+                            <div class="form-label">
+                                <div class="form-label-text">Daily Water Goal</div>
+                                <div class="form-label-hint">Glasses per day</div>
+                            </div>
+                            <div class="form-input-group">
+                                <input type="number"
+                                    class="form-input"
+                                    id="nutrition-waterGlasses"
+                                    value="${nutritionGoals.waterGlasses || 8}"
+                                    min="1"
+                                    max="20">
+                                <span class="form-unit">glasses</span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-label">
+                                <div class="form-label-text">Daily Protein Goal</div>
+                                <div class="form-label-hint">Target grams per day</div>
+                            </div>
+                            <div class="form-input-group">
+                                <input type="number"
+                                    class="form-input"
+                                    id="nutrition-proteinGrams"
+                                    value="${nutritionGoals.proteinGrams || 150}"
+                                    min="50"
+                                    max="300">
+                                <span class="form-unit">grams</span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+
+            document.getElementById('settingsForm').innerHTML = html;
+        }
+
+        function getGoalHint(goalKey) {
+            if (!data) return '';
+            const m = data.metrics || {};
+
+            const hints = {
+                dailySteps: `Your avg: ${(m.dailyAvgSteps || 0).toLocaleString()}`,
+                hrvBaseline: data.hrv?.baseline ? `Your 30-day avg: ${data.hrv.baseline}ms` : '',
+                deepSleepMinutes: data.sleepStages?.avgDeep ? `Your avg: ${data.sleepStages.avgDeep} min` : '',
+                sleepEfficiency: data.sleepStages?.avgEfficiency ? `Your avg: ${data.sleepStages.avgEfficiency}%` : '',
+                readinessScore: m.readinessScore ? `Recent: ${m.readinessScore}` : '',
+                sleepScore: m.sleepScore ? `Recent: ${m.sleepScore}` : ''
+            };
+
+            return hints[goalKey] || '';
+        }
+
+        function saveGoals() {
+            if (typeof GoalsManager === 'undefined') return;
+
+            const { goals } = GoalsManager.load();
+
+            Object.keys(goals).forEach(key => {
+                const input = document.getElementById(`goal-${key}`);
+                const toggle = document.getElementById(`enabled-${key}`);
+
+                if (input) {
+                    goals[key].target = parseInt(input.value, 10) || goals[key].target;
+                }
+                if (toggle) {
+                    goals[key].enabled = toggle.checked;
+                }
+            });
+
+            GoalsManager.save(goals);
+
+            // Save nutrition goals
+            if (typeof NutritionManager !== 'undefined') {
+                const waterInput = document.getElementById('nutrition-waterGlasses');
+                const proteinInput = document.getElementById('nutrition-proteinGrams');
+
+                if (waterInput || proteinInput) {
+                    NutritionManager.updateGoals({
+                        waterGlasses: parseInt(waterInput?.value, 10) || 8,
+                        proteinGrams: parseInt(proteinInput?.value, 10) || 150
+                    });
+                }
+            }
+
+            closeSettingsModal();
+            renderGoalsSummary();
+            renderDashboard();
+            if (typeof renderNutritionUI === 'function') {
+                renderNutritionUI();
+            }
+        }
+
+        function resetGoals() {
+            if (confirm('Reset all goals to default values?')) {
+                GoalsManager.resetToDefaults();
+                renderSettingsForm();
+            }
+        }
+
+        // Close modal on overlay click
+        document.getElementById('settingsModal')?.addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeSettingsModal();
+            }
+        });
+
+        // Close modal on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeSettingsModal();
+            }
+        });
+
+        // ===== Morning Coach Rendering =====
+
+        function renderMorningCoach() {
+            if (!data || typeof RecommendationEngine === 'undefined') return;
+
+            const goals = typeof GoalsManager !== 'undefined' ? GoalsManager.load().goals : {};
+            const history = typeof GoalsManager !== 'undefined' ? GoalsManager.loadHistory() : [];
+            const analysis = RecommendationEngine.analyzeToday(data, goals, history);
+
+            // Greeting
+            document.getElementById('coachGreeting').textContent = analysis.greeting.text;
+            document.getElementById('coachDate').textContent = analysis.greeting.date;
+
+            // Readiness
+            renderReadiness(analysis.readiness);
+
+            // Recovery Factors
+            renderRecoveryFactors(analysis.recoveryFactors);
+
+            // Workout Suggestion
+            renderWorkoutSuggestion(analysis.workout);
+
+            // Priority
+            renderPriority(analysis.priority);
+
+            // Last Night
+            renderLastNight(analysis.yesterday);
+
+            // This Week
+            renderThisWeek(analysis.thisWeek);
+        }
+
+        function renderReadiness(readiness) {
+            const circle = document.getElementById('readinessCircle');
+            circle.style.borderColor = readiness.color;
+            circle.style.color = readiness.color;
+
+            document.getElementById('readinessScoreValue').textContent = readiness.compositeScore;
+            document.getElementById('readinessLabel').textContent = readiness.label;
+            document.getElementById('readinessDescription').textContent = readiness.description;
+
+            // Render dots
+            let dotsHtml = '';
+            for (let i = 0; i < 5; i++) {
+                const active = i < readiness.dots ? 'active' : '';
+                dotsHtml += `<div class="readiness-dot ${active}"></div>`;
+            }
+            document.getElementById('readinessDots').innerHTML = dotsHtml;
+        }
+
+        function renderRecoveryFactors(factors) {
+            const container = document.getElementById('recoveryFactors');
+
+            const factorCards = [
+                {
+                    icon: getIcon('heart'),
+                    value: `${factors.hrv.current}ms`,
+                    label: 'HRV',
+                    status: factors.hrv.status,
+                    detail: `${factors.hrv.percentage}%`
+                },
+                {
+                    icon: getIcon('moon'),
+                    value: `${factors.deepSleep.value}m`,
+                    label: 'Deep Sleep',
+                    status: factors.deepSleep.status,
+                    detail: `${factors.deepSleep.percentage}%`
+                },
+                {
+                    icon: getIcon('bed'),
+                    value: factors.sleepScore.value,
+                    label: 'Sleep',
+                    status: factors.sleepScore.status,
+                    detail: factors.sleepScore.status.label
+                },
+                {
+                    icon: getIcon('activity'),
+                    value: factors.stress.summary !== 'unknown' ? factors.stress.summary : '--',
+                    label: 'Recovery',
+                    status: factors.stress.status,
+                    detail: factors.stress.available !== false ? '' : 'N/A'
+                }
+            ];
+
+            container.innerHTML = factorCards.map(f => `
+                <div class="recovery-factor ${f.status.level}">
+                    <div class="recovery-factor-icon">${f.icon}</div>
+                    <div class="recovery-factor-value">${f.value}</div>
+                    <div class="recovery-factor-label">${f.label}</div>
+                    <div class="recovery-factor-status" style="color: ${getStatusColor(f.status.level)}">${f.status.label}</div>
+                </div>
+            `).join('');
+        }
+
+        function renderWorkoutSuggestion(workout) {
+            const container = document.getElementById('workoutSuggestion');
+            container.innerHTML = `
+                <div class="workout-icon" style="background: ${workout.color}22; color: ${workout.color}">
+                    ${getIcon(workout.icon)}
+                </div>
+                <div class="workout-info">
+                    <div class="workout-label">${workout.label}</div>
+                    <div class="workout-duration">${workout.duration} suggested</div>
+                    <div class="workout-reason">${workout.reason}</div>
+                </div>
+            `;
+        }
+
+        function renderPriority(priority) {
+            const card = document.getElementById('priorityCard');
+            card.style.borderLeftColor = priority.color;
+
+            const iconContainer = document.getElementById('priorityIcon');
+            iconContainer.style.background = `${priority.color}22`;
+            iconContainer.style.color = priority.color;
+            iconContainer.innerHTML = getIcon(priority.icon);
+
+            document.getElementById('priorityTitle').textContent = priority.title;
+            document.getElementById('priorityAction').textContent = priority.action;
+            document.getElementById('priorityReason').textContent = priority.reason;
+        }
+
+        function renderLastNight(yesterday) {
+            document.getElementById('lastSleepScore').textContent = yesterday.sleepScore || '--';
+            document.getElementById('lastHrv').textContent = yesterday.hrv ? `${yesterday.hrv}ms` : '-- ms';
+            document.getElementById('lastDeep').textContent = yesterday.deep ? `${yesterday.deep}m` : '-- min';
+            document.getElementById('lastRem').textContent = yesterday.rem ? `${yesterday.rem}m` : '-- min';
+            document.getElementById('lastEfficiency').textContent = yesterday.efficiency ? `${yesterday.efficiency}%` : '--%';
+
+            // Breath rate from sleep stages
+            const lastSleep = data.sleepStages?.last7Days?.[data.sleepStages?.last7Days?.length - 1];
+            document.getElementById('lastBreath').textContent = lastSleep?.breathRate ?
+                `${lastSleep.breathRate}/min` : '--/min';
+        }
+
+        function renderThisWeek(week) {
+            document.getElementById('weekWorkouts').textContent = `${week.workouts}/${week.workoutGoal}`;
+            document.getElementById('weekSteps').textContent = week.avgSteps ? week.avgSteps.toLocaleString() : '--';
+            document.getElementById('weekActiveDays').textContent = `${week.activeDays}/7`;
+            document.getElementById('weekHrv').textContent = week.avgHrv ? `${week.avgHrv}ms` : '-- ms';
+            document.getElementById('weekDeep').textContent = week.avgDeepSleep ? `${week.avgDeepSleep}m` : '-- min';
+            document.getElementById('weekSleep').textContent = data.metrics?.sleepScore || '--';
+        }
+
+        function getStatusColor(level) {
+            const colors = {
+                good: '#10b981',
+                normal: '#9ca3af',
+                warning: '#f59e0b',
+                low: '#ef4444',
+                unknown: '#6b7280'
+            };
+            return colors[level] || colors.unknown;
+        }
+
+        function getIcon(name) {
+            const icons = {
+                'heart': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>',
+                'moon': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>',
+                'bed': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4v16M2 8h18a2 2 0 0 1 2 2v10M2 17h20M6 8v9"/></svg>',
+                'activity': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>',
+                'flame': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>',
+                'trending-up': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>',
+                'footprints': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 16v-2.38C4 11.5 2.97 10.5 3 8c.03-2.72 1.49-6 4.5-6C9.37 2 10 3.8 10 5.5c0 3.11-2 5.66-2 8.68V16a2 2 0 1 1-4 0Z"/><path d="M20 20v-2.38c0-2.12 1.03-3.12 1-5.62-.03-2.72-1.49-6-4.5-6C14.63 6 14 7.8 14 9.5c0 3.11 2 5.66 2 8.68V20a2 2 0 1 0 4 0Z"/></svg>',
+                'pause': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>',
+                'alert-octagon': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>',
+                'dumbbell': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6.5 6.5h11M6.5 17.5h11M4 12h16M12 4v16"/></svg>',
+                'check-circle': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>'
+            };
+            return icons[name] || icons['activity'];
+        }
+
+        // ===== Check-in Functions =====
+
+        let checkinState = {
+            workout: null,
+            workoutType: null,
+            duration: 0,
+            intensity: null,
+            energy: null,
+            tags: [],
+            notes: ''
+        };
+
+        function initCheckinUI() {
+            if (typeof CheckinManager === 'undefined') return;
+
+            // Update FAB state
+            updateFabState();
+
+            // Initialize modal content
+            initWorkoutTypes();
+            initIntensityButtons();
+            initEnergyRating();
+            initTags();
+
+            // Notes counter
+            const notesInput = document.getElementById('checkinNotes');
+            if (notesInput) {
+                notesInput.addEventListener('input', function() {
+                    document.getElementById('notesCount').textContent = this.value.length;
+                    checkinState.notes = this.value;
+                });
+            }
+        }
+
+        function updateFabState() {
+            if (typeof CheckinManager === 'undefined') return;
+
+            const fab = document.getElementById('checkinFab');
+            const hasCheckedIn = CheckinManager.hasCheckedInToday();
+
+            if (hasCheckedIn) {
+                fab.classList.remove('not-checked-in');
+                fab.classList.add('checked-in');
+                fab.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>';
+            } else {
+                fab.classList.add('not-checked-in');
+                fab.classList.remove('checked-in');
+                fab.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>';
+            }
+        }
+
+        function openCheckinModal() {
+            if (typeof CheckinManager === 'undefined') return;
+
+            // Set date
+            const today = new Date();
+            document.getElementById('checkinDate').textContent = today.toLocaleDateString('en-US', {
+                weekday: 'long',
+                month: 'long',
+                day: 'numeric'
+            });
+
+            // Load existing check-in if available
+            const existing = CheckinManager.getTodayCheckin();
+            if (existing) {
+                loadExistingCheckin(existing);
+            } else {
+                resetCheckinState();
+            }
+
+            // Update streak
+            const streaks = CheckinManager.getStreaks();
+            document.getElementById('streakValue').textContent = streaks.current;
+
+            document.getElementById('checkinModal').classList.add('active');
+        }
+
+        function closeCheckinModal() {
+            document.getElementById('checkinModal').classList.remove('active');
+        }
+
+        function loadExistingCheckin(checkin) {
+            checkinState = {
+                workout: checkin.workout?.completed || false,
+                workoutType: checkin.workout?.type || null,
+                duration: checkin.workout?.duration || 0,
+                intensity: checkin.workout?.intensity || null,
+                energy: checkin.energy,
+                tags: checkin.tags || [],
+                notes: checkin.notes || ''
+            };
+
+            // Update UI
+            setWorkout(checkinState.workout, true);
+
+            if (checkinState.workoutType) {
+                selectWorkoutType(checkinState.workoutType);
+            }
+            if (checkinState.duration) {
+                document.getElementById('workoutDuration').value = checkinState.duration;
+            }
+            if (checkinState.intensity) {
+                selectIntensity(checkinState.intensity);
+            }
+            if (checkinState.energy) {
+                selectEnergy(checkinState.energy);
+            }
+
+            // Tags
+            checkinState.tags.forEach(tag => {
+                const btn = document.querySelector(`[data-tag="${tag}"]`);
+                if (btn) btn.classList.add('selected');
+            });
+
+            // Notes
+            document.getElementById('checkinNotes').value = checkinState.notes;
+            document.getElementById('notesCount').textContent = checkinState.notes.length;
+        }
+
+        function resetCheckinState() {
+            checkinState = {
+                workout: null,
+                workoutType: null,
+                duration: 0,
+                intensity: null,
+                energy: null,
+                tags: [],
+                notes: ''
+            };
+
+            // Reset UI
+            document.getElementById('workoutYes').classList.remove('selected');
+            document.getElementById('workoutNo').classList.remove('selected');
+            document.getElementById('workoutDetails').classList.remove('visible');
+            document.getElementById('workoutDuration').value = '';
+            document.getElementById('checkinNotes').value = '';
+            document.getElementById('notesCount').textContent = '0';
+
+            // Reset selections
+            document.querySelectorAll('.workout-type-btn').forEach(b => b.classList.remove('selected'));
+            document.querySelectorAll('.intensity-btn').forEach(b => b.classList.remove('selected'));
+            document.querySelectorAll('.energy-btn').forEach(b => b.classList.remove('selected'));
+            document.querySelectorAll('.tag-btn').forEach(b => b.classList.remove('selected'));
+        }
+
+        function setWorkout(didWorkout, skipAnimation) {
+            checkinState.workout = didWorkout;
+
+            const yesBtn = document.getElementById('workoutYes');
+            const noBtn = document.getElementById('workoutNo');
+            const details = document.getElementById('workoutDetails');
+
+            yesBtn.classList.toggle('selected', didWorkout === true);
+            noBtn.classList.toggle('selected', didWorkout === false);
+            noBtn.classList.toggle('no', didWorkout === false);
+
+            if (didWorkout) {
+                details.classList.add('visible');
+            } else {
+                details.classList.remove('visible');
+            }
+        }
+
+        function initWorkoutTypes() {
+            if (typeof CheckinManager === 'undefined') return;
+
+            const container = document.getElementById('workoutTypes');
+            container.innerHTML = CheckinManager.WORKOUT_TYPES.map(type =>
+                `<button class="workout-type-btn" data-type="${type.id}" onclick="selectWorkoutType('${type.id}')">${type.label}</button>`
+            ).join('');
+        }
+
+        function selectWorkoutType(type) {
+            checkinState.workoutType = type;
+            document.querySelectorAll('.workout-type-btn').forEach(btn => {
+                btn.classList.toggle('selected', btn.dataset.type === type);
+            });
+        }
+
+        function initIntensityButtons() {
+            if (typeof CheckinManager === 'undefined') return;
+
+            const container = document.getElementById('intensityBtns');
+            container.innerHTML = CheckinManager.INTENSITIES.map(int =>
+                `<button class="intensity-btn" data-intensity="${int.id}" onclick="selectIntensity('${int.id}')">${int.label}</button>`
+            ).join('');
+        }
+
+        function selectIntensity(intensity) {
+            checkinState.intensity = intensity;
+            document.querySelectorAll('.intensity-btn').forEach(btn => {
+                btn.classList.toggle('selected', btn.dataset.intensity === intensity);
+            });
+        }
+
+        function initEnergyRating() {
+            const container = document.getElementById('energyRating');
+            const labels = ['Low', '', 'Mid', '', 'High'];
+
+            container.innerHTML = [1, 2, 3, 4, 5].map(val =>
+                `<button class="energy-btn" data-energy="${val}" onclick="selectEnergy(${val})">
+                    <div class="energy-value">${val}</div>
+                    <div class="energy-label">${labels[val-1]}</div>
+                </button>`
+            ).join('');
+        }
+
+        function selectEnergy(energy) {
+            checkinState.energy = energy;
+            document.querySelectorAll('.energy-btn').forEach(btn => {
+                btn.classList.toggle('selected', parseInt(btn.dataset.energy) === energy);
+            });
+        }
+
+        function initTags() {
+            if (typeof CheckinManager === 'undefined') return;
+
+            const container = document.getElementById('tagsGrid');
+            const tags = CheckinManager.TAGS;
+
+            const tagIcons = {
+                great_day: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>',
+                good_sleep: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>',
+                productive: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>',
+                rest_day: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 8h20"/></svg>',
+                travel: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>',
+                busy: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>',
+                sick: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>',
+                poor_sleep: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 15h8M9 9h.01M15 9h.01"/></svg>',
+                stress: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>',
+                alcohol: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 22h8M12 11v11M5 3l7 8 7-8"/></svg>',
+                meditation: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>',
+                cold_exposure: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="2" x2="12" y2="22"/><path d="M17 7l-5 5-5-5"/><path d="M17 17l-5-5-5 5"/></svg>'
+            };
+
+            container.innerHTML = Object.entries(tags).map(([key, tag]) =>
+                `<button class="tag-btn" data-tag="${key}" onclick="toggleTag('${key}')">
+                    ${tagIcons[key] || ''}
+                    ${tag.label}
+                </button>`
+            ).join('');
+        }
+
+        function toggleTag(tag) {
+            const index = checkinState.tags.indexOf(tag);
+            if (index >= 0) {
+                checkinState.tags.splice(index, 1);
+            } else {
+                checkinState.tags.push(tag);
+            }
+
+            const btn = document.querySelector(`[data-tag="${tag}"]`);
+            if (btn) btn.classList.toggle('selected');
+        }
+
+        function saveCheckin() {
+            if (typeof CheckinManager === 'undefined') return;
+
+            // Validate
+            if (checkinState.energy === null) {
+                alert('Please rate your energy level');
+                return;
+            }
+
+            // Build check-in object
+            const checkin = {
+                energy: checkinState.energy,
+                tags: checkinState.tags,
+                notes: checkinState.notes
+            };
+
+            if (checkinState.workout) {
+                checkin.workout = {
+                    completed: true,
+                    type: checkinState.workoutType,
+                    duration: parseInt(document.getElementById('workoutDuration').value) || 0,
+                    intensity: checkinState.intensity
+                };
+            } else if (checkinState.workout === false) {
+                checkin.workout = { completed: false };
+            }
+
+            // Save
+            CheckinManager.saveCheckin(checkin);
+
+            // Update UI
+            updateFabState();
+            closeCheckinModal();
+
+            // Show confirmation
+            console.log('Check-in saved:', checkin);
+        }
+
+        // Close check-in modal on overlay click
+        document.getElementById('checkinModal')?.addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeCheckinModal();
+            }
+        });
 
         function renderDashboard() {
             if (!data) return;
@@ -673,6 +4309,12 @@
             document.getElementById('sleepScore').textContent = m.sleepScore || '--';
             document.getElementById('readinessScore').textContent = m.readinessScore || '--';
             document.getElementById('activityScore').textContent = m.activityScore || '--';
+
+            // Sleep and Readiness card values
+            document.getElementById('sleepScoreValue').textContent = m.sleepScore || '--';
+            document.getElementById('sleepTrend').textContent = `7-day avg: ${m.sleepScore || '--'}`;
+            document.getElementById('readinessValue').textContent = m.readinessScore || '--';
+            document.getElementById('readinessTrend').textContent = `7-day avg: ${m.readinessScore || '--'}`;
 
             // Key metrics
             document.getElementById('avgSteps').textContent = (m.dailyAvgSteps || 0).toLocaleString();
@@ -701,6 +4343,33 @@
             document.getElementById('totalSteps').textContent = (m.totalSteps30Days || 0).toLocaleString();
             document.getElementById('totalCalories').textContent = (m.totalCalories30Days || 0).toLocaleString();
             document.getElementById('daysTracked').textContent = m.daysTracked || '--';
+
+            // HRV display
+            if (data.hrv && data.hrv.current) {
+                document.getElementById('hrvValue').textContent = `${data.hrv.current} ms`;
+                document.getElementById('hrvBaseline').textContent = `Baseline: ${data.hrv.baseline || '--'} ms`;
+
+                const hrvStatusEl = document.getElementById('hrvStatus');
+                hrvStatusEl.textContent = data.hrv.status === 'low' ? 'Below baseline' :
+                                          data.hrv.status === 'high' ? 'Above baseline' : 'Normal';
+                hrvStatusEl.className = `metric-status ${data.hrv.status || 'normal'}`;
+            }
+
+            // Sleep stages display
+            if (data.sleepStages && data.sleepStages.last7Days?.length > 0) {
+                const latest = data.sleepStages.last7Days[data.sleepStages.last7Days.length - 1];
+                document.getElementById('deepSleepValue').textContent = `${latest.deep || '--'} min`;
+                document.getElementById('deepSleepAvg').textContent = `Avg: ${data.sleepStages.avgDeep || '--'} min`;
+            }
+
+            // Add goal progress bars to metric cards
+            if (typeof GoalsManager !== 'undefined') {
+                const metrics = getCurrentMetrics();
+                renderMetricProgress('stepsCard', 'dailySteps', metrics.dailySteps);
+                renderMetricProgress('sleepCard', 'sleepScore', metrics.sleepScore);
+                renderMetricProgress('hrvCard', 'hrvBaseline', metrics.hrvBaseline);
+                renderMetricProgress('deepSleepCard', 'deepSleepMinutes', metrics.deepSleepMinutes);
+            }
 
             // Render alerts
             renderAlerts();
@@ -888,7 +4557,783 @@
             });
         }
 
+        // ==================== NUTRITION UI ====================
+
+        function initNutritionUI() {
+            if (typeof NutritionManager === 'undefined') return;
+
+            // Render initial state
+            renderNutritionUI();
+
+            // Water buttons
+            document.getElementById('waterMinus')?.addEventListener('click', () => {
+                NutritionManager.removeWater(1);
+                renderNutritionUI();
+            });
+
+            document.getElementById('waterPlus1')?.addEventListener('click', () => {
+                NutritionManager.addWater(1);
+                renderNutritionUI();
+            });
+
+            document.getElementById('waterPlus2')?.addEventListener('click', () => {
+                NutritionManager.addWater(2);
+                renderNutritionUI();
+            });
+
+            // Protein buttons
+            document.querySelectorAll('.protein-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const rating = btn.dataset.rating;
+                    NutritionManager.setProteinRating(rating);
+                    renderNutritionUI();
+                });
+            });
+
+            // Food quality buttons
+            document.querySelectorAll('.quality-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const quality = parseInt(btn.dataset.quality);
+                    NutritionManager.setFoodQuality(quality);
+                    renderNutritionUI();
+                });
+            });
+
+            // Meal log button
+            document.getElementById('logMealBtn')?.addEventListener('click', openMealLogModal);
+        }
+
+        function renderNutritionUI() {
+            if (typeof NutritionManager === 'undefined') return;
+
+            const summary = NutritionManager.getTodaySummary();
+
+            // Water
+            const waterProgress = summary.water;
+            document.getElementById('waterCount').textContent = waterProgress.current;
+            document.getElementById('waterGoal').textContent = waterProgress.goal;
+            document.getElementById('waterPercentage').textContent = `${waterProgress.percentage}%`;
+            document.getElementById('waterProgressFill').style.width = `${waterProgress.percentage}%`;
+
+            if (waterProgress.remaining > 0) {
+                document.getElementById('waterRemaining').textContent =
+                    `${waterProgress.remaining} glass${waterProgress.remaining !== 1 ? 'es' : ''} to go`;
+            } else {
+                document.getElementById('waterRemaining').textContent = 'Goal reached!';
+                document.getElementById('waterRemaining').style.color = '#10b981';
+            }
+
+            // Protein
+            const protein = summary.protein;
+            document.querySelectorAll('.protein-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.rating === protein.rating);
+            });
+
+            if (protein.grams) {
+                document.getElementById('proteinEstimate').textContent = `~${protein.grams}g`;
+            } else {
+                document.getElementById('proteinEstimate').textContent = '--';
+            }
+
+            // Food Quality
+            const foodQuality = summary.foodQuality;
+            document.querySelectorAll('.quality-btn').forEach(btn => {
+                btn.classList.toggle('active', parseInt(btn.dataset.quality) === foodQuality);
+            });
+
+            if (foodQuality) {
+                document.getElementById('qualityScore').textContent = `${foodQuality}/5`;
+                const qualityLabels = {
+                    1: 'Poor - Mostly processed foods',
+                    2: 'Below Average - More junk than whole foods',
+                    3: 'Balanced - Mix of both',
+                    4: 'Good - Mostly whole foods',
+                    5: 'Excellent - All nutritious whole foods'
+                };
+                document.getElementById('qualityDescription').textContent = qualityLabels[foodQuality] || '';
+            } else {
+                document.getElementById('qualityScore').textContent = '--';
+                document.getElementById('qualityDescription').textContent = 'Rate your food choices';
+            }
+
+            // Meals
+            const meals = summary.meals;
+            document.getElementById('mealCount').textContent =
+                `${meals.length} meal${meals.length !== 1 ? 's' : ''} logged today`;
+
+            const mealsList = document.getElementById('mealsList');
+            mealsList.innerHTML = '';
+
+            meals.forEach(meal => {
+                const mealItem = document.createElement('div');
+                mealItem.className = 'meal-item';
+                mealItem.innerHTML = `
+                    <span class="meal-item-time">${meal.time}</span>
+                    <span class="meal-item-desc">${meal.description || meal.type || 'Meal'}</span>
+                    ${meal.aiAnalysis?.totals?.protein ?
+                        `<span class="meal-item-protein">${meal.aiAnalysis.totals.protein}g protein</span>` : ''}
+                `;
+                mealsList.appendChild(mealItem);
+            });
+        }
+
+        function openMealLogModal() {
+            // Create a simple meal log modal
+            const existingModal = document.getElementById('mealLogModal');
+            if (existingModal) {
+                existingModal.classList.add('active');
+                return;
+            }
+
+            const overlay = document.createElement('div');
+            overlay.id = 'mealLogModal';
+            overlay.className = 'modal-overlay';
+            overlay.innerHTML = `
+                <div class="modal" style="max-width: 500px;">
+                    <div class="modal-header">
+                        <h2 class="modal-title">Log Meal</h2>
+                        <button class="modal-close" id="mealModalClose">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                                <line x1="18" y1="6" x2="6" y2="18"/>
+                                <line x1="6" y1="6" x2="18" y2="18"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label class="form-label">Meal Type</label>
+                            <div class="meal-type-buttons">
+                                <button class="meal-type-btn" data-type="breakfast">Breakfast</button>
+                                <button class="meal-type-btn" data-type="lunch">Lunch</button>
+                                <button class="meal-type-btn" data-type="dinner">Dinner</button>
+                                <button class="meal-type-btn" data-type="snack">Snack</button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Description</label>
+                            <textarea id="mealDescription" class="form-textarea" rows="3"
+                                placeholder="e.g., Grilled chicken with rice and vegetables"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Estimated Protein (optional)</label>
+                            <div style="display: flex; align-items: center; gap: 8px;">
+                                <input type="number" id="mealProtein" class="form-input"
+                                    style="width: 100px;" placeholder="0" min="0" max="200">
+                                <span style="color: var(--text-secondary);">grams</span>
+                            </div>
+                        </div>
+                        <div class="form-group" style="margin-top: 16px;">
+                            <label class="form-label">Photo (optional)</label>
+                            <div class="photo-upload-area" id="photoUploadArea">
+                                <input type="file" id="mealPhotoInput" accept="image/*" style="display: none;">
+                                <div id="photoPreview" style="display: none;">
+                                    <img id="photoPreviewImg" style="max-width: 100%; max-height: 200px; border-radius: 8px;">
+                                </div>
+                                <button class="meal-log-btn" id="selectPhotoBtn" style="margin-top: 0;">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                                        <circle cx="8.5" cy="8.5" r="1.5"/>
+                                        <polyline points="21 15 16 10 5 21"/>
+                                    </svg>
+                                    <span>Add Photo</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" id="mealModalCancel">Cancel</button>
+                        <button class="btn btn-primary" id="mealModalSave">Save Meal</button>
+                    </div>
+                </div>
+            `;
+
+            document.body.appendChild(overlay);
+
+            // Add event listeners (using addEventListener instead of onclick)
+            document.getElementById('mealModalClose').addEventListener('click', closeMealLogModal);
+            document.getElementById('mealModalCancel').addEventListener('click', closeMealLogModal);
+            document.getElementById('mealModalSave').addEventListener('click', saveMealLog);
+
+            // Close on overlay click
+            overlay.addEventListener('click', (e) => {
+                if (e.target === overlay) {
+                    closeMealLogModal();
+                }
+            });
+
+            // Add styles for new elements
+            const style = document.createElement('style');
+            style.textContent = `
+                .meal-type-buttons {
+                    display: flex;
+                    gap: 8px;
+                    flex-wrap: wrap;
+                }
+                .meal-type-btn {
+                    padding: 10px 16px;
+                    border: 1px solid var(--border);
+                    border-radius: 8px;
+                    background: var(--bg-elevated);
+                    color: var(--text-primary);
+                    cursor: pointer;
+                    transition: all 0.2s;
+                }
+                .meal-type-btn:hover {
+                    border-color: #8b5cf6;
+                }
+                .meal-type-btn.selected {
+                    background: rgba(139, 92, 246, 0.15);
+                    border-color: #8b5cf6;
+                    color: #8b5cf6;
+                }
+                .form-textarea {
+                    width: 100%;
+                    padding: 12px;
+                    border: 1px solid var(--border);
+                    border-radius: 8px;
+                    background: var(--bg-elevated);
+                    color: var(--text-primary);
+                    font-family: inherit;
+                    font-size: 14px;
+                    resize: vertical;
+                }
+                .form-textarea:focus {
+                    outline: none;
+                    border-color: var(--accent);
+                }
+                .photo-upload-area {
+                    border: 2px dashed var(--border);
+                    border-radius: 10px;
+                    padding: 16px;
+                    text-align: center;
+                }
+            `;
+            document.head.appendChild(style);
+
+            // Event listeners
+            document.querySelectorAll('.meal-type-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.querySelectorAll('.meal-type-btn').forEach(b => b.classList.remove('selected'));
+                    btn.classList.add('selected');
+                });
+            });
+
+            document.getElementById('selectPhotoBtn').addEventListener('click', () => {
+                document.getElementById('mealPhotoInput').click();
+            });
+
+            document.getElementById('mealPhotoInput').addEventListener('change', (e) => {
+                const file = e.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = (e) => {
+                        document.getElementById('photoPreviewImg').src = e.target.result;
+                        document.getElementById('photoPreview').style.display = 'block';
+                        document.getElementById('selectPhotoBtn').innerHTML = `
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span>Photo Added</span>
+                        `;
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+
+            overlay.classList.add('active');
+        }
+
+        function closeMealLogModal() {
+            const modal = document.getElementById('mealLogModal');
+            if (modal) {
+                modal.classList.remove('active');
+            }
+        }
+
+        function saveMealLog() {
+            const mealType = document.querySelector('.meal-type-btn.selected')?.dataset.type || 'meal';
+            const description = document.getElementById('mealDescription').value;
+            const protein = parseInt(document.getElementById('mealProtein').value) || 0;
+            const photoImg = document.getElementById('photoPreviewImg');
+            const photo = photoImg?.src || null;
+
+            if (!description && !photo) {
+                alert('Please add a description or photo');
+                return;
+            }
+
+            const meal = {
+                type: mealType,
+                description: description,
+                photo: photo,
+                aiAnalysis: protein > 0 ? {
+                    totals: { protein: protein }
+                } : null
+            };
+
+            NutritionManager.addMeal(meal);
+            closeMealLogModal();
+            renderNutritionUI();
+
+            // Reset form
+            document.querySelectorAll('.meal-type-btn').forEach(b => b.classList.remove('selected'));
+            document.getElementById('mealDescription').value = '';
+            document.getElementById('mealProtein').value = '';
+            document.getElementById('photoPreview').style.display = 'none';
+            document.getElementById('selectPhotoBtn').innerHTML = `
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                    <circle cx="8.5" cy="8.5" r="1.5"/>
+                    <polyline points="21 15 16 10 5 21"/>
+                </svg>
+                <span>Add Photo</span>
+            `;
+        }
+
+        // ==================== TRENDS & ANALYTICS UI ====================
+
+        let selectedTimeRange = '7d';
+        let historicalData = [];
+
+        function initTrendsUI() {
+            if (typeof AnalyticsEngine === 'undefined') return;
+
+            // Generate historical data for demo (in production, this would come from stored data)
+            historicalData = AnalyticsEngine.generateHistoricalData(data, 90);
+
+            // Time range selector
+            document.querySelectorAll('.range-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.querySelectorAll('.range-btn').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    selectedTimeRange = btn.dataset.range;
+                    renderTrendsUI();
+                });
+            });
+
+            // Export button
+            document.getElementById('exportDataBtn')?.addEventListener('click', exportHealthData);
+
+            // Initial render
+            renderTrendsUI();
+        }
+
+        function renderTrendsUI() {
+            if (typeof AnalyticsEngine === 'undefined' || historicalData.length === 0) return;
+
+            renderComparison();
+            renderPersonalRecords();
+            renderMilestones();
+        }
+
+        function renderComparison() {
+            const days = parseInt(selectedTimeRange) || 7;
+            const labels = AnalyticsEngine.getComparisonLabel(selectedTimeRange);
+
+            document.getElementById('currentPeriodLabel').textContent = labels.current;
+            document.getElementById('previousPeriodLabel').textContent = labels.previous;
+
+            // Split data into current and previous periods
+            const currentPeriod = historicalData.slice(-days);
+            const previousPeriod = historicalData.slice(-days * 2, -days);
+
+            const comparison = AnalyticsEngine.comparePeriods(
+                currentPeriod,
+                previousPeriod,
+                ['steps', 'sleepScore', 'hrv', 'workout']
+            );
+
+            // Steps
+            updateComparisonMetric('Steps', comparison.steps);
+
+            // Sleep
+            updateComparisonMetric('Sleep', comparison.sleepScore);
+
+            // HRV
+            updateComparisonMetric('Hrv', comparison.hrv);
+
+            // Workouts - count instead of average
+            const currentWorkouts = currentPeriod.filter(d => d.workout).length;
+            const previousWorkouts = previousPeriod.filter(d => d.workout).length;
+            const workoutDelta = currentWorkouts - previousWorkouts;
+
+            document.getElementById('compWorkoutsCurrent').textContent = currentWorkouts;
+            document.getElementById('compWorkoutsPrevious').textContent = previousWorkouts;
+
+            const workoutDeltaEl = document.getElementById('compWorkoutsDelta');
+            workoutDeltaEl.textContent = `${workoutDelta >= 0 ? '+' : ''}${workoutDelta}`;
+            workoutDeltaEl.className = `comparison-delta ${workoutDelta > 0 ? 'positive' : workoutDelta < 0 ? 'negative' : 'neutral'}`;
+        }
+
+        function updateComparisonMetric(name, data) {
+            if (!data) return;
+
+            const currentEl = document.getElementById(`comp${name}Current`);
+            const previousEl = document.getElementById(`comp${name}Previous`);
+            const deltaEl = document.getElementById(`comp${name}Delta`);
+
+            if (currentEl) currentEl.textContent = data.current.toLocaleString();
+            if (previousEl) previousEl.textContent = data.previous.toLocaleString();
+
+            if (deltaEl) {
+                const sign = data.delta >= 0 ? '+' : '';
+                deltaEl.textContent = `${sign}${data.percentChange}%`;
+                deltaEl.className = `comparison-delta ${data.improved ? 'positive' : data.delta === 0 ? 'neutral' : 'negative'}`;
+            }
+        }
+
+        function renderPersonalRecords() {
+            const prs = AnalyticsEngine.findPersonalRecords(historicalData);
+            const grid = document.getElementById('recordsGrid');
+            if (!grid) return;
+
+            // Select which PRs to show
+            const prKeys = ['maxSteps', 'maxHrv', 'maxSleepScore', 'maxDeepSleep'];
+            let html = '';
+
+            prKeys.forEach(key => {
+                const pr = prs[key];
+                if (!pr || pr.value === null) return;
+
+                const dateStr = pr.date ? new Date(pr.date).toLocaleDateString('en-US', {
+                    month: 'short',
+                    day: 'numeric',
+                    year: 'numeric'
+                }) : '';
+
+                // Get current value for comparison
+                let currentValue = null;
+                if (key === 'maxSteps') currentValue = data.today?.steps;
+                else if (key === 'maxHrv') currentValue = data.hrv?.current;
+                else if (key === 'maxSleepScore') currentValue = data.metrics?.sleepScore;
+                else if (key === 'maxDeepSleep') currentValue = data.sleepStages?.lastNight?.deep;
+
+                const percentage = currentValue && pr.value ? Math.round((currentValue / pr.value) * 100) : null;
+
+                html += `
+                    <div class="record-card">
+                        <div class="record-icon">
+                            ${getRecordIcon(pr.icon)}
+                        </div>
+                        <div class="record-label">${pr.label}</div>
+                        <div class="record-value">
+                            ${pr.value.toLocaleString()}
+                            ${pr.unit ? `<span class="record-unit">${pr.unit}</span>` : ''}
+                        </div>
+                        ${dateStr ? `<div class="record-date">${dateStr}</div>` : ''}
+                        ${percentage ? `<div class="record-current">Today: ${percentage}% of PR</div>` : ''}
+                    </div>
+                `;
+            });
+
+            grid.innerHTML = html || '<div style="color: var(--text-muted); padding: 20px;">No records yet</div>';
+        }
+
+        function getRecordIcon(iconName) {
+            const icons = {
+                'footprints': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M4 16v-2.38C4 11.5 2.97 10.5 3 8c.03-2.72 1.49-6 4.5-6C9.37 2 10 3.8 10 5.5c0 3.11-2 5.66-2 8.68V16a2 2 0 1 1-4 0zm16 0v-2.38c0-2.12 1.03-3.12 1-5.62-.03-2.72-1.49-6-4.5-6C14.63 2 14 3.8 14 5.5c0 3.11 2 5.66 2 8.68V16a2 2 0 1 0 4 0z"/></svg>',
+                'flame': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>',
+                'heart': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>',
+                'moon': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>',
+                'zap': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>'
+            };
+            return icons[iconName] || icons['heart'];
+        }
+
+        function renderMilestones() {
+            const grid = document.getElementById('milestonesGrid');
+            if (!grid || typeof AnalyticsEngine === 'undefined') return;
+
+            // Calculate totals from historical data
+            const totalSteps = historicalData.reduce((sum, d) => sum + (d.steps || 0), 0);
+            const totalWorkouts = historicalData.filter(d => d.workout).length;
+            const currentStreak = data.metrics?.currentStreak || 1;
+
+            const milestones = AnalyticsEngine.calculateMilestones(totalSteps, totalWorkouts, currentStreak);
+
+            let html = '';
+
+            // Steps Milestone
+            html += renderMilestoneCard('steps', 'Total Steps', milestones.steps, 'steps');
+
+            // Workouts Milestone
+            html += renderMilestoneCard('workouts', 'Total Workouts', milestones.workouts, 'workouts');
+
+            // Streak Milestone
+            html += renderMilestoneCard('streak', 'Current Streak', milestones.streak, 'days');
+
+            grid.innerHTML = html;
+        }
+
+        function renderMilestoneCard(type, title, milestone, unit) {
+            const achieved = milestone.achieved || [];
+            const next = milestone.next;
+            const progress = milestone.progress || 0;
+            const current = milestone.current || 0;
+            const remaining = milestone.remaining || 0;
+
+            let badgesHtml = '';
+
+            // Show last 2 achieved
+            achieved.slice(-2).forEach(m => {
+                badgesHtml += `<span class="milestone-badge earned">${AnalyticsEngine.formatMilestone(m)}</span>`;
+            });
+
+            // Show next milestone
+            if (next) {
+                badgesHtml += `<span class="milestone-badge next">${AnalyticsEngine.formatMilestone(next)}</span>`;
+            }
+
+            const icons = {
+                'steps': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M4 16v-2.38C4 11.5 2.97 10.5 3 8c.03-2.72 1.49-6 4.5-6C9.37 2 10 3.8 10 5.5c0 3.11-2 5.66-2 8.68V16a2 2 0 1 1-4 0z"/></svg>',
+                'workouts': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>',
+                'streak': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>'
+            };
+
+            return `
+                <div class="milestone-card">
+                    <div class="milestone-header">
+                        <div class="milestone-icon ${type}">${icons[type]}</div>
+                        <div class="milestone-title">${title}</div>
+                    </div>
+                    <div class="milestone-achieved">${badgesHtml}</div>
+                    <div class="milestone-progress">
+                        <div class="milestone-progress-bar">
+                            <div class="milestone-progress-fill" style="width: ${Math.min(100, progress)}%"></div>
+                        </div>
+                        <div class="milestone-progress-text">
+                            <span class="milestone-current">${current.toLocaleString()} ${unit}</span>
+                            ${next ? ` - ${remaining.toLocaleString()} to next` : ' - Maxed out!'}
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function exportHealthData() {
+            if (typeof AnalyticsEngine === 'undefined' || historicalData.length === 0) {
+                alert('No data to export');
+                return;
+            }
+
+            const today = new Date().toISOString().split('T')[0];
+            AnalyticsEngine.exportToCSV(historicalData, `health_data_${today}.csv`);
+        }
+
         // Load data on page load
+        // ===== AI Insights =====
+
+        async function initAIInsights() {
+            if (typeof InsightsEngine === 'undefined') {
+                console.warn('InsightsEngine not loaded');
+                return;
+            }
+
+            // Load daily insight
+            loadDailyInsight();
+
+            // Load prediction
+            loadPrediction();
+
+            // Render correlations
+            renderCorrelations();
+
+            // Set up ask AI input handler
+            const askInput = document.getElementById('askAiInput');
+            if (askInput) {
+                askInput.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter') {
+                        askAI();
+                    }
+                });
+            }
+        }
+
+        async function loadDailyInsight(forceRefresh = false) {
+            const textEl = document.getElementById('insightText');
+            const actionTextEl = document.getElementById('insightActionText');
+            const datapointEl = document.getElementById('insightDatapoint');
+
+            try {
+                console.log('Loading daily insight, forceRefresh:', forceRefresh);
+                const insight = await InsightsEngine.generateDailyInsight(forceRefresh);
+                console.log('Received insight:', insight);
+
+                if (insight) {
+                    textEl.textContent = insight.insight || 'No insight available';
+                    actionTextEl.textContent = insight.action || 'Keep tracking your health data';
+                    datapointEl.textContent = insight.dataPoint
+                        ? `Key data: ${insight.dataPoint}`
+                        : 'Based on your health data';
+
+                    // Update icon based on category
+                    updateInsightIcon(insight.category);
+                }
+            } catch (error) {
+                console.error('Failed to load daily insight:', error);
+                textEl.textContent = 'Unable to generate insight at this time.';
+                actionTextEl.textContent = 'Check your API configuration';
+            }
+        }
+
+        function updateInsightIcon(category) {
+            const iconEl = document.querySelector('#dailyInsightCard .insight-icon');
+            if (!iconEl) return;
+
+            const icons = {
+                sleep: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>',
+                activity: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>',
+                recovery: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>',
+                nutrition: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>',
+                consistency: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>'
+            };
+
+            iconEl.innerHTML = icons[category] || icons.activity;
+        }
+
+        async function refreshDailyInsight() {
+            const btn = document.getElementById('refreshInsightBtn');
+            btn.classList.add('loading');
+            btn.disabled = true;
+
+            try {
+                await loadDailyInsight(true); // Force refresh, don't use cache
+            } finally {
+                btn.classList.remove('loading');
+                btn.disabled = false;
+            }
+        }
+
+        async function loadPrediction() {
+            const scoreEl = document.getElementById('predictionScore');
+            const confidenceEl = document.getElementById('confidenceText');
+            const confidenceDotEl = document.getElementById('confidenceDot');
+            const recEl = document.getElementById('predictionRecommendation');
+            const tipEl = document.getElementById('predictionTip');
+            const warningEl = document.getElementById('predictionWarning');
+            const warningTextEl = document.getElementById('predictionWarningText');
+
+            try {
+                const prediction = await InsightsEngine.generatePrediction();
+
+                if (prediction) {
+                    scoreEl.textContent = prediction.predictedReadiness || '--';
+
+                    const confidence = prediction.confidence || 'medium';
+                    confidenceEl.textContent = confidence.charAt(0).toUpperCase() + confidence.slice(1) + ' confidence';
+                    confidenceDotEl.className = 'confidence-dot ' + confidence;
+
+                    if (recEl) {
+                        recEl.innerHTML = `<strong>Recommendation:</strong> <span>${prediction.recommendation || 'Moderate activity'}</span>`;
+                    }
+                    if (tipEl) {
+                        tipEl.innerHTML = `<strong>Tip:</strong> <span>${prediction.tip || 'Stay consistent'}</span>`;
+                    }
+
+                    if (prediction.warning) {
+                        warningEl.style.display = 'flex';
+                        warningTextEl.textContent = prediction.warning;
+                    } else {
+                        warningEl.style.display = 'none';
+                    }
+                }
+            } catch (error) {
+                console.error('Failed to load prediction:', error);
+                scoreEl.textContent = '--';
+                confidenceEl.textContent = 'Unable to predict';
+            }
+        }
+
+        function renderCorrelations() {
+            const grid = document.getElementById('correlationsGrid');
+            if (!grid) return;
+
+            const allData = InsightsEngine.collectAllData();
+            const correlations = InsightsEngine.findCorrelations(allData);
+
+            if (correlations.length === 0) {
+                grid.innerHTML = '<div style="color: var(--text-muted); padding: 16px;">No significant correlations found yet. Keep tracking for more insights.</div>';
+                return;
+            }
+
+            grid.innerHTML = correlations.slice(0, 4).map(corr => {
+                const iconClass = corr.priority === 'high' ? 'warning' :
+                                  corr.interpretation?.includes('better') || corr.interpretation?.includes('higher') || corr.interpretation?.includes('above') || corr.interpretation?.includes('excellent') ? 'positive' : 'negative';
+
+                const icon = getCorrelationIcon(corr.type);
+
+                return `
+                    <div class="correlation-card">
+                        <div class="correlation-header">
+                            <div class="correlation-icon ${iconClass}">
+                                ${icon}
+                            </div>
+                            <div class="correlation-title">${corr.factor1} vs ${corr.factor2}</div>
+                        </div>
+                        <div class="correlation-text">${corr.interpretation}</div>
+                        ${corr.recommendation ? `<div class="correlation-recommendation">${corr.recommendation}</div>` : ''}
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function getCorrelationIcon(type) {
+            const icons = {
+                hrv_baseline: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>',
+                sleep_readiness: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>',
+                deep_sleep: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>',
+                stress_recovery: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>',
+                activity_low: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>',
+                hydration_low: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>'
+            };
+            return icons[type] || '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>';
+        }
+
+        function setAskQuestion(question) {
+            document.getElementById('askAiInput').value = question;
+            askAI();
+        }
+
+        async function askAI() {
+            const input = document.getElementById('askAiInput');
+            const responseEl = document.getElementById('askAiResponse');
+            const responseTextEl = document.getElementById('askAiResponseText');
+            const btn = document.getElementById('askAiBtn');
+
+            const question = input.value.trim();
+            if (!question) return;
+
+            // Show loading state
+            responseEl.classList.add('visible');
+            responseTextEl.innerHTML = `
+                <div class="ask-ai-response-loading">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M23 4v6h-6M1 20v-6h6"/>
+                        <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+                    </svg>
+                    Analyzing your data...
+                </div>
+            `;
+            btn.disabled = true;
+
+            try {
+                const response = await InsightsEngine.askQuestion(question);
+
+                if (response.text) {
+                    responseTextEl.textContent = response.text;
+                } else if (response.isError) {
+                    responseTextEl.textContent = 'Unable to analyze your data. Please ensure the API is configured correctly.';
+                } else {
+                    responseTextEl.textContent = JSON.stringify(response, null, 2);
+                }
+            } catch (error) {
+                console.error('Failed to ask AI:', error);
+                responseTextEl.textContent = 'Sorry, something went wrong. Please try again.';
+            } finally {
+                btn.disabled = false;
+            }
+        }
+
         loadData();
     </script>
 </body>

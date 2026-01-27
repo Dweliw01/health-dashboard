@@ -11,7 +11,7 @@ const path = require('path');
 const OURA_TOKEN = process.env.OURA_ACCESS_TOKEN;
 
 if (!OURA_TOKEN) {
-  console.error('❌ OURA_ACCESS_TOKEN not found in environment');
+  console.error('[ERROR] OURA_ACCESS_TOKEN not found in environment');
   process.exit(1);
 }
 
@@ -24,9 +24,9 @@ const formatDate = (date) => date.toISOString().split('T')[0];
 const start = formatDate(startDate);
 const end = formatDate(endDate);
 
-console.log(`📅 Fetching Oura data from ${start} to ${end}`);
+console.log(`[OURA] Date range: ${start} to ${end}`);
 
-// API endpoints
+// API endpoints - Core data
 const endpoints = {
   daily_activity: `https://api.ouraring.com/v2/usercollection/daily_activity?start_date=${start}&end_date=${end}`,
   daily_sleep: `https://api.ouraring.com/v2/usercollection/daily_sleep?start_date=${start}&end_date=${end}`,
@@ -36,6 +36,14 @@ const endpoints = {
   workout: `https://api.ouraring.com/v2/usercollection/workout?start_date=${start}&end_date=${end}`,
   session: `https://api.ouraring.com/v2/usercollection/session?start_date=${start}&end_date=${end}`,
   tag: `https://api.ouraring.com/v2/usercollection/tag?start_date=${start}&end_date=${end}`
+};
+
+// Extended endpoints - May require specific Oura subscription/ring generation
+const extendedEndpoints = {
+  daily_spo2: `https://api.ouraring.com/v2/usercollection/daily_spo2?start_date=${start}&end_date=${end}`,
+  daily_stress: `https://api.ouraring.com/v2/usercollection/daily_stress?start_date=${start}&end_date=${end}`,
+  daily_resilience: `https://api.ouraring.com/v2/usercollection/daily_resilience?start_date=${start}&end_date=${end}`,
+  vo2_max: `https://api.ouraring.com/v2/usercollection/vo2_max?start_date=${start}&end_date=${end}`
 };
 
 // Fetch data from Oura API
@@ -74,19 +82,35 @@ async function main() {
   const results = {
     sync_date: formatDate(new Date()),
     date_range: { start, end },
-    data: {}
+    data: {},
+    extended: {}
   };
 
-  console.log('🔄 Fetching data from Oura API...');
+  console.log('[SYNC] Fetching data from Oura API...\n');
 
+  // Fetch core endpoints
+  console.log('Core Endpoints:');
   for (const [key, url] of Object.entries(endpoints)) {
     try {
-      console.log(`  → Fetching ${key}...`);
+      process.stdout.write(`  ${key}... `);
       results.data[key] = await fetchOuraData(url);
-      console.log(`  ✅ ${key}: ${results.data[key].data?.length || 0} records`);
+      console.log(`OK (${results.data[key].data?.length || 0} records)`);
     } catch (err) {
-      console.error(`  ❌ ${key} failed: ${err.message}`);
+      console.log(`FAILED: ${err.message}`);
       results.data[key] = { data: [], error: err.message };
+    }
+  }
+
+  // Fetch extended endpoints (graceful failure)
+  console.log('\nExtended Endpoints:');
+  for (const [key, url] of Object.entries(extendedEndpoints)) {
+    try {
+      process.stdout.write(`  ${key}... `);
+      results.extended[key] = await fetchOuraData(url);
+      console.log(`OK (${results.extended[key].data?.length || 0} records)`);
+    } catch (err) {
+      console.log(`UNAVAILABLE: ${err.message}`);
+      results.extended[key] = { data: [], unavailable: true, error: err.message };
     }
   }
 
@@ -100,12 +124,18 @@ async function main() {
   const filepath = path.join(fitnessDataDir, filename);
 
   fs.writeFileSync(filepath, JSON.stringify(results, null, 2));
-  console.log(`\n✅ Data saved to: ${filepath}`);
-  console.log(`📊 Total endpoints: ${Object.keys(endpoints).length}`);
-  console.log(`🔥 Ready to process with: node process-oura-data.js`);
+
+  const coreCount = Object.keys(endpoints).length;
+  const extendedCount = Object.keys(extendedEndpoints).length;
+  const extendedAvailable = Object.values(results.extended).filter(e => !e.unavailable).length;
+
+  console.log(`\n[COMPLETE] Data saved to: ${filepath}`);
+  console.log(`  Core endpoints: ${coreCount}`);
+  console.log(`  Extended endpoints: ${extendedAvailable}/${extendedCount} available`);
+  console.log(`\nRun: node process-oura-data.js`);
 }
 
 main().catch(err => {
-  console.error('💥 Fatal error:', err.message);
+  console.error('[FATAL]', err.message);
   process.exit(1);
 });

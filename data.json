@@ -11,142 +11,33 @@
     "avgCalories": 475
   },
   "last7Days": {
-    "labels": [
-      "Mon",
-      "Tue",
-      "Wed",
-      "Thu",
-      "Fri",
-      "Sat",
-      "Mon"
-    ],
-    "values": [
-      0,
-      4857,
-      14299,
-      0,
-      0,
-      0,
-      11118
-    ]
+    "labels": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+    "values": [0, 4857, 14299, 0, 0, 0, 11118]
   },
   "heartRateTrends": {
-    "labels": [
-      "Sun",
-      "Mon",
-      "Wed",
-      "Thu",
-      "Sun",
-      "Mon",
-      "Tue"
-    ],
-    "values": [
-      86,
-      100,
-      98,
-      89,
-      106,
-      97,
-      103
-    ],
-    "max": [
-      122,
-      116,
-      169,
-      109,
-      119,
-      155,
-      160
-    ],
-    "min": [
-      49,
-      65,
-      50,
-      57,
-      93,
-      53,
-      52
-    ]
+    "labels": ["Sun", "Mon", "Wed", "Thu", "Sun", "Mon", "Tue"],
+    "values": [86, 100, 98, 89, 106, 97, 103],
+    "max": [122, 116, 169, 109, 119, 155, 160],
+    "min": [49, 65, 50, 57, 93, 53, 52]
   },
   "workoutDistribution": {
-    "labels": [
-      "Walking",
-      "Hiking"
-    ],
-    "values": [
-      2,
-      2
-    ]
+    "labels": ["Walking", "Hiking"],
+    "values": [2, 2]
   },
   "weeklyComparison": {
-    "labels": [
-      "Week 1",
-      "Week 2",
-      "Week 3",
-      "This Week"
-    ],
-    "steps": [
-      10086,
-      14404,
-      10619,
-      4325
-    ],
-    "workouts": [
-      0,
-      3,
-      1,
-      0
-    ],
-    "calories": [
-      644,
-      1043,
-      723,
-      475
-    ]
+    "labels": ["Week 1", "Week 2", "Week 3", "This Week"],
+    "steps": [10086, 14404, 10619, 4325],
+    "workouts": [0, 3, 1, 0],
+    "calories": [644, 1043, 723, 475]
   },
   "projection": {
-    "labels": [
-      "Now",
-      "Day 10",
-      "Day 20",
-      "Day 30"
-    ],
-    "actual": [
-      4325,
-      null,
-      null,
-      null
-    ],
-    "projected": [
-      4325,
-      3049,
-      2411,
-      1773
-    ]
+    "labels": ["Now", "Day 10", "Day 20", "Day 30"],
+    "actual": [4325, null, null, null],
+    "projected": [4325, 3049, 2411, 1773]
   },
   "timeOfDay": {
-    "labels": [
-      "6am",
-      "8am",
-      "10am",
-      "12pm",
-      "2pm",
-      "4pm",
-      "6pm",
-      "8pm",
-      "10pm"
-    ],
-    "values": [
-      40,
-      36,
-      34,
-      36,
-      46,
-      42,
-      24,
-      22,
-      22
-    ]
+    "labels": ["6am", "8am", "10am", "12pm", "2pm", "4pm", "6pm", "8pm", "10pm"],
+    "values": [40, 36, 34, 36, 46, 42, 24, 22, 22]
   },
   "metrics": {
     "dailyAvgSteps": 4325,
@@ -168,6 +59,91 @@
     "totalCalories30Days": 20488,
     "daysTracked": 29
   },
+  "hrv": {
+    "current": 42,
+    "baseline": 48,
+    "avg7Days": 45,
+    "avg30Days": 48,
+    "trend7Days": [38, 42, 45, 41, 48, 44, 42],
+    "trend30Days": [45, 48, 42, 50, 47, 44, 49, 51, 46, 43, 48, 52, 45, 41, 47, 50, 48, 44, 46, 49, 52, 47, 45, 48, 43, 46, 44, 42, 45, 42],
+    "percentileVsBaseline": 88,
+    "nightlyAvg": 44,
+    "morningReading": 42,
+    "status": "normal"
+  },
+  "sleepStages": {
+    "lastNight": {
+      "deep": 78,
+      "rem": 95,
+      "light": 245,
+      "awake": 22,
+      "total": 440,
+      "efficiency": 85,
+      "latency": 12,
+      "timing": {
+        "bedtime": "23:15",
+        "wakeTime": "06:35",
+        "midpoint": "02:55"
+      }
+    },
+    "last7Days": [
+      { "deep": 75, "rem": 92, "light": 240, "efficiency": 82, "total": 420, "breathRate": 14.5 },
+      { "deep": 85, "rem": 85, "light": 235, "efficiency": 85, "total": 435, "breathRate": 14.2 },
+      { "deep": 72, "rem": 98, "light": 250, "efficiency": 80, "total": 425, "breathRate": 15.1 },
+      { "deep": 90, "rem": 82, "light": 230, "efficiency": 88, "total": 445, "breathRate": 13.8 },
+      { "deep": 88, "rem": 95, "light": 238, "efficiency": 86, "total": 440, "breathRate": 14.0 },
+      { "deep": 78, "rem": 88, "light": 242, "efficiency": 84, "total": 430, "breathRate": 14.3 },
+      { "deep": 78, "rem": 95, "light": 245, "efficiency": 85, "total": 440, "breathRate": 14.2 }
+    ],
+    "avgDeep": 81,
+    "avgRem": 91,
+    "avgEfficiency": 84,
+    "avgTotal": 434,
+    "avgBreathRate": 14.3
+  },
+  "stress": {
+    "current": {
+      "high": 145,
+      "medium": 280,
+      "low": 420,
+      "recovery": 595
+    },
+    "today": {
+      "stressMinutes": 145,
+      "recoveryMinutes": 595
+    },
+    "dayScore": 62,
+    "recoveryRatio": 0.41,
+    "avg7Days": {
+      "high": 160,
+      "recovery": 540,
+      "dayScore": 58
+    }
+  },
+  "spo2": {
+    "current": {
+      "average": 96.5,
+      "min": 94,
+      "max": 98
+    },
+    "breathing": {
+      "disturbanceIndex": 2.3,
+      "avgBreathingRate": 14.2
+    }
+  },
+  "readinessBreakdown": {
+    "overall": 74,
+    "contributors": {
+      "sleepBalance": 78,
+      "previousDayActivity": 65,
+      "activityBalance": 72,
+      "bodyTemperature": 85,
+      "restingHeartRate": 82,
+      "hrvBalance": 68,
+      "recoveryIndex": 75
+    },
+    "trend7Days": [68, 72, 75, 71, 78, 76, 74]
+  },
   "insights": {
     "performance": {
       "weekChange": -59,
@@ -177,7 +153,8 @@
     "recovery": {
       "readinessScore": 74,
       "restingHR": 46,
-      "sleepScore": 66
+      "sleepScore": 66,
+      "hrvStatus": "normal"
     }
   },
   "alerts": [
