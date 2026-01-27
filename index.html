@@ -753,31 +753,45 @@
         // Load data dynamically
         let data = null;
         
-        // Fetch data from JSON
-        fetch('./data.json')
-            .then(res => res.json())
-            .then(loadedData => {
-                data = loadedData;
-                updateDashboard();
-                initCharts();
-            })
-            .catch(err => {
-                console.error('Failed to load data:', err);
-                // Fallback to sample data
-                data = {
-                    today: { steps: 0, avgHeartRate: 70, calories: 0 },
-                    thisWeek: { workouts: 0, avgSteps: 0, avgCalories: 0 },
-                    last7Days: { labels: [], values: [] },
-                    heartRateTrends: { labels: [], values: [] },
-                    workoutDistribution: { labels: [], values: [] },
-                    weeklyComparison: { labels: [], steps: [], workouts: [], calories: [] },
-                    projection: { labels: [], actual: [], projected: [] },
-                    timeOfDay: { labels: [], values: [] },
-                    metrics: {}
-                };
-                updateDashboard();
-                initCharts();
-            });
+        // Fetch data from JSON (try multiple paths)
+        async function loadData() {
+            const paths = ['/data.json', './data.json', 'data.json'];
+            
+            for (const path of paths) {
+                try {
+                    console.log('Trying to fetch data from:', path);
+                    const res = await fetch(path);
+                    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                    data = await res.json();
+                    console.log('✅ Data loaded successfully from:', path);
+                    console.log('Data:', data);
+                    updateDashboard();
+                    initCharts();
+                    return;
+                } catch (err) {
+                    console.warn('Failed to load from', path, ':', err.message);
+                }
+            }
+            
+            // If all failed, use fallback
+            console.error('All data fetch attempts failed, using fallback');
+            alert('⚠️ Could not load data.json - check console for details');
+            data = {
+                today: { steps: 0, avgHeartRate: 70, calories: 0 },
+                thisWeek: { workouts: 0, avgSteps: 0, avgCalories: 0 },
+                last7Days: { labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'], values: [0,0,0,0,0,0,0] },
+                heartRateTrends: { labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'], values: [70,70,70,70,70,70,70] },
+                workoutDistribution: { labels: [], values: [] },
+                weeklyComparison: { labels: [], steps: [], workouts: [], calories: [] },
+                projection: { labels: [], actual: [], projected: [] },
+                timeOfDay: { labels: [], values: [] },
+                metrics: {}
+            };
+            updateDashboard();
+            initCharts();
+        }
+        
+        loadData();
         
         function updateDashboard() {
             if (!data || !data.metrics) return;
