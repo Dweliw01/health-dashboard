@@ -20,11 +20,11 @@
             padding: 40px;
             border-radius: 20px;
             box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            max-width: 500px;
+            max-width: 600px;
             width: 100%;
         }
         h1 {
-            font-size: 24px;
+            font-size: 28px;
             margin-bottom: 10px;
             color: #333;
         }
@@ -33,6 +33,52 @@
             margin-bottom: 30px;
             font-size: 14px;
         }
+        .step {
+            background: #f8f9ff;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+        .step-number {
+            background: #667eea;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .step-title {
+            font-weight: 600;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+            margin-top: 8px;
+            font-family: monospace;
+        }
+        .help-text {
+            font-size: 12px;
+            color: #666;
+            margin-top: 5px;
+        }
+        .help-link {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .help-link:hover {
+            text-decoration: underline;
+        }
         .upload-zone {
             border: 3px dashed #667eea;
             border-radius: 15px;
@@ -40,7 +86,7 @@
             text-align: center;
             cursor: pointer;
             transition: all 0.3s;
-            margin-bottom: 20px;
+            margin-top: 15px;
         }
         .upload-zone:hover {
             border-color: #764ba2;
@@ -49,6 +95,10 @@
         .upload-zone.dragover {
             background: #f0f3ff;
             border-color: #764ba2;
+        }
+        .upload-zone.disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
         }
         .upload-icon {
             font-size: 48px;
@@ -68,8 +118,9 @@
             font-weight: 600;
             cursor: pointer;
             transition: transform 0.2s;
+            margin-top: 20px;
         }
-        button:hover {
+        button:hover:not(:disabled) {
             transform: translateY(-2px);
         }
         button:disabled {
@@ -101,18 +152,19 @@
         }
         .file-info {
             margin-top: 15px;
-            padding: 10px;
-            background: #f8f9fa;
+            padding: 15px;
+            background: #e8f5e9;
             border-radius: 8px;
             font-size: 14px;
-            color: #666;
+            color: #2e7d32;
             display: none;
+            border-left: 4px solid #4caf50;
         }
         .instructions {
-            margin-top: 30px;
-            padding: 20px;
             background: #f8f9ff;
             border-radius: 10px;
+            padding: 20px;
+            margin-top: 30px;
             font-size: 13px;
             color: #555;
         }
@@ -127,36 +179,74 @@
         .instructions li {
             margin-bottom: 8px;
         }
+        .warning {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            color: #856404;
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>🍎 Upload Apple Health Data</h1>
-        <p class="subtitle">Export from Health app → Upload here → Dashboard updates automatically</p>
+        <h1>🍎 Upload Apple Health Export</h1>
+        <p class="subtitle">Simple 3-step process to sync your Health data</p>
         
-        <div class="upload-zone" id="dropZone">
-            <div class="upload-icon">📱</div>
-            <p><strong>Drop your export.xml here</strong></p>
-            <p style="font-size: 14px; color: #999; margin-top: 8px;">or click to browse</p>
+        <!-- Step 1: GitHub Token -->
+        <div class="step">
+            <div class="step-title">
+                <span class="step-number">1</span>
+                <span>Get GitHub Token (one-time setup)</span>
+            </div>
+            <p class="help-text">
+                <a href="https://github.com/settings/tokens/new?scopes=repo&description=Health+Dashboard+Upload" target="_blank" class="help-link">→ Click here to create token</a>
+            </p>
+            <input type="password" id="githubToken" placeholder="Paste your GitHub token here (ghp_...)">
+            <div class="warning">
+                ⚠️ Token is stored in your browser only. Never shared.
+            </div>
         </div>
-        
-        <input type="file" id="fileInput" accept=".xml,.json,.zip">
-        
-        <div class="file-info" id="fileInfo"></div>
-        
-        <button id="uploadBtn" disabled>Upload to Dashboard</button>
-        
-        <div class="status" id="status"></div>
-        
-        <div class="instructions">
-            <h3>📋 How to Export from iPhone:</h3>
-            <ol>
-                <li>Open <strong>Health</strong> app</li>
-                <li>Tap your <strong>profile picture</strong> (top right)</li>
-                <li>Scroll down → <strong>Export All Health Data</strong></li>
-                <li>Wait for export (5-10 min)</li>
-                <li>Unzip and upload <code>export.xml</code> here</li>
-            </ol>
+
+        <!-- Step 2: Export from iPhone -->
+        <div class="step">
+            <div class="step-title">
+                <span class="step-number">2</span>
+                <span>Export from iPhone Health App</span>
+            </div>
+            <div class="instructions">
+                <ol>
+                    <li>Open <strong>Health</strong> app on iPhone</li>
+                    <li>Tap your <strong>profile picture</strong> (top right)</li>
+                    <li>Scroll down → <strong>Export All Health Data</strong></li>
+                    <li>Wait 5-10 minutes for export</li>
+                    <li>AirDrop or email <strong>export.zip</strong> to yourself</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- Step 3: Upload -->
+        <div class="step">
+            <div class="step-title">
+                <span class="step-number">3</span>
+                <span>Upload export.zip</span>
+            </div>
+            
+            <div class="upload-zone" id="dropZone">
+                <div class="upload-icon">📦</div>
+                <p><strong>Drop export.zip here</strong></p>
+                <p style="font-size: 14px; color: #999; margin-top: 8px;">or click to browse</p>
+            </div>
+            
+            <input type="file" id="fileInput" accept=".zip">
+            
+            <div class="file-info" id="fileInfo"></div>
+            
+            <button id="uploadBtn" disabled>🚀 Upload to Dashboard</button>
+            
+            <div class="status" id="status"></div>
         </div>
     </div>
 
@@ -166,15 +256,36 @@
         const uploadBtn = document.getElementById('uploadBtn');
         const status = document.getElementById('status');
         const fileInfo = document.getElementById('fileInfo');
+        const tokenInput = document.getElementById('githubToken');
         let selectedFile = null;
 
+        // Load saved token
+        const savedToken = localStorage.getItem('githubToken');
+        if (savedToken) {
+            tokenInput.value = savedToken;
+        }
+
+        // Save token on input
+        tokenInput.addEventListener('input', () => {
+            localStorage.setItem('githubToken', tokenInput.value);
+            updateUploadButton();
+        });
+
         // Click to browse
-        dropZone.addEventListener('click', () => fileInput.click());
+        dropZone.addEventListener('click', () => {
+            if (tokenInput.value) {
+                fileInput.click();
+            } else {
+                alert('Please enter your GitHub token first!');
+            }
+        });
 
         // Drag and drop
         dropZone.addEventListener('dragover', (e) => {
             e.preventDefault();
-            dropZone.classList.add('dragover');
+            if (tokenInput.value) {
+                dropZone.classList.add('dragover');
+            }
         });
 
         dropZone.addEventListener('dragleave', () => {
@@ -184,6 +295,10 @@
         dropZone.addEventListener('drop', (e) => {
             e.preventDefault();
             dropZone.classList.remove('dragover');
+            if (!tokenInput.value) {
+                alert('Please enter your GitHub token first!');
+                return;
+            }
             const file = e.dataTransfer.files[0];
             handleFile(file);
         });
@@ -196,62 +311,92 @@
         function handleFile(file) {
             if (!file) return;
             
+            if (!file.name.endsWith('.zip')) {
+                alert('Please select a .zip file (export.zip from Health app)');
+                return;
+            }
+            
             selectedFile = file;
-            fileInfo.textContent = `📄 ${file.name} (${(file.size / 1024 / 1024).toFixed(2)} MB)`;
+            fileInfo.innerHTML = `
+                ✅ <strong>${file.name}</strong><br>
+                Size: ${(file.size / 1024 / 1024).toFixed(2)} MB
+            `;
             fileInfo.style.display = 'block';
-            uploadBtn.disabled = false;
+            updateUploadButton();
             status.style.display = 'none';
         }
 
-        uploadBtn.addEventListener('click', async () => {
-            if (!selectedFile) return;
+        function updateUploadButton() {
+            uploadBtn.disabled = !selectedFile || !tokenInput.value;
+        }
 
-            // Show loading status
+        uploadBtn.addEventListener('click', async () => {
+            if (!selectedFile || !tokenInput.value) return;
+
             status.className = 'status loading';
-            status.textContent = '⏳ Processing and uploading...';
+            status.textContent = '⏳ Uploading to GitHub...';
             uploadBtn.disabled = true;
 
             try {
-                // Read file
-                const text = await selectedFile.text();
+                // Read file as base64
+                const base64 = await fileToBase64(selectedFile);
                 
-                // Convert to JSON (simplified - in production you'd parse XML properly)
-                const healthData = {
-                    uploadDate: new Date().toISOString(),
-                    filename: selectedFile.name,
-                    size: selectedFile.size,
-                    rawData: text.substring(0, 10000) // First 10KB for demo
-                };
-
-                // Upload to GitHub API
+                // Upload to GitHub
                 const date = new Date().toISOString().split('T')[0];
-                const content = btoa(JSON.stringify(healthData, null, 2));
+                const filename = `apple_health_${date}.zip`;
                 
-                const response = await fetch(`https://api.github.com/repos/Dweliw01/health-dashboard/contents/fitness-data/apple_health_${date}.json`, {
+                const response = await fetch(`https://api.github.com/repos/Dweliw01/health-dashboard/contents/fitness-data/${filename}`, {
                     method: 'PUT',
                     headers: {
-                        'Authorization': 'Bearer YOUR_GITHUB_TOKEN',
+                        'Authorization': `Bearer ${tokenInput.value}`,
+                        'Accept': 'application/vnd.github+json',
                         'Content-Type': 'application/json'
                     },
                     body: JSON.stringify({
-                        message: `📱 Apple Health upload: ${date}`,
-                        content: content,
+                        message: `📱 Apple Health export: ${date}`,
+                        content: base64,
                         branch: 'main'
                     })
                 });
 
                 if (response.ok) {
                     status.className = 'status success';
-                    status.textContent = '✅ Uploaded successfully! Dashboard will update in ~1 minute.';
+                    status.innerHTML = '✅ <strong>Upload successful!</strong><br>Your dashboard will update in ~1-2 minutes.<br>Check: <a href="https://github.com/Dweliw01/health-dashboard/actions" target="_blank" style="color: #155724;">GitHub Actions</a>';
                 } else {
-                    throw new Error('Upload failed');
+                    const error = await response.json();
+                    throw new Error(error.message || 'Upload failed');
                 }
             } catch (error) {
                 status.className = 'status error';
-                status.textContent = '❌ Upload failed. Please use iOS Shortcut method instead.';
+                status.innerHTML = `❌ Upload failed: ${error.message}<br><small>Check that your GitHub token is valid and has 'repo' scope.</small>`;
                 console.error(error);
             } finally {
                 uploadBtn.disabled = false;
+            }
+        });
+
+        function fileToBase64(file) {
+            return new Promise((resolve, reject) => {
+                const reader = new FileReader();
+                reader.readAsDataURL(file);
+                reader.onload = () => {
+                    // Remove data:application/zip;base64, prefix
+                    const base64 = reader.result.split(',')[1];
+                    resolve(base64);
+                };
+                reader.onerror = reject;
+            });
+        }
+
+        // Update disabled state on load
+        if (!tokenInput.value) {
+            dropZone.classList.add('disabled');
+        }
+        tokenInput.addEventListener('input', () => {
+            if (tokenInput.value) {
+                dropZone.classList.remove('disabled');
+            } else {
+                dropZone.classList.add('disabled');
             }
         });
     </script>

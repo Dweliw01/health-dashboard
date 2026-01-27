@@ -30,9 +30,24 @@ jobs:
         run: |
           node fetch-oura-data.js
       
+      - name: Process Apple Health data (if available)
+        run: |
+          if ls fitness-data/apple_health_*.zip 1> /dev/null 2>&1; then
+            echo "📱 Apple Health export found, processing..."
+            node parse-apple-export.js
+          else
+            echo "⏭️  No Apple Health export found, skipping..."
+          fi
+      
       - name: Process health data
         run: |
           node process-oura-data.js
+          
+          # Merge with Apple Health data if available
+          if ls fitness-data/apple_health_*.json 1> /dev/null 2>&1; then
+            echo "🔄 Merging Apple Health data..."
+            node process-apple-health.js
+          fi
       
       - name: Commit and push if data changed
         run: |
