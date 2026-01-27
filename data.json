@@ -1,16 +1,17 @@
 {
   "today": {
     "steps": 11118,
-    "avgHeartRate": 73,
+    "avgHeartRate": 46,
     "calories": 639
   },
   "thisWeek": {
     "workouts": 0,
-    "avgSteps": 5046,
-    "avgCalories": 555
+    "avgSteps": 4325,
+    "avgCalories": 475
   },
   "last7Days": {
     "labels": [
+      "Tue",
       "Wed",
       "Thu",
       "Fri",
@@ -19,6 +20,7 @@
       "Tue"
     ],
     "values": [
+      0,
       4857,
       14299,
       0,
@@ -29,6 +31,7 @@
   },
   "heartRateTrends": {
     "labels": [
+      "Tue",
       "Wed",
       "Thu",
       "Fri",
@@ -37,6 +40,7 @@
       "Tue"
     ],
     "values": [
+      99,
       97,
       94,
       98,
@@ -67,10 +71,10 @@
       "Week 4 (Current)"
     ],
     "steps": [
-      4390,
-      4693,
-      4895,
-      5046
+      8428,
+      9009,
+      9396,
+      4325
     ],
     "workouts": [
       3,
@@ -79,10 +83,10 @@
       0
     ],
     "calories": [
-      472,
-      511,
-      533,
-      555
+      404,
+      437,
+      456,
+      475
     ]
   },
   "projection": {
@@ -93,16 +97,16 @@
       "Day 30"
     ],
     "actual": [
-      5046,
+      4325,
       null,
       null,
       null
     ],
     "projected": [
-      5046,
-      5147,
-      5197,
-      5248
+      4325,
+      4412,
+      4455,
+      4498
     ]
   },
   "timeOfDay": {
@@ -130,31 +134,31 @@
     ]
   },
   "metrics": {
-    "dailyAvgSteps": 5046,
-    "avgHeartRate": 73,
+    "dailyAvgSteps": 4325,
+    "avgHeartRate": 46,
     "activeDays": 2,
     "totalWorkouts": 0,
     "bestDaySteps": 14299,
     "bestDayLabel": "Wed",
-    "caloriesPerDay": 555,
+    "caloriesPerDay": 475,
     "currentStreak": 1,
     "longestStreak": 12,
-    "fitnessScore": 73,
-    "sleepScore": 72,
-    "readinessScore": 77,
+    "fitnessScore": 74,
+    "sleepScore": 66,
+    "readinessScore": 74,
     "consistency": 29,
-    "totalSteps30Days": 30274,
-    "totalCalories30Days": 3327
+    "totalSteps30Days": 280933,
+    "totalCalories30Days": 20488
   },
   "insights": {
     "performance": {
-      "weekChange": 3,
-      "monthChange": 0
+      "weekChange": -54,
+      "monthChange": -55
     },
     "recovery": {
-      "readinessScore": 77,
-      "restingHR": 73,
-      "sleepScore": 72
+      "readinessScore": 74,
+      "restingHR": 46,
+      "sleepScore": 66
     }
   }
 }
