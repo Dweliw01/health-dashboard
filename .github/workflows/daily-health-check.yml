@@ -2,8 +2,8 @@ name: Daily Health Check-In
 
 on:
   schedule:
-    # Run every day at 8:00 AM UTC (4am ET, 1am PT)
-    - cron: '0 8 * * *'
+    # Run every day at 9:30 AM UTC (4:30 AM EST, 1:30 AM PST)
+    - cron: '30 9 * * *'
   workflow_dispatch:  # Manual trigger
 
 permissions:
