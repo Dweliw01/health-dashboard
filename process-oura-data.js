@@ -94,18 +94,39 @@ const last7Labels = last7Days.map(d => {
   return daysOfWeek[date.getDay()];
 });
 
-// Time of day analysis (simulate peak hours based on MET data)
-const timeOfDaySteps = [
-  500,  // 6am
-  3200, // 8am (morning peak)
-  5800, // 10am
-  2100, // 12pm
-  1200, // 2pm
-  2400, // 4pm
-  4200, // 6pm (evening peak)
-  1500, // 8pm
-  200   // 10pm
-];
+// Calculate real time of day activity from MET and activity class data
+const timeOfDayActivity = [0, 0, 0, 0, 0, 0, 0, 0, 0]; // 6am, 8am, 10am, 12pm, 2pm, 4pm, 6pm, 8pm, 10pm
+const hourIndices = [6, 8, 10, 12, 14, 16, 18, 20, 22]; // Hour of day
+const activityCounts = [0, 0, 0, 0, 0, 0, 0, 0, 0]; // Count days with data
+
+last7Days.forEach(day => {
+  if (day.met && day.met.items && day.met.items.length > 0) {
+    // MET data is hourly intervals starting from timestamp
+    hourIndices.forEach((targetHour, i) => {
+      // Get MET value for this hour (items array is 24 hours)
+      const metValue = day.met.items[targetHour] || 0;
+      
+      // Also check activity class (high activity = 4, medium = 2-3, low = 1)
+      let activityBoost = 1;
+      if (day.class_5_min) {
+        // class_5_min has 12 intervals per hour (5-min each)
+        const intervalIndex = targetHour * 12;
+        const hourClass = day.class_5_min.substring(intervalIndex, intervalIndex + 12);
+        const avgClass = hourClass.split('').reduce((sum, c) => sum + parseInt(c || 0), 0) / 12;
+        activityBoost = Math.max(1, avgClass);
+      }
+      
+      // Combine MET and activity class for better accuracy
+      timeOfDayActivity[i] += (metValue * activityBoost * 100);
+      activityCounts[i]++;
+    });
+  }
+});
+
+// Average across days with data
+const avgTimeOfDay = timeOfDayActivity.map((val, i) => 
+  activityCounts[i] > 0 ? Math.round(val / activityCounts[i]) : 0
+);
 
 // Generate output data
 const dashboardData = {
@@ -175,7 +196,7 @@ const dashboardData = {
   },
   timeOfDay: {
     labels: ["6am", "8am", "10am", "12pm", "2pm", "4pm", "6pm", "8pm", "10pm"],
-    values: timeOfDaySteps
+    values: avgTimeOfDay
   },
   metrics: {
     dailyAvgSteps: avgSteps7Days,
