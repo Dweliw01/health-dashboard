@@ -36,11 +36,6 @@
             background: 
                 radial-gradient(circle at 20% 50%, rgba(0,245,255,0.15) 0%, transparent 50%),
                 radial-gradient(circle at 80% 80%, rgba(255,0,255,0.15) 0%, transparent 50%);
-            animation: shift 15s ease infinite;
-        }
-        
-        @keyframes shift {
-            0%, 100% { opacity: 0.5; } 50% { opacity: 0.8; }
         }
         
         .container { max-width: 1800px; margin: 0 auto; padding: 30px 20px; }
@@ -220,6 +215,11 @@
             border-radius: 6px;
         }
         
+        .chart-wrapper {
+            position: relative;
+            height: 250px;
+        }
+        
         /* Activity Heatmap */
         .heatmap {
             display: grid;
@@ -311,7 +311,6 @@
         
         .ring-progress {
             stroke: var(--accent);
-            transition: stroke-dashoffset 1s ease;
         }
         
         .ring-label {
@@ -377,6 +376,10 @@
             .bottom-grid {
                 grid-template-columns: 1fr;
             }
+            
+            .chart-wrapper {
+                height: 200px;
+            }
         }
         
         #fileInput { display: none; }
@@ -403,37 +406,37 @@
         <div class="metrics-grid">
             <div class="metric-card">
                 <div class="metric-label">Daily Avg Steps</div>
-                <div class="metric-value" id="avg-steps">21,151</div>
+                <div class="metric-value">21,151</div>
                 <div class="metric-change">↑ 112% of goal</div>
             </div>
             
             <div class="metric-card">
                 <div class="metric-label">Avg Heart Rate</div>
-                <div class="metric-value" id="avg-hr">84</div>
+                <div class="metric-value">84</div>
                 <div class="metric-change">Excellent fitness</div>
             </div>
             
             <div class="metric-card">
                 <div class="metric-label">Active Days</div>
-                <div class="metric-value" id="active-days">7/7</div>
+                <div class="metric-value">7/7</div>
                 <div class="metric-change">Perfect week!</div>
             </div>
             
             <div class="metric-card">
                 <div class="metric-label">Total Workouts</div>
-                <div class="metric-value" id="total-workouts">27</div>
+                <div class="metric-value">27</div>
                 <div class="metric-change">Last 30 days</div>
             </div>
             
             <div class="metric-card">
                 <div class="metric-label">Best Day</div>
-                <div class="metric-value" id="best-day">36.4k</div>
+                <div class="metric-value">36.4k</div>
                 <div class="metric-change">Wednesday</div>
             </div>
             
             <div class="metric-card">
                 <div class="metric-label">Calories/Day</div>
-                <div class="metric-value" id="avg-cal">1,363</div>
+                <div class="metric-value">1,363</div>
                 <div class="metric-change">↑ 273% of goal</div>
             </div>
         </div>
@@ -467,7 +470,9 @@
                     <div class="chart-title">📈 Daily Steps Trend</div>
                     <div class="chart-period">Last 7 days</div>
                 </div>
-                <canvas id="stepsChart" height="80"></canvas>
+                <div class="chart-wrapper">
+                    <canvas id="stepsChart"></canvas>
+                </div>
             </div>
             
             <!-- Activity Score -->
@@ -510,7 +515,9 @@
                     <div class="chart-title">❤️ Heart Rate Trends</div>
                     <div class="chart-period">7 days</div>
                 </div>
-                <canvas id="heartChart" height="120"></canvas>
+                <div class="chart-wrapper">
+                    <canvas id="heartChart"></canvas>
+                </div>
                 <div class="stats-list" style="margin-top: 20px;">
                     <div class="stat-row">
                         <span class="stat-label">Resting HR</span>
@@ -533,7 +540,9 @@
                     <div class="chart-title">💪 Workout Breakdown</div>
                     <div class="chart-period">Last 30 days</div>
                 </div>
-                <canvas id="workoutChart" height="120"></canvas>
+                <div class="chart-wrapper">
+                    <canvas id="workoutChart"></canvas>
+                </div>
                 <div class="stats-list" style="margin-top: 20px;">
                     <div class="stat-row">
                         <span class="stat-label">Strength Training</span>
@@ -587,7 +596,7 @@
     </div>
     
     <script>
-        // Sample data embedded
+        // Data
         const data = {
             today: { steps: 23128, avgHeartRate: 88, calories: 751 },
             thisWeek: { workouts: 0 },
@@ -605,109 +614,140 @@
             }
         };
         
-        // Generate heatmap
-        const heatmap = document.getElementById('heatmap');
-        data.last7Days.labels.forEach((day, i) => {
-            const val = data.last7Days.values[i];
-            const percent = (val / 40000) * 100;
-            const color = percent > 80 ? 'rgba(0,255,136,0.3)' : 
-                         percent > 60 ? 'rgba(0,245,255,0.3)' : 
-                         percent > 40 ? 'rgba(255,107,53,0.3)' : 
-                         'rgba(255,60,120,0.2)';
-            heatmap.innerHTML += `
-                <div class="heatmap-day" style="background: ${color}; border: 1px solid ${color.replace('0.3', '0.5')}">
-                    <div class="heatmap-label">${day}</div>
-                    <div class="heatmap-value">${(val/1000).toFixed(1)}k</div>
-                </div>
-            `;
-        });
+        // Initialize charts only once
+        let chartsInitialized = false;
         
-        // Steps Chart
-        new Chart(document.getElementById('stepsChart'), {
-            type: 'line',
-            data: {
-                labels: data.last7Days.labels,
-                datasets: [{
-                    data: data.last7Days.values,
-                    borderColor: '#00f5ff',
-                    backgroundColor: 'rgba(0,245,255,0.1)',
-                    fill: true,
-                    tension: 0.4,
-                    borderWidth: 3,
-                    pointRadius: 6,
-                    pointBackgroundColor: '#00f5ff',
-                    pointBorderWidth: 0
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                animation: false,
-                plugins: { legend: { display: false } },
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        grid: { color: 'rgba(255,255,255,0.05)' },
-                        ticks: { color: '#6b6b7f', callback: v => (v/1000).toFixed(0) + 'k' }
+        function initCharts() {
+            if (chartsInitialized) return;
+            chartsInitialized = true;
+            
+            // Generate heatmap
+            const heatmap = document.getElementById('heatmap');
+            data.last7Days.labels.forEach((day, i) => {
+                const val = data.last7Days.values[i];
+                const percent = (val / 40000) * 100;
+                const color = percent > 80 ? 'rgba(0,255,136,0.3)' : 
+                             percent > 60 ? 'rgba(0,245,255,0.3)' : 
+                             percent > 40 ? 'rgba(255,107,53,0.3)' : 
+                             'rgba(255,60,120,0.2)';
+                heatmap.innerHTML += `
+                    <div class="heatmap-day" style="background: ${color}; border: 1px solid ${color.replace('0.3', '0.5')}">
+                        <div class="heatmap-label">${day}</div>
+                        <div class="heatmap-value">${(val/1000).toFixed(1)}k</div>
+                    </div>
+                `;
+            });
+            
+            // Steps Chart
+            const stepsCtx = document.getElementById('stepsChart').getContext('2d');
+            new Chart(stepsCtx, {
+                type: 'line',
+                data: {
+                    labels: data.last7Days.labels,
+                    datasets: [{
+                        data: data.last7Days.values,
+                        borderColor: '#00f5ff',
+                        backgroundColor: 'rgba(0,245,255,0.1)',
+                        fill: true,
+                        tension: 0.4,
+                        borderWidth: 3,
+                        pointRadius: 6,
+                        pointBackgroundColor: '#00f5ff',
+                        pointBorderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    animation: {
+                        duration: 0
                     },
-                    x: { grid: { display: false }, ticks: { color: '#6b6b7f' } }
-                }
-            }
-        });
-        
-        // Heart Rate Chart
-        new Chart(document.getElementById('heartChart'), {
-            type: 'line',
-            data: {
-                labels: data.heartRateTrends.labels,
-                datasets: [{
-                    data: data.heartRateTrends.values,
-                    borderColor: '#ff3c78',
-                    backgroundColor: 'rgba(255,60,120,0.1)',
-                    fill: true,
-                    tension: 0.4,
-                    borderWidth: 3,
-                    pointRadius: 6,
-                    pointBackgroundColor: '#ff3c78',
-                    pointBorderWidth: 0
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                animation: false,
-                plugins: { legend: { display: false } },
-                scales: {
-                    y: {
-                        beginAtZero: false,
-                        grid: { color: 'rgba(255,255,255,0.05)' },
-                        ticks: { color: '#6b6b7f' }
+                    plugins: {
+                        legend: { display: false }
                     },
-                    x: { grid: { display: false }, ticks: { color: '#6b6b7f' } }
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 40000,
+                            grid: { color: 'rgba(255,255,255,0.05)' },
+                            ticks: { color: '#6b6b7f', callback: v => (v/1000).toFixed(0) + 'k' }
+                        },
+                        x: { grid: { display: false }, ticks: { color: '#6b6b7f' } }
+                    }
                 }
-            }
-        });
+            });
+            
+            // Heart Rate Chart
+            const heartCtx = document.getElementById('heartChart').getContext('2d');
+            new Chart(heartCtx, {
+                type: 'line',
+                data: {
+                    labels: data.heartRateTrends.labels,
+                    datasets: [{
+                        data: data.heartRateTrends.values,
+                        borderColor: '#ff3c78',
+                        backgroundColor: 'rgba(255,60,120,0.1)',
+                        fill: true,
+                        tension: 0.4,
+                        borderWidth: 3,
+                        pointRadius: 6,
+                        pointBackgroundColor: '#ff3c78',
+                        pointBorderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    animation: {
+                        duration: 0
+                    },
+                    plugins: {
+                        legend: { display: false }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: false,
+                            min: 0,
+                            max: 150,
+                            grid: { color: 'rgba(255,255,255,0.05)' },
+                            ticks: { color: '#6b6b7f' }
+                        },
+                        x: { grid: { display: false }, ticks: { color: '#6b6b7f' } }
+                    }
+                }
+            });
+            
+            // Workout Chart
+            const workoutCtx = document.getElementById('workoutChart').getContext('2d');
+            new Chart(workoutCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: data.workoutDistribution.labels,
+                    datasets: [{
+                        data: data.workoutDistribution.values,
+                        backgroundColor: ['#00f5ff', '#ff00ff', '#00ff88', '#ff6b35'],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    animation: {
+                        duration: 0
+                    },
+                    plugins: {
+                        legend: { display: false }
+                    }
+                }
+            });
+        }
         
-        // Workout Chart
-        new Chart(document.getElementById('workoutChart'), {
-            type: 'doughnut',
-            data: {
-                labels: data.workoutDistribution.labels,
-                datasets: [{
-                    data: data.workoutDistribution.values,
-                    backgroundColor: ['#00f5ff', '#ff00ff', '#00ff88', '#ff6b35'],
-                    borderWidth: 0
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                animation: false,
-                plugins: {
-                    legend: { display: false }
-                }
-            }
-        });
+        // Initialize on page load
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initCharts);
+        } else {
+            initCharts();
+        }
         
         // File upload
         document.getElementById('fileInput').addEventListener('change', e => {
