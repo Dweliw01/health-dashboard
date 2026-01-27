@@ -6,8 +6,23 @@
 const fs = require('fs');
 const path = require('path');
 
+// Find the most recent oura_sync file
+const fitnessDataDir = path.join(__dirname, '..', 'fitness-data');
+const ouraFiles = fs.readdirSync(fitnessDataDir)
+  .filter(f => f.startsWith('oura_sync_') && f.endsWith('.json'))
+  .sort()
+  .reverse();
+
+if (ouraFiles.length === 0) {
+  console.error('❌ No oura_sync_*.json files found in fitness-data/');
+  process.exit(1);
+}
+
+const latestFile = path.join(fitnessDataDir, ouraFiles[0]);
+console.log(`📂 Using data from: ${ouraFiles[0]}`);
+
 // Load Oura data
-const ouraData = JSON.parse(fs.readFileSync('../fitness-data/oura_sync_2026-01-27.json', 'utf8'));
+const ouraData = JSON.parse(fs.readFileSync(latestFile, 'utf8'));
 const dailyActivity = ouraData.data.daily_activity.data || [];
 const dailySleep = ouraData.data.daily_sleep.data || [];
 const dailyReadiness = ouraData.data.daily_readiness.data || [];

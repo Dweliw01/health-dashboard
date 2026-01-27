@@ -1,0 +1,54 @@
+name: Sync Oura Data & Update Dashboard
+
+on:
+  schedule:
+    # Runs every 6 hours: 12am, 6am, 12pm, 6pm UTC
+    - cron: '0 */6 * * *'
+  workflow_dispatch:  # Manual trigger button in GitHub Actions
+
+jobs:
+  sync-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      
+      - name: Fetch Oura data via API
+        env:
+          OURA_ACCESS_TOKEN: ${{ secrets.OURA_ACCESS_TOKEN }}
+        run: |
+          cd health-dashboard-deploy
+          node fetch-oura-data.js
+      
+      - name: Process health data
+        run: |
+          cd health-dashboard-deploy
+          node process-oura-data.js
+      
+      - name: Commit and push if data changed
+        run: |
+          git config user.name "Health Data Bot"
+          git config user.email "health-bot@github-actions"
+          git add fitness-data/oura_sync_*.json health-dashboard-deploy/data.json
+          
+          # Only commit if there are changes
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "🔄 Auto-update: Oura data synced $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git push
+            echo "✅ Data updated and pushed to production"
+          fi
+      
+      - name: Deployment complete
+        run: |
+          echo "🚀 Vercel will auto-deploy in ~30 seconds"
+          echo "📊 Next sync in 6 hours"
