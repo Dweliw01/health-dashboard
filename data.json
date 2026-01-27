@@ -1,11 +1,13 @@
 {
   "today": {
-    "steps": 23128,
-    "avgHeartRate": 88,
-    "calories": 751
+    "steps": 11118,
+    "avgHeartRate": 73,
+    "calories": 639
   },
   "thisWeek": {
-    "workouts": 0
+    "workouts": 0,
+    "avgSteps": 5046,
+    "avgCalories": 555
   },
   "last7Days": {
     "labels": [
@@ -14,17 +16,15 @@
       "Fri",
       "Sat",
       "Sun",
-      "Mon",
       "Tue"
     ],
     "values": [
-      36374,
-      20649,
-      25629,
-      15475,
-      6668,
-      28397,
-      14868
+      4857,
+      14299,
+      0,
+      0,
+      0,
+      11118
     ]
   },
   "heartRateTrends": {
@@ -34,31 +34,127 @@
       "Fri",
       "Sat",
       "Sun",
-      "Mon",
       "Tue"
     ],
     "values": [
-      104,
-      120,
-      109,
-      84,
-      0,
-      100,
-      70
+      97,
+      94,
+      98,
+      97,
+      98,
+      97
     ]
   },
   "workoutDistribution": {
     "labels": [
-      "TraditionalStrengthTraining",
-      "Running",
-      "Hiking",
-      "Walking"
+      "Walking",
+      "Active",
+      "Rest",
+      "Light"
     ],
     "values": [
       14,
       8,
-      3,
-      2
+      5,
+      3
     ]
+  },
+  "weeklyComparison": {
+    "labels": [
+      "Week 1",
+      "Week 2",
+      "Week 3",
+      "Week 4 (Current)"
+    ],
+    "steps": [
+      4390,
+      4693,
+      4895,
+      5046
+    ],
+    "workouts": [
+      3,
+      4,
+      4,
+      0
+    ],
+    "calories": [
+      472,
+      511,
+      533,
+      555
+    ]
+  },
+  "projection": {
+    "labels": [
+      "Day 0",
+      "Day 10",
+      "Day 20",
+      "Day 30"
+    ],
+    "actual": [
+      5046,
+      null,
+      null,
+      null
+    ],
+    "projected": [
+      5046,
+      5147,
+      5197,
+      5248
+    ]
+  },
+  "timeOfDay": {
+    "labels": [
+      "6am",
+      "8am",
+      "10am",
+      "12pm",
+      "2pm",
+      "4pm",
+      "6pm",
+      "8pm",
+      "10pm"
+    ],
+    "values": [
+      500,
+      3200,
+      5800,
+      2100,
+      1200,
+      2400,
+      4200,
+      1500,
+      200
+    ]
+  },
+  "metrics": {
+    "dailyAvgSteps": 5046,
+    "avgHeartRate": 73,
+    "activeDays": 2,
+    "totalWorkouts": 0,
+    "bestDaySteps": 14299,
+    "bestDayLabel": "Wed",
+    "caloriesPerDay": 555,
+    "currentStreak": 1,
+    "longestStreak": 12,
+    "fitnessScore": 73,
+    "sleepScore": 72,
+    "readinessScore": 77,
+    "consistency": 29,
+    "totalSteps30Days": 30274,
+    "totalCalories30Days": 3327
+  },
+  "insights": {
+    "performance": {
+      "weekChange": 3,
+      "monthChange": 0
+    },
+    "recovery": {
+      "readinessScore": 77,
+      "restingHR": 73,
+      "sleepScore": 72
+    }
   }
 }

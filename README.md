@@ -1,114 +1,130 @@
-# 🏋️ Personal Health Dashboard
+# 💪 Health Analytics Dashboard
 
-A beautiful, interactive dashboard for tracking your health and fitness metrics from Apple Health.
+A real-time health analytics dashboard powered by your Oura Ring data.
 
-![Health Dashboard](https://img.shields.io/badge/Status-Live-success)
-![Platform](https://img.shields.io/badge/Platform-Vercel-black)
+## Features
 
-## ✨ Features
+✨ **8 Advanced Intelligence Features:**
 
-- 📊 **Real-time Stats**: Steps, heart rate, calories, and workouts
-- 📈 **Trend Charts**: 7-day visualizations of your progress
-- 🎯 **Goal Tracking**: Visual progress bars for daily/weekly targets
-- 💾 **Local Storage**: Your data stays in your browser
-- 🎨 **Beautiful UI**: Modern, responsive design
-- 📱 **Mobile Friendly**: Works great on all devices
+1. **📊 Performance Trends** - Week-over-week comparison
+2. **💤 Recovery Metrics** - Sleep, readiness, and overtraining detection
+3. **💪 Workout Effectiveness** - Activity type analysis
+4. **⏰ Time Analysis** - Best hours for peak performance
+5. **🔥 Streaks & Consistency** - Track active day streaks
+6. **⚠️ Health Warnings** - HR spikes, low activity alerts
+7. **🔮 Predictive Analytics** - 30-day projections
+8. **📈 Comparisons** - Multi-week performance tracking
 
-## 🚀 Quick Start
+## Setup
 
-1. **Visit the dashboard**: [Your Live URL]
-2. **Export your Apple Health data**:
-   - Open Apple Health app on iPhone
-   - Tap your profile → Export All Health Data
-   - Save the export
-3. **Process your data**:
-   - Use the Python scripts in `/scripts` folder
-   - Generate `data.json` from your export
-4. **Upload to dashboard**:
-   - Click "Upload Health Data"
-   - Select your `data.json` file
-   - Dashboard updates instantly!
+### Prerequisites
+- Node.js installed
+- Oura Ring data synced to `../fitness-data/oura_sync_*.json`
 
-## 📊 Data Format
+### Installation
+```bash
+cd health-dashboard-deploy
+npm install # If you add dependencies later
+```
 
-The dashboard expects a JSON file with this structure:
+## Usage
 
-```json
-{
-  "today": {
-    "steps": 10000,
-    "avgHeartRate": 75,
-    "calories": 500
-  },
-  "thisWeek": {
-    "workouts": 5
-  },
-  "last7Days": {
-    "labels": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
-    "values": [8000, 10000, 12000, 9500, 11000, 13000, 10500]
-  },
-  "heartRateTrends": {
-    "labels": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
-    "values": [72, 75, 73, 74, 76, 71, 75]
-  },
-  "workoutDistribution": {
-    "labels": ["Strength", "Running", "Cycling", "Yoga"],
-    "values": [5, 3, 2, 1]
-  }
+### Update Dashboard with Latest Data
+```bash
+./update.sh
+```
+
+This will:
+1. Process your latest Oura data
+2. Generate `data.json` with calculated metrics
+3. Update the dashboard automatically
+
+### View Locally
+Simply open `index.html` in your browser, or run:
+```bash
+python3 -m http.server 8000
+# Then visit: http://localhost:8000
+```
+
+### Deploy to Vercel
+```bash
+vercel --prod
+```
+
+## Data Flow
+
+```
+fitness-data/oura_sync_*.json
+         ↓
+  process-oura-data.js
+         ↓
+      data.json
+         ↓
+     index.html (dashboard)
+```
+
+## Metrics Tracked
+
+- **Daily Steps** - Average and trends
+- **Heart Rate** - Resting and activity patterns
+- **Active Days** - Days hitting 10k+ steps
+- **Sleep Score** - Oura sleep quality metrics
+- **Readiness Score** - Recovery and fitness readiness
+- **Calories** - Active calorie burn
+- **Streaks** - Consecutive active days
+- **Activity Distribution** - Time-of-day patterns
+
+## Customization
+
+### Update Goals
+Edit `process-oura-data.js` to adjust:
+- Step targets (default: 10,000)
+- Activity thresholds
+- Projection algorithms
+
+### Styling
+Modify CSS variables in `index.html`:
+```css
+:root {
+    --bg: #0a0a0f;
+    --accent: #00f5ff;
+    --accent2: #ff00ff;
+    /* ... */
 }
 ```
 
-## 🛠️ Local Development
+## Files
 
-```bash
-# Clone the repo
-git clone https://github.com/Dweliw01/health-dashboard.git
+- `index.html` - Main dashboard UI
+- `process-oura-data.js` - Data processor
+- `data.json` - Generated metrics (auto-updated)
+- `update.sh` - Quick update script
+- `vercel.json` - Deployment config
 
-# Open in browser
-open index.html
+## Troubleshooting
 
-# Or use a local server
-python3 -m http.server 8080
-```
+**Charts not showing?**
+- Make sure `data.json` exists
+- Check browser console for errors
+- Verify Oura data path in `process-oura-data.js`
 
-## 🎯 Goals & Targets
+**Data looks wrong?**
+- Re-run `./update.sh`
+- Check that `../fitness-data/oura_sync_*.json` is up-to-date
 
-Current default goals:
-- **Daily Steps**: 10,000
-- **Weekly Workouts**: 5
-- **Active Calories**: 500/day
+**Deployment issues?**
+- Ensure `vercel.json` is present
+- Run `vercel login` first
+- Use `vercel --prod` for production deploys
 
-Edit these in the JavaScript section of `index.html`.
+## Next Steps
 
-## 📱 Privacy
-
-- **100% Client-Side**: All data processing happens in your browser
-- **No Server Upload**: Your health data never leaves your device
-- **Local Storage**: Data stored only in your browser's localStorage
-- **No Tracking**: No analytics or third-party tracking
-
-## 🔄 Updating Your Data
-
-1. Export new Apple Health data
-2. Process with Python scripts
-3. Upload new JSON file
-4. Dashboard auto-updates!
-
-## 💪 Powered By
-
-- [Chart.js](https://www.chartjs.org/) - Beautiful charts
-- Vanilla JavaScript - No frameworks needed
-- CSS Grid & Flexbox - Responsive layouts
-- LocalStorage API - Client-side persistence
-
-## 📝 License
-
-MIT License - Feel free to use and modify!
-
-## 🤝 Contributing
-
-Suggestions and improvements welcome! Open an issue or PR.
+- [ ] Set up automatic Oura data sync
+- [ ] Add workout type detection
+- [ ] Integrate with other health APIs
+- [ ] Build mobile-responsive view
+- [ ] Add export/PDF report feature
 
 ---
 
-**Track. Optimize. Achieve.** 💪
+Built with ❤️ for peak performance tracking 🔥
