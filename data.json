@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-01-28T18:46:32.457Z",
+  "lastUpdated": "2026-01-28T19:36:12.596Z",
   "today": {
     "steps": 15395,
     "avgHeartRate": 101,
@@ -56,7 +56,7 @@
       119,
       155,
       160,
-      136
+      143
     ],
     "min": [
       65,
@@ -212,7 +212,7 @@
     {
       "type": "warning",
       "title": "HR Spike Detected",
-      "message": "Wed: 136 bpm peak",
+      "message": "Wed: 143 bpm peak",
       "severity": "medium",
       "category": "activity"
     }
@@ -772,7 +772,7 @@
   "stress": {
     "available": true,
     "today": {
-      "stressMinutes": 240,
+      "stressMinutes": 255,
       "recoveryMinutes": 30,
       "summary": "stressful"
     },
@@ -785,7 +785,7 @@
       "stressful",
       "stressful"
     ],
-    "avgStressMinutes": 107,
+    "avgStressMinutes": 109,
     "avgRecoveryMinutes": 24,
     "records": [
       {
@@ -964,7 +964,7 @@
       },
       {
         "day": "2026-01-28",
-        "stressHigh": 14400,
+        "stressHigh": 15300,
         "recoveryHigh": 1800,
         "daySummary": "stressful"
       }
