@@ -1,24 +1,24 @@
 {
-  "lastUpdated": "2026-01-28T01:47:22.919Z",
+  "lastUpdated": "2026-01-28T02:21:17.187Z",
   "today": {
-    "steps": 12658,
-    "avgHeartRate": 108,
-    "calories": 721
+    "steps": 15110,
+    "avgHeartRate": 107,
+    "calories": 885
   },
   "thisWeek": {
     "workouts": 1,
-    "avgSteps": 6133,
-    "avgCalories": 578
+    "avgSteps": 6483,
+    "avgCalories": 602
   },
   "last7Days": {
     "labels": [
-      "Mon",
       "Tue",
       "Wed",
       "Thu",
       "Fri",
-      "Sun",
-      "Mon"
+      "Sat",
+      "Mon",
+      "Tue"
     ],
     "values": [
       4857,
@@ -27,18 +27,18 @@
       0,
       0,
       11118,
-      12658
+      15110
     ]
   },
   "heartRateTrends": {
     "labels": [
-      "Sun",
-      "Tue",
+      "Mon",
       "Wed",
-      "Sat",
+      "Thu",
       "Sun",
       "Mon",
-      "Tue"
+      "Tue",
+      "Wed"
     ],
     "values": [
       100,
@@ -47,7 +47,7 @@
       106,
       97,
       99,
-      108
+      107
     ],
     "max": [
       116,
@@ -65,7 +65,7 @@
       93,
       53,
       52,
-      77
+      62
     ]
   },
   "workoutDistribution": {
@@ -89,7 +89,7 @@
       10998,
       14255,
       8594,
-      6133
+      6483
     ],
     "workouts": [
       0,
@@ -101,7 +101,7 @@
       702,
       1076,
       572,
-      578
+      602
     ]
   },
   "projection": {
@@ -112,16 +112,16 @@
       "Day 30"
     ],
     "actual": [
-      6133,
+      6483,
       null,
       null,
       null
     ],
     "projected": [
-      6133,
-      5244,
-      4799,
-      4354
+      6483,
+      5673,
+      5267,
+      4862
     ]
   },
   "timeOfDay": {
@@ -142,21 +142,21 @@
       61,
       70,
       84,
-      55,
+      71,
       36,
       34,
       33
     ]
   },
   "metrics": {
-    "dailyAvgSteps": 6133,
-    "avgHeartRate": 100,
+    "dailyAvgSteps": 6483,
+    "avgHeartRate": 99,
     "restingHR": 46,
     "activeDays": 3,
     "totalWorkouts": 5,
-    "bestDaySteps": 14299,
+    "bestDaySteps": 15110,
     "bestDayLabel": "Tue",
-    "caloriesPerDay": 578,
+    "caloriesPerDay": 602,
     "currentStreak": 2,
     "longestStreak": 8,
     "fitnessScore": 68,
@@ -164,14 +164,14 @@
     "sleepScore": 66,
     "readinessScore": 74,
     "consistency": 59,
-    "totalSteps30Days": 288690,
-    "totalCalories30Days": 20916,
+    "totalSteps30Days": 291142,
+    "totalCalories30Days": 21080,
     "daysTracked": 29
   },
   "insights": {
     "performance": {
-      "weekChange": -29,
-      "monthChange": -38,
+      "weekChange": -25,
+      "monthChange": -35,
       "trend": "declining"
     },
     "recovery": {
@@ -191,28 +191,28 @@
     {
       "type": "warning",
       "title": "HR Spike Detected",
-      "message": "Tue: 169 bpm peak",
+      "message": "Wed: 169 bpm peak",
       "severity": "medium",
       "category": "activity"
     },
     {
       "type": "warning",
       "title": "HR Spike Detected",
-      "message": "Sun: 155 bpm peak",
+      "message": "Mon: 155 bpm peak",
       "severity": "medium",
       "category": "activity"
     },
     {
       "type": "warning",
       "title": "HR Spike Detected",
-      "message": "Mon: 160 bpm peak",
+      "message": "Tue: 160 bpm peak",
       "severity": "medium",
       "category": "activity"
     },
     {
       "type": "warning",
       "title": "HR Spike Detected",
-      "message": "Tue: 136 bpm peak",
+      "message": "Wed: 136 bpm peak",
       "severity": "medium",
       "category": "activity"
     }
@@ -772,7 +772,7 @@
   "stress": {
     "available": true,
     "today": {
-      "stressMinutes": 165,
+      "stressMinutes": 150,
       "recoveryMinutes": 15,
       "summary": "stressful"
     },
@@ -785,7 +785,7 @@
       "stressful",
       "stressful"
     ],
-    "avgStressMinutes": 118,
+    "avgStressMinutes": 116,
     "avgRecoveryMinutes": 21,
     "records": [
       {
@@ -964,7 +964,7 @@
       },
       {
         "day": "2026-01-27",
-        "stressHigh": 9900,
+        "stressHigh": 9000,
         "recoveryHigh": 900,
         "daySummary": "stressful"
       }
