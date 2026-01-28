@@ -3,9 +3,13 @@
  * Fetch Oura Ring data via API and save to fitness-data/
  */
 
-const https = require('https');
-const fs = require('fs');
-const path = require('path');
+import https from 'https';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Get token from environment
 const OURA_TOKEN = process.env.OURA_ACCESS_TOKEN;
