@@ -1,13 +1,13 @@
 {
-  "lastUpdated": "2026-01-28T02:21:17.187Z",
+  "lastUpdated": "2026-01-28T04:10:11.535Z",
   "today": {
-    "steps": 15110,
+    "steps": 15142,
     "avgHeartRate": 107,
-    "calories": 885
+    "calories": 887
   },
   "thisWeek": {
     "workouts": 1,
-    "avgSteps": 6483,
+    "avgSteps": 6488,
     "avgCalories": 602
   },
   "last7Days": {
@@ -27,7 +27,7 @@
       0,
       0,
       11118,
-      15110
+      15142
     ]
   },
   "heartRateTrends": {
@@ -89,7 +89,7 @@
       10998,
       14255,
       8594,
-      6483
+      6488
     ],
     "workouts": [
       0,
@@ -112,16 +112,16 @@
       "Day 30"
     ],
     "actual": [
-      6483,
+      6488,
       null,
       null,
       null
     ],
     "projected": [
-      6483,
-      5673,
-      5267,
-      4862
+      6488,
+      5677,
+      5272,
+      4866
     ]
   },
   "timeOfDay": {
@@ -142,19 +142,19 @@
       61,
       70,
       84,
-      71,
-      36,
+      75,
+      45,
       34,
       33
     ]
   },
   "metrics": {
-    "dailyAvgSteps": 6483,
+    "dailyAvgSteps": 6488,
     "avgHeartRate": 99,
     "restingHR": 46,
     "activeDays": 3,
     "totalWorkouts": 5,
-    "bestDaySteps": 15110,
+    "bestDaySteps": 15142,
     "bestDayLabel": "Tue",
     "caloriesPerDay": 602,
     "currentStreak": 2,
@@ -164,8 +164,8 @@
     "sleepScore": 66,
     "readinessScore": 74,
     "consistency": 59,
-    "totalSteps30Days": 291142,
-    "totalCalories30Days": 21080,
+    "totalSteps30Days": 291174,
+    "totalCalories30Days": 21082,
     "daysTracked": 29
   },
   "insights": {
@@ -772,7 +772,7 @@
   "stress": {
     "available": true,
     "today": {
-      "stressMinutes": 150,
+      "stressMinutes": 180,
       "recoveryMinutes": 15,
       "summary": "stressful"
     },
@@ -785,7 +785,7 @@
       "stressful",
       "stressful"
     ],
-    "avgStressMinutes": 116,
+    "avgStressMinutes": 120,
     "avgRecoveryMinutes": 21,
     "records": [
       {
@@ -964,7 +964,7 @@
       },
       {
         "day": "2026-01-27",
-        "stressHigh": 9000,
+        "stressHigh": 10800,
         "recoveryHigh": 900,
         "daySummary": "stressful"
       }
