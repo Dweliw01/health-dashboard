@@ -36,15 +36,29 @@ const InsightsEngine = {
     const data = window.dashboardData || {};
 
     return {
+      // Core metrics
       today: data.today || {},
       metrics: data.metrics || {},
+      thisWeek: data.thisWeek || {},
+
+      // Sleep & Recovery
       hrv: data.hrv || {},
       sleepStages: data.sleepStages || {},
       stress: data.stress || {},
       readiness: data.readinessBreakdown || {},
+      spo2: data.spo2 || {},
+
+      // Activity & Trends
       heartRateTrends: data.heartRateTrends || {},
       last7Days: data.last7Days || {},
-      weeklyComparison: data.weeklyComparison || {}
+      weeklyComparison: data.weeklyComparison || {},
+      workoutDistribution: data.workoutDistribution || {},
+      timeOfDay: data.timeOfDay || {},
+      projection: data.projection || {},
+
+      // Insights & Alerts
+      insights: data.insights || {},
+      alerts: data.alerts || []
     };
   },
 
@@ -122,14 +136,25 @@ const InsightsEngine = {
         sleepTotal: oura.sleepStages?.lastNight?.total || 0,
         deepSleep: oura.sleepStages?.lastNight?.deep || 0,
         remSleep: oura.sleepStages?.lastNight?.rem || 0,
+        lightSleep: oura.sleepStages?.lastNight?.light || 0,
+        awakeTime: oura.sleepStages?.lastNight?.awake || 0,
         sleepEfficiency: oura.sleepStages?.lastNight?.efficiency || 0,
+        sleepLatency: oura.sleepStages?.lastNight?.latency || 0,
+        breathRate: oura.sleepStages?.lastNight?.breathRate || 0,
         stressMinutes: oura.stress?.today?.stressMinutes || 0,
         recoveryMinutes: oura.stress?.today?.recoveryMinutes || 0,
+        stressSummary: oura.stress?.today?.summary || 'unknown',
+        spo2: oura.spo2?.current || 0,
         water: nutrition.today?.water?.current || 0,
         protein: nutrition.today?.protein?.rating || null,
         foodQuality: nutrition.today?.foodQuality || null,
         mood: checkins.today?.mood || null,
         energy: checkins.today?.energy || null
+      },
+      thisWeek: {
+        avgSteps: oura.thisWeek?.avgSteps || 0,
+        avgCalories: oura.thisWeek?.avgCalories || 0,
+        workouts: oura.thisWeek?.workouts || 0
       },
       metrics: oura.metrics || {},
       hrv: {
@@ -138,27 +163,309 @@ const InsightsEngine = {
         avg7Days: oura.hrv?.avg7Days || 0,
         avg30Days: oura.hrv?.avg30Days || 0,
         status: oura.hrv?.status || 'unknown',
-        trend: oura.hrv?.trend7Days || []
+        trend7Days: oura.hrv?.trend7Days || [],
+        trend30Days: oura.hrv?.trend30Days || []
       },
       sleep: {
+        lastNight: oura.sleepStages?.lastNight || {},
         avgDeep: oura.sleepStages?.avgDeep || 0,
         avgRem: oura.sleepStages?.avgRem || 0,
+        avgLight: oura.sleepStages?.avgLight || 0,
         avgEfficiency: oura.sleepStages?.avgEfficiency || 0,
         avgTotal: oura.sleepStages?.avgTotal || 0,
-        avgBreathRate: oura.sleepStages?.avgBreathRate || 0
+        avgLatency: oura.sleepStages?.avgLatency || 0,
+        avgBreathRate: oura.sleepStages?.avgBreathRate || 0,
+        last7Days: oura.sleepStages?.last7Days || []
       },
       stress: {
-        dayScore: oura.stress?.dayScore || 0,
-        recoveryRatio: oura.stress?.recoveryRatio || 0,
-        avg7Days: oura.stress?.avg7Days || {}
+        available: oura.stress?.available || false,
+        today: oura.stress?.today || {},
+        trend7Days: oura.stress?.trend7Days || [],
+        avgStressMinutes: oura.stress?.avgStressMinutes || 0,
+        avgRecoveryMinutes: oura.stress?.avgRecoveryMinutes || 0
       },
-      readiness: oura.readiness || {},
+      spo2: {
+        available: oura.spo2?.available || false,
+        current: oura.spo2?.current || 0,
+        baseline: oura.spo2?.baseline || 0,
+        trend7Days: oura.spo2?.trend7Days || []
+      },
+      readiness: {
+        score: oura.readiness?.score || 0,
+        overall: oura.readiness?.overall || 0,
+        activityBalance: oura.readiness?.activityBalance || 0,
+        bodyTemperature: oura.readiness?.bodyTemperature || 0,
+        hrvBalance: oura.readiness?.hrvBalance || null,
+        previousDayActivity: oura.readiness?.previousDayActivity || 0,
+        previousNight: oura.readiness?.previousNight || 0,
+        recoveryIndex: oura.readiness?.recoveryIndex || 0,
+        restingHeartRate: oura.readiness?.restingHeartRate || 0,
+        sleepBalance: oura.readiness?.sleepBalance || null,
+        tempDeviation: oura.readiness?.tempDeviation || 0
+      },
+      activity: {
+        last7Days: oura.last7Days || {},
+        heartRateTrends: oura.heartRateTrends || {},
+        workoutDistribution: oura.workoutDistribution || {},
+        timeOfDay: oura.timeOfDay || {},
+        weeklyComparison: oura.weeklyComparison || {}
+      },
+      trends: {
+        projection: oura.projection || {},
+        performance: oura.insights?.performance || {},
+        recovery: oura.insights?.recovery || {}
+      },
+      alerts: oura.alerts || [],
       context: data.context,
       goals: data.goals?.current || {}
     };
   },
 
   // ==================== PATTERN FINDING ====================
+
+  /**
+   * Find smart correlations from historical data (day N vs day N+1 patterns)
+   * Analyzes 30-day data to find actual patterns, not just thresholds
+   */
+  findSmartCorrelations(data) {
+    const correlations = [];
+    const oura = data.oura;
+
+    // Get 30-day sleep data
+    const sleepData = oura.sleepStages?.last30Days || [];
+    const hrvRecords = oura.hrv?.records || [];
+    const stressRecords = oura.stress?.records || [];
+
+    if (sleepData.length < 14) {
+      return []; // Need at least 2 weeks of data
+    }
+
+    // Pattern 1: Deep sleep (50+ min) vs next-day efficiency
+    const deepSleepPattern = this.analyzeNextDayPattern(sleepData, 'deep', 'efficiency', 50);
+    if (deepSleepPattern && deepSleepPattern.significant) {
+      correlations.push({
+        type: 'deep_sleep_efficiency',
+        factor1: 'Deep Sleep (50+ min)',
+        factor2: 'Next-Day Efficiency',
+        interpretation: `${deepSleepPattern.improvement > 0 ? '+' : ''}${deepSleepPattern.improvement}% sleep efficiency after nights with 50+ min deep sleep`,
+        dataPoints: deepSleepPattern.sampleSize,
+        priority: deepSleepPattern.improvement > 5 ? 'high' : 'medium',
+        recommendation: deepSleepPattern.improvement > 0 ? 'Prioritize deep sleep for better next-night quality' : null
+      });
+    }
+
+    // Pattern 2: Sleep efficiency vs next-day HRV (using HRV records)
+    if (hrvRecords.length >= 14) {
+      const efficiencyHrvPattern = this.analyzeSleepToHrvPattern(sleepData, hrvRecords);
+      if (efficiencyHrvPattern && efficiencyHrvPattern.significant) {
+        correlations.push({
+          type: 'efficiency_hrv',
+          factor1: 'Sleep Efficiency (85%+)',
+          factor2: 'Next-Day HRV',
+          interpretation: `${efficiencyHrvPattern.improvement > 0 ? '+' : ''}${efficiencyHrvPattern.improvement}% HRV improvement after high-efficiency nights`,
+          dataPoints: efficiencyHrvPattern.sampleSize,
+          priority: efficiencyHrvPattern.improvement > 8 ? 'high' : 'medium',
+          recommendation: efficiencyHrvPattern.improvement > 0 ? 'High sleep efficiency leads to better HRV recovery' : null
+        });
+      }
+    }
+
+    // Pattern 3: Stress/recovery ratio vs next-day readiness
+    if (stressRecords.length >= 14) {
+      const stressPattern = this.analyzeStressRecoveryPattern(stressRecords, oura);
+      if (stressPattern && stressPattern.significant) {
+        correlations.push({
+          type: 'stress_readiness',
+          factor1: 'Stress/Recovery Ratio',
+          factor2: 'Next-Day Readiness',
+          interpretation: stressPattern.message,
+          dataPoints: stressPattern.sampleSize,
+          priority: 'high',
+          recommendation: 'Balance stress with equal or more recovery time'
+        });
+      }
+    }
+
+    // Pattern 4: Total sleep duration vs next-day metrics
+    const sleepDurationPattern = this.analyzeSleepDurationPattern(sleepData);
+    if (sleepDurationPattern && sleepDurationPattern.significant) {
+      correlations.push({
+        type: 'sleep_duration',
+        factor1: 'Sleep Duration (7h+)',
+        factor2: 'Next-Night Quality',
+        interpretation: sleepDurationPattern.message,
+        dataPoints: sleepDurationPattern.sampleSize,
+        priority: 'medium'
+      });
+    }
+
+    return correlations;
+  },
+
+  /**
+   * Analyze day N metric threshold vs day N+1 outcome
+   */
+  analyzeNextDayPattern(sleepData, inputMetric, outputMetric, threshold) {
+    const pairs = [];
+
+    for (let i = 0; i < sleepData.length - 1; i++) {
+      const today = sleepData[i];
+      const tomorrow = sleepData[i + 1];
+
+      if (today[inputMetric] != null && tomorrow[outputMetric] != null) {
+        pairs.push({
+          input: today[inputMetric],
+          output: tomorrow[outputMetric],
+          aboveThreshold: today[inputMetric] >= threshold
+        });
+      }
+    }
+
+    if (pairs.length < 10) return null;
+
+    const aboveThreshold = pairs.filter(p => p.aboveThreshold);
+    const belowThreshold = pairs.filter(p => !p.aboveThreshold);
+
+    if (aboveThreshold.length < 3 || belowThreshold.length < 3) return null;
+
+    const avgAbove = aboveThreshold.reduce((sum, p) => sum + p.output, 0) / aboveThreshold.length;
+    const avgBelow = belowThreshold.reduce((sum, p) => sum + p.output, 0) / belowThreshold.length;
+    const improvement = Math.round(((avgAbove - avgBelow) / avgBelow) * 100);
+
+    return {
+      significant: Math.abs(improvement) >= 3,
+      improvement,
+      sampleSize: pairs.length,
+      avgAbove: Math.round(avgAbove),
+      avgBelow: Math.round(avgBelow)
+    };
+  },
+
+  /**
+   * Analyze sleep efficiency to next-day HRV pattern
+   */
+  analyzeSleepToHrvPattern(sleepData, hrvRecords) {
+    // Create date map for HRV
+    const hrvByDate = {};
+    hrvRecords.forEach(r => {
+      if (r.day && r.avgHrv) {
+        hrvByDate[r.day] = r.avgHrv;
+      }
+    });
+
+    const pairs = [];
+    for (const sleep of sleepData) {
+      if (!sleep.day || !sleep.efficiency) continue;
+
+      // Find next day's HRV
+      const sleepDate = new Date(sleep.day);
+      sleepDate.setDate(sleepDate.getDate() + 1);
+      const nextDay = sleepDate.toISOString().split('T')[0];
+
+      if (hrvByDate[nextDay]) {
+        pairs.push({
+          efficiency: sleep.efficiency,
+          hrv: hrvByDate[nextDay],
+          highEfficiency: sleep.efficiency >= 85
+        });
+      }
+    }
+
+    if (pairs.length < 8) return null;
+
+    const highEff = pairs.filter(p => p.highEfficiency);
+    const lowEff = pairs.filter(p => !p.highEfficiency);
+
+    if (highEff.length < 3 || lowEff.length < 3) return null;
+
+    const avgHrvHigh = highEff.reduce((sum, p) => sum + p.hrv, 0) / highEff.length;
+    const avgHrvLow = lowEff.reduce((sum, p) => sum + p.hrv, 0) / lowEff.length;
+    const improvement = Math.round(((avgHrvHigh - avgHrvLow) / avgHrvLow) * 100);
+
+    return {
+      significant: Math.abs(improvement) >= 5,
+      improvement,
+      sampleSize: pairs.length
+    };
+  },
+
+  /**
+   * Analyze stress/recovery ratio pattern
+   */
+  analyzeStressRecoveryPattern(stressRecords, oura) {
+    // Group days by stress level
+    const balanced = [];
+    const stressed = [];
+
+    stressRecords.forEach(r => {
+      if (!r.stressHigh || !r.recoveryHigh) return;
+
+      const stressMinutes = r.stressHigh / 60; // Convert from seconds
+      const recoveryMinutes = r.recoveryHigh / 60;
+      const ratio = recoveryMinutes / (stressMinutes + 1);
+
+      if (ratio >= 0.8) {
+        balanced.push(r);
+      } else if (ratio < 0.5) {
+        stressed.push(r);
+      }
+    });
+
+    if (balanced.length < 3 || stressed.length < 3) return null;
+
+    // Count "stressful" summaries for each group
+    const stressfulBalanced = balanced.filter(r => r.daySummary === 'stressful').length;
+    const stressfulStressed = stressed.filter(r => r.daySummary === 'stressful').length;
+
+    const pctBalanced = Math.round((stressfulBalanced / balanced.length) * 100);
+    const pctStressed = Math.round((stressfulStressed / stressed.length) * 100);
+
+    return {
+      significant: pctStressed - pctBalanced >= 15,
+      message: `Days with balanced recovery: ${100 - pctBalanced}% felt good. High-stress days: only ${100 - pctStressed}% felt good.`,
+      sampleSize: balanced.length + stressed.length
+    };
+  },
+
+  /**
+   * Analyze sleep duration impact
+   */
+  analyzeSleepDurationPattern(sleepData) {
+    const pairs = [];
+
+    for (let i = 0; i < sleepData.length - 1; i++) {
+      const today = sleepData[i];
+      const tomorrow = sleepData[i + 1];
+
+      if (today.total && tomorrow.efficiency) {
+        pairs.push({
+          duration: today.total,
+          nextEfficiency: tomorrow.efficiency,
+          longSleep: today.total >= 420 // 7 hours
+        });
+      }
+    }
+
+    if (pairs.length < 10) return null;
+
+    const longSleep = pairs.filter(p => p.longSleep);
+    const shortSleep = pairs.filter(p => !p.longSleep);
+
+    if (longSleep.length < 3 || shortSleep.length < 3) return null;
+
+    const avgEffLong = longSleep.reduce((sum, p) => sum + p.nextEfficiency, 0) / longSleep.length;
+    const avgEffShort = shortSleep.reduce((sum, p) => sum + p.nextEfficiency, 0) / shortSleep.length;
+
+    const diff = Math.round(avgEffLong - avgEffShort);
+
+    return {
+      significant: Math.abs(diff) >= 3,
+      message: diff > 0
+        ? `Nights after 7+ hours sleep average ${diff}% better efficiency`
+        : `Sleep duration doesn't significantly affect next-night efficiency`,
+      sampleSize: pairs.length
+    };
+  },
 
   /**
    * Find correlations in the data

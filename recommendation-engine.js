@@ -454,6 +454,207 @@ const RecommendationEngine = {
     const values = arr.map(item => item[key]).filter(v => v != null && v > 0);
     if (values.length === 0) return 0;
     return values.reduce((a, b) => a + b, 0) / values.length;
+  },
+
+  /**
+   * Generate Recovery Protocol when recovery indicators are low
+   * Triggers when: readiness < 70 OR HRV < 85% baseline OR sleep score < 60
+   */
+  generateRecoveryProtocol(data, goals) {
+    const readinessScore = data.metrics?.readinessScore || 0;
+    const sleepScore = data.metrics?.sleepScore || 0;
+    const hrv = data.hrv?.current || 0;
+    const hrvBaseline = this.getHrvBaseline(goals);
+    const hrvPercentage = hrvBaseline > 0 ? (hrv / hrvBaseline) * 100 : 100;
+    const stressData = data.stress?.today || {};
+
+    // Check triggers
+    const triggers = [];
+    if (readinessScore > 0 && readinessScore < 70) {
+      triggers.push({ type: 'readiness', label: 'Low Readiness', value: readinessScore, severity: readinessScore < 50 ? 'critical' : 'warning' });
+    }
+    if (hrvPercentage < 85 && hrv > 0) {
+      triggers.push({ type: 'hrv', label: 'Low HRV', value: `${Math.round(hrvPercentage)}%`, severity: hrvPercentage < 70 ? 'critical' : 'warning' });
+    }
+    if (sleepScore > 0 && sleepScore < 60) {
+      triggers.push({ type: 'sleep', label: 'Low Sleep Score', value: sleepScore, severity: sleepScore < 50 ? 'critical' : 'warning' });
+    }
+    if (stressData.stressMinutes > 300 && stressData.recoveryMinutes < 120) {
+      triggers.push({ type: 'stress', label: 'High Stress', value: `${Math.round(stressData.stressMinutes / 60)}h`, severity: 'warning' });
+    }
+
+    // No triggers, no protocol needed
+    if (triggers.length === 0) {
+      return null;
+    }
+
+    // Generate recommendations based on what's low
+    const recommendations = [];
+    const triggerTypes = triggers.map(t => t.type);
+
+    if (triggerTypes.includes('hrv')) {
+      recommendations.push({
+        icon: 'heart',
+        text: 'Avoid intense exercise today - your nervous system needs rest',
+        priority: 1
+      });
+      recommendations.push({
+        icon: 'wind',
+        text: 'Practice 10+ min of deep breathing or meditation',
+        priority: 2
+      });
+    }
+
+    if (triggerTypes.includes('readiness')) {
+      recommendations.push({
+        icon: 'moon',
+        text: 'Prioritize sleep tonight - aim for 8+ hours in bed',
+        priority: 1
+      });
+      recommendations.push({
+        icon: 'coffee',
+        text: 'Limit caffeine to morning only',
+        priority: 3
+      });
+    }
+
+    if (triggerTypes.includes('sleep')) {
+      recommendations.push({
+        icon: 'thermometer',
+        text: 'Optimize bedroom: cool (65-68F), dark, no screens after 9pm',
+        priority: 2
+      });
+      recommendations.push({
+        icon: 'x-circle',
+        text: 'No alcohol or late meals tonight',
+        priority: 3
+      });
+    }
+
+    if (triggerTypes.includes('stress')) {
+      recommendations.push({
+        icon: 'clock',
+        text: 'Schedule 30+ min relaxation time today',
+        priority: 2
+      });
+      recommendations.push({
+        icon: 'sun',
+        text: 'Take a walk outside if possible',
+        priority: 3
+      });
+    }
+
+    // Sort by priority and take top 4
+    recommendations.sort((a, b) => a.priority - b.priority);
+    const topRecommendations = recommendations.slice(0, 4);
+
+    // Determine overall severity
+    const hasCritical = triggers.some(t => t.severity === 'critical');
+    const severity = hasCritical ? 'critical' : 'warning';
+
+    return {
+      active: true,
+      severity,
+      title: hasCritical ? 'Recovery Day Needed' : 'Recovery Focus Recommended',
+      subtitle: 'Your body is showing signs of stress or fatigue',
+      triggers,
+      recommendations: topRecommendations
+    };
+  },
+
+  /**
+   * Calculate optimal bedtime based on sleep patterns
+   */
+  calculateOptimalBedtime(data, targetWakeTime = '07:00') {
+    // Get stored wake time or use default
+    const storedWakeTime = typeof localStorage !== 'undefined'
+      ? localStorage.getItem('health_dashboard_wake_time') || targetWakeTime
+      : targetWakeTime;
+
+    const last30Days = data.sleepStages?.last30Days || [];
+    if (last30Days.length < 7) {
+      return null; // Not enough data
+    }
+
+    // Find nights with best efficiency (top 30%)
+    const nightsWithEfficiency = last30Days
+      .filter(n => n.efficiency && n.total && n.latency != null)
+      .sort((a, b) => b.efficiency - a.efficiency);
+
+    const topNights = nightsWithEfficiency.slice(0, Math.ceil(nightsWithEfficiency.length * 0.3));
+
+    if (topNights.length === 0) {
+      return null;
+    }
+
+    // Calculate averages from best nights
+    const avgSleepDuration = Math.round(topNights.reduce((sum, n) => sum + n.total, 0) / topNights.length);
+    const avgLatency = Math.round(topNights.reduce((sum, n) => sum + (n.latency || 0), 0) / topNights.length);
+    const avgEfficiency = Math.round(topNights.reduce((sum, n) => sum + n.efficiency, 0) / topNights.length);
+
+    // Parse wake time
+    const [wakeHour, wakeMinute] = storedWakeTime.split(':').map(Number);
+    const wakeTimeMinutes = wakeHour * 60 + wakeMinute;
+
+    // Calculate bedtime: wake time - target sleep - latency buffer
+    // Target sleep = avg duration from best nights (rounded to nearest 30 min)
+    const targetSleepMinutes = Math.round(avgSleepDuration / 30) * 30;
+    const latencyBuffer = Math.max(15, avgLatency + 10); // Add 10 min buffer
+
+    let bedtimeMinutes = wakeTimeMinutes - targetSleepMinutes - latencyBuffer;
+    if (bedtimeMinutes < 0) bedtimeMinutes += 24 * 60;
+
+    // Format bedtime
+    const bedtimeHour = Math.floor(bedtimeMinutes / 60);
+    const bedtimeMinute = bedtimeMinutes % 60;
+    const period = bedtimeHour >= 12 ? 'PM' : 'AM';
+    const displayHour = bedtimeHour === 0 ? 12 : bedtimeHour > 12 ? bedtimeHour - 12 : bedtimeHour;
+    const bedtimeFormatted = `${displayHour}:${bedtimeMinute.toString().padStart(2, '0')} ${period}`;
+
+    // Wind-down reminder (30 min before bedtime)
+    let windDownMinutes = bedtimeMinutes - 30;
+    if (windDownMinutes < 0) windDownMinutes += 24 * 60;
+    const windDownHour = Math.floor(windDownMinutes / 60);
+    const windDownMinute = windDownMinutes % 60;
+    const windDownPeriod = windDownHour >= 12 ? 'PM' : 'AM';
+    const windDownDisplayHour = windDownHour === 0 ? 12 : windDownHour > 12 ? windDownHour - 12 : windDownHour;
+    const windDownFormatted = `${windDownDisplayHour}:${windDownMinute.toString().padStart(2, '0')} ${windDownPeriod}`;
+
+    // Format wake time for display
+    const wakePeriod = wakeHour >= 12 ? 'PM' : 'AM';
+    const wakeDisplayHour = wakeHour === 0 ? 12 : wakeHour > 12 ? wakeHour - 12 : wakeHour;
+    const wakeTimeFormatted = `${wakeDisplayHour}:${wakeMinute.toString().padStart(2, '0')} ${wakePeriod}`;
+
+    // Format target sleep duration
+    const targetHours = Math.floor(targetSleepMinutes / 60);
+    const targetMins = targetSleepMinutes % 60;
+    const targetSleepFormatted = targetMins > 0
+      ? `${targetHours}h ${targetMins}m`
+      : `${targetHours} hours`;
+
+    return {
+      bedtime: bedtimeFormatted,
+      bedtimeMinutes,
+      windDown: windDownFormatted,
+      windDownMinutes,
+      wakeTime: wakeTimeFormatted,
+      wakeTimeRaw: storedWakeTime,
+      targetSleep: targetSleepFormatted,
+      targetSleepMinutes,
+      avgLatency,
+      avgEfficiency,
+      basedOnNights: topNights.length,
+      totalNightsAnalyzed: last30Days.length
+    };
+  },
+
+  /**
+   * Save target wake time
+   */
+  saveTargetWakeTime(time) {
+    if (typeof localStorage !== 'undefined') {
+      localStorage.setItem('health_dashboard_wake_time', time);
+    }
   }
 };
 

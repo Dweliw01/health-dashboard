@@ -531,6 +531,120 @@ const GoalsManager = {
       console.error('Failed to import:', err);
       return false;
     }
+  },
+
+  /**
+   * Generate AI-powered goal suggestions based on current performance
+   * Returns up to 3 suggestions
+   */
+  generateSuggestions(data) {
+    const { goals } = this.load();
+    const suggestions = [];
+    const oura = data || {};
+
+    // Get current averages from data
+    const avgDeep = oura.sleepStages?.avgDeep || 0;
+    const avgRem = oura.sleepStages?.avgRem || 0;
+    const avgEfficiency = oura.sleepStages?.avgEfficiency || 0;
+    const avgSteps = oura.metrics?.dailyAvgSteps || 0;
+    const avgHrv = oura.hrv?.avg30Days || 0;
+
+    // Check each goal for suggestion opportunities
+    Object.entries(goals).forEach(([metric, goal]) => {
+      if (!goal) return;
+
+      // Suggestion type 1: If avg << target, suggest more realistic goal
+      if (goal.enabled && goal.target) {
+        let currentAvg = null;
+        let unit = goal.unit || '';
+
+        switch (metric) {
+          case 'deepSleepMinutes':
+            currentAvg = avgDeep;
+            break;
+          case 'remSleepMinutes':
+            currentAvg = avgRem;
+            break;
+          case 'sleepEfficiency':
+            currentAvg = avgEfficiency;
+            break;
+          case 'dailySteps':
+            currentAvg = avgSteps;
+            break;
+          case 'hrvBaseline':
+            currentAvg = avgHrv;
+            break;
+        }
+
+        if (currentAvg && currentAvg > 0) {
+          const percentOfTarget = (currentAvg / goal.target) * 100;
+
+          // If performing at < 80% of target, suggest 15% above current
+          if (percentOfTarget < 80 && percentOfTarget > 30) {
+            const suggestedTarget = Math.round(currentAvg * 1.15);
+
+            // Only suggest if meaningfully different from current target
+            if (suggestedTarget < goal.target * 0.9) {
+              suggestions.push({
+                metric,
+                action: 'update',
+                text: `Your ${goal.label.toLowerCase()} averages ${Math.round(currentAvg)}${unit === 'minutes' ? ' min' : unit === '%' ? '%' : ''}. Try targeting ${suggestedTarget}${unit === 'minutes' ? ' min' : unit === '%' ? '%' : ''} first.`,
+                currentTarget: goal.target,
+                newTarget: suggestedTarget,
+                priority: percentOfTarget < 60 ? 1 : 2
+              });
+            }
+          }
+
+          // If exceeding target, suggest stretch goal (10% increase)
+          if (percentOfTarget >= 100 && !goal.inverted) {
+            const stretchTarget = Math.round(goal.target * 1.1);
+            suggestions.push({
+              metric,
+              action: 'update',
+              text: `You're consistently hitting your ${goal.label.toLowerCase()} goal. Consider raising it to ${stretchTarget}${unit === 'minutes' ? ' min' : unit === '%' ? '%' : ''}.`,
+              currentTarget: goal.target,
+              newTarget: stretchTarget,
+              priority: 3
+            });
+          }
+        }
+      }
+
+      // Suggestion type 2: Enable disabled goals when data is available
+      if (!goal.enabled && goal.target) {
+        let hasData = false;
+        let avgValue = null;
+
+        switch (metric) {
+          case 'remSleepMinutes':
+            hasData = avgRem > 0;
+            avgValue = avgRem;
+            break;
+          case 'maxStressMinutes':
+            hasData = oura.stress?.available;
+            break;
+          case 'minRecoveryMinutes':
+            hasData = oura.stress?.available;
+            break;
+        }
+
+        if (hasData) {
+          const avgText = avgValue ? ` (avg ${Math.round(avgValue)} min)` : '';
+          suggestions.push({
+            metric,
+            action: 'enable',
+            text: `You have ${goal.label} data available${avgText}. Enable this goal?`,
+            priority: 2
+          });
+        }
+      }
+    });
+
+    // Sort by priority and return top 3
+    return suggestions
+      .sort((a, b) => a.priority - b.priority)
+      .slice(0, 3);
   }
 };
 
