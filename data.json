@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-01-28T01:34:00.704Z",
+  "lastUpdated": "2026-01-28T01:47:22.919Z",
   "today": {
     "steps": 12658,
     "avgHeartRate": 108,
@@ -12,13 +12,13 @@
   },
   "last7Days": {
     "labels": [
+      "Mon",
       "Tue",
       "Wed",
       "Thu",
       "Fri",
-      "Sat",
-      "Mon",
-      "Tue"
+      "Sun",
+      "Mon"
     ],
     "values": [
       4857,
@@ -32,13 +32,13 @@
   },
   "heartRateTrends": {
     "labels": [
-      "Mon",
+      "Sun",
+      "Tue",
       "Wed",
-      "Thu",
+      "Sat",
       "Sun",
       "Mon",
-      "Tue",
-      "Wed"
+      "Tue"
     ],
     "values": [
       100,
@@ -155,7 +155,7 @@
     "activeDays": 3,
     "totalWorkouts": 5,
     "bestDaySteps": 14299,
-    "bestDayLabel": "Wed",
+    "bestDayLabel": "Tue",
     "caloriesPerDay": 578,
     "currentStreak": 2,
     "longestStreak": 8,
@@ -190,29 +190,29 @@
     },
     {
       "type": "warning",
-      "title": "High Stress Day",
-      "message": "165h in high stress",
-      "severity": "medium",
-      "category": "stress"
-    },
-    {
-      "type": "warning",
       "title": "HR Spike Detected",
-      "message": "Wed: 169 bpm peak",
+      "message": "Tue: 169 bpm peak",
       "severity": "medium",
       "category": "activity"
     },
     {
       "type": "warning",
       "title": "HR Spike Detected",
-      "message": "Mon: 155 bpm peak",
+      "message": "Sun: 155 bpm peak",
       "severity": "medium",
       "category": "activity"
     },
     {
       "type": "warning",
       "title": "HR Spike Detected",
-      "message": "Tue: 160 bpm peak",
+      "message": "Mon: 160 bpm peak",
+      "severity": "medium",
+      "category": "activity"
+    },
+    {
+      "type": "warning",
+      "title": "HR Spike Detected",
+      "message": "Tue: 136 bpm peak",
       "severity": "medium",
       "category": "activity"
     }
@@ -438,7 +438,62 @@
     ]
   },
   "sleepStages": {
+    "lastNight": {
+      "day": "2026-01-27",
+      "deep": 49,
+      "rem": 58,
+      "light": 217,
+      "awake": 98,
+      "total": 324,
+      "efficiency": 77,
+      "latency": 7,
+      "breathRate": 14.75
+    },
     "last7Days": [
+      {
+        "day": "2026-01-14",
+        "deep": 56,
+        "rem": 73,
+        "light": 164,
+        "awake": 49,
+        "total": 293,
+        "efficiency": 86,
+        "latency": 4,
+        "breathRate": 14.25
+      },
+      {
+        "day": "2026-01-15",
+        "deep": 48,
+        "rem": 93,
+        "light": 214,
+        "awake": 118,
+        "total": 354,
+        "efficiency": 75,
+        "latency": 12,
+        "breathRate": 13.75
+      },
+      {
+        "day": "2026-01-16",
+        "deep": 10,
+        "rem": 63,
+        "light": 226,
+        "awake": 58,
+        "total": 298,
+        "efficiency": 84,
+        "latency": 10,
+        "breathRate": 14
+      },
+      {
+        "day": "2026-01-17",
+        "deep": 48,
+        "rem": 92,
+        "light": 269,
+        "awake": 70,
+        "total": 409,
+        "efficiency": 85,
+        "latency": 41,
+        "breathRate": 14.5
+      },
       {
         "day": "2026-01-18",
         "deep": 44,
@@ -462,50 +517,6 @@
         "breathRate": 14.25
       },
       {
-        "day": "2026-01-21",
-        "deep": 0,
-        "rem": 0,
-        "light": 1,
-        "awake": 15,
-        "total": 1,
-        "efficiency": 3,
-        "latency": 0,
-        "breathRate": 14.25
-      },
-      {
-        "day": "2026-01-21",
-        "deep": 0,
-        "rem": 0,
-        "light": 15,
-        "awake": 18,
-        "total": 15,
-        "efficiency": 45,
-        "latency": 16,
-        "breathRate": 14.25
-      },
-      {
-        "day": "2026-01-26",
-        "deep": 0,
-        "rem": 0,
-        "light": 1,
-        "awake": 22,
-        "total": 1,
-        "efficiency": 4,
-        "latency": 0,
-        "breathRate": 16.5
-      },
-      {
-        "day": "2026-01-27",
-        "deep": 10,
-        "rem": 1,
-        "light": 41,
-        "awake": 17,
-        "total": 52,
-        "efficiency": 75,
-        "latency": 20,
-        "breathRate": 16.5
-      },
-      {
         "day": "2026-01-27",
         "deep": 49,
         "rem": 58,
@@ -519,14 +530,124 @@
     ],
     "last30Days": [
       {
+        "day": "2025-12-29",
+        "deep": 27,
+        "rem": 83,
+        "light": 235,
+        "awake": 107,
+        "total": 344,
+        "efficiency": 76,
+        "latency": 10,
+        "breathRate": 14
+      },
+      {
+        "day": "2025-12-30",
+        "deep": 55,
+        "rem": 57,
+        "light": 144,
+        "awake": 19,
+        "total": 255,
+        "efficiency": 93,
+        "latency": 12,
+        "breathRate": 13.875
+      },
+      {
+        "day": "2025-12-31",
+        "deep": 48,
+        "rem": 61,
+        "light": 151,
+        "awake": 18,
+        "total": 260,
+        "efficiency": 94,
+        "latency": 10,
+        "breathRate": 14.625
+      },
+      {
+        "day": "2026-01-01",
+        "deep": 21,
+        "rem": 81,
+        "light": 207,
+        "awake": 130,
+        "total": 309,
+        "efficiency": 70,
+        "latency": 20,
+        "breathRate": 15
+      },
+      {
+        "day": "2026-01-02",
+        "deep": 24,
+        "rem": 78,
+        "light": 166,
+        "awake": 20,
+        "total": 268,
+        "efficiency": 93,
+        "latency": 1,
+        "breathRate": 14
+      },
+      {
+        "day": "2026-01-03",
+        "deep": 47,
+        "rem": 58,
+        "light": 172,
+        "awake": 14,
+        "total": 277,
+        "efficiency": 95,
+        "latency": 4,
+        "breathRate": 13.75
+      },
+      {
+        "day": "2026-01-04",
+        "deep": 39,
+        "rem": 58,
+        "light": 134,
+        "awake": 28,
+        "total": 230,
+        "efficiency": 89,
+        "latency": 10,
+        "breathRate": 14
+      },
+      {
+        "day": "2026-01-06",
+        "deep": 25,
+        "rem": 74,
+        "light": 223,
+        "awake": 59,
+        "total": 322,
+        "efficiency": 85,
+        "latency": 20,
+        "breathRate": 13.75
+      },
+      {
+        "day": "2026-01-07",
+        "deep": 51,
+        "rem": 53,
+        "light": 183,
+        "awake": 111,
+        "total": 286,
+        "efficiency": 72,
+        "latency": 26,
+        "breathRate": 13.625
+      },
+      {
+        "day": "2026-01-08",
+        "deep": 29,
+        "rem": 86,
+        "light": 224,
+        "awake": 51,
+        "total": 339,
+        "efficiency": 87,
+        "latency": 15,
+        "breathRate": 14.875
+      },
+      {
         "day": "2026-01-09",
-        "deep": 2,
-        "rem": 0,
-        "light": 22,
-        "awake": 23,
-        "total": 23,
-        "efficiency": 51,
-        "latency": 23,
+        "deep": 32,
+        "rem": 82,
+        "light": 243,
+        "awake": 76,
+        "total": 357,
+        "efficiency": 83,
+        "latency": 28,
         "breathRate": 14.625
       },
       {
@@ -552,94 +673,6 @@
         "breathRate": 15.375
       },
       {
-        "day": "2026-01-11",
-        "deep": 0,
-        "rem": 0,
-        "light": 4,
-        "awake": 18,
-        "total": 4,
-        "efficiency": 17,
-        "latency": 0,
-        "breathRate": 15.375
-      },
-      {
-        "day": "2026-01-11",
-        "deep": 0,
-        "rem": 0,
-        "light": 7,
-        "awake": 11,
-        "total": 7,
-        "efficiency": 37,
-        "latency": 0,
-        "breathRate": 15.375
-      },
-      {
-        "day": "2026-01-12",
-        "deep": 1,
-        "rem": 0,
-        "light": 16,
-        "awake": 12,
-        "total": 17,
-        "efficiency": 60,
-        "latency": 9,
-        "breathRate": 15.375
-      },
-      {
-        "day": "2026-01-12",
-        "deep": 0,
-        "rem": 0,
-        "light": 15,
-        "awake": 8,
-        "total": 15,
-        "efficiency": 65,
-        "latency": 8,
-        "breathRate": 14.25
-      },
-      {
-        "day": "2026-01-12",
-        "deep": 0,
-        "rem": 0,
-        "light": 1,
-        "awake": 24,
-        "total": 1,
-        "efficiency": 2,
-        "latency": 0,
-        "breathRate": 14.25
-      },
-      {
-        "day": "2026-01-12",
-        "deep": 2,
-        "rem": 0,
-        "light": 15,
-        "awake": 26,
-        "total": 17,
-        "efficiency": 39,
-        "latency": 0,
-        "breathRate": 14.25
-      },
-      {
-        "day": "2026-01-12",
-        "deep": 0,
-        "rem": 0,
-        "light": 2,
-        "awake": 17,
-        "total": 2,
-        "efficiency": 11,
-        "latency": 0,
-        "breathRate": 14.25
-      },
-      {
-        "day": "2026-01-13",
-        "deep": 1,
-        "rem": 0,
-        "light": 10,
-        "awake": 16,
-        "total": 10,
-        "efficiency": 39,
-        "latency": 17,
-        "breathRate": 14.25
-      },
-      {
         "day": "2026-01-13",
         "deep": 36,
         "rem": 94,
@@ -648,17 +681,6 @@
         "total": 344,
         "efficiency": 90,
         "latency": 10,
-        "breathRate": 14.75
-      },
-      {
-        "day": "2026-01-13",
-        "deep": 2,
-        "rem": 0,
-        "light": 0,
-        "awake": 28,
-        "total": 2,
-        "efficiency": 5,
-        "latency": 0,
         "breathRate": 14.75
       },
       {
@@ -673,28 +695,6 @@
         "breathRate": 14.25
       },
       {
-        "day": "2026-01-14",
-        "deep": 8,
-        "rem": 0,
-        "light": 33,
-        "awake": 11,
-        "total": 41,
-        "efficiency": 79,
-        "latency": 9,
-        "breathRate": 14.25
-      },
-      {
-        "day": "2026-01-14",
-        "deep": 2,
-        "rem": 0,
-        "light": 9,
-        "awake": 14,
-        "total": 10,
-        "efficiency": 42,
-        "latency": 0,
-        "breathRate": 14.25
-      },
-      {
         "day": "2026-01-15",
         "deep": 48,
         "rem": 93,
@@ -703,17 +703,6 @@
         "total": 354,
         "efficiency": 75,
         "latency": 12,
-        "breathRate": 13.75
-      },
-      {
-        "day": "2026-01-15",
-        "deep": 1,
-        "rem": 0,
-        "light": 6,
-        "awake": 28,
-        "total": 7,
-        "efficiency": 20,
-        "latency": 0,
         "breathRate": 13.75
       },
       {
@@ -728,28 +717,6 @@
         "breathRate": 14
       },
       {
-        "day": "2026-01-16",
-        "deep": 0,
-        "rem": 3,
-        "light": 33,
-        "awake": 34,
-        "total": 35,
-        "efficiency": 51,
-        "latency": 26,
-        "breathRate": 14
-      },
-      {
-        "day": "2026-01-16",
-        "deep": 0,
-        "rem": 0,
-        "light": 2,
-        "awake": 23,
-        "total": 2,
-        "efficiency": 8,
-        "latency": 0,
-        "breathRate": 14
-      },
-      {
         "day": "2026-01-17",
         "deep": 48,
         "rem": 92,
@@ -758,17 +725,6 @@
         "total": 409,
         "efficiency": 85,
         "latency": 41,
-        "breathRate": 14.5
-      },
-      {
-        "day": "2026-01-17",
-        "deep": 0,
-        "rem": 0,
-        "light": 19,
-        "awake": 17,
-        "total": 19,
-        "efficiency": 52,
-        "latency": 16,
         "breathRate": 14.5
       },
       {
@@ -794,50 +750,6 @@
         "breathRate": 14.25
       },
       {
-        "day": "2026-01-21",
-        "deep": 0,
-        "rem": 0,
-        "light": 1,
-        "awake": 15,
-        "total": 1,
-        "efficiency": 3,
-        "latency": 0,
-        "breathRate": 14.25
-      },
-      {
-        "day": "2026-01-21",
-        "deep": 0,
-        "rem": 0,
-        "light": 15,
-        "awake": 18,
-        "total": 15,
-        "efficiency": 45,
-        "latency": 16,
-        "breathRate": 14.25
-      },
-      {
-        "day": "2026-01-26",
-        "deep": 0,
-        "rem": 0,
-        "light": 1,
-        "awake": 22,
-        "total": 1,
-        "efficiency": 4,
-        "latency": 0,
-        "breathRate": 16.5
-      },
-      {
-        "day": "2026-01-27",
-        "deep": 10,
-        "rem": 1,
-        "light": 41,
-        "awake": 17,
-        "total": 52,
-        "efficiency": 75,
-        "latency": 20,
-        "breathRate": 16.5
-      },
-      {
         "day": "2026-01-27",
         "deep": 49,
         "rem": 58,
@@ -849,18 +761,19 @@
         "breathRate": 14.75
       }
     ],
-    "avgDeep": 14,
-    "avgRem": 31,
-    "avgLight": 84,
-    "avgEfficiency": 52,
+    "avgDeep": 38,
+    "avgRem": 81,
+    "avgLight": 207,
+    "avgTotal": 325,
+    "avgEfficiency": 85,
     "avgLatency": 13,
-    "avgBreathRate": 14.6
+    "avgBreathRate": 14.4
   },
   "stress": {
     "available": true,
     "today": {
-      "stressMinutes": 9900,
-      "recoveryMinutes": 900,
+      "stressMinutes": 165,
+      "recoveryMinutes": 15,
       "summary": "stressful"
     },
     "trend7Days": [
@@ -872,8 +785,8 @@
       "stressful",
       "stressful"
     ],
-    "avgStressMinutes": 7071,
-    "avgRecoveryMinutes": 1286,
+    "avgStressMinutes": 118,
+    "avgRecoveryMinutes": 21,
     "records": [
       {
         "day": "2025-12-29",
@@ -1074,6 +987,7 @@
   "readinessBreakdown": {
     "day": "2026-01-27",
     "score": 70,
+    "overall": 70,
     "activityBalance": 74,
     "bodyTemperature": 78,
     "hrvBalance": null,

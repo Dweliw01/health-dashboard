@@ -101,8 +101,10 @@ function processHRV(sleepData) {
 
 // Process sleep stages from detailed sleep records
 function processSleepStages(sleepData) {
-  const stageRecords = sleepData
-    .filter(s => s.deep_sleep_duration != null)
+  // Filter out short naps (less than 3 hours / 10800 seconds)
+  // and only keep main sleep sessions
+  const mainSleepRecords = sleepData
+    .filter(s => s.deep_sleep_duration != null && (s.total_sleep_duration || 0) >= 10800)
     .map(s => ({
       day: s.day,
       deep: Math.round((s.deep_sleep_duration || 0) / 60),
@@ -113,8 +115,17 @@ function processSleepStages(sleepData) {
       efficiency: s.efficiency || null,
       latency: Math.round((s.latency || 0) / 60),
       breathRate: s.average_breath || null
-    }))
-    .sort((a, b) => a.day.localeCompare(b.day));
+    }));
+
+  // Group by day and keep only the longest sleep session per day
+  const sleepByDay = {};
+  mainSleepRecords.forEach(s => {
+    if (!sleepByDay[s.day] || s.total > sleepByDay[s.day].total) {
+      sleepByDay[s.day] = s;
+    }
+  });
+
+  const stageRecords = Object.values(sleepByDay).sort((a, b) => a.day.localeCompare(b.day));
 
   if (stageRecords.length === 0) {
     return { last7Days: [], avgDeep: null, avgRem: null, avgEfficiency: null };
@@ -122,13 +133,16 @@ function processSleepStages(sleepData) {
 
   const last7 = stageRecords.slice(-7);
   const last30 = stageRecords.slice(-30);
+  const lastNight = stageRecords[stageRecords.length - 1] || null;
 
   return {
+    lastNight,
     last7Days: last7,
     last30Days: last30,
     avgDeep: Math.round(avg(last30.map(s => s.deep))),
     avgRem: Math.round(avg(last30.map(s => s.rem))),
     avgLight: Math.round(avg(last30.map(s => s.light))),
+    avgTotal: Math.round(avg(last30.map(s => s.total))),
     avgEfficiency: Math.round(avg(last30.filter(s => s.efficiency).map(s => s.efficiency))),
     avgLatency: Math.round(avg(last30.filter(s => s.latency).map(s => s.latency))),
     avgBreathRate: last30.filter(s => s.breathRate).length > 0
@@ -158,13 +172,14 @@ function processStress(stressData) {
   return {
     available: true,
     today: today ? {
-      stressMinutes: today.stressHigh,
-      recoveryMinutes: today.recoveryHigh,
+      // Oura API returns stress/recovery in SECONDS, convert to minutes
+      stressMinutes: Math.round(today.stressHigh / 60),
+      recoveryMinutes: Math.round(today.recoveryHigh / 60),
       summary: today.daySummary
     } : null,
     trend7Days: last7.map(s => s.daySummary),
-    avgStressMinutes: Math.round(avg(last7.map(s => s.stressHigh))),
-    avgRecoveryMinutes: Math.round(avg(last7.map(s => s.recoveryHigh))),
+    avgStressMinutes: Math.round(avg(last7.map(s => s.stressHigh)) / 60),
+    avgRecoveryMinutes: Math.round(avg(last7.map(s => s.recoveryHigh)) / 60),
     records: records.slice(-30)
   };
 }
@@ -201,14 +216,15 @@ function processSpo2(spo2Data) {
 // Process readiness contributors
 function processReadinessContributors(readinessData) {
   const latest = readinessData[readinessData.length - 1];
-  if (!latest || !latest.contributors) {
-    return null;
+  if (!latest) {
+    return { overall: null };
   }
 
-  const c = latest.contributors;
+  const c = latest.contributors || {};
   return {
     day: latest.day,
     score: latest.score,
+    overall: latest.score,  // Add overall for insights-engine compatibility
     activityBalance: c.activity_balance || null,
     bodyTemperature: c.body_temperature || null,
     hrvBalance: c.hrv_balance || null,
