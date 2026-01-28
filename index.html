@@ -3208,7 +3208,7 @@
         <!-- Header -->
         <header class="header">
             <div class="header-left">
-                <h1>Health Dashboard</h1>
+                <h1 id="dashboardTitle">Health Dashboard</h1>
                 <p class="subtitle">Your fitness metrics at a glance</p>
             </div>
             <div style="display: flex; align-items: center; gap: 12px;">
@@ -3218,7 +3218,7 @@
                         <path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
                         <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1Z"/>
                     </svg>
-                    Goals
+                    Settings
                 </button>
             </div>
         </header>
@@ -4397,14 +4397,27 @@
     <div class="modal-overlay" id="settingsModal">
         <div class="modal">
             <div class="modal-header">
-                <h2 class="modal-title">Goal Settings</h2>
+                <h2 class="modal-title">Settings</h2>
                 <button class="modal-close" onclick="closeSettingsModal()">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M18 6L6 18M6 6l12 12"/>
                     </svg>
                 </button>
             </div>
-            <div class="modal-body" id="settingsForm"></div>
+            <div class="modal-body">
+                <!-- Personalization Section -->
+                <div class="settings-section" style="margin-bottom: 24px; padding-bottom: 20px; border-bottom: 1px solid var(--border);">
+                    <div class="settings-section-title" style="font-size: 14px; font-weight: 600; margin-bottom: 12px; color: var(--text-primary);">Personalization</div>
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                        <label style="font-size: 13px; color: var(--text-secondary); min-width: 80px;">Your Name</label>
+                        <input type="text" id="userNameInput" placeholder="Enter your name"
+                            style="flex: 1; padding: 10px 14px; border: 1px solid var(--border); border-radius: 8px; background: var(--bg-elevated); color: var(--text-primary); font-size: 14px;">
+                    </div>
+                </div>
+                <!-- Goals Section -->
+                <div class="settings-section-title" style="font-size: 14px; font-weight: 600; margin-bottom: 12px; color: var(--text-primary);">Goal Settings</div>
+                <div id="settingsForm"></div>
+            </div>
             <div class="modal-footer">
                 <div class="modal-footer-left">
                     <button class="btn btn-danger" onclick="resetGoals()">Reset Defaults</button>
@@ -4713,6 +4726,10 @@
                 return;
             }
 
+            // Load user name into input
+            const userName = localStorage.getItem('health_dashboard_user_name') || '';
+            document.getElementById('userNameInput').value = userName;
+
             renderSettingsForm();
             document.getElementById('settingsModal').classList.add('active');
         }
@@ -4821,6 +4838,11 @@
         function saveGoals() {
             if (typeof GoalsManager === 'undefined') return;
 
+            // Save user name
+            const userName = document.getElementById('userNameInput').value.trim();
+            localStorage.setItem('health_dashboard_user_name', userName);
+            applyPersonalization();
+
             const { goals } = GoalsManager.load();
 
             Object.keys(goals).forEach(key => {
@@ -4858,6 +4880,24 @@
             }
         }
 
+        function applyPersonalization() {
+            const userName = localStorage.getItem('health_dashboard_user_name') || '';
+
+            // Update header title
+            const titleEl = document.getElementById('dashboardTitle');
+            if (titleEl) {
+                titleEl.textContent = userName ? `${userName}'s Health Dashboard` : 'Health Dashboard';
+            }
+
+            // Update Coach greeting
+            const greetingEl = document.getElementById('coachGreeting');
+            if (greetingEl) {
+                const hour = new Date().getHours();
+                let greeting = hour < 12 ? 'Good morning' : hour < 17 ? 'Good afternoon' : 'Good evening';
+                greetingEl.textContent = userName ? `${greeting}, ${userName}` : greeting;
+            }
+        }
+
         function resetGoals() {
             if (confirm('Reset all goals to default values?')) {
                 GoalsManager.resetToDefaults();
@@ -4888,8 +4928,10 @@
             const history = typeof GoalsManager !== 'undefined' ? GoalsManager.loadHistory() : [];
             const analysis = RecommendationEngine.analyzeToday(data, goals, history);
 
-            // Greeting
-            document.getElementById('coachGreeting').textContent = analysis.greeting.text;
+            // Greeting (personalized with user name)
+            const userName = localStorage.getItem('health_dashboard_user_name') || '';
+            const greetingText = userName ? `${analysis.greeting.text}, ${userName}` : analysis.greeting.text;
+            document.getElementById('coachGreeting').textContent = greetingText;
             document.getElementById('coachDate').textContent = analysis.greeting.date;
 
             // Recovery Protocol (new feature - shown at top when recovery is low)
@@ -7038,6 +7080,7 @@
         }
 
         loadData();
+        applyPersonalization();
     </script>
 </body>
 </html>
