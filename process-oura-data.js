@@ -53,7 +53,8 @@ function avg(arr) {
 
 function getDayLabel(dateStr) {
   const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-  const date = new Date(dateStr);
+  // Add T12:00:00 to avoid timezone issues when parsing date-only strings
+  const date = new Date(dateStr + 'T12:00:00');
   return days[date.getDay()];
 }
 
