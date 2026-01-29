@@ -1,8 +1,8 @@
 {
-  "lastUpdated": "2026-01-29T09:52:49.076Z",
+  "lastUpdated": "2026-01-29T10:45:41.755Z",
   "today": {
     "steps": 14573,
-    "avgHeartRate": 84,
+    "avgHeartRate": 77,
     "calories": 676
   },
   "thisWeek": {
@@ -47,7 +47,7 @@
       97,
       99,
       98,
-      84
+      77
     ],
     "max": [
       169,
@@ -56,7 +56,7 @@
       155,
       160,
       143,
-      99
+      128
     ],
     "min": [
       50,
@@ -65,7 +65,7 @@
       53,
       52,
       50,
-      49
+      48
     ]
   },
   "workoutDistribution": {
@@ -150,8 +150,8 @@
   },
   "metrics": {
     "dailyAvgSteps": 7912,
-    "avgHeartRate": 96,
-    "restingHR": 74,
+    "avgHeartRate": 95,
+    "restingHR": 92,
     "activeDays": 4,
     "totalWorkouts": 5,
     "bestDaySteps": 15395,
@@ -159,10 +159,10 @@
     "caloriesPerDay": 637,
     "currentStreak": 3,
     "longestStreak": 8,
-    "fitnessScore": 69,
+    "fitnessScore": 70,
     "activityScore": 72,
-    "sleepScore": 65,
-    "readinessScore": 75,
+    "sleepScore": 66,
+    "readinessScore": 76,
     "consistency": 62,
     "totalSteps30Days": 297167,
     "totalCalories30Days": 21363,
@@ -175,9 +175,9 @@
       "trend": "declining"
     },
     "recovery": {
-      "readinessScore": 75,
-      "restingHR": 74,
-      "sleepScore": 65
+      "readinessScore": 76,
+      "restingHR": 92,
+      "sleepScore": 66
     }
   },
   "alerts": [
@@ -197,13 +197,6 @@
     },
     {
       "type": "warning",
-      "title": "High Stress Day",
-      "message": "7h in high stress",
-      "severity": "medium",
-      "category": "stress"
-    },
-    {
-      "type": "warning",
       "title": "HR Spike Detected",
       "message": "Wed: 169 bpm peak",
       "severity": "medium",
@@ -213,6 +206,13 @@
       "type": "warning",
       "title": "HR Spike Detected",
       "message": "Mon: 155 bpm peak",
+      "severity": "medium",
+      "category": "activity"
+    },
+    {
+      "type": "warning",
+      "title": "HR Spike Detected",
+      "message": "Tue: 160 bpm peak",
       "severity": "medium",
       "category": "activity"
     }
@@ -777,28 +777,22 @@
   "stress": {
     "available": true,
     "today": {
-      "stressMinutes": 390,
-      "recoveryMinutes": 120,
-      "summary": "stressful"
+      "stressMinutes": 15,
+      "recoveryMinutes": 0,
+      "summary": "unknown"
     },
     "trend7Days": [
       "unknown",
       "unknown",
       "unknown",
-      "unknown",
       "stressful",
       "stressful",
-      "stressful"
+      "stressful",
+      "unknown"
     ],
-    "avgStressMinutes": 129,
-    "avgRecoveryMinutes": 36,
+    "avgStressMinutes": 131,
+    "avgRecoveryMinutes": 26,
     "records": [
-      {
-        "day": "2025-12-30",
-        "stressHigh": 38700,
-        "recoveryHigh": 1800,
-        "daySummary": "stressful"
-      },
       {
         "day": "2025-12-31",
         "stressHigh": 18900,
@@ -970,38 +964,44 @@
       {
         "day": "2026-01-28",
         "stressHigh": 23400,
-        "recoveryHigh": 7200,
+        "recoveryHigh": 2700,
         "daySummary": "stressful"
+      },
+      {
+        "day": "2026-01-29",
+        "stressHigh": 900,
+        "recoveryHigh": 0,
+        "daySummary": "unknown"
       }
     ]
   },
   "spo2": {
     "available": true,
-    "current": 96.972,
+    "current": 97.067,
     "trend7Days": [
-      96.245,
       97.821,
       95.99,
       98.289,
       95.907,
       97.966,
-      96.972
+      96.972,
+      97.067
     ],
-    "baseline": 97.5
+    "baseline": 97.4
   },
   "readinessBreakdown": {
-    "day": "2026-01-28",
-    "score": 72,
-    "overall": 72,
-    "activityBalance": 75,
-    "bodyTemperature": 99,
+    "day": "2026-01-29",
+    "score": 84,
+    "overall": 84,
+    "activityBalance": 79,
+    "bodyTemperature": 100,
     "hrvBalance": null,
-    "previousDayActivity": 75,
-    "previousNight": 57,
-    "recoveryIndex": 74,
-    "restingHeartRate": 74,
+    "previousDayActivity": 93,
+    "previousNight": 79,
+    "recoveryIndex": 72,
+    "restingHeartRate": 92,
     "sleepBalance": null,
-    "tempDeviation": -0.16,
-    "tempTrend": null
+    "tempDeviation": -0.11,
+    "tempTrend": 0.14
   }
 }
