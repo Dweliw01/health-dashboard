@@ -1,8 +1,8 @@
 {
-  "lastUpdated": "2026-01-29T04:44:06.561Z",
+  "lastUpdated": "2026-01-29T05:51:03.417Z",
   "today": {
     "steps": 14573,
-    "avgHeartRate": 98,
+    "avgHeartRate": 84,
     "calories": 673
   },
   "thisWeek": {
@@ -32,40 +32,40 @@
   },
   "heartRateTrends": {
     "labels": [
-      "Mon",
       "Wed",
       "Thu",
       "Sun",
       "Mon",
       "Tue",
-      "Wed"
+      "Wed",
+      "Thu"
     ],
     "values": [
-      100,
       98,
       89,
       106,
       97,
       99,
-      98
+      98,
+      84
     ],
     "max": [
-      116,
       169,
       109,
       119,
       155,
       160,
-      143
+      143,
+      99
     ],
     "min": [
-      65,
       50,
       57,
       93,
       53,
       52,
-      50
+      50,
+      49
     ]
   },
   "workoutDistribution": {
@@ -143,14 +143,14 @@
       92,
       127,
       100,
-      58,
+      62,
       52,
       45
     ]
   },
   "metrics": {
     "dailyAvgSteps": 7912,
-    "avgHeartRate": 98,
+    "avgHeartRate": 96,
     "restingHR": 74,
     "activeDays": 4,
     "totalWorkouts": 5,
@@ -778,7 +778,7 @@
     "available": true,
     "today": {
       "stressMinutes": 390,
-      "recoveryMinutes": 60,
+      "recoveryMinutes": 120,
       "summary": "stressful"
     },
     "trend7Days": [
@@ -791,7 +791,7 @@
       "stressful"
     ],
     "avgStressMinutes": 129,
-    "avgRecoveryMinutes": 28,
+    "avgRecoveryMinutes": 36,
     "records": [
       {
         "day": "2025-12-30",
@@ -970,7 +970,7 @@
       {
         "day": "2026-01-28",
         "stressHigh": 23400,
-        "recoveryHigh": 3600,
+        "recoveryHigh": 7200,
         "daySummary": "stressful"
       }
     ]
