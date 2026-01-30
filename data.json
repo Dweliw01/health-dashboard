@@ -1,14 +1,14 @@
 {
-  "lastUpdated": "2026-01-30T18:54:32.121Z",
+  "lastUpdated": "2026-01-30T19:38:05.337Z",
   "today": {
     "steps": 15241,
     "avgHeartRate": 96,
-    "calories": 789
+    "calories": 1099
   },
   "thisWeek": {
     "workouts": 5,
     "avgSteps": 8047,
-    "avgCalories": 602
+    "avgCalories": 646
   },
   "last7Days": {
     "labels": [
@@ -101,7 +101,7 @@
       762,
       927,
       574,
-      602
+      646
     ]
   },
   "projection": {
@@ -141,7 +141,7 @@
       93,
       99,
       94,
-      132,
+      135,
       107,
       74,
       56,
@@ -156,16 +156,16 @@
     "totalWorkouts": 9,
     "bestDaySteps": 15395,
     "bestDayLabel": "Tue",
-    "caloriesPerDay": 602,
+    "caloriesPerDay": 646,
     "currentStreak": 4,
     "longestStreak": 8,
-    "fitnessScore": 70,
-    "activityScore": 72,
+    "fitnessScore": 71,
+    "activityScore": 73,
     "sleepScore": 69,
     "readinessScore": 76,
     "consistency": 62,
     "totalSteps30Days": 300253,
-    "totalCalories30Days": 21153,
+    "totalCalories30Days": 21463,
     "daysTracked": 29
   },
   "insights": {
@@ -777,9 +777,9 @@
   "stress": {
     "available": true,
     "today": {
-      "stressMinutes": 0,
+      "stressMinutes": 195,
       "recoveryMinutes": 0,
-      "summary": "unknown"
+      "summary": "stressful"
     },
     "trend7Days": [
       "unknown",
@@ -788,9 +788,9 @@
       "stressful",
       "stressful",
       "stressful",
-      "unknown"
+      "stressful"
     ],
-    "avgStressMinutes": 174,
+    "avgStressMinutes": 195,
     "avgRecoveryMinutes": 39,
     "records": [
       {
@@ -963,15 +963,15 @@
       },
       {
         "day": "2026-01-29",
-        "stressHigh": 18900,
+        "stressHigh": 16200,
         "recoveryHigh": 5400,
         "daySummary": "stressful"
       },
       {
         "day": "2026-01-30",
-        "stressHigh": 0,
+        "stressHigh": 11700,
         "recoveryHigh": 0,
-        "daySummary": "unknown"
+        "daySummary": "stressful"
       }
     ]
   },
