@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-01-30T20:38:55.470Z",
+  "lastUpdated": "2026-01-30T21:34:15.588Z",
   "today": {
     "steps": 15241,
     "avgHeartRate": 96,
@@ -777,8 +777,8 @@
   "stress": {
     "available": true,
     "today": {
-      "stressMinutes": 225,
-      "recoveryMinutes": 0,
+      "stressMinutes": 255,
+      "recoveryMinutes": 15,
       "summary": "stressful"
     },
     "trend7Days": [
@@ -790,8 +790,8 @@
       "stressful",
       "stressful"
     ],
-    "avgStressMinutes": 199,
-    "avgRecoveryMinutes": 39,
+    "avgStressMinutes": 204,
+    "avgRecoveryMinutes": 41,
     "records": [
       {
         "day": "2026-01-01",
@@ -969,8 +969,8 @@
       },
       {
         "day": "2026-01-30",
-        "stressHigh": 13500,
-        "recoveryHigh": 0,
+        "stressHigh": 15300,
+        "recoveryHigh": 900,
         "daySummary": "stressful"
       }
     ]
