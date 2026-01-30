@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-01-30T17:39:54.451Z",
+  "lastUpdated": "2026-01-30T18:54:32.121Z",
   "today": {
     "steps": 15241,
-    "avgHeartRate": 95,
+    "avgHeartRate": 96,
     "calories": 789
   },
   "thisWeek": {
-    "workouts": 1,
+    "workouts": 5,
     "avgSteps": 8047,
     "avgCalories": 602
   },
@@ -47,7 +47,7 @@
       99,
       98,
       92,
-      95
+      96
     ],
     "max": [
       109,
@@ -70,12 +70,12 @@
   },
   "workoutDistribution": {
     "labels": [
-      "Hiking",
-      "Walking"
+      "Walking",
+      "Hiking"
     ],
     "values": [
-      3,
-      2
+      6,
+      3
     ]
   },
   "weeklyComparison": {
@@ -95,7 +95,7 @@
       3,
       0,
       1,
-      1
+      5
     ],
     "calories": [
       762,
@@ -151,9 +151,9 @@
   "metrics": {
     "dailyAvgSteps": 8047,
     "avgHeartRate": 97,
-    "restingHR": 92,
+    "restingHR": 100,
     "activeDays": 4,
-    "totalWorkouts": 5,
+    "totalWorkouts": 9,
     "bestDaySteps": 15395,
     "bestDayLabel": "Tue",
     "caloriesPerDay": 602,
@@ -161,7 +161,7 @@
     "longestStreak": 8,
     "fitnessScore": 70,
     "activityScore": 72,
-    "sleepScore": 66,
+    "sleepScore": 69,
     "readinessScore": 76,
     "consistency": 62,
     "totalSteps30Days": 300253,
@@ -176,18 +176,11 @@
     },
     "recovery": {
       "readinessScore": 76,
-      "restingHR": 92,
-      "sleepScore": 66
+      "restingHR": 100,
+      "sleepScore": 69
     }
   },
   "alerts": [
-    {
-      "type": "warning",
-      "title": "High Stress Day",
-      "message": "5h in high stress",
-      "severity": "medium",
-      "category": "stress"
-    },
     {
       "type": "warning",
       "title": "HR Spike Detected",
@@ -213,6 +206,13 @@
       "type": "warning",
       "title": "HR Spike Detected",
       "message": "Thu: 128 bpm peak",
+      "severity": "medium",
+      "category": "activity"
+    },
+    {
+      "type": "warning",
+      "title": "HR Spike Detected",
+      "message": "Fri: 141 bpm peak",
       "severity": "medium",
       "category": "activity"
     }
@@ -777,28 +777,22 @@
   "stress": {
     "available": true,
     "today": {
-      "stressMinutes": 315,
-      "recoveryMinutes": 150,
-      "summary": "stressful"
+      "stressMinutes": 0,
+      "recoveryMinutes": 0,
+      "summary": "unknown"
     },
     "trend7Days": [
       "unknown",
       "unknown",
-      "unknown",
       "stressful",
       "stressful",
       "stressful",
-      "stressful"
+      "stressful",
+      "unknown"
     ],
     "avgStressMinutes": 174,
-    "avgRecoveryMinutes": 47,
+    "avgRecoveryMinutes": 39,
     "records": [
-      {
-        "day": "2025-12-31",
-        "stressHigh": 18900,
-        "recoveryHigh": 3600,
-        "daySummary": "stressful"
-      },
       {
         "day": "2026-01-01",
         "stressHigh": 15300,
@@ -970,38 +964,44 @@
       {
         "day": "2026-01-29",
         "stressHigh": 18900,
-        "recoveryHigh": 9000,
+        "recoveryHigh": 5400,
         "daySummary": "stressful"
+      },
+      {
+        "day": "2026-01-30",
+        "stressHigh": 0,
+        "recoveryHigh": 0,
+        "daySummary": "unknown"
       }
     ]
   },
   "spo2": {
     "available": true,
-    "current": 97.067,
+    "current": 98.472,
     "trend7Days": [
-      97.821,
       95.99,
       98.289,
       95.907,
       97.966,
       96.972,
-      97.067
+      97.067,
+      98.472
     ],
     "baseline": 97.4
   },
   "readinessBreakdown": {
-    "day": "2026-01-29",
-    "score": 84,
-    "overall": 84,
-    "activityBalance": 79,
-    "bodyTemperature": 100,
-    "hrvBalance": null,
-    "previousDayActivity": 93,
-    "previousNight": 79,
-    "recoveryIndex": 72,
-    "restingHeartRate": 92,
-    "sleepBalance": null,
-    "tempDeviation": -0.11,
-    "tempTrend": 0.14
+    "day": "2026-01-30",
+    "score": 75,
+    "overall": 75,
+    "activityBalance": 74,
+    "bodyTemperature": 95,
+    "hrvBalance": 79,
+    "previousDayActivity": 73,
+    "previousNight": 74,
+    "recoveryIndex": 68,
+    "restingHeartRate": 100,
+    "sleepBalance": 50,
+    "tempDeviation": -0.3,
+    "tempTrend": 0.04
   }
 }
