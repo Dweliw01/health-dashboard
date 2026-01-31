@@ -3,7 +3,7 @@
  * Stores lifestyle journal data in Vercel Blob for persistence across devices
  */
 
-import { put, get, list } from '@vercel/blob';
+import { put, list } from '@vercel/blob';
 
 const BLOB_PREFIX = 'lifestyle/';
 const DATA_FILE = 'lifestyle-data.json';
@@ -45,35 +45,33 @@ export default async function handler(req, res) {
 
     try {
         if (req.method === 'GET') {
-            // Load lifestyle data
             return await loadLifestyleData(res);
         } else if (req.method === 'POST') {
-            // Save lifestyle data
             return await saveLifestyleData(req, res);
         } else {
             return res.status(405).json({ error: 'Method not allowed' });
         }
     } catch (error) {
         console.error('Lifestyle API error:', error);
-        return res.status(500).json({ error: error.message });
+        return res.status(500).json({
+            error: error.message,
+            type: error.name
+        });
     }
 }
 
 async function loadLifestyleData(res) {
     try {
-        // List blobs to find our data file
         const { blobs } = await list({ prefix: BLOB_PREFIX });
         const dataBlob = blobs.find(b => b.pathname === BLOB_PREFIX + DATA_FILE);
 
         if (!dataBlob) {
-            // No data yet, return default structure
             return res.status(200).json({
                 data: getDefaultData(),
                 isNew: true
             });
         }
 
-        // Fetch the data
         const response = await fetch(dataBlob.url);
         const data = await response.json();
 
@@ -84,11 +82,10 @@ async function loadLifestyleData(res) {
         });
     } catch (error) {
         console.error('Load error:', error);
-        // Return default data on error
         return res.status(200).json({
             data: getDefaultData(),
             isNew: true,
-            error: error.message
+            loadError: error.message
         });
     }
 }
@@ -104,7 +101,6 @@ async function saveLifestyleData(req, res) {
         let finalData = data;
 
         if (merge) {
-            // Load existing data and merge
             const { blobs } = await list({ prefix: BLOB_PREFIX });
             const dataBlob = blobs.find(b => b.pathname === BLOB_PREFIX + DATA_FILE);
 
@@ -115,10 +111,8 @@ async function saveLifestyleData(req, res) {
             }
         }
 
-        // Add sync timestamp
         finalData.lastSync = new Date().toISOString();
 
-        // Save to Vercel Blob
         const blob = await put(BLOB_PREFIX + DATA_FILE, JSON.stringify(finalData, null, 2), {
             access: 'public',
             contentType: 'application/json'
@@ -135,13 +129,9 @@ async function saveLifestyleData(req, res) {
     }
 }
 
-/**
- * Merge incoming data with existing data (smart merge)
- */
 function mergeLifestyleData(existing, incoming) {
     const merged = { ...existing };
 
-    // Merge evening check-ins (by date, prefer newer)
     if (incoming.eveningCheckins) {
         const checkinMap = new Map();
         existing.eveningCheckins?.forEach(c => checkinMap.set(c.date, c));
@@ -150,7 +140,6 @@ function mergeLifestyleData(existing, incoming) {
             .sort((a, b) => new Date(b.date) - new Date(a.date));
     }
 
-    // Merge morning reflections (by date, prefer newer)
     if (incoming.morningReflections) {
         const reflectionMap = new Map();
         existing.morningReflections?.forEach(r => reflectionMap.set(r.date, r));
@@ -159,7 +148,6 @@ function mergeLifestyleData(existing, incoming) {
             .sort((a, b) => new Date(b.date) - new Date(a.date));
     }
 
-    // Merge retro causes (by date+metric, prefer newer)
     if (incoming.retroCauses) {
         const causeMap = new Map();
         existing.retroCauses?.forEach(c => causeMap.set(`${c.date}_${c.metric}`, c));
@@ -168,15 +156,11 @@ function mergeLifestyleData(existing, incoming) {
             .sort((a, b) => new Date(b.date) - new Date(a.date));
     }
 
-    // Use incoming patterns if provided (they're recalculated locally anyway)
     if (incoming.patterns) {
         merged.patterns = incoming.patterns;
     }
 
-    // Recalculate streaks from merged data
     merged.streaks = incoming.streaks || existing.streaks;
-
-    // Keep version
     merged.version = Math.max(existing.version || 1, incoming.version || 1);
 
     return merged;
