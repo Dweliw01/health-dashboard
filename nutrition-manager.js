@@ -5,6 +5,8 @@
 
 const NutritionManager = {
   STORAGE_KEY: 'health_dashboard_nutrition',
+  _syncTimeout: null,
+  _syncDebounceMs: 2000, // Debounce cloud sync by 2 seconds
 
   // Default goals
   defaultGoals: {
@@ -60,11 +62,20 @@ const NutritionManager = {
   },
 
   /**
-   * Save nutrition data
+   * Save nutrition data (local + debounced cloud sync)
    */
   save(data) {
     try {
       localStorage.setItem(this.STORAGE_KEY, JSON.stringify(data));
+
+      // Debounced cloud sync
+      if (this._syncTimeout) {
+        clearTimeout(this._syncTimeout);
+      }
+      this._syncTimeout = setTimeout(() => {
+        this.syncToCloud().catch(err => console.warn('Background sync failed:', err));
+      }, this._syncDebounceMs);
+
       return true;
     } catch (err) {
       console.error('Failed to save nutrition data:', err);
@@ -627,6 +638,161 @@ const NutritionManager = {
       mealsCount: meals.length,
       totalMealProtein: meals.reduce((sum, m) => sum + (m.aiAnalysis?.totals?.protein || 0), 0)
     };
+  },
+
+  // ==================== CLOUD SYNC ====================
+
+  /**
+   * API endpoint for cloud storage
+   */
+  API_URL: '/api/nutrition',
+
+  /**
+   * Sync data to cloud
+   */
+  async syncToCloud() {
+    try {
+      const data = this.load();
+      const response = await fetch(this.API_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ data, merge: true })
+      });
+
+      if (!response.ok) {
+        throw new Error(`Sync failed: ${response.status}`);
+      }
+
+      const result = await response.json();
+      console.log('Nutrition synced to cloud:', result.savedAt);
+      return { success: true, savedAt: result.savedAt };
+    } catch (err) {
+      console.error('Failed to sync nutrition to cloud:', err);
+      return { success: false, error: err.message };
+    }
+  },
+
+  /**
+   * Load data from cloud
+   */
+  async loadFromCloud() {
+    try {
+      const response = await fetch(this.API_URL);
+      if (!response.ok) {
+        throw new Error(`Load failed: ${response.status}`);
+      }
+
+      const result = await response.json();
+
+      if (result.data) {
+        // Merge cloud data with local data
+        const localData = this.load();
+        const mergedData = this.mergeData(localData, result.data);
+        this.save(mergedData);
+        console.log('Nutrition loaded from cloud, isNew:', result.isNew);
+        return { success: true, data: mergedData, isNew: result.isNew };
+      }
+
+      return { success: true, data: this.load(), isNew: true };
+    } catch (err) {
+      console.error('Failed to load nutrition from cloud:', err);
+      return { success: false, error: err.message };
+    }
+  },
+
+  /**
+   * Merge local and cloud data (newer entries win)
+   */
+  mergeData(local, cloud) {
+    const merged = { ...local };
+
+    // Merge entries by date (cloud wins for same date if cloud has more data)
+    if (cloud.entries) {
+      const entryMap = new Map();
+      (local.entries || []).forEach(e => entryMap.set(e.date, e));
+      cloud.entries.forEach(e => {
+        const existing = entryMap.get(e.date);
+        if (!existing) {
+          entryMap.set(e.date, e);
+        } else {
+          // Merge: prefer non-empty values from either source
+          entryMap.set(e.date, {
+            ...existing,
+            ...e,
+            water: this.mergeWater(existing.water, e.water),
+            energy: this.mergeEnergy(existing.energy, e.energy),
+            protein: e.protein?.rating ? e.protein : existing.protein,
+            foodQuality: e.foodQuality ?? existing.foodQuality,
+            meals: this.mergeMeals(existing.meals, e.meals)
+          });
+        }
+      });
+      merged.entries = Array.from(entryMap.values())
+        .sort((a, b) => new Date(b.date) - new Date(a.date));
+    }
+
+    // Use latest goals
+    if (cloud.goals) {
+      merged.goals = cloud.goals;
+    }
+
+    merged.version = Math.max(local.version || 1, cloud.version || 1);
+    merged.lastSync = new Date().toISOString();
+
+    return merged;
+  },
+
+  /**
+   * Merge water data (keep the higher count)
+   */
+  mergeWater(local, cloud) {
+    if (!local && !cloud) return { glasses: 0, logs: [] };
+    if (!local) return cloud;
+    if (!cloud) return local;
+
+    // Keep the entry with more glasses (likely more up-to-date)
+    return local.glasses >= cloud.glasses ? local : cloud;
+  },
+
+  /**
+   * Merge energy data (combine logs)
+   */
+  mergeEnergy(local, cloud) {
+    if (!local && !cloud) return { logs: [] };
+    if (!local) return cloud;
+    if (!cloud) return local;
+
+    // Combine logs by time (dedupe)
+    const logMap = new Map();
+    (local.logs || []).forEach(l => logMap.set(l.time, l));
+    (cloud.logs || []).forEach(l => logMap.set(l.time, l));
+    return { logs: Array.from(logMap.values()).sort((a, b) => a.time.localeCompare(b.time)) };
+  },
+
+  /**
+   * Merge meals (combine by ID)
+   */
+  mergeMeals(local, cloud) {
+    if (!local && !cloud) return [];
+    if (!local) return cloud;
+    if (!cloud) return local;
+
+    const mealMap = new Map();
+    local.forEach(m => mealMap.set(m.id, m));
+    cloud.forEach(m => mealMap.set(m.id, m));
+    return Array.from(mealMap.values()).sort((a, b) => a.time.localeCompare(b.time));
+  },
+
+  /**
+   * Full sync: load from cloud, then push merged data back
+   */
+  async fullSync() {
+    const loadResult = await this.loadFromCloud();
+    if (loadResult.success) {
+      const syncResult = await this.syncToCloud();
+      return syncResult;
+    }
+    return loadResult;
   },
 
   // ==================== EXPORT/IMPORT ====================
