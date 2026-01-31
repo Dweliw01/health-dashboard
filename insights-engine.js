@@ -199,7 +199,7 @@ const InsightsEngine = {
         previousDayActivity: oura.readiness?.previousDayActivity || 0,
         previousNight: oura.readiness?.previousNight || 0,
         recoveryIndex: oura.readiness?.recoveryIndex || 0,
-        restingHeartRate: oura.readiness?.restingHeartRate || 0,
+        restingHeartRateScore: oura.readiness?.restingHeartRateScore || 0, // Contributor score (0-100), not actual HR
         sleepBalance: oura.readiness?.sleepBalance || null,
         tempDeviation: oura.readiness?.tempDeviation || 0
       },

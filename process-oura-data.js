@@ -232,7 +232,7 @@ function processReadinessContributors(readinessData) {
     previousDayActivity: c.previous_day_activity || null,
     previousNight: c.previous_night || null,
     recoveryIndex: c.recovery_index || null,
-    restingHeartRate: c.resting_heart_rate || null,
+    restingHeartRateScore: c.resting_heart_rate || null, // NOTE: This is a contributor SCORE (0-100), NOT actual HR in bpm!
     sleepBalance: c.sleep_balance || null,
     tempDeviation: latest.temperature_deviation || null,
     tempTrend: latest.temperature_trend_deviation || null
@@ -264,9 +264,15 @@ const avgSleepScore = Math.round(avg(last7Sleep.map(d => d.score || 0)));
 const last7Readiness = dailyReadiness.slice(-7);
 const avgReadinessScore = Math.round(avg(last7Readiness.map(d => d.score || 0)));
 const latestReadiness = dailyReadiness[dailyReadiness.length - 1] || {};
-const restingHR = latestReadiness.contributors?.resting_heart_rate ||
-                  Math.round(avg(last7Readiness.map(d => d.contributors?.resting_heart_rate || 0).filter(x => x > 0))) ||
-                  60;
+
+// Get actual resting HR from sleep data (lowest_heart_rate during sleep)
+// Note: contributors.resting_heart_rate is a SCORE (0-100), not the actual HR!
+const sleepHRValues = detailedSleep
+  .filter(s => s.lowest_heart_rate && s.lowest_heart_rate > 30 && s.lowest_heart_rate < 100)
+  .map(s => s.lowest_heart_rate);
+const restingHR = sleepHRValues.length > 0
+  ? Math.round(avg(sleepHRValues.slice(-7))) // Average of last 7 nights
+  : 60;
 
 // Calculate REAL heart rate trends from actual HR data
 function calculateDailyHR() {
@@ -580,6 +586,15 @@ const dashboardData = {
     steps: last7Days[last7Days.length - 1]?.steps || 0,
     avgHeartRate: dailyHRTrends[dailyHRTrends.length - 1]?.avgHR || restingHR,
     calories: last7Days[last7Days.length - 1]?.active_calories || 0
+  },
+  // Today's actual scores (not 7-day averages)
+  todayScores: {
+    sleep: dailySleep[dailySleep.length - 1]?.score || null,
+    readiness: dailyReadiness[dailyReadiness.length - 1]?.score || null,
+    activity: dailyActivity[dailyActivity.length - 1]?.score || null,
+    sleepDate: dailySleep[dailySleep.length - 1]?.day || null,
+    readinessDate: dailyReadiness[dailyReadiness.length - 1]?.day || null,
+    activityDate: dailyActivity[dailyActivity.length - 1]?.day || null
   },
   thisWeek: {
     workouts: weeklyComparison.workouts[3],
