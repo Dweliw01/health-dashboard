@@ -5693,8 +5693,24 @@
     <script src="ai-coach.js"></script>
 
     <script>
-        // API Key for AI Coach (loaded from localStorage via Settings)
-        // Users add their key via the Settings gear icon
+        // API Key for AI Coach (loaded from Vercel environment variable)
+        let claudeApiKey = null;
+
+        // Fetch API key from Vercel serverless function
+        async function loadApiKey() {
+            try {
+                const response = await fetch('/api/config');
+                if (response.ok) {
+                    const config = await response.json();
+                    claudeApiKey = config.apiKey;
+                    console.log('API key loaded from server');
+                }
+            } catch (e) {
+                // Fallback to localStorage for local development
+                claudeApiKey = localStorage.getItem('claude_api_key');
+                console.log('Using localStorage API key');
+            }
+        }
 
         let data = null;
         let chartsInitialized = false;
@@ -5783,10 +5799,9 @@
             patternEl.textContent = '';
 
             try {
-                // Use AI Coach with API key from localStorage
-                const apiKey = localStorage.getItem('claude_api_key');
+                // Use AI Coach with API key (from Vercel env or localStorage fallback)
                 if (typeof AICoach !== 'undefined') {
-                    const insight = await AICoach.getDailyInsight(data, apiKey);
+                    const insight = await AICoach.getDailyInsight(data, claudeApiKey);
 
                     headlineEl.textContent = insight.headline || 'Analyzing your data...';
 
@@ -5848,11 +5863,10 @@
                 return;
             }
 
-            // Check for API key
-            const apiKey = localStorage.getItem('claude_api_key');
-            if (!apiKey) {
+            // Check for API key (from Vercel env or localStorage)
+            if (!claudeApiKey) {
                 responseDiv.classList.add('visible');
-                responseText.innerHTML = '<span style="color: var(--text-muted);">Please add your Claude API key in Settings (gear icon) to use the Ask AI feature.</span>';
+                responseText.innerHTML = '<span style="color: var(--text-muted);">API key not configured. Please contact the administrator.</span>';
                 return;
             }
 
@@ -5863,7 +5877,7 @@
             responseText.innerHTML = '<span style="color: var(--text-muted);">Thinking...</span>';
 
             try {
-                const answer = await getAIAnswer(question, apiKey);
+                const answer = await getAIAnswer(question, claudeApiKey);
                 responseText.innerHTML = answer;
                 input.value = ''; // Clear input after successful answer
             } catch (error) {
@@ -8794,8 +8808,11 @@ ${healthContext}`;
             }).join('');
         }
 
-        loadData();
-        applyPersonalization();
+        // Initialize: Load API key first, then data
+        loadApiKey().then(() => {
+            loadData();
+            applyPersonalization();
+        });
     </script>
 </body>
 </html>
