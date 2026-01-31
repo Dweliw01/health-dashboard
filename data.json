@@ -1,9 +1,17 @@
 {
-  "lastUpdated": "2026-01-31T02:33:11.703Z",
+  "lastUpdated": "2026-01-31T03:01:04.256Z",
   "today": {
     "steps": 10532,
     "avgHeartRate": 93,
     "calories": 691
+  },
+  "todayScores": {
+    "sleep": 71,
+    "readiness": 75,
+    "activity": 76,
+    "sleepDate": "2026-01-30",
+    "readinessDate": "2026-01-30",
+    "activityDate": "2026-01-30"
   },
   "thisWeek": {
     "workouts": 6,
@@ -153,7 +161,7 @@
   "metrics": {
     "dailyAvgSteps": 9551,
     "avgHeartRate": 97,
-    "restingHR": 100,
+    "restingHR": 52,
     "activeDays": 5,
     "totalWorkouts": 10,
     "bestDaySteps": 15395,
@@ -178,7 +186,7 @@
     },
     "recovery": {
       "readinessScore": 76,
-      "restingHR": 100,
+      "restingHR": 52,
       "sleepScore": 69
     }
   },
@@ -1001,7 +1009,7 @@
     "previousDayActivity": 73,
     "previousNight": 74,
     "recoveryIndex": 68,
-    "restingHeartRate": 100,
+    "restingHeartRateScore": 100,
     "sleepBalance": 50,
     "tempDeviation": -0.3,
     "tempTrend": 0.04
