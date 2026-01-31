@@ -9292,10 +9292,11 @@ ${healthContext}${lifestyleContext}`;
                 return;
             }
 
-            // Load daily insight
-            loadDailyInsight();
+            // DON'T auto-call AI on page load - too expensive!
+            // User can click refresh button to get AI insights
+            // loadDailyInsight();
 
-            // Load prediction
+            // Load prediction (local, no API call)
             loadPrediction();
 
             // Render correlations (with smart patterns)
