@@ -8,8 +8,8 @@ export const config = {
 export default async function middleware(request) {
   const url = new URL(request.url);
 
-  // Allow auth and logout endpoints through (needed for login/logout)
-  if (url.pathname === '/api/auth' || url.pathname === '/api/logout') {
+  // Allow auth endpoints through (needed for login/logout/check)
+  if (url.pathname === '/api/auth' || url.pathname === '/api/logout' || url.pathname === '/api/auth-check') {
     return; // Pass through to the actual endpoint
   }
 

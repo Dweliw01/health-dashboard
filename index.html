@@ -6,15 +6,16 @@
     <title>Health Dashboard</title>
     <!-- Auth check - redirect to login if not authenticated -->
     <script>
-        (async function() {
+        (async function checkAuth() {
             try {
                 const res = await fetch('/api/auth-check');
-                if (!res.ok) {
-                    window.location.href = '/login.html';
+                if (res.status === 401) {
+                    window.location.replace('/login.html');
                 }
+                // Any other status (200, 500, etc.) - continue loading page
             } catch (e) {
-                // If auth check fails, redirect to login
-                window.location.href = '/login.html';
+                // Network error - don't redirect, let page try to load
+                console.warn('Auth check failed:', e.message);
             }
         })();
     </script>
