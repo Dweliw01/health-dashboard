@@ -24,7 +24,8 @@ const InsightsEngine = {
       checkins: this.getCheckinData(),
       nutrition: this.getNutritionData(),
       goals: this.getGoalsData(),
-      context: this.getUserContext()
+      context: this.getUserContext(),
+      lifestyle: this.getLifestyleData()
     };
   },
 
@@ -75,6 +76,16 @@ const InsightsEngine = {
       };
     }
     return { today: null, history: [], streak: 0 };
+  },
+
+  /**
+   * Get lifestyle data from Smart Health Journal
+   */
+  getLifestyleData() {
+    if (typeof LifestyleManager !== 'undefined') {
+      return LifestyleManager.getLifestyleContext();
+    }
+    return null;
   },
 
   /**
@@ -217,7 +228,8 @@ const InsightsEngine = {
       },
       alerts: oura.alerts || [],
       context: data.context,
-      goals: data.goals?.current || {}
+      goals: data.goals?.current || {},
+      lifestyle: data.lifestyle || null
     };
   },
 

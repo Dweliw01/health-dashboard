@@ -287,6 +287,59 @@ const AICoach = {
     },
 
     /**
+     * Get lifestyle context from LifestyleManager if available
+     */
+    getLifestyleContext() {
+        if (typeof LifestyleManager === 'undefined') {
+            return null;
+        }
+        return LifestyleManager.getLifestyleContext();
+    },
+
+    /**
+     * Format lifestyle data for AI prompt
+     */
+    formatLifestylePrompt(lifestyle) {
+        if (!lifestyle) return '';
+
+        let prompt = '\nLIFESTYLE FACTORS (User-reported):';
+
+        if (lifestyle.lastNight) {
+            const ln = lifestyle.lastNight;
+            prompt += '\nLast Night:';
+            if (ln.caffeine) prompt += `\n- Caffeine: ${ln.caffeine.replace('_', ' ')}`;
+            if (ln.alcohol) prompt += `\n- Alcohol: ${ln.alcohol.replace('_', ' ')}`;
+            if (ln.lastMealTime) prompt += `\n- Last meal: ${ln.lastMealTime.replace('_', ' ')} before bed`;
+            if (ln.screenTime) prompt += `\n- Screen time: ${ln.screenTime.replace('_', ' ')}`;
+            if (ln.stress) prompt += `\n- Stress level: ${ln.stress}/5`;
+        }
+
+        if (lifestyle.thisMorning) {
+            const tm = lifestyle.thisMorning;
+            prompt += '\nThis Morning:';
+            if (tm.energy) prompt += `\n- Subjective energy: ${tm.energy}/5`;
+            if (tm.sleepFelt) prompt += `\n- Sleep felt: ${tm.sleepFelt}`;
+        }
+
+        if (lifestyle.patterns && lifestyle.patterns.length > 0) {
+            prompt += '\nDiscovered Patterns:';
+            lifestyle.patterns.forEach(p => {
+                prompt += `\n- ${p.insight}`;
+            });
+        }
+
+        if (lifestyle.trends) {
+            const t = lifestyle.trends;
+            prompt += '\n7-Day Lifestyle Trends:';
+            if (t.avgStress) prompt += `\n- Avg stress: ${t.avgStress}/5`;
+            if (t.caffeineAfternoonCount) prompt += `\n- Afternoon caffeine: ${t.caffeineAfternoonCount}/${t.total} days`;
+            if (t.alcoholCount) prompt += `\n- Alcohol: ${t.alcoholCount}/${t.total} days`;
+        }
+
+        return prompt;
+    },
+
+    /**
      * Call Claude API for truly personalized insight
      */
     async generateAIInsight(data, apiKey) {
@@ -298,8 +351,10 @@ const AICoach = {
 
         const patterns = this.analyzePatterns(data);
         const todayScores = data.todayScores || {};
+        const lifestyle = this.getLifestyleContext();
+        const lifestylePrompt = this.formatLifestylePrompt(lifestyle);
 
-        const prompt = `You are a personal health coach analyzing Oura Ring data. Be concise, specific, and actionable.
+        const prompt = `You are a personal health coach analyzing Oura Ring data and lifestyle factors. Be concise, specific, and actionable. Connect lifestyle behaviors to health outcomes when relevant.
 
 TODAY'S SCORES:
 - Sleep: ${todayScores.sleep || 'N/A'} (7-day avg: ${data.metrics?.sleepScore || 'N/A'})
@@ -326,10 +381,11 @@ STRESS DATA:
 - Today's Stress: ${patterns.stress?.todayStress || 'N/A'} min high stress
 - Today's Recovery: ${patterns.stress?.todayRecovery || 'N/A'} min recovery time
 - Stress/Recovery Trend: ${patterns.stress?.stressfulDaysRatio || 0}% stressful days recently
+${lifestylePrompt}
 
 Based on this data, provide:
-1. A brief headline insight (1 sentence, be specific with numbers)
-2. The most important recommendation for today (1 sentence)
+1. A brief headline insight (1 sentence, be specific with numbers, connect lifestyle to outcomes if relevant)
+2. The most important recommendation for today (1 sentence, be specific and actionable)
 3. One pattern you notice in the data (1 sentence)
 
 Format your response as JSON:

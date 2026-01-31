@@ -3887,6 +3887,604 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        /* ===== Smart Health Journal Styles ===== */
+
+        /* Smart Journal Section */
+        .smart-journal-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .journal-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 20px 24px;
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.08) 0%, rgba(99, 102, 241, 0.08) 100%);
+            border-bottom: 1px solid var(--border);
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .journal-header:hover {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.12) 0%, rgba(99, 102, 241, 0.12) 100%);
+        }
+
+        .journal-header-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.2) 0%, rgba(99, 102, 241, 0.2) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #8b5cf6;
+        }
+
+        .journal-header-text {
+            flex: 1;
+        }
+
+        .journal-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .journal-subtitle {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+
+        .journal-expand {
+            color: var(--text-muted);
+            transition: transform 0.3s;
+        }
+
+        .journal-header.expanded .journal-expand {
+            transform: rotate(180deg);
+        }
+
+        .journal-content {
+            display: none;
+            padding: 24px;
+        }
+
+        .journal-content.visible {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        /* Evening Check-in Card */
+        .evening-checkin-card {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.05) 0%, var(--bg-elevated) 100%);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .checkin-card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .checkin-card-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .checkin-card-title svg {
+            width: 20px;
+            height: 20px;
+            color: #8b5cf6;
+        }
+
+        .checkin-card-time {
+            font-size: 12px;
+            color: var(--text-muted);
+            padding: 4px 10px;
+            background: var(--bg-card);
+            border-radius: 20px;
+        }
+
+        .checkin-status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .checkin-status-badge.completed {
+            background: rgba(16, 185, 129, 0.15);
+            color: #10b981;
+        }
+
+        .checkin-status-badge.pending {
+            background: rgba(245, 158, 11, 0.15);
+            color: #f59e0b;
+        }
+
+        /* Lifestyle Factor Row */
+        .lifestyle-factor {
+            margin-bottom: 20px;
+        }
+
+        .lifestyle-factor:last-child {
+            margin-bottom: 0;
+        }
+
+        .factor-label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+        }
+
+        .factor-label svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        /* Chip Selection */
+        .chip-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .chip {
+            padding: 10px 16px;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            background: var(--bg-card);
+            color: var(--text-secondary);
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .chip:hover {
+            border-color: var(--accent);
+            background: rgba(99, 102, 241, 0.05);
+        }
+
+        .chip.selected {
+            border-color: var(--accent);
+            background: rgba(99, 102, 241, 0.15);
+            color: var(--accent-light);
+        }
+
+        .chip.selected.good {
+            border-color: #10b981;
+            background: rgba(16, 185, 129, 0.15);
+            color: #10b981;
+        }
+
+        .chip.selected.warning {
+            border-color: #f59e0b;
+            background: rgba(245, 158, 11, 0.15);
+            color: #f59e0b;
+        }
+
+        .chip.selected.bad {
+            border-color: #ef4444;
+            background: rgba(239, 68, 68, 0.15);
+            color: #ef4444;
+        }
+
+        /* Stress Scale */
+        .stress-scale {
+            display: flex;
+            gap: 8px;
+        }
+
+        .stress-btn {
+            width: 44px;
+            height: 44px;
+            border: 2px solid var(--border);
+            border-radius: 50%;
+            background: var(--bg-card);
+            color: var(--text-secondary);
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .stress-btn:hover {
+            border-color: var(--accent);
+        }
+
+        .stress-btn.selected {
+            border-color: var(--accent);
+            background: rgba(99, 102, 241, 0.15);
+            color: var(--accent-light);
+        }
+
+        .stress-btn.selected.low {
+            border-color: #10b981;
+            background: rgba(16, 185, 129, 0.15);
+            color: #10b981;
+        }
+
+        .stress-btn.selected.medium {
+            border-color: #f59e0b;
+            background: rgba(245, 158, 11, 0.15);
+            color: #f59e0b;
+        }
+
+        .stress-btn.selected.high {
+            border-color: #ef4444;
+            background: rgba(239, 68, 68, 0.15);
+            color: #ef4444;
+        }
+
+        /* Save Button */
+        .save-checkin-btn {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
+            color: white;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            margin-top: 24px;
+        }
+
+        .save-checkin-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(139, 92, 246, 0.4);
+        }
+
+        .save-checkin-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* Morning Reflection Card */
+        .morning-reflection-card {
+            background: linear-gradient(135deg, rgba(251, 191, 36, 0.05) 0%, var(--bg-elevated) 100%);
+            border: 1px solid rgba(251, 191, 36, 0.2);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .morning-reflection-card .checkin-card-title svg {
+            color: #fbbf24;
+        }
+
+        /* Energy Emoji Scale */
+        .energy-emoji-scale {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+        }
+
+        .energy-emoji-btn {
+            width: 56px;
+            height: 56px;
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            background: var(--bg-card);
+            font-size: 28px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .energy-emoji-btn:hover {
+            border-color: var(--accent);
+            transform: scale(1.05);
+        }
+
+        .energy-emoji-btn.selected {
+            border-color: var(--accent);
+            background: rgba(99, 102, 241, 0.15);
+            transform: scale(1.1);
+        }
+
+        /* Patterns Section */
+        .patterns-section {
+            background: var(--bg-elevated);
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .patterns-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 16px;
+        }
+
+        .patterns-title {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .patterns-title svg {
+            width: 18px;
+            height: 18px;
+            color: #6366f1;
+        }
+
+        .patterns-days {
+            font-size: 12px;
+            color: var(--text-muted);
+            padding: 4px 10px;
+            background: var(--bg-card);
+            border-radius: 20px;
+        }
+
+        .pattern-item {
+            padding: 14px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .pattern-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .pattern-item.negative {
+            border-left: 3px solid #ef4444;
+        }
+
+        .pattern-item.positive {
+            border-left: 3px solid #10b981;
+        }
+
+        .pattern-factor {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+
+        .pattern-factor svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .pattern-impact {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 6px;
+        }
+
+        .pattern-confidence {
+            font-size: 11px;
+            color: var(--text-muted);
+        }
+
+        /* Best Sleep Factors */
+        .best-sleep-section {
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid var(--border);
+        }
+
+        .best-sleep-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+        }
+
+        .best-sleep-factors {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .best-factor-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 12px;
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            border-radius: 20px;
+            font-size: 12px;
+            color: #10b981;
+        }
+
+        .best-factor-chip .percentage {
+            font-weight: 600;
+        }
+
+        /* Smart Prompt Card */
+        .smart-prompt-card {
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.08) 0%, var(--bg-card) 100%);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .smart-prompt-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .smart-prompt-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: rgba(245, 158, 11, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #f59e0b;
+            flex-shrink: 0;
+        }
+
+        .smart-prompt-message {
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--text-primary);
+            line-height: 1.5;
+        }
+
+        .smart-prompt-causes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .cause-chip {
+            padding: 10px 16px;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            background: var(--bg-elevated);
+            color: var(--text-secondary);
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .cause-chip:hover {
+            border-color: #f59e0b;
+            background: rgba(245, 158, 11, 0.1);
+        }
+
+        .cause-chip.selected {
+            border-color: #f59e0b;
+            background: rgba(245, 158, 11, 0.15);
+            color: #f59e0b;
+        }
+
+        /* Journal Streaks */
+        .journal-streaks {
+            display: flex;
+            gap: 16px;
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid var(--border);
+        }
+
+        .journal-streak-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 16px;
+            background: var(--bg-card);
+            border-radius: 8px;
+        }
+
+        .journal-streak-item svg {
+            width: 18px;
+            height: 18px;
+            color: #f59e0b;
+        }
+
+        .journal-streak-label {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        .journal-streak-value {
+            font-size: 14px;
+            font-weight: 600;
+            color: #f59e0b;
+        }
+
+        /* Enough Data Message */
+        .not-enough-data {
+            text-align: center;
+            padding: 24px;
+            color: var(--text-muted);
+        }
+
+        .not-enough-data-icon {
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 12px;
+            border-radius: 50%;
+            background: var(--bg-elevated);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+        }
+
+        .not-enough-data-title {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+
+        .not-enough-data-text {
+            font-size: 13px;
+        }
+
+        @media (max-width: 600px) {
+            .chip-group {
+                gap: 6px;
+            }
+            .chip {
+                padding: 8px 12px;
+                font-size: 12px;
+            }
+            .stress-scale {
+                gap: 6px;
+            }
+            .stress-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 14px;
+            }
+            .energy-emoji-scale {
+                gap: 8px;
+            }
+            .energy-emoji-btn {
+                width: 48px;
+                height: 48px;
+                font-size: 24px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -4402,7 +5000,263 @@
             </div>
         </section>
 
-        <!-- Expandable Details: Nutrition & Check-in -->
+        <!-- Smart Health Journal -->
+        <section class="smart-journal-section" id="smartJournalSection">
+            <div class="journal-header" id="journalHeader" onclick="toggleJournalSection()">
+                <div class="journal-header-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22">
+                        <path d="M12 20h9"/>
+                        <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+                    </svg>
+                </div>
+                <div class="journal-header-text">
+                    <div class="journal-title">Smart Health Journal</div>
+                    <div class="journal-subtitle" id="journalSubtitle">Track lifestyle factors that impact your sleep</div>
+                </div>
+                <div class="journal-expand">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                        <polyline points="6 9 12 15 18 9"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="journal-content" id="journalContent">
+
+                <!-- Smart Prompt (shown when anomaly detected) -->
+                <div class="smart-prompt-card" id="smartPromptCard" style="display: none;">
+                    <div class="smart-prompt-header">
+                        <div class="smart-prompt-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22">
+                                <circle cx="12" cy="12" r="10"/>
+                                <line x1="12" y1="8" x2="12" y2="12"/>
+                                <line x1="12" y1="16" x2="12.01" y2="16"/>
+                            </svg>
+                        </div>
+                        <div class="smart-prompt-message" id="smartPromptMessage">Your deep sleep was low. What might have caused this?</div>
+                    </div>
+                    <div class="smart-prompt-causes" id="smartPromptCauses">
+                        <button class="cause-chip" data-cause="late_caffeine" onclick="selectCause('late_caffeine')">Late caffeine</button>
+                        <button class="cause-chip" data-cause="alcohol" onclick="selectCause('alcohol')">Alcohol</button>
+                        <button class="cause-chip" data-cause="stress" onclick="selectCause('stress')">Stress</button>
+                        <button class="cause-chip" data-cause="late_meal" onclick="selectCause('late_meal')">Late meal</button>
+                        <button class="cause-chip" data-cause="screen_time" onclick="selectCause('screen_time')">Screen time</button>
+                        <button class="cause-chip" data-cause="not_sure" onclick="selectCause('not_sure')">Not sure</button>
+                    </div>
+                    <button class="save-checkin-btn" style="margin-top: 16px; background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);" onclick="saveRetroCauseAndDismiss()">Save & Dismiss</button>
+                </div>
+
+                <!-- Morning Reflection (shown 6am-11am) -->
+                <div class="morning-reflection-card" id="morningReflectionCard" style="display: none;">
+                    <div class="checkin-card-header">
+                        <div class="checkin-card-title">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="5"/>
+                                <line x1="12" y1="1" x2="12" y2="3"/>
+                                <line x1="12" y1="21" x2="12" y2="23"/>
+                                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                                <line x1="1" y1="12" x2="3" y2="12"/>
+                                <line x1="21" y1="12" x2="23" y2="12"/>
+                                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                            </svg>
+                            Morning Reflection
+                        </div>
+                        <div id="morningReflectionStatus"></div>
+                    </div>
+
+                    <div class="lifestyle-factor">
+                        <div class="factor-label">How's your energy this morning?</div>
+                        <div class="energy-emoji-scale" id="morningEnergyScale">
+                            <button class="energy-emoji-btn" data-energy="1" onclick="selectMorningEnergy(1)">&#128553;</button>
+                            <button class="energy-emoji-btn" data-energy="2" onclick="selectMorningEnergy(2)">&#128532;</button>
+                            <button class="energy-emoji-btn" data-energy="3" onclick="selectMorningEnergy(3)">&#128528;</button>
+                            <button class="energy-emoji-btn" data-energy="4" onclick="selectMorningEnergy(4)">&#128578;</button>
+                            <button class="energy-emoji-btn" data-energy="5" onclick="selectMorningEnergy(5)">&#128522;</button>
+                        </div>
+                    </div>
+
+                    <div class="lifestyle-factor">
+                        <div class="factor-label">How did your sleep feel?</div>
+                        <div class="chip-group" id="sleepFeltChips">
+                            <button class="chip" data-value="poor" onclick="selectSleepFelt('poor')">Poor</button>
+                            <button class="chip" data-value="okay" onclick="selectSleepFelt('okay')">Okay</button>
+                            <button class="chip" data-value="good" onclick="selectSleepFelt('good')">Good</button>
+                            <button class="chip" data-value="great" onclick="selectSleepFelt('great')">Great</button>
+                        </div>
+                    </div>
+
+                    <button class="save-checkin-btn" id="saveMorningBtn" onclick="saveMorningReflection()">Save Reflection</button>
+                </div>
+
+                <!-- Evening Check-in (shown after 7pm) -->
+                <div class="evening-checkin-card" id="eveningCheckinCard">
+                    <div class="checkin-card-header">
+                        <div class="checkin-card-title">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                            </svg>
+                            Evening Check-in
+                        </div>
+                        <div id="eveningCheckinStatus"></div>
+                    </div>
+
+                    <!-- Caffeine -->
+                    <div class="lifestyle-factor">
+                        <div class="factor-label">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
+                                <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+                            </svg>
+                            Caffeine today?
+                        </div>
+                        <div class="chip-group" id="caffeineChips">
+                            <button class="chip" data-value="none" onclick="selectCaffeine('none')">None</button>
+                            <button class="chip" data-value="morning_only" onclick="selectCaffeine('morning_only')">Morning only</button>
+                            <button class="chip" data-value="afternoon" onclick="selectCaffeine('afternoon')">Afternoon</button>
+                            <button class="chip" data-value="evening" onclick="selectCaffeine('evening')">Evening</button>
+                        </div>
+                    </div>
+
+                    <!-- Alcohol -->
+                    <div class="lifestyle-factor">
+                        <div class="factor-label">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M8 22h8"/>
+                                <path d="M12 11v11"/>
+                                <path d="M5.2 4a10.8 10.8 0 0 0 13.6 0"/>
+                                <path d="M5.2 4L7 2h10l1.8 2"/>
+                                <path d="M5.2 4c-1 2-1 4 0 6l.6 1c1 2 2.8 3 4.2 3h4c1.4 0 3.2-1 4.2-3l.6-1c1-2 1-4 0-6"/>
+                            </svg>
+                            Alcohol?
+                        </div>
+                        <div class="chip-group" id="alcoholChips">
+                            <button class="chip" data-value="none" onclick="selectAlcohol('none')">None</button>
+                            <button class="chip" data-value="one_two" onclick="selectAlcohol('one_two')">1-2 drinks</button>
+                            <button class="chip" data-value="three_plus" onclick="selectAlcohol('three_plus')">3+</button>
+                        </div>
+                    </div>
+
+                    <!-- Last Meal Time -->
+                    <div class="lifestyle-factor">
+                        <div class="factor-label">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/>
+                                <path d="M7 2v20"/>
+                                <path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3"/>
+                                <path d="M18 22v-7"/>
+                            </svg>
+                            Last meal before bed?
+                        </div>
+                        <div class="chip-group" id="mealTimeChips">
+                            <button class="chip" data-value="three_plus" onclick="selectMealTime('three_plus')">3+ hrs</button>
+                            <button class="chip" data-value="one_two" onclick="selectMealTime('one_two')">1-2 hrs</button>
+                            <button class="chip" data-value="less_one" onclick="selectMealTime('less_one')">&lt; 1 hr</button>
+                        </div>
+                    </div>
+
+                    <!-- Screen Time -->
+                    <div class="lifestyle-factor">
+                        <div class="factor-label">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                                <line x1="12" y1="18" x2="12.01" y2="18"/>
+                            </svg>
+                            Screen time before bed?
+                        </div>
+                        <div class="chip-group" id="screenTimeChips">
+                            <button class="chip" data-value="none" onclick="selectScreenTime('none')">None</button>
+                            <button class="chip" data-value="under_30" onclick="selectScreenTime('under_30')">&lt; 30 min</button>
+                            <button class="chip" data-value="over_30" onclick="selectScreenTime('over_30')">30+ min</button>
+                        </div>
+                    </div>
+
+                    <!-- Stress Level -->
+                    <div class="lifestyle-factor">
+                        <div class="factor-label">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z"/>
+                                <path d="M8 15h8"/>
+                                <path d="M9 9h.01"/>
+                                <path d="M15 9h.01"/>
+                            </svg>
+                            Stress level today?
+                        </div>
+                        <div class="stress-scale" id="stressScale">
+                            <button class="stress-btn" data-stress="1" onclick="selectStress(1)">1</button>
+                            <button class="stress-btn" data-stress="2" onclick="selectStress(2)">2</button>
+                            <button class="stress-btn" data-stress="3" onclick="selectStress(3)">3</button>
+                            <button class="stress-btn" data-stress="4" onclick="selectStress(4)">4</button>
+                            <button class="stress-btn" data-stress="5" onclick="selectStress(5)">5</button>
+                        </div>
+                    </div>
+
+                    <button class="save-checkin-btn" id="saveEveningBtn" onclick="saveEveningCheckin()">Save Check-in</button>
+                </div>
+
+                <!-- Patterns Section (shown when 14+ days of data) -->
+                <div class="patterns-section" id="patternsSection" style="display: none;">
+                    <div class="patterns-header">
+                        <div class="patterns-title">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"/>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                            </svg>
+                            Your Patterns
+                        </div>
+                        <div class="patterns-days" id="patternsDays">-- days analyzed</div>
+                    </div>
+
+                    <div id="patternsList"></div>
+
+                    <div class="best-sleep-section" id="bestSleepSection" style="display: none;">
+                        <div class="best-sleep-title">Your best sleep nights had:</div>
+                        <div class="best-sleep-factors" id="bestSleepFactors"></div>
+                    </div>
+                </div>
+
+                <!-- Not Enough Data Message -->
+                <div class="not-enough-data" id="notEnoughDataMessage" style="display: none;">
+                    <div class="not-enough-data-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                    </div>
+                    <div class="not-enough-data-title">Building your patterns...</div>
+                    <div class="not-enough-data-text" id="notEnoughDataText">Check in for 14 days to see your personal sleep patterns</div>
+                </div>
+
+                <!-- Journal Streaks -->
+                <div class="journal-streaks" id="journalStreaks">
+                    <div class="journal-streak-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/>
+                        </svg>
+                        <div>
+                            <div class="journal-streak-label">Evening Streak</div>
+                            <div class="journal-streak-value" id="eveningStreakValue">0 days</div>
+                        </div>
+                    </div>
+                    <div class="journal-streak-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="5"/>
+                            <line x1="12" y1="1" x2="12" y2="3"/>
+                            <line x1="12" y1="21" x2="12" y2="23"/>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                            <line x1="1" y1="12" x2="3" y2="12"/>
+                            <line x1="21" y1="12" x2="23" y2="12"/>
+                        </svg>
+                        <div>
+                            <div class="journal-streak-label">Morning Streak</div>
+                            <div class="journal-streak-value" id="morningStreakValue">0 days</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Expandable Details: Nutrition & Check-in (Legacy) -->
         <section class="details-section" id="nutritionDetails">
             <div class="details-header" onclick="toggleDetails('nutritionDetails')">
                 <div class="details-icon nutrition">
@@ -4410,7 +5264,7 @@
                         <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
                     </svg>
                 </div>
-                <span class="details-title">Nutrition & Check-in</span>
+                <span class="details-title">Nutrition & Water Tracking</span>
                 <div class="details-expand">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
                         <polyline points="6 9 12 15 18 9"/>
@@ -4422,7 +5276,7 @@
                 <section class="nutrition-section" id="nutritionSectionInline">
                     <div class="nutrition-grid" id="nutritionGridInline"></div>
                 </section>
-                <section class="checkin-section-inline" id="checkinSectionInline">
+                <section class="checkin-section-inline" id="checkinSectionInline" style="display: none;">
                     <div class="checkin-inline-grid" id="checkinGridInline"></div>
                 </section>
             </div>
@@ -5685,6 +6539,8 @@
     <script src="checkin-manager.js"></script>
     <!-- Include Nutrition Manager -->
     <script src="nutrition-manager.js"></script>
+    <!-- Include Lifestyle Manager (Smart Health Journal) -->
+    <script src="lifestyle-manager.js"></script>
     <!-- Include Analytics Engine -->
     <script src="analytics-engine.js"></script>
     <!-- Include AI Insights Engine -->
@@ -5957,7 +6813,37 @@ SpO2: ${data.spo2?.current || 'N/A'}%
 Breath Rate: ${sleepStages.avgBreathRate || 'N/A'} breaths/min
 `;
 
-            const systemPrompt = `You are a knowledgeable health coach analyzing Oura Ring data. You have access to the user's complete health metrics.
+            // Add lifestyle context if available
+            let lifestyleContext = '';
+            if (typeof LifestyleManager !== 'undefined') {
+                const lifestyle = LifestyleManager.getLifestyleContext();
+                if (lifestyle) {
+                    lifestyleContext = '\nLIFESTYLE FACTORS (User-reported):';
+                    if (lifestyle.lastNight) {
+                        const ln = lifestyle.lastNight;
+                        lifestyleContext += '\nLast Night:';
+                        if (ln.caffeine) lifestyleContext += `\n- Caffeine: ${ln.caffeine.replace(/_/g, ' ')}`;
+                        if (ln.alcohol) lifestyleContext += `\n- Alcohol: ${ln.alcohol.replace(/_/g, ' ')}`;
+                        if (ln.lastMealTime) lifestyleContext += `\n- Last meal: ${ln.lastMealTime.replace(/_/g, ' ')} before bed`;
+                        if (ln.screenTime) lifestyleContext += `\n- Screen time: ${ln.screenTime.replace(/_/g, ' ')}`;
+                        if (ln.stress) lifestyleContext += `\n- Stress level: ${ln.stress}/5`;
+                    }
+                    if (lifestyle.thisMorning) {
+                        const tm = lifestyle.thisMorning;
+                        lifestyleContext += '\nThis Morning:';
+                        if (tm.energy) lifestyleContext += `\n- Subjective energy: ${tm.energy}/5`;
+                        if (tm.sleepFelt) lifestyleContext += `\n- Sleep felt: ${tm.sleepFelt}`;
+                    }
+                    if (lifestyle.patterns && lifestyle.patterns.length > 0) {
+                        lifestyleContext += '\nDiscovered Personal Patterns:';
+                        lifestyle.patterns.forEach(p => {
+                            lifestyleContext += `\n- ${p.insight}`;
+                        });
+                    }
+                }
+            }
+
+            const systemPrompt = `You are a knowledgeable health coach analyzing Oura Ring data and lifestyle factors. You have access to the user's complete health metrics.
 
 Guidelines:
 - Be specific and reference actual numbers from their data
@@ -5966,9 +6852,10 @@ Guidelines:
 - Keep responses concise (2-4 paragraphs max)
 - If data is missing (N/A), acknowledge it and work with what's available
 - Focus on patterns and correlations in the data
+- Connect lifestyle factors (caffeine, alcohol, meal timing, stress) to health outcomes when relevant
 - Mention specific improvements they could make today
 
-${healthContext}`;
+${healthContext}${lifestyleContext}`;
 
             const response = await fetch('https://api.anthropic.com/v1/messages', {
                 method: 'POST',
@@ -6272,6 +7159,7 @@ ${healthContext}`;
                     renderMorningCoach();
                     initCheckinUI();
                     initNutritionUI();
+                    await initSmartJournal();
                     initTrendsUI();
                     initAIInsights();
                     applyPersonalization();
@@ -6765,6 +7653,450 @@ ${healthContext}`;
                 'check-circle': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>'
             };
             return icons[name] || icons['activity'];
+        }
+
+        // ===== Smart Health Journal Functions =====
+
+        let lifestyleState = {
+            evening: {
+                caffeine: null,
+                alcohol: null,
+                lastMealTime: null,
+                screenTime: null,
+                stress: null
+            },
+            morning: {
+                energy: null,
+                sleepFelt: null
+            },
+            retroCauses: [],
+            currentAnomaly: null
+        };
+
+        async function initSmartJournal() {
+            if (typeof LifestyleManager === 'undefined') {
+                console.warn('LifestyleManager not loaded');
+                return;
+            }
+
+            // Initialize cloud sync (loads from cloud, merges with local)
+            try {
+                await LifestyleManager.initCloudSync();
+                console.log('Cloud sync initialized');
+            } catch (err) {
+                console.warn('Cloud sync failed, using local data:', err.message);
+            }
+
+            // Try to import from old CheckinManager
+            LifestyleManager.importFromCheckinManager();
+
+            // Update visibility based on time of day
+            updateJournalVisibility();
+
+            // Load existing data
+            loadExistingLifestyleData();
+
+            // Update patterns display
+            updatePatternsDisplay();
+
+            // Check for anomalies
+            checkForAnomalies();
+
+            // Update streaks
+            updateJournalStreaks();
+        }
+
+        function updateJournalVisibility() {
+            const hour = new Date().getHours();
+            const morningCard = document.getElementById('morningReflectionCard');
+            const eveningCard = document.getElementById('eveningCheckinCard');
+
+            // Morning reflection: 6am - 11am
+            if (morningCard) {
+                const todayMorning = LifestyleManager.getTodayMorningReflection();
+                if (hour >= 6 && hour < 11 && !todayMorning) {
+                    morningCard.style.display = 'block';
+                } else if (todayMorning) {
+                    morningCard.style.display = 'block';
+                    updateMorningReflectionStatus(true);
+                    loadMorningReflection(todayMorning);
+                } else {
+                    morningCard.style.display = 'none';
+                }
+            }
+
+            // Evening check-in: always visible but highlighted after 7pm
+            if (eveningCard) {
+                const todayEvening = LifestyleManager.getTodayEveningCheckin();
+                if (todayEvening) {
+                    updateEveningCheckinStatus(true);
+                    loadEveningCheckin(todayEvening);
+                } else {
+                    updateEveningCheckinStatus(false);
+                }
+
+                // Update subtitle based on time
+                const subtitle = document.getElementById('journalSubtitle');
+                if (subtitle) {
+                    if (hour >= 19) {
+                        subtitle.textContent = 'Time for your evening check-in';
+                    } else if (hour >= 6 && hour < 11) {
+                        subtitle.textContent = 'How did you sleep?';
+                    } else {
+                        subtitle.textContent = 'Track lifestyle factors that impact your sleep';
+                    }
+                }
+            }
+        }
+
+        function loadExistingLifestyleData() {
+            const todayEvening = LifestyleManager.getTodayEveningCheckin();
+            const todayMorning = LifestyleManager.getTodayMorningReflection();
+
+            if (todayEvening) {
+                loadEveningCheckin(todayEvening);
+            }
+            if (todayMorning) {
+                loadMorningReflection(todayMorning);
+            }
+        }
+
+        function loadEveningCheckin(checkin) {
+            if (checkin.caffeine) selectCaffeine(checkin.caffeine, true);
+            if (checkin.alcohol) selectAlcohol(checkin.alcohol, true);
+            if (checkin.lastMealTime) selectMealTime(checkin.lastMealTime, true);
+            if (checkin.screenTime) selectScreenTime(checkin.screenTime, true);
+            if (checkin.stress) selectStress(checkin.stress, true);
+        }
+
+        function loadMorningReflection(reflection) {
+            if (reflection.energy) selectMorningEnergy(reflection.energy, true);
+            if (reflection.sleepFelt) selectSleepFelt(reflection.sleepFelt, true);
+        }
+
+        function updateEveningCheckinStatus(completed) {
+            const statusEl = document.getElementById('eveningCheckinStatus');
+            if (!statusEl) return;
+
+            if (completed) {
+                statusEl.innerHTML = '<span class="checkin-status-badge completed"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Saved</span>';
+            } else {
+                const hour = new Date().getHours();
+                if (hour >= 19) {
+                    statusEl.innerHTML = '<span class="checkin-status-badge pending">~30 sec</span>';
+                } else {
+                    statusEl.innerHTML = '<span class="checkin-card-time">Best after 7pm</span>';
+                }
+            }
+        }
+
+        function updateMorningReflectionStatus(completed) {
+            const statusEl = document.getElementById('morningReflectionStatus');
+            if (!statusEl) return;
+
+            if (completed) {
+                statusEl.innerHTML = '<span class="checkin-status-badge completed"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Saved</span>';
+            } else {
+                statusEl.innerHTML = '<span class="checkin-status-badge pending">~15 sec</span>';
+            }
+        }
+
+        function toggleJournalSection() {
+            const header = document.getElementById('journalHeader');
+            const content = document.getElementById('journalContent');
+
+            if (header && content) {
+                header.classList.toggle('expanded');
+                content.classList.toggle('visible');
+            }
+        }
+
+        // Chip Selection Functions
+        function selectCaffeine(value, isLoad = false) {
+            lifestyleState.evening.caffeine = value;
+            updateChipSelection('caffeineChips', value, getChipClass('caffeine', value));
+            if (!isLoad) markEveningUnsaved();
+        }
+
+        function selectAlcohol(value, isLoad = false) {
+            lifestyleState.evening.alcohol = value;
+            updateChipSelection('alcoholChips', value, getChipClass('alcohol', value));
+            if (!isLoad) markEveningUnsaved();
+        }
+
+        function selectMealTime(value, isLoad = false) {
+            lifestyleState.evening.lastMealTime = value;
+            updateChipSelection('mealTimeChips', value, getChipClass('meal', value));
+            if (!isLoad) markEveningUnsaved();
+        }
+
+        function selectScreenTime(value, isLoad = false) {
+            lifestyleState.evening.screenTime = value;
+            updateChipSelection('screenTimeChips', value, getChipClass('screen', value));
+            if (!isLoad) markEveningUnsaved();
+        }
+
+        function selectStress(level, isLoad = false) {
+            lifestyleState.evening.stress = level;
+            const stressScale = document.getElementById('stressScale');
+            if (stressScale) {
+                stressScale.querySelectorAll('.stress-btn').forEach(btn => {
+                    const btnLevel = parseInt(btn.dataset.stress);
+                    btn.classList.remove('selected', 'low', 'medium', 'high');
+                    if (btnLevel === level) {
+                        btn.classList.add('selected');
+                        if (level <= 2) btn.classList.add('low');
+                        else if (level <= 3) btn.classList.add('medium');
+                        else btn.classList.add('high');
+                    }
+                });
+            }
+            if (!isLoad) markEveningUnsaved();
+        }
+
+        function selectMorningEnergy(level, isLoad = false) {
+            lifestyleState.morning.energy = level;
+            const scale = document.getElementById('morningEnergyScale');
+            if (scale) {
+                scale.querySelectorAll('.energy-emoji-btn').forEach(btn => {
+                    btn.classList.toggle('selected', parseInt(btn.dataset.energy) === level);
+                });
+            }
+            if (!isLoad) markMorningUnsaved();
+        }
+
+        function selectSleepFelt(value, isLoad = false) {
+            lifestyleState.morning.sleepFelt = value;
+            updateChipSelection('sleepFeltChips', value, getChipClass('sleepFelt', value));
+            if (!isLoad) markMorningUnsaved();
+        }
+
+        function updateChipSelection(containerId, selectedValue, colorClass) {
+            const container = document.getElementById(containerId);
+            if (!container) return;
+
+            container.querySelectorAll('.chip').forEach(chip => {
+                chip.classList.remove('selected', 'good', 'warning', 'bad');
+                if (chip.dataset.value === selectedValue) {
+                    chip.classList.add('selected');
+                    if (colorClass) chip.classList.add(colorClass);
+                }
+            });
+        }
+
+        function getChipClass(factor, value) {
+            const classes = {
+                caffeine: { none: 'good', morning_only: 'good', afternoon: 'warning', evening: 'bad' },
+                alcohol: { none: 'good', one_two: 'warning', three_plus: 'bad' },
+                meal: { three_plus: 'good', one_two: 'warning', less_one: 'bad' },
+                screen: { none: 'good', under_30: 'warning', over_30: 'bad' },
+                sleepFelt: { great: 'good', good: 'good', okay: 'warning', poor: 'bad' }
+            };
+            return classes[factor]?.[value] || '';
+        }
+
+        function markEveningUnsaved() {
+            const btn = document.getElementById('saveEveningBtn');
+            if (btn) {
+                btn.textContent = 'Save Check-in';
+                btn.disabled = false;
+            }
+        }
+
+        function markMorningUnsaved() {
+            const btn = document.getElementById('saveMorningBtn');
+            if (btn) {
+                btn.textContent = 'Save Reflection';
+                btn.disabled = false;
+            }
+        }
+
+        function saveEveningCheckin() {
+            if (typeof LifestyleManager === 'undefined') return;
+
+            const checkin = {
+                caffeine: lifestyleState.evening.caffeine,
+                alcohol: lifestyleState.evening.alcohol,
+                lastMealTime: lifestyleState.evening.lastMealTime,
+                screenTime: lifestyleState.evening.screenTime,
+                stress: lifestyleState.evening.stress
+            };
+
+            LifestyleManager.saveEveningCheckin(checkin);
+
+            const btn = document.getElementById('saveEveningBtn');
+            if (btn) {
+                btn.textContent = 'Saved!';
+                btn.disabled = true;
+            }
+
+            updateEveningCheckinStatus(true);
+            updateJournalStreaks();
+            updatePatternsDisplay();
+
+            // Update FAB if it exists
+            updateFabState();
+
+            console.log('Evening check-in saved:', checkin);
+        }
+
+        function saveMorningReflection() {
+            if (typeof LifestyleManager === 'undefined') return;
+
+            if (!lifestyleState.morning.energy) {
+                alert('Please select your energy level');
+                return;
+            }
+
+            const reflection = {
+                energy: lifestyleState.morning.energy,
+                sleepFelt: lifestyleState.morning.sleepFelt
+            };
+
+            LifestyleManager.saveMorningReflection(reflection);
+
+            const btn = document.getElementById('saveMorningBtn');
+            if (btn) {
+                btn.textContent = 'Saved!';
+                btn.disabled = true;
+            }
+
+            updateMorningReflectionStatus(true);
+            updateJournalStreaks();
+
+            console.log('Morning reflection saved:', reflection);
+        }
+
+        // Smart Prompts for Anomalies
+        function checkForAnomalies() {
+            if (typeof LifestyleManager === 'undefined' || !data) return;
+
+            const anomalies = LifestyleManager.detectAnomalies(data);
+            const promptCard = document.getElementById('smartPromptCard');
+
+            if (anomalies.length > 0) {
+                // Check if user hasn't already responded today
+                const anomaly = anomalies[0];
+                if (!LifestyleManager.hasRespondedToAnomaly(anomaly.metric)) {
+                    lifestyleState.currentAnomaly = anomaly;
+                    document.getElementById('smartPromptMessage').textContent = anomaly.message;
+                    if (promptCard) promptCard.style.display = 'block';
+                    return;
+                }
+            }
+
+            if (promptCard) promptCard.style.display = 'none';
+        }
+
+        function selectCause(cause) {
+            const chip = document.querySelector(`.cause-chip[data-cause="${cause}"]`);
+            if (chip) {
+                chip.classList.toggle('selected');
+            }
+
+            // Collect all selected causes
+            const selectedCauses = Array.from(document.querySelectorAll('.cause-chip.selected'))
+                .map(c => c.dataset.cause);
+
+            lifestyleState.retroCauses = selectedCauses;
+        }
+
+        function saveRetroCause() {
+            if (typeof LifestyleManager === 'undefined') return;
+            if (!lifestyleState.currentAnomaly) return;
+
+            LifestyleManager.saveRetroCause(
+                lifestyleState.currentAnomaly.metric,
+                lifestyleState.retroCauses
+            );
+
+            lifestyleState.currentAnomaly = null;
+            lifestyleState.retroCauses = [];
+        }
+
+        function saveRetroCauseAndDismiss() {
+            saveRetroCause();
+
+            // Hide the prompt card with animation
+            const promptCard = document.getElementById('smartPromptCard');
+            if (promptCard) {
+                promptCard.style.opacity = '0';
+                promptCard.style.transform = 'translateY(-10px)';
+                setTimeout(() => {
+                    promptCard.style.display = 'none';
+                    promptCard.style.opacity = '1';
+                    promptCard.style.transform = 'translateY(0)';
+                }, 300);
+            }
+
+            console.log('Retro cause saved and dismissed');
+        }
+
+        // Patterns Display
+        function updatePatternsDisplay() {
+            if (typeof LifestyleManager === 'undefined' || !data) return;
+
+            const patternsSection = document.getElementById('patternsSection');
+            const notEnoughData = document.getElementById('notEnoughDataMessage');
+            const patternsList = document.getElementById('patternsList');
+            const patternsDays = document.getElementById('patternsDays');
+            const bestSleepSection = document.getElementById('bestSleepSection');
+            const bestSleepFactors = document.getElementById('bestSleepFactors');
+
+            const analysis = LifestyleManager.analyzePatterns(data);
+
+            if (!analysis.hasEnoughData) {
+                if (patternsSection) patternsSection.style.display = 'none';
+                if (notEnoughData) {
+                    notEnoughData.style.display = 'block';
+                    document.getElementById('notEnoughDataText').textContent =
+                        `Check in for ${analysis.daysNeeded} more days to see your personal patterns`;
+                }
+                return;
+            }
+
+            if (notEnoughData) notEnoughData.style.display = 'none';
+            if (patternsSection) patternsSection.style.display = 'block';
+            if (patternsDays) patternsDays.textContent = `${analysis.daysTracked} days analyzed`;
+
+            // Render patterns
+            if (patternsList && analysis.patterns) {
+                patternsList.innerHTML = analysis.patterns.slice(0, 4).map(pattern => `
+                    <div class="pattern-item ${pattern.impact < 0 ? 'negative' : 'positive'}">
+                        <div class="pattern-factor">
+                            ${pattern.impact < 0 ? '⚠️' : '✅'} ${pattern.factorName}
+                        </div>
+                        <div class="pattern-impact">→ ${Math.abs(pattern.impact)}% ${pattern.impact < 0 ? 'less' : 'more'} ${pattern.metricName}</div>
+                        <div class="pattern-confidence">${pattern.sampleSize} occurrences, ${pattern.confidence > 0.7 ? 'high' : 'moderate'} confidence</div>
+                    </div>
+                `).join('');
+            }
+
+            // Best sleep factors
+            const bestFactors = LifestyleManager.getBestSleepFactors(data);
+            if (bestFactors && bestFactors.length > 0 && bestSleepSection && bestSleepFactors) {
+                bestSleepSection.style.display = 'block';
+                bestSleepFactors.innerHTML = bestFactors.map(f => `
+                    <span class="best-factor-chip">• ${f.factor} <span class="percentage">(${f.percentage}%)</span></span>
+                `).join('');
+            } else if (bestSleepSection) {
+                bestSleepSection.style.display = 'none';
+            }
+        }
+
+        function updateJournalStreaks() {
+            if (typeof LifestyleManager === 'undefined') return;
+
+            const streaks = LifestyleManager.getStreaks();
+            const eveningEl = document.getElementById('eveningStreakValue');
+            const morningEl = document.getElementById('morningStreakValue');
+
+            if (eveningEl) {
+                eveningEl.textContent = `${streaks.evening.current} day${streaks.evening.current !== 1 ? 's' : ''}`;
+            }
+            if (morningEl) {
+                morningEl.textContent = `${streaks.morning.current} day${streaks.morning.current !== 1 ? 's' : ''}`;
+            }
         }
 
         // ===== Check-in Functions =====

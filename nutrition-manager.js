@@ -199,6 +199,87 @@ const NutritionManager = {
     };
   },
 
+  // ==================== ENERGY TRACKING ====================
+
+  /**
+   * Get today's energy logs
+   */
+  getEnergyToday() {
+    const entry = this.getTodayEntry();
+    return entry.energy || { logs: [] };
+  },
+
+  /**
+   * Add energy reading
+   */
+  addEnergy(level) {
+    const data = this.load();
+    const today = this.getDateString(new Date());
+    let entry = data.entries.find(e => e.date === today);
+
+    if (!entry) {
+      entry = {
+        date: today,
+        water: { glasses: 0, logs: [] },
+        energy: { logs: [] },
+        protein: { rating: null, grams: null },
+        foodQuality: null,
+        meals: []
+      };
+      data.entries.push(entry);
+    }
+
+    if (!entry.energy) {
+      entry.energy = { logs: [] };
+    }
+
+    entry.energy.logs.push({
+      time: new Date().toTimeString().slice(0, 5),
+      level: level
+    });
+
+    this.save(data);
+    return entry.energy;
+  },
+
+  /**
+   * Get energy progress/summary for today
+   */
+  getEnergyProgress() {
+    const energy = this.getEnergyToday();
+    const logs = energy.logs || [];
+
+    if (logs.length === 0) {
+      return { logs: [], average: null, latest: null, count: 0 };
+    }
+
+    const average = logs.reduce((sum, l) => sum + l.level, 0) / logs.length;
+    const latest = logs[logs.length - 1];
+
+    return {
+      logs: logs,
+      average: Math.round(average * 10) / 10,
+      latest: latest,
+      count: logs.length
+    };
+  },
+
+  /**
+   * Remove last energy entry
+   */
+  removeLastEnergy() {
+    const data = this.load();
+    const today = this.getDateString(new Date());
+    const entry = data.entries.find(e => e.date === today);
+
+    if (entry && entry.energy && entry.energy.logs.length > 0) {
+      entry.energy.logs.pop();
+      this.save(data);
+    }
+
+    return this.getEnergyToday();
+  },
+
   // ==================== PROTEIN TRACKING ====================
 
   /**
@@ -531,12 +612,14 @@ const NutritionManager = {
    */
   getTodaySummary() {
     const water = this.getWaterProgress();
+    const energy = this.getEnergyProgress();
     const protein = this.getProteinProgress();
     const foodQuality = this.getFoodQualityToday();
     const meals = this.getMealsToday();
 
     return {
       water,
+      energy,
       protein,
       foodQuality,
       foodQualityLabel: foodQuality ? this.FOOD_QUALITY[foodQuality]?.label : null,
