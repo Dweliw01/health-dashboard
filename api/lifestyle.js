@@ -1,22 +1,5 @@
-const { put, list } = require('@vercel/blob');
-
-const BLOB_PREFIX = 'lifestyle/';
-const DATA_FILE = 'lifestyle-data.json';
-
-const getDefaultData = () => ({
-    version: 1,
-    eveningCheckins: [],
-    morningReflections: [],
-    retroCauses: [],
-    patterns: { lastAnalyzed: null, discovered: [] },
-    streaks: {
-        evening: { current: 0, longest: 0 },
-        morning: { current: 0, longest: 0 }
-    },
-    lastSync: null
-});
-
-module.exports = async function handler(req, res) {
+// Vercel Serverless Function - Lifestyle Data Storage
+export default async function handler(req, res) {
     // CORS headers
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
@@ -32,6 +15,31 @@ module.exports = async function handler(req, res) {
             hint: 'Set BLOB_READ_WRITE_TOKEN in Vercel Environment Variables'
         });
     }
+
+    // Dynamic import to catch any module errors
+    let blob;
+    try {
+        blob = await import('@vercel/blob');
+    } catch (importError) {
+        return res.status(500).json({
+            error: 'Failed to load @vercel/blob',
+            message: importError.message
+        });
+    }
+
+    const { put, list } = blob;
+    const BLOB_PREFIX = 'lifestyle/';
+    const DATA_FILE = 'lifestyle-data.json';
+
+    const getDefaultData = () => ({
+        version: 1,
+        eveningCheckins: [],
+        morningReflections: [],
+        retroCauses: [],
+        patterns: { lastAnalyzed: null, discovered: [] },
+        streaks: { evening: { current: 0, longest: 0 }, morning: { current: 0, longest: 0 } },
+        lastSync: null
+    });
 
     try {
         if (req.method === 'GET') {
@@ -68,12 +76,12 @@ module.exports = async function handler(req, res) {
 
             finalData.lastSync = new Date().toISOString();
 
-            const blob = await put(BLOB_PREFIX + DATA_FILE, JSON.stringify(finalData, null, 2), {
+            const result = await put(BLOB_PREFIX + DATA_FILE, JSON.stringify(finalData, null, 2), {
                 access: 'public',
                 contentType: 'application/json'
             });
 
-            return res.status(200).json({ success: true, url: blob.url, savedAt: finalData.lastSync });
+            return res.status(200).json({ success: true, url: result.url, savedAt: finalData.lastSync });
 
         } else {
             return res.status(405).json({ error: 'Method not allowed' });
@@ -82,7 +90,7 @@ module.exports = async function handler(req, res) {
         console.error('API Error:', error);
         return res.status(500).json({ error: error.message });
     }
-};
+}
 
 function mergeData(existing, incoming) {
     const merged = { ...existing };
