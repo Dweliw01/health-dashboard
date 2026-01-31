@@ -9716,11 +9716,9 @@ ACTIVITY:
             }).join('');
         }
 
-        // Initialize: Load API key first, then data
-        loadApiKey().then(() => {
-            loadData();
-            applyPersonalization();
-        });
+        // Initialize: Load data on page ready
+        loadData();
+        applyPersonalization();
     </script>
 </body>
 </html>
