@@ -6388,24 +6388,7 @@
     <script src="ai-coach.js"></script>
 
     <script>
-        // API Key for AI Coach (loaded from Vercel environment variable)
-        let claudeApiKey = null;
-
-        // Fetch API key from Vercel serverless function
-        async function loadApiKey() {
-            try {
-                const response = await fetch('/api/config');
-                if (response.ok) {
-                    const config = await response.json();
-                    claudeApiKey = config.apiKey;
-                    console.log('API key loaded from server');
-                }
-            } catch (e) {
-                // Fallback to localStorage for local development
-                claudeApiKey = localStorage.getItem('claude_api_key');
-                console.log('Using localStorage API key');
-            }
-        }
+        // AI Coach now uses server-side API (/api/ask-ai) to keep API key secure
 
         let data = null;
         let chartsInitialized = false;
@@ -6488,54 +6471,92 @@
             const recommendationEl = document.getElementById('heroRecommendation');
             const patternEl = document.getElementById('heroPattern');
 
-            // Show loading state
-            headlineEl.textContent = 'AI Coach is analyzing your data...';
-            recommendationEl.textContent = '';
-            patternEl.textContent = '';
-
+            // Use LOCAL insights only on page load (no API call)
+            // User can click refresh button for AI-powered insights
             try {
-                // Use AI Coach with API key (from Vercel env or localStorage fallback)
                 if (typeof AICoach !== 'undefined') {
-                    const insight = await AICoach.getDailyInsight(data, claudeApiKey);
+                    // Use local insight generation (no API call)
+                    const insight = AICoach.generateLocalInsight(data);
 
                     headlineEl.textContent = insight.headline || 'Analyzing your data...';
 
-                    if (insight.recommendation) {
-                        recommendationEl.textContent = '→ ' + insight.recommendation;
+                    if (insight.recommendations && insight.recommendations[0]) {
+                        recommendationEl.textContent = '→ ' + insight.recommendations[0];
                     }
 
-                    if (insight.pattern) {
-                        patternEl.textContent = insight.pattern;
+                    if (insight.details && insight.details[0]) {
+                        patternEl.textContent = insight.details[0];
                     }
                 } else {
                     // Fallback if AICoach not loaded
-                    headlineEl.textContent = 'AI Coach loading...';
+                    const readiness = data.todayScores?.readiness || data.metrics?.readinessScore || 0;
+                    const sleep = data.todayScores?.sleep || data.metrics?.sleepScore || 0;
+                    headlineEl.textContent = `Readiness: ${readiness}, Sleep: ${sleep} - ${readiness >= 70 ? 'Good day for activity' : 'Focus on recovery'}`;
                 }
             } catch (error) {
-                console.error('AI Coach error:', error);
-                // Fallback to simple insight
+                console.error('Hero insight error:', error);
                 const readiness = data.todayScores?.readiness || data.metrics?.readinessScore || 0;
                 const sleep = data.todayScores?.sleep || data.metrics?.sleepScore || 0;
                 headlineEl.textContent = `Readiness: ${readiness}, Sleep: ${sleep} - ${readiness >= 70 ? 'Good day for activity' : 'Focus on recovery'}`;
             }
         }
 
-        // Refresh AI Insight on demand
+        // Refresh AI Insight on demand (calls server-side API)
         async function refreshAIInsight() {
+            if (!data) return;
+
             const refreshBtn = document.querySelector('.insight-refresh-btn');
+            const headlineEl = document.getElementById('heroInsightText');
+            const recommendationEl = document.getElementById('heroRecommendation');
+            const patternEl = document.getElementById('heroPattern');
+
             if (refreshBtn) {
                 refreshBtn.classList.add('loading');
             }
 
-            // Clear cache to force new insight
-            if (typeof AICoach !== 'undefined') {
-                AICoach.cache = {};
-            }
+            headlineEl.textContent = 'AI Coach is analyzing...';
+            recommendationEl.textContent = '';
+            patternEl.textContent = '';
 
-            await renderHeroInsight();
+            try {
+                // Call server-side API for AI insight
+                const healthContext = buildHealthContext();
+                const response = await fetch('/api/ask-ai', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        healthContext,
+                        type: 'insight'
+                    })
+                });
 
-            if (refreshBtn) {
-                refreshBtn.classList.remove('loading');
+                const result = await response.json();
+
+                if (!response.ok) {
+                    throw new Error(result.error || 'AI request failed');
+                }
+
+                headlineEl.textContent = result.headline || 'Analysis complete';
+                if (result.recommendation) {
+                    recommendationEl.textContent = '→ ' + result.recommendation;
+                }
+                if (result.pattern) {
+                    patternEl.textContent = result.pattern;
+                }
+            } catch (error) {
+                console.error('Refresh AI error:', error);
+                // Fall back to local insight
+                if (typeof AICoach !== 'undefined') {
+                    const insight = AICoach.generateLocalInsight(data);
+                    headlineEl.textContent = insight.headline || 'Analysis complete';
+                    if (insight.recommendations?.[0]) {
+                        recommendationEl.textContent = '→ ' + insight.recommendations[0];
+                    }
+                }
+            } finally {
+                if (refreshBtn) {
+                    refreshBtn.classList.remove('loading');
+                }
             }
         }
 
@@ -6558,13 +6579,6 @@
                 return;
             }
 
-            // Check for API key (from Vercel env or localStorage)
-            if (!claudeApiKey) {
-                responseDiv.classList.add('visible');
-                responseText.innerHTML = '<span style="color: var(--text-muted);">API key not configured. Please contact the administrator.</span>';
-                return;
-            }
-
             // Show loading state
             btn.disabled = true;
             btn.classList.add('loading');
@@ -6572,24 +6586,62 @@
             responseText.innerHTML = '<span style="color: var(--text-muted);">Thinking...</span>';
 
             try {
-                const answer = await getAIAnswer(question, claudeApiKey);
+                // Use server-side API (keeps API key secure)
+                const answer = await askAIServer(question);
                 responseText.innerHTML = answer;
                 input.value = ''; // Clear input after successful answer
             } catch (error) {
                 console.error('Ask AI error:', error);
-                responseText.innerHTML = '<span style="color: #ef4444;">Sorry, there was an error getting a response. Please try again.</span>';
+                if (error.message === 'AI not configured') {
+                    responseText.innerHTML = '<span style="color: var(--text-muted);">AI not configured. Please set ANTHROPIC_API_KEY in Vercel environment variables.</span>';
+                } else {
+                    responseText.innerHTML = '<span style="color: #ef4444;">Sorry, there was an error getting a response. Please try again.</span>';
+                }
             } finally {
                 btn.disabled = false;
                 btn.classList.remove('loading');
             }
         }
 
-        async function getAIAnswer(question, apiKey) {
+        // Server-side AI call (keeps API key secure)
+        async function askAIServer(question) {
             if (!data) {
                 return 'No health data available. Please load your Oura data first.';
             }
 
-            // Build comprehensive health context
+            // Build health context
+            const healthContext = buildHealthContext();
+
+            const response = await fetch('/api/ask-ai', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    question,
+                    healthContext,
+                    type: 'question'
+                })
+            });
+
+            const result = await response.json();
+
+            if (!response.ok) {
+                if (result.configured === false) {
+                    throw new Error('AI not configured');
+                }
+                throw new Error(result.error || 'AI request failed');
+            }
+
+            // Format the response
+            return result.answer
+                .replace(/\n\n/g, '</p><p style="margin-top: 12px;">')
+                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                .replace(/^(.*)$/, '<p>$1</p>');
+        }
+
+        // Build health context for AI prompts
+        function buildHealthContext() {
+            if (!data) return '';
+
             const todayScores = data.todayScores || {};
             const metrics = data.metrics || {};
             const sleepStages = data.sleepStages || {};
@@ -6597,7 +6649,7 @@
             const stressData = data.stress || {};
             const readiness = data.readinessBreakdown || {};
 
-            const healthContext = `
+            let context = `
 CURRENT HEALTH DATA:
 
 TODAY'S SCORES:
@@ -6608,126 +6660,38 @@ TODAY'S SCORES:
 7-DAY AVERAGES:
 - Avg Sleep Score: ${metrics.sleepScore || 'N/A'}
 - Avg Readiness Score: ${metrics.readinessScore || 'N/A'}
-- Avg Activity Score: ${metrics.activityScore || 'N/A'}
 
 SLEEP DATA (Last Night):
-- Deep Sleep: ${sleepStages.lastNight?.deep || 'N/A'} minutes (30-day avg: ${sleepStages.avgDeep || 'N/A'} min)
-- REM Sleep: ${sleepStages.lastNight?.rem || 'N/A'} minutes (30-day avg: ${sleepStages.avgRem || 'N/A'} min)
-- Light Sleep: ${sleepStages.lastNight?.light || 'N/A'} minutes
-- Sleep Efficiency: ${sleepStages.lastNight?.efficiency || 'N/A'}% (30-day avg: ${sleepStages.avgEfficiency || 'N/A'}%)
-- Total Sleep: ${sleepStages.lastNight?.total || 'N/A'} minutes
-- Sleep Latency: ${sleepStages.lastNight?.latency || 'N/A'} minutes
+- Deep Sleep: ${sleepStages.lastNight?.deep || 'N/A'} min (avg: ${sleepStages.avgDeep || 'N/A'} min)
+- REM Sleep: ${sleepStages.lastNight?.rem || 'N/A'} min
+- Sleep Efficiency: ${sleepStages.lastNight?.efficiency || 'N/A'}%
 
-HRV (Heart Rate Variability):
-- Current HRV: ${hrvData.current || 'N/A'} ms
-- 7-Day Avg HRV: ${hrvData.avg7Days || 'N/A'} ms
-- Baseline (30-day): ${hrvData.baseline || 'N/A'} ms
-- HRV Status: ${hrvData.status || 'N/A'}
-- HRV Trend (7 days): ${hrvData.trend7Days?.join(', ') || 'N/A'}
+HRV:
+- Current: ${hrvData.current || 'N/A'} ms
+- Baseline: ${hrvData.baseline || 'N/A'} ms
+- Status: ${hrvData.status || 'N/A'}
 
-RECOVERY INDICATORS:
+RECOVERY:
 - Resting HR: ${metrics.restingHR || 'N/A'} bpm
-- Recovery Index Score: ${readiness.recoveryIndex || 'N/A'}
-- Body Temperature Deviation: ${readiness.tempDeviation || 0}°C
-- HRV Balance Score: ${readiness.hrvBalance || 'N/A'}
-- Previous Night Score: ${readiness.previousNight || 'N/A'}
-- Activity Balance Score: ${readiness.activityBalance || 'N/A'}
-- Sleep Balance Score: ${readiness.sleepBalance || 'N/A'}
+- Recovery Index: ${readiness.recoveryIndex || 'N/A'}
 
-ACTIVITY DATA:
+ACTIVITY:
 - Today's Steps: ${data.today?.steps?.toLocaleString() || 'N/A'}
-- 7-Day Avg Steps: ${metrics.dailyAvgSteps?.toLocaleString() || 'N/A'}
-- Current Streak: ${metrics.currentStreak || 0} days (10k+ steps)
-- Workouts This Month: ${metrics.totalWorkouts || 0}
-- Active Days (last 7): ${metrics.activeDays || 0}
-- Consistency (% hitting 10k): ${metrics.consistency || 0}%
-
-STRESS DATA:
-- Today's High Stress: ${stressData.today?.stressMinutes || 'N/A'} minutes
-- Today's Recovery Time: ${stressData.today?.recoveryMinutes || 'N/A'} minutes
-- Avg Stress (7-day): ${stressData.avgStressMinutes || 'N/A'} min/day
-- Avg Recovery (7-day): ${stressData.avgRecoveryMinutes || 'N/A'} min/day
-
-SpO2: ${data.spo2?.current || 'N/A'}%
-Breath Rate: ${sleepStages.avgBreathRate || 'N/A'} breaths/min
-`;
+- Current Streak: ${metrics.currentStreak || 0} days`;
 
             // Add lifestyle context if available
-            let lifestyleContext = '';
             if (typeof LifestyleManager !== 'undefined') {
                 const lifestyle = LifestyleManager.getLifestyleContext();
-                if (lifestyle) {
-                    lifestyleContext = '\nLIFESTYLE FACTORS (User-reported):';
-                    if (lifestyle.lastNight) {
-                        const ln = lifestyle.lastNight;
-                        lifestyleContext += '\nLast Night:';
-                        if (ln.caffeine) lifestyleContext += `\n- Caffeine: ${ln.caffeine.replace(/_/g, ' ')}`;
-                        if (ln.alcohol) lifestyleContext += `\n- Alcohol: ${ln.alcohol.replace(/_/g, ' ')}`;
-                        if (ln.lastMealTime) lifestyleContext += `\n- Last meal: ${ln.lastMealTime.replace(/_/g, ' ')} before bed`;
-                        if (ln.screenTime) lifestyleContext += `\n- Screen time: ${ln.screenTime.replace(/_/g, ' ')}`;
-                        if (ln.stress) lifestyleContext += `\n- Stress level: ${ln.stress}/5`;
-                    }
-                    if (lifestyle.thisMorning) {
-                        const tm = lifestyle.thisMorning;
-                        lifestyleContext += '\nThis Morning:';
-                        if (tm.energy) lifestyleContext += `\n- Subjective energy: ${tm.energy}/5`;
-                        if (tm.sleepFelt) lifestyleContext += `\n- Sleep felt: ${tm.sleepFelt}`;
-                    }
-                    if (lifestyle.patterns && lifestyle.patterns.length > 0) {
-                        lifestyleContext += '\nDiscovered Personal Patterns:';
-                        lifestyle.patterns.forEach(p => {
-                            lifestyleContext += `\n- ${p.insight}`;
-                        });
-                    }
+                if (lifestyle?.lastNight) {
+                    context += '\n\nLIFESTYLE (Last Night):';
+                    const ln = lifestyle.lastNight;
+                    if (ln.caffeine) context += `\n- Caffeine: ${ln.caffeine.replace(/_/g, ' ')}`;
+                    if (ln.alcohol) context += `\n- Alcohol: ${ln.alcohol.replace(/_/g, ' ')}`;
+                    if (ln.stress) context += `\n- Stress: ${ln.stress}/5`;
                 }
             }
 
-            const systemPrompt = `You are a knowledgeable health coach analyzing Oura Ring data and lifestyle factors. You have access to the user's complete health metrics.
-
-Guidelines:
-- Be specific and reference actual numbers from their data
-- Provide actionable, science-backed recommendations
-- Be encouraging but honest about areas for improvement
-- Keep responses concise (2-4 paragraphs max)
-- If data is missing (N/A), acknowledge it and work with what's available
-- Focus on patterns and correlations in the data
-- Connect lifestyle factors (caffeine, alcohol, meal timing, stress) to health outcomes when relevant
-- Mention specific improvements they could make today
-
-${healthContext}${lifestyleContext}`;
-
-            const response = await fetch('https://api.anthropic.com/v1/messages', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'x-api-key': apiKey,
-                    'anthropic-version': '2023-06-01',
-                    'anthropic-dangerous-direct-browser-access': 'true'
-                },
-                body: JSON.stringify({
-                    model: 'claude-3-5-haiku-20241022',
-                    max_tokens: 600,
-                    system: systemPrompt,
-                    messages: [{
-                        role: 'user',
-                        content: question
-                    }]
-                })
-            });
-
-            if (!response.ok) {
-                const errorData = await response.json().catch(() => ({}));
-                throw new Error(`API error: ${response.status} - ${errorData.error?.message || 'Unknown error'}`);
-            }
-
-            const result = await response.json();
-            const answer = result.content[0].text;
-
-            // Format the response with better styling
-            return answer
-                .replace(/\n\n/g, '</p><p style="margin-top: 12px;">')
-                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-                .replace(/^(.*)$/, '<p>$1</p>');
+            return context;
         }
 
         // ===== Render Collapsible Alerts =====

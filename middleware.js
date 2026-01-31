@@ -8,15 +8,16 @@ export const config = {
 export default async function middleware(request) {
   const url = new URL(request.url);
 
-  // Allow auth endpoint through (needed for login)
-  if (url.pathname === '/api/auth') {
-    return;
+  // Allow auth and logout endpoints through (needed for login/logout)
+  if (url.pathname === '/api/auth' || url.pathname === '/api/logout') {
+    return; // Pass through to the actual endpoint
   }
 
-  // Check for auth cookie
-  const authCookie = request.cookies.get('dashboard_auth');
+  // Parse cookies from header (Edge runtime compatible)
+  const cookieHeader = request.headers.get('cookie') || '';
+  const hasAuth = cookieHeader.includes('dashboard_auth=authenticated');
 
-  if (authCookie?.value === 'authenticated') {
+  if (hasAuth) {
     // Valid session - allow through
     return;
   }
