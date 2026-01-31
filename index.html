@@ -8722,8 +8722,16 @@ ${healthContext}${lifestyleContext}`;
 
         // ==================== NUTRITION UI ====================
 
-        function initNutritionUI() {
+        async function initNutritionUI() {
             if (typeof NutritionManager === 'undefined') return;
+
+            // Load from cloud first (for cross-device sync)
+            try {
+                await NutritionManager.loadFromCloud();
+                console.log('Nutrition data synced from cloud');
+            } catch (err) {
+                console.warn('Cloud sync failed, using local data:', err);
+            }
 
             // Render initial state
             renderNutritionUI();
