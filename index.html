@@ -6976,8 +6976,11 @@ ACTIVITY:
                     renderGoalsSummary();
                     renderMorningCoach();
                     initCheckinUI();
-                    initNutritionUI();
+
+                    // Load cloud data first (await both to ensure sync completes)
+                    await initNutritionUI();
                     await initSmartJournal();
+
                     initTrendsUI();
                     initAIInsights();
                     applyPersonalization();
