@@ -108,22 +108,30 @@ const LifestyleManager = {
         console.log('[Lifestyle] Initializing cloud sync...');
         try {
             const cloudData = await this.loadFromCloud();
+            console.log('[Lifestyle] Cloud response:', cloudData);
+
             if (cloudData && !cloudData.isNew) {
                 const localData = this.load();
+                console.log('[Lifestyle] Local checkins:', localData.eveningCheckins?.length || 0);
+                console.log('[Lifestyle] Cloud checkins:', cloudData.data?.eveningCheckins?.length || 0);
+
                 const mergedData = this.mergeWithCloud(localData, cloudData.data);
+                console.log('[Lifestyle] Merged checkins:', mergedData.eveningCheckins?.length || 0);
+
                 localStorage.setItem(this.STORAGE_KEY, JSON.stringify(mergedData));
-                console.log('[Lifestyle] Cloud sync complete - data merged');
+                console.log('[Lifestyle] Cloud sync complete - data merged and saved');
                 return mergedData;
             } else {
                 // No cloud data, push local to cloud
                 const localData = this.load();
+                console.log('[Lifestyle] No cloud data, local checkins:', localData.eveningCheckins?.length || 0);
                 if (localData.eveningCheckins.length > 0 || localData.morningReflections.length > 0) {
                     await this.syncToCloud(localData);
                     console.log('[Lifestyle] Local data pushed to cloud');
                 }
             }
         } catch (err) {
-            console.warn('[Lifestyle] Cloud sync failed (offline mode):', err.message);
+            console.error('[Lifestyle] Cloud sync failed:', err);
         }
         return this.load();
     },

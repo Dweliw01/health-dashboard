@@ -677,25 +677,34 @@ const NutritionManager = {
    */
   async loadFromCloud() {
     try {
+      console.log('[Nutrition] Loading from cloud...');
       const response = await fetch(this.API_URL);
       if (!response.ok) {
         throw new Error(`Load failed: ${response.status}`);
       }
 
       const result = await response.json();
+      console.log('[Nutrition] Cloud response:', result.isNew ? 'NEW (no cloud data)' : 'HAS DATA');
 
       if (result.data) {
-        // Merge cloud data with local data
         const localData = this.load();
+        console.log('[Nutrition] Local entries:', localData.entries?.length || 0);
+        console.log('[Nutrition] Cloud entries:', result.data.entries?.length || 0);
+
+        // Merge cloud data with local data
         const mergedData = this.mergeData(localData, result.data);
-        this.save(mergedData);
-        console.log('Nutrition loaded from cloud, isNew:', result.isNew);
+        console.log('[Nutrition] Merged entries:', mergedData.entries?.length || 0);
+
+        // Save WITHOUT triggering cloud sync (to avoid loop)
+        localStorage.setItem(this.STORAGE_KEY, JSON.stringify(mergedData));
+        console.log('[Nutrition] Saved merged data to localStorage');
+
         return { success: true, data: mergedData, isNew: result.isNew };
       }
 
       return { success: true, data: this.load(), isNew: true };
     } catch (err) {
-      console.error('Failed to load nutrition from cloud:', err);
+      console.error('[Nutrition] Failed to load from cloud:', err);
       return { success: false, error: err.message };
     }
   },
