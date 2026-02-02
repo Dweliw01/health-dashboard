@@ -1,9 +1,9 @@
 {
-  "lastUpdated": "2026-02-02T02:48:11.223Z",
+  "lastUpdated": "2026-02-02T05:03:43.662Z",
   "today": {
-    "steps": 13510,
+    "steps": 13782,
     "avgHeartRate": 78,
-    "calories": 863
+    "calories": 881
   },
   "todayScores": {
     "sleep": 63,
@@ -15,8 +15,8 @@
   },
   "thisWeek": {
     "workouts": 8,
-    "avgSteps": 12339,
-    "avgCalories": 745
+    "avgSteps": 12378,
+    "avgCalories": 748
   },
   "last7Days": {
     "labels": [
@@ -35,7 +35,7 @@
       15241,
       10787,
       5751,
-      13510
+      13782
     ]
   },
   "heartRateTrends": {
@@ -99,7 +99,7 @@
       13070,
       10983,
       4210,
-      12339
+      12378
     ],
     "workouts": [
       3,
@@ -111,7 +111,7 @@
       971,
       739,
       465,
-      745
+      748
     ]
   },
   "projection": {
@@ -122,16 +122,16 @@
       "Day 30"
     ],
     "actual": [
-      12339,
+      12378,
       null,
       null,
       null
     ],
     "projected": [
-      12339,
-      24246,
-      30200,
-      36153
+      12378,
+      24385,
+      30388,
+      36391
     ]
   },
   "timeOfDay": {
@@ -152,21 +152,21 @@
       143,
       150,
       195,
-      159,
-      105,
+      173,
+      116,
       79,
       72
     ]
   },
   "metrics": {
-    "dailyAvgSteps": 12339,
+    "dailyAvgSteps": 12378,
     "avgHeartRate": 91,
     "restingHR": 50,
     "activeDays": 7,
     "totalWorkouts": 12,
     "bestDaySteps": 15395,
     "bestDayLabel": "Tue",
-    "caloriesPerDay": 745,
+    "caloriesPerDay": 748,
     "currentStreak": 1,
     "longestStreak": 8,
     "fitnessScore": 69,
@@ -174,13 +174,13 @@
     "sleepScore": 64,
     "readinessScore": 75,
     "consistency": 62,
-    "totalSteps30Days": 292816,
-    "totalCalories30Days": 20919,
+    "totalSteps30Days": 293088,
+    "totalCalories30Days": 20937,
     "daysTracked": 29
   },
   "insights": {
     "performance": {
-      "weekChange": 193,
+      "weekChange": 194,
       "monthChange": 22,
       "trend": "improving"
     },
@@ -777,9 +777,9 @@
   "stress": {
     "available": true,
     "today": {
-      "stressMinutes": 135,
-      "recoveryMinutes": 90,
-      "summary": "normal"
+      "stressMinutes": 165,
+      "recoveryMinutes": 165,
+      "summary": "restored"
     },
     "trend7Days": [
       "stressful",
@@ -788,10 +788,10 @@
       "stressful",
       "stressful",
       "restored",
-      "normal"
+      "restored"
     ],
-    "avgStressMinutes": 274,
-    "avgRecoveryMinutes": 92,
+    "avgStressMinutes": 279,
+    "avgRecoveryMinutes": 103,
     "records": [
       {
         "day": "2026-01-03",
@@ -969,9 +969,9 @@
       },
       {
         "day": "2026-02-01",
-        "stressHigh": 8100,
-        "recoveryHigh": 5400,
-        "daySummary": "normal"
+        "stressHigh": 9900,
+        "recoveryHigh": 9900,
+        "daySummary": "restored"
       }
     ]
   },
