@@ -1,8 +1,8 @@
 {
-  "lastUpdated": "2026-02-08T16:39:39.254Z",
+  "lastUpdated": "2026-02-08T17:33:27.644Z",
   "today": {
     "steps": 10395,
-    "avgHeartRate": 62,
+    "avgHeartRate": 91,
     "calories": 608
   },
   "todayScores": {
@@ -55,7 +55,7 @@
       98,
       85,
       98,
-      62
+      91
     ],
     "max": [
       119,
@@ -64,7 +64,7 @@
       171,
       121,
       148,
-      98
+      120
     ],
     "min": [
       49,
@@ -160,7 +160,7 @@
   },
   "metrics": {
     "dailyAvgSteps": 11502,
-    "avgHeartRate": 90,
+    "avgHeartRate": 94,
     "restingHR": 49,
     "activeDays": 7,
     "totalWorkouts": 9,
@@ -201,13 +201,6 @@
     {
       "type": "warning",
       "title": "HR Spike Detected",
-      "message": "Mon: 119 bpm peak",
-      "severity": "medium",
-      "category": "activity"
-    },
-    {
-      "type": "warning",
-      "title": "HR Spike Detected",
       "message": "Tue: 180 bpm peak",
       "severity": "medium",
       "category": "activity"
@@ -223,6 +216,13 @@
       "type": "warning",
       "title": "HR Spike Detected",
       "message": "Thu: 171 bpm peak",
+      "severity": "medium",
+      "category": "activity"
+    },
+    {
+      "type": "warning",
+      "title": "HR Spike Detected",
+      "message": "Sat: 148 bpm peak",
       "severity": "medium",
       "category": "activity"
     }
@@ -733,28 +733,22 @@
   "stress": {
     "available": true,
     "today": {
-      "stressMinutes": 240,
-      "recoveryMinutes": 150,
-      "summary": "stressful"
+      "stressMinutes": 30,
+      "recoveryMinutes": 0,
+      "summary": "unknown"
     },
     "trend7Days": [
-      "restored",
       "stressful",
       "stressful",
       "restored",
       "stressful",
       "restored",
-      "stressful"
+      "stressful",
+      "unknown"
     ],
-    "avgStressMinutes": 255,
-    "avgRecoveryMinutes": 152,
+    "avgStressMinutes": 236,
+    "avgRecoveryMinutes": 131,
     "records": [
-      {
-        "day": "2026-01-09",
-        "stressHigh": 18900,
-        "recoveryHigh": 9000,
-        "daySummary": "stressful"
-      },
       {
         "day": "2026-01-10",
         "stressHigh": 18900,
@@ -926,8 +920,14 @@
       {
         "day": "2026-02-07",
         "stressHigh": 14400,
-        "recoveryHigh": 9000,
+        "recoveryHigh": 9900,
         "daySummary": "stressful"
+      },
+      {
+        "day": "2026-02-08",
+        "stressHigh": 1800,
+        "recoveryHigh": 0,
+        "daySummary": "unknown"
       }
     ]
   },
