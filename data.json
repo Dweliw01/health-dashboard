@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-10T09:04:26.099Z",
+  "lastUpdated": "2026-02-10T11:00:40.885Z",
   "today": {
     "steps": 4420,
     "avgHeartRate": 89,
@@ -8,7 +8,7 @@
   "todayScores": {
     "sleep": 37,
     "readiness": 50,
-    "activity": 83,
+    "activity": 90,
     "sleepDate": "2026-02-09",
     "readinessDate": "2026-02-09",
     "activityDate": "2026-02-09"
@@ -170,7 +170,7 @@
     "currentStreak": 0,
     "longestStreak": 5,
     "fitnessScore": 67,
-    "activityScore": 80,
+    "activityScore": 81,
     "sleepScore": 56,
     "readinessScore": 67,
     "consistency": 62,
@@ -705,28 +705,22 @@
   "stress": {
     "available": true,
     "today": {
-      "stressMinutes": 30,
+      "stressMinutes": 0,
       "recoveryMinutes": 0,
       "summary": "unknown"
     },
     "trend7Days": [
-      "stressful",
       "restored",
       "stressful",
       "restored",
       "stressful",
       "stressful",
+      "unknown",
       "unknown"
     ],
-    "avgStressMinutes": 306,
-    "avgRecoveryMinutes": 118,
+    "avgStressMinutes": 261,
+    "avgRecoveryMinutes": 99,
     "records": [
-      {
-        "day": "2026-01-11",
-        "stressHigh": 16200,
-        "recoveryHigh": 5400,
-        "daySummary": "stressful"
-      },
       {
         "day": "2026-01-12",
         "stressHigh": 19800,
@@ -898,6 +892,12 @@
       {
         "day": "2026-02-09",
         "stressHigh": 1800,
+        "recoveryHigh": 0,
+        "daySummary": "unknown"
+      },
+      {
+        "day": "2026-02-10",
+        "stressHigh": 0,
         "recoveryHigh": 0,
         "daySummary": "unknown"
       }
