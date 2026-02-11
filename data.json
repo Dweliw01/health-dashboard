@@ -1,8 +1,8 @@
 {
-  "lastUpdated": "2026-02-11T15:01:22.929Z",
+  "lastUpdated": "2026-02-11T17:10:51.338Z",
   "today": {
     "steps": 7052,
-    "avgHeartRate": 77,
+    "avgHeartRate": 103,
     "calories": 608
   },
   "todayScores": {
@@ -55,7 +55,7 @@
       97,
       89,
       97,
-      77
+      103
     ],
     "max": [
       171,
@@ -64,7 +64,7 @@
       138,
       132,
       130,
-      123
+      170
     ],
     "min": [
       48,
@@ -160,7 +160,7 @@
   },
   "metrics": {
     "dailyAvgSteps": 9780,
-    "avgHeartRate": 92,
+    "avgHeartRate": 95,
     "restingHR": 51,
     "activeDays": 6,
     "totalWorkouts": 9,
@@ -215,14 +215,14 @@
     {
       "type": "warning",
       "title": "HR Spike Detected",
-      "message": "Fri: 121 bpm peak",
+      "message": "Sat: 148 bpm peak",
       "severity": "medium",
       "category": "activity"
     },
     {
       "type": "warning",
       "title": "HR Spike Detected",
-      "message": "Sat: 148 bpm peak",
+      "message": "Sun: 138 bpm peak",
       "severity": "medium",
       "category": "activity"
     }
