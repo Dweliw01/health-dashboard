@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-02-11T13:26:18.698Z",
+  "lastUpdated": "2026-02-11T15:01:22.929Z",
   "today": {
     "steps": 7052,
     "avgHeartRate": 77,
     "calories": 608
   },
   "todayScores": {
-    "sleep": 37,
-    "readiness": 50,
+    "sleep": 52,
+    "readiness": 68,
     "activity": 68,
-    "sleepDate": "2026-02-09",
-    "readinessDate": "2026-02-09",
+    "sleepDate": "2026-02-11",
+    "readinessDate": "2026-02-11",
     "activityDate": "2026-02-10"
   },
   "thisWeek": {
@@ -171,8 +171,8 @@
     "longestStreak": 5,
     "fitnessScore": 66,
     "activityScore": 79,
-    "sleepScore": 56,
-    "readinessScore": 67,
+    "sleepScore": 54,
+    "readinessScore": 66,
     "consistency": 59,
     "totalSteps30Days": 272688,
     "totalCalories30Days": 19534,
@@ -185,9 +185,9 @@
       "trend": "declining"
     },
     "recovery": {
-      "readinessScore": 67,
+      "readinessScore": 66,
       "restingHR": 51,
-      "sleepScore": 56
+      "sleepScore": 54
     }
   },
   "alerts": [
@@ -888,31 +888,31 @@
   },
   "spo2": {
     "available": true,
-    "current": 98.398,
+    "current": 97.515,
     "trend7Days": [
-      97.067,
       98.472,
       95.692,
       98.202,
       99.105,
       95.337,
-      98.398
+      98.398,
+      97.515
     ],
     "baseline": 97.3
   },
   "readinessBreakdown": {
-    "day": "2026-02-09",
-    "score": 50,
-    "overall": 50,
-    "activityBalance": 85,
-    "bodyTemperature": null,
-    "hrvBalance": 85,
-    "previousDayActivity": 72,
-    "previousNight": 31,
-    "recoveryIndex": 44,
-    "restingHeartRateScore": 1,
-    "sleepBalance": 33,
-    "tempDeviation": null,
-    "tempTrend": -0.03
+    "day": "2026-02-11",
+    "score": 68,
+    "overall": 68,
+    "activityBalance": 88,
+    "bodyTemperature": 100,
+    "hrvBalance": 86,
+    "previousDayActivity": 71,
+    "previousNight": 50,
+    "recoveryIndex": 70,
+    "restingHeartRateScore": 98,
+    "sleepBalance": 20,
+    "tempDeviation": -0.14,
+    "tempTrend": -0.04
   }
 }
