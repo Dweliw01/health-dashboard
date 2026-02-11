@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-11T11:50:34.913Z",
+  "lastUpdated": "2026-02-11T13:26:18.698Z",
   "today": {
     "steps": 7052,
     "avgHeartRate": 77,
@@ -207,13 +207,6 @@
     },
     {
       "type": "warning",
-      "title": "High Stress Day",
-      "message": "7h in high stress",
-      "severity": "medium",
-      "category": "stress"
-    },
-    {
-      "type": "warning",
       "title": "HR Spike Detected",
       "message": "Thu: 171 bpm peak",
       "severity": "medium",
@@ -223,6 +216,13 @@
       "type": "warning",
       "title": "HR Spike Detected",
       "message": "Fri: 121 bpm peak",
+      "severity": "medium",
+      "category": "activity"
+    },
+    {
+      "type": "warning",
+      "title": "HR Spike Detected",
+      "message": "Sat: 148 bpm peak",
       "severity": "medium",
       "category": "activity"
     }
@@ -688,28 +688,22 @@
   "stress": {
     "available": true,
     "today": {
-      "stressMinutes": 435,
-      "recoveryMinutes": 15,
-      "summary": "stressful"
+      "stressMinutes": 0,
+      "recoveryMinutes": 0,
+      "summary": "unknown"
     },
     "trend7Days": [
-      "restored",
       "stressful",
       "restored",
       "stressful",
       "stressful",
       "unknown",
-      "stressful"
+      "stressful",
+      "unknown"
     ],
-    "avgStressMinutes": 326,
-    "avgRecoveryMinutes": 101,
+    "avgStressMinutes": 298,
+    "avgRecoveryMinutes": 69,
     "records": [
-      {
-        "day": "2026-01-12",
-        "stressHigh": 19800,
-        "recoveryHigh": 1800,
-        "daySummary": "stressful"
-      },
       {
         "day": "2026-01-13",
         "stressHigh": 20700,
@@ -883,6 +877,12 @@
         "stressHigh": 26100,
         "recoveryHigh": 900,
         "daySummary": "stressful"
+      },
+      {
+        "day": "2026-02-11",
+        "stressHigh": 0,
+        "recoveryHigh": 0,
+        "daySummary": "unknown"
       }
     ]
   },
