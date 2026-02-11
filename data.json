@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-11T20:47:41.099Z",
+  "lastUpdated": "2026-02-11T21:39:17.379Z",
   "today": {
     "steps": 7052,
     "avgHeartRate": 103,
@@ -207,6 +207,13 @@
     },
     {
       "type": "warning",
+      "title": "High Stress Day",
+      "message": "6h in high stress",
+      "severity": "medium",
+      "category": "stress"
+    },
+    {
+      "type": "warning",
       "title": "HR Spike Detected",
       "message": "Thu: 171 bpm peak",
       "severity": "medium",
@@ -216,13 +223,6 @@
       "type": "warning",
       "title": "HR Spike Detected",
       "message": "Sat: 148 bpm peak",
-      "severity": "medium",
-      "category": "activity"
-    },
-    {
-      "type": "warning",
-      "title": "HR Spike Detected",
-      "message": "Sun: 138 bpm peak",
       "severity": "medium",
       "category": "activity"
     }
@@ -688,7 +688,7 @@
   "stress": {
     "available": true,
     "today": {
-      "stressMinutes": 300,
+      "stressMinutes": 360,
       "recoveryMinutes": 0,
       "summary": "stressful"
     },
@@ -701,7 +701,7 @@
       "stressful",
       "stressful"
     ],
-    "avgStressMinutes": 341,
+    "avgStressMinutes": 349,
     "avgRecoveryMinutes": 69,
     "records": [
       {
@@ -880,7 +880,7 @@
       },
       {
         "day": "2026-02-11",
-        "stressHigh": 18000,
+        "stressHigh": 21600,
         "recoveryHigh": 0,
         "daySummary": "stressful"
       }
