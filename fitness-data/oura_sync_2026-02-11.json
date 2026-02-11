@@ -279500,6 +279500,81 @@
           "timestamp": "2026-02-11T16:19:13.000Z",
           "bpm": 69,
           "source": "awake"
+        },
+        {
+          "timestamp": "2026-02-11T16:24:47.000Z",
+          "bpm": 73,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-02-11T16:25:32.000Z",
+          "bpm": 84,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-02-11T16:25:40.000Z",
+          "bpm": 78,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-02-11T16:30:01.000Z",
+          "bpm": 69,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-02-11T16:30:11.000Z",
+          "bpm": 80,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-02-11T16:30:57.000Z",
+          "bpm": 70,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-02-11T16:31:09.000Z",
+          "bpm": 74,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-02-11T16:35:01.000Z",
+          "bpm": 69,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-02-11T16:57:55.000Z",
+          "bpm": 76,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-02-11T16:58:09.000Z",
+          "bpm": 79,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-02-11T17:02:19.000Z",
+          "bpm": 71,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-02-11T17:02:22.000Z",
+          "bpm": 69,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-02-11T17:21:07.000Z",
+          "bpm": 73,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-02-11T17:21:45.000Z",
+          "bpm": 79,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-02-11T17:21:48.000Z",
+          "bpm": 83,
+          "source": "awake"
         }
       ],
       "next_token": null
@@ -287350,9 +287425,9 @@
         {
           "id": "9c6ddace-b6a7-4878-8f5c-78983cdc253e",
           "day": "2026-02-11",
-          "day_summary": null,
+          "day_summary": "stressful",
           "recovery_high": 0,
-          "stress_high": 0
+          "stress_high": 14400
         }
       ],
       "next_token": null
@@ -287556,6 +287631,16 @@
             "sleep_recovery": 37.4,
             "daytime_recovery": 36.2,
             "stress": 63.6
+          },
+          "level": "adequate"
+        },
+        {
+          "id": "7e51ff48-a174-499b-8bcb-9a0887e9b3c2",
+          "day": "2026-02-11",
+          "contributors": {
+            "sleep_recovery": 38.5,
+            "daytime_recovery": 36.6,
+            "stress": 64.6
           },
           "level": "adequate"
         }
