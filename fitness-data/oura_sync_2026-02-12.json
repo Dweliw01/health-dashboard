@@ -283844,6 +283844,51 @@
           "timestamp": "2026-02-12T16:52:01.000Z",
           "bpm": 78,
           "source": "awake"
+        },
+        {
+          "timestamp": "2026-02-12T17:01:41.000Z",
+          "bpm": 87,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-02-12T17:01:42.000Z",
+          "bpm": 89,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-02-12T17:01:43.000Z",
+          "bpm": 94,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-02-12T17:11:49.000Z",
+          "bpm": 75,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-02-12T17:11:55.000Z",
+          "bpm": 83,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-02-12T17:11:58.000Z",
+          "bpm": 77,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-02-12T17:26:28.000Z",
+          "bpm": 109,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-02-12T17:26:42.000Z",
+          "bpm": 103,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-02-12T17:27:05.000Z",
+          "bpm": 106,
+          "source": "awake"
         }
       ],
       "next_token": null
@@ -291602,15 +291647,15 @@
           "id": "9c6ddace-b6a7-4878-8f5c-78983cdc253e",
           "day": "2026-02-11",
           "day_summary": "stressful",
-          "recovery_high": 0,
+          "recovery_high": 900,
           "stress_high": 27900
         },
         {
           "id": "bfdc53dd-9c34-4ca8-94c6-9be7111022c6",
           "day": "2026-02-12",
-          "day_summary": null,
-          "recovery_high": 0,
-          "stress_high": 0
+          "day_summary": "stressful",
+          "recovery_high": 1800,
+          "stress_high": 12600
         }
       ],
       "next_token": null
@@ -291824,6 +291869,16 @@
             "sleep_recovery": 38.5,
             "daytime_recovery": 36.6,
             "stress": 64.6
+          },
+          "level": "adequate"
+        },
+        {
+          "id": "59c2d6d1-7700-456e-8f2d-1dc3b77f2642",
+          "day": "2026-02-12",
+          "contributors": {
+            "sleep_recovery": 37.5,
+            "daytime_recovery": 35.3,
+            "stress": 66.9
           },
           "level": "adequate"
         }
