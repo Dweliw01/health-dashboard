@@ -1,9 +1,9 @@
 {
-  "lastUpdated": "2026-02-12T02:50:40.643Z",
+  "lastUpdated": "2026-02-12T05:04:27.819Z",
   "today": {
-    "steps": 16145,
+    "steps": 16561,
     "avgHeartRate": 101,
-    "calories": 1029
+    "calories": 1058
   },
   "todayScores": {
     "sleep": 52,
@@ -15,8 +15,8 @@
   },
   "thisWeek": {
     "workouts": 0,
-    "avgSteps": 10953,
-    "avgCalories": 703
+    "avgSteps": 11012,
+    "avgCalories": 707
   },
   "last7Days": {
     "labels": [
@@ -35,7 +35,7 @@
       14353,
       4420,
       7052,
-      16145
+      16561
     ]
   },
   "heartRateTrends": {
@@ -99,7 +99,7 @@
       8332,
       7912,
       11085,
-      10953
+      11012
     ],
     "workouts": [
       1,
@@ -111,7 +111,7 @@
       530,
       637,
       810,
-      703
+      707
     ]
   },
   "projection": {
@@ -122,16 +122,16 @@
       "Day 30"
     ],
     "actual": [
-      10953,
+      11012,
       null,
       null,
       null
     ],
     "projected": [
-      10953,
-      10898,
-      10871,
-      10843
+      11012,
+      10957,
+      10929,
+      10902
     ]
   },
   "timeOfDay": {
@@ -153,20 +153,20 @@
       105,
       154,
       139,
-      73,
+      78,
       62,
       63
     ]
   },
   "metrics": {
-    "dailyAvgSteps": 10953,
+    "dailyAvgSteps": 11012,
     "avgHeartRate": 95,
     "restingHR": 51,
     "activeDays": 6,
     "totalWorkouts": 9,
-    "bestDaySteps": 16145,
+    "bestDaySteps": 16561,
     "bestDayLabel": "Wed",
-    "caloriesPerDay": 703,
+    "caloriesPerDay": 707,
     "currentStreak": 1,
     "longestStreak": 5,
     "fitnessScore": 66,
@@ -174,8 +174,8 @@
     "sleepScore": 54,
     "readinessScore": 66,
     "consistency": 59,
-    "totalSteps30Days": 274657,
-    "totalCalories30Days": 19507,
+    "totalSteps30Days": 275073,
+    "totalCalories30Days": 19536,
     "daysTracked": 29
   },
   "insights": {
@@ -705,7 +705,7 @@
   "stress": {
     "available": true,
     "today": {
-      "stressMinutes": 450,
+      "stressMinutes": 465,
       "recoveryMinutes": 0,
       "summary": "stressful"
     },
@@ -718,7 +718,7 @@
       "stressful",
       "stressful"
     ],
-    "avgStressMinutes": 362,
+    "avgStressMinutes": 364,
     "avgRecoveryMinutes": 69,
     "records": [
       {
@@ -897,7 +897,7 @@
       },
       {
         "day": "2026-02-11",
-        "stressHigh": 27000,
+        "stressHigh": 27900,
         "recoveryHigh": 0,
         "daySummary": "stressful"
       }
