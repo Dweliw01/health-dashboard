@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-02-12T13:24:47.025Z",
+  "lastUpdated": "2026-02-12T14:55:15.909Z",
   "today": {
     "steps": 16603,
     "avgHeartRate": 100,
     "calories": 1065
   },
   "todayScores": {
-    "sleep": 52,
-    "readiness": 68,
+    "sleep": 67,
+    "readiness": 65,
     "activity": 82,
-    "sleepDate": "2026-02-11",
-    "readinessDate": "2026-02-11",
+    "sleepDate": "2026-02-12",
+    "readinessDate": "2026-02-12",
     "activityDate": "2026-02-11"
   },
   "thisWeek": {
@@ -169,10 +169,10 @@
     "caloriesPerDay": 708,
     "currentStreak": 1,
     "longestStreak": 5,
-    "fitnessScore": 66,
+    "fitnessScore": 65,
     "activityScore": 79,
-    "sleepScore": 54,
-    "readinessScore": 66,
+    "sleepScore": 53,
+    "readinessScore": 65,
     "consistency": 59,
     "totalSteps30Days": 275115,
     "totalCalories30Days": 19543,
@@ -185,9 +185,9 @@
       "trend": "declining"
     },
     "recovery": {
-      "readinessScore": 66,
+      "readinessScore": 65,
       "restingHR": 51,
-      "sleepScore": 54
+      "sleepScore": 53
     }
   },
   "alerts": [
@@ -905,31 +905,31 @@
   },
   "spo2": {
     "available": true,
-    "current": 97.515,
+    "current": 98.452,
     "trend7Days": [
-      98.472,
       95.692,
       98.202,
       99.105,
       95.337,
       98.398,
-      97.515
+      97.515,
+      98.452
     ],
-    "baseline": 97.3
+    "baseline": 97.4
   },
   "readinessBreakdown": {
-    "day": "2026-02-11",
-    "score": 68,
-    "overall": 68,
-    "activityBalance": 88,
+    "day": "2026-02-12",
+    "score": 65,
+    "overall": 65,
+    "activityBalance": 80,
     "bodyTemperature": 100,
     "hrvBalance": 86,
-    "previousDayActivity": 71,
-    "previousNight": 50,
-    "recoveryIndex": 70,
-    "restingHeartRateScore": 98,
-    "sleepBalance": 20,
-    "tempDeviation": -0.14,
-    "tempTrend": -0.04
+    "previousDayActivity": 59,
+    "previousNight": 69,
+    "recoveryIndex": 47,
+    "restingHeartRateScore": 80,
+    "sleepBalance": 25,
+    "tempDeviation": -0.11,
+    "tempTrend": null
   }
 }
