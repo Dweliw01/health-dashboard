@@ -1,9 +1,9 @@
 {
-  "lastUpdated": "2026-02-14T04:46:50.792Z",
+  "lastUpdated": "2026-02-14T05:51:24.736Z",
   "today": {
-    "steps": 7991,
+    "steps": 7995,
     "avgHeartRate": 103,
-    "calories": 523
+    "calories": 524
   },
   "todayScores": {
     "sleep": 72,
@@ -35,7 +35,7 @@
       7052,
       16603,
       16408,
-      7991
+      7995
     ]
   },
   "heartRateTrends": {
@@ -161,7 +161,7 @@
   "metrics": {
     "dailyAvgSteps": 11032,
     "avgHeartRate": 97,
-    "restingHR": 50,
+    "restingHR": 51,
     "activeDays": 6,
     "totalWorkouts": 9,
     "bestDaySteps": 16603,
@@ -174,8 +174,8 @@
     "sleepScore": 56,
     "readinessScore": 65,
     "consistency": 59,
-    "totalSteps30Days": 279524,
-    "totalCalories30Days": 19460,
+    "totalSteps30Days": 279528,
+    "totalCalories30Days": 19461,
     "daysTracked": 29
   },
   "insights": {
@@ -186,11 +186,18 @@
     },
     "recovery": {
       "readinessScore": 65,
-      "restingHR": 50,
+      "restingHR": 51,
       "sleepScore": 56
     }
   },
   "alerts": [
+    {
+      "type": "warning",
+      "title": "HRV Significantly Low",
+      "message": "73ms vs 139ms baseline (-47%)",
+      "severity": "high",
+      "category": "recovery"
+    },
     {
       "type": "warning",
       "title": "High Stress Day",
@@ -218,25 +225,18 @@
       "message": "Tue: 130 bpm peak",
       "severity": "medium",
       "category": "activity"
-    },
-    {
-      "type": "warning",
-      "title": "HR Spike Detected",
-      "message": "Wed: 170 bpm peak",
-      "severity": "medium",
-      "category": "activity"
     }
   ],
   "hrv": {
-    "current": 138,
+    "current": 73,
     "trend7Days": [
-      144,
       153,
       144,
       107,
       149,
       147,
-      138
+      138,
+      73
     ],
     "trend30Days": [
       153,
@@ -263,12 +263,13 @@
       107,
       149,
       147,
-      138
+      138,
+      73
     ],
-    "avg7Days": 140,
-    "avg30Days": 141,
-    "baseline": 141,
-    "status": "normal",
+    "avg7Days": 130,
+    "avg30Days": 139,
+    "baseline": 139,
+    "status": "low",
     "records": [
       {
         "day": "2026-01-15",
@@ -394,6 +395,11 @@
         "day": "2026-02-13",
         "avgHrv": 138,
         "lowestHR": 50
+      },
+      {
+        "day": "2026-02-14",
+        "avgHrv": 73,
+        "lowestHR": 58
       }
     ]
   },
