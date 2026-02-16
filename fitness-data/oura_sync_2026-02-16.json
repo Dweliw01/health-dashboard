@@ -41450,8 +41450,8 @@
         {
           "id": "c79a8bfb-625c-4f3a-84b7-b8a486109956",
           "active_calories": 903,
-          "average_met_minutes": 1.75,
-          "class_5_min": "111122221111111121122122111111222322330000000000000000000333444333322322223333223222323443333344223222222233333333332332233333333433223433334332244222222222333333232322333343333333434334333323333332233322232334223222233333333223333333321111121111111111111121112111111111111111211",
+          "average_met_minutes": 1.71875,
+          "class_5_min": "111122221111111121122122111111222322330000000000000000000333444333322322223333223222323443333344223222222233333333332332233333333433223433334332244222222222333333232322333343333333434334333323333332233322232334223222233333333223333333321111121111111111111121112111111111111111211111111111",
           "contributors": {
             "meet_daily_targets": 78,
             "move_every_hour": 100,
@@ -42869,6 +42869,10 @@
               0.9,
               0.9,
               0.9,
+              1.1,
+              1.1,
+              0.9,
+              1,
               0.9,
               0.9,
               0.9,
@@ -42897,18 +42901,14 @@
               0.9,
               0.9,
               0.9,
+              1.1,
               0.9,
               0.9,
+              1.1,
+              1.2,
               0.9,
               0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
+              1.2,
               0.9,
               0.9,
               0.9
@@ -42917,10 +42917,10 @@
           },
           "meters_to_target": -2400,
           "non_wear_time": 5940,
-          "resting_time": 22020,
+          "resting_time": 24540,
           "score": 94,
           "sedentary_met_minutes": 10,
-          "sedentary_time": 22380,
+          "sedentary_time": 22440,
           "steps": 13289,
           "target_calories": 750,
           "target_meters": 13000,
@@ -43246,6 +43246,21 @@
           "day": "2026-02-15",
           "score": 74,
           "timestamp": "2026-02-15T00:00:00.000+00:00"
+        },
+        {
+          "id": "f7da1eb2-dbcf-4e14-b2eb-62a291c049ba",
+          "contributors": {
+            "deep_sleep": 20,
+            "efficiency": 93,
+            "latency": 94,
+            "rem_sleep": 69,
+            "restfulness": 53,
+            "timing": 100,
+            "total_sleep": 41
+          },
+          "day": "2026-02-16",
+          "score": 60,
+          "timestamp": "2026-02-16T00:00:00.000+00:00"
         }
       ],
       "next_token": null
@@ -43650,6 +43665,25 @@
           "temperature_deviation": 0.24,
           "temperature_trend_deviation": 0.16,
           "timestamp": "2026-02-15T00:00:00.000+00:00"
+        },
+        {
+          "id": "0c9b5fd3-9f7c-4b4d-95be-dffbf98fe7ca",
+          "contributors": {
+            "activity_balance": 85,
+            "body_temperature": 97,
+            "hrv_balance": 87,
+            "previous_day_activity": 91,
+            "previous_night": 60,
+            "recovery_index": 61,
+            "resting_heart_rate": 81,
+            "sleep_balance": 36,
+            "sleep_regularity": 76
+          },
+          "day": "2026-02-16",
+          "score": 71,
+          "temperature_deviation": 0.1,
+          "temperature_trend_deviation": 0.25,
+          "timestamp": "2026-02-16T00:00:00.000+00:00"
         }
       ],
       "next_token": null
@@ -319437,6 +319471,14 @@
           "spo2_percentage": {
             "average": 96.441
           }
+        },
+        {
+          "id": "580f3f2e-224d-4b78-8b86-8b25de91e793",
+          "breathing_disturbance_index": 9,
+          "day": "2026-02-16",
+          "spo2_percentage": {
+            "average": 96.54
+          }
         }
       ],
       "next_token": null
@@ -319650,8 +319692,15 @@
           "id": "c9044f42-8707-4b5f-aa08-d8d2caea7007",
           "day": "2026-02-15",
           "day_summary": "stressful",
-          "recovery_high": 3600,
+          "recovery_high": 2700,
           "stress_high": 18000
+        },
+        {
+          "id": "70acf811-632b-4c2f-bb12-61699c4fb2af",
+          "day": "2026-02-16",
+          "day_summary": null,
+          "recovery_high": 0,
+          "stress_high": 0
         }
       ],
       "next_token": null
@@ -319865,6 +319914,16 @@
             "sleep_recovery": 37.5,
             "daytime_recovery": 33.2,
             "stress": 74.1
+          },
+          "level": "adequate"
+        },
+        {
+          "id": "cfbc5c25-afc9-469e-b3db-e792bd726dad",
+          "day": "2026-02-16",
+          "contributors": {
+            "sleep_recovery": 37.7,
+            "daytime_recovery": 33.1,
+            "stress": 75.2
           },
           "level": "adequate"
         }
