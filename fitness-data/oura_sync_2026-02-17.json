@@ -42909,7 +42909,7 @@
               1.1,
               0.9,
               0.9,
-              0.9,
+              1.1,
               0.9,
               0.9
             ],
@@ -43246,6 +43246,21 @@
           "day": "2026-02-16",
           "score": 58,
           "timestamp": "2026-02-16T00:00:00.000+00:00"
+        },
+        {
+          "id": "d1577e91-1509-4a18-98de-4fe6252fafeb",
+          "contributors": {
+            "deep_sleep": 48,
+            "efficiency": 76,
+            "latency": 19,
+            "rem_sleep": 64,
+            "restfulness": 60,
+            "timing": 100,
+            "total_sleep": 48
+          },
+          "day": "2026-02-17",
+          "score": 57,
+          "timestamp": "2026-02-17T00:00:00.000+00:00"
         }
       ],
       "next_token": null
@@ -43650,6 +43665,25 @@
           "temperature_deviation": 0.1,
           "temperature_trend_deviation": 0.25,
           "timestamp": "2026-02-16T00:00:00.000+00:00"
+        },
+        {
+          "id": "2d3854eb-b79f-4d0d-bdd8-53686597edbc",
+          "contributors": {
+            "activity_balance": 82,
+            "body_temperature": 93,
+            "hrv_balance": 85,
+            "previous_day_activity": 76,
+            "previous_night": 56,
+            "recovery_index": 40,
+            "resting_heart_rate": 81,
+            "sleep_balance": 44,
+            "sleep_regularity": 79
+          },
+          "day": "2026-02-17",
+          "score": 68,
+          "temperature_deviation": 0.14,
+          "temperature_trend_deviation": 0.27,
+          "timestamp": "2026-02-17T00:00:00.000+00:00"
         }
       ],
       "next_token": null
@@ -313979,6 +314013,14 @@
           "spo2_percentage": {
             "average": 96.594
           }
+        },
+        {
+          "id": "d7e19d69-5c66-4d85-902c-1ba75ba2e451",
+          "breathing_disturbance_index": 7,
+          "day": "2026-02-17",
+          "spo2_percentage": {
+            "average": 96.777
+          }
         }
       ],
       "next_token": null
@@ -314192,7 +314234,7 @@
           "id": "70acf811-632b-4c2f-bb12-61699c4fb2af",
           "day": "2026-02-16",
           "day_summary": "stressful",
-          "recovery_high": 3600,
+          "recovery_high": 2700,
           "stress_high": 19800
         },
         {
@@ -314414,6 +314456,16 @@
             "sleep_recovery": 37.8,
             "daytime_recovery": 33.1,
             "stress": 75.2
+          },
+          "level": "adequate"
+        },
+        {
+          "id": "1ac6c6f4-51b1-4606-9fe5-37e47e5205b1",
+          "day": "2026-02-17",
+          "contributors": {
+            "sleep_recovery": 36.5,
+            "daytime_recovery": 32.1,
+            "stress": 75
           },
           "level": "adequate"
         }
