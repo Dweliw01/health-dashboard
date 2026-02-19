@@ -1,41 +1,41 @@
 {
-  "lastUpdated": "2026-02-18T23:37:03.311Z",
+  "lastUpdated": "2026-02-19T02:46:22.145Z",
   "today": {
-    "steps": 12837,
+    "steps": 11104,
     "avgHeartRate": 87,
-    "calories": 809
+    "calories": 702
   },
   "todayScores": {
     "sleep": 59,
     "readiness": 67,
-    "activity": 90,
+    "activity": 91,
     "sleepDate": "2026-02-18",
     "readinessDate": "2026-02-18",
-    "activityDate": "2026-02-17"
+    "activityDate": "2026-02-18"
   },
   "thisWeek": {
     "workouts": 0,
-    "avgSteps": 14430,
-    "avgCalories": 900
+    "avgSteps": 13645,
+    "avgCalories": 848
   },
   "last7Days": {
     "labels": [
-      "Wed",
       "Thu",
       "Fri",
       "Sat",
       "Sun",
       "Mon",
-      "Tue"
+      "Tue",
+      "Wed"
     ],
     "values": [
-      16603,
       16408,
       8121,
       20311,
       13289,
       13443,
-      12837
+      12837,
+      11104
     ]
   },
   "heartRateTrends": {
@@ -96,22 +96,22 @@
       "This Week"
     ],
     "steps": [
-      6524,
-      12032,
-      9780,
-      14430
+      7912,
+      11085,
+      11018,
+      13645
     ],
     "workouts": [
-      1,
-      7,
+      5,
+      3,
       0,
       0
     ],
     "calories": [
-      605,
-      771,
-      691,
-      900
+      637,
+      810,
+      708,
+      848
     ]
   },
   "projection": {
@@ -122,16 +122,16 @@
       "Day 30"
     ],
     "actual": [
-      14430,
+      13645,
       null,
       null,
       null
     ],
     "projected": [
-      14430,
-      17893,
-      19625,
-      21356
+      13645,
+      15282,
+      16101,
+      16920
     ]
   },
   "timeOfDay": {
@@ -147,41 +147,41 @@
       "10pm"
     ],
     "values": [
-      189,
-      211,
-      228,
-      214,
-      240,
-      248,
-      201,
-      113,
-      101
+      188,
+      208,
+      229,
+      212,
+      238,
+      221,
+      186,
+      115,
+      106
     ]
   },
   "metrics": {
-    "dailyAvgSteps": 14430,
+    "dailyAvgSteps": 13645,
     "avgHeartRate": 93,
     "restingHR": 56,
     "activeDays": 7,
     "totalWorkouts": 8,
     "bestDaySteps": 20311,
     "bestDayLabel": "Sat",
-    "caloriesPerDay": 900,
-    "currentStreak": 4,
+    "caloriesPerDay": 848,
+    "currentStreak": 5,
     "longestStreak": 5,
-    "fitnessScore": 73,
-    "activityScore": 89,
+    "fitnessScore": 74,
+    "activityScore": 90,
     "sleepScore": 64,
     "readinessScore": 68,
-    "consistency": 66,
-    "totalSteps30Days": 299369,
-    "totalCalories30Days": 20776,
+    "consistency": 69,
+    "totalSteps30Days": 310473,
+    "totalCalories30Days": 21478,
     "daysTracked": 29
   },
   "insights": {
     "performance": {
-      "weekChange": 48,
-      "monthChange": 40,
+      "weekChange": 24,
+      "monthChange": 27,
       "trend": "improving"
     },
     "recovery": {
@@ -194,7 +194,7 @@
     {
       "type": "warning",
       "title": "Low Deep Sleep",
-      "message": "43 min last night (target: 90+ min)",
+      "message": "39 min last night (target: 90+ min)",
       "severity": "medium",
       "category": "sleep"
     },
@@ -228,15 +228,15 @@
     }
   ],
   "hrv": {
-    "current": 165,
+    "current": 143,
     "trend7Days": [
-      73,
       128,
       128,
       166,
       81,
       54,
-      165
+      165,
+      143
     ],
     "trend30Days": [
       137,
@@ -266,12 +266,13 @@
       166,
       81,
       54,
-      165
+      165,
+      143
     ],
-    "avg7Days": 114,
+    "avg7Days": 124,
     "avg30Days": 133,
     "baseline": 133,
-    "status": "high",
+    "status": "normal",
     "records": [
       {
         "day": "2026-01-21",
@@ -412,33 +413,27 @@
         "day": "2026-02-17",
         "avgHrv": 165,
         "lowestHR": 49
+      },
+      {
+        "day": "2026-02-18",
+        "avgHrv": 143,
+        "lowestHR": 48
       }
     ]
   },
   "sleepStages": {
     "lastNight": {
-      "day": "2026-02-17",
-      "deep": 43,
-      "rem": 74,
-      "light": 191,
-      "awake": 67,
-      "total": 307,
-      "efficiency": 82,
-      "latency": 50,
-      "breathRate": 16.25
+      "day": "2026-02-18",
+      "deep": 39,
+      "rem": 73,
+      "light": 163,
+      "awake": 42,
+      "total": 275,
+      "efficiency": 87,
+      "latency": 28,
+      "breathRate": 15.5
     },
     "last7Days": [
-      {
-        "day": "2026-02-11",
-        "deep": 53,
-        "rem": 43,
-        "light": 135,
-        "awake": 65,
-        "total": 231,
-        "efficiency": 78,
-        "latency": 12,
-        "breathRate": 14.5
-      },
       {
         "day": "2026-02-12",
         "deep": 36,
@@ -504,6 +499,17 @@
         "efficiency": 82,
         "latency": 50,
         "breathRate": 16.25
+      },
+      {
+        "day": "2026-02-18",
+        "deep": 39,
+        "rem": 73,
+        "light": 163,
+        "awake": 42,
+        "total": 275,
+        "efficiency": 87,
+        "latency": 28,
+        "breathRate": 15.5
       }
     ],
     "last30Days": [
@@ -704,20 +710,31 @@
         "efficiency": 82,
         "latency": 50,
         "breathRate": 16.25
+      },
+      {
+        "day": "2026-02-18",
+        "deep": 39,
+        "rem": 73,
+        "light": 163,
+        "awake": 42,
+        "total": 275,
+        "efficiency": 87,
+        "latency": 28,
+        "breathRate": 15.5
       }
     ],
     "avgDeep": 45,
     "avgRem": 78,
-    "avgLight": 203,
-    "avgTotal": 326,
+    "avgLight": 201,
+    "avgTotal": 323,
     "avgEfficiency": 85,
-    "avgLatency": 18,
+    "avgLatency": 19,
     "avgBreathRate": 14.7
   },
   "stress": {
     "available": true,
     "today": {
-      "stressMinutes": 135,
+      "stressMinutes": 180,
       "recoveryMinutes": 120,
       "summary": "normal"
     },
@@ -730,7 +747,7 @@
       "restored",
       "normal"
     ],
-    "avgStressMinutes": 345,
+    "avgStressMinutes": 351,
     "avgRecoveryMinutes": 88,
     "records": [
       {
@@ -909,7 +926,7 @@
       },
       {
         "day": "2026-02-18",
-        "stressHigh": 8100,
+        "stressHigh": 10800,
         "recoveryHigh": 7200,
         "daySummary": "normal"
       }
