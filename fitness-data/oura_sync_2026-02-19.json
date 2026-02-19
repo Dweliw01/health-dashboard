@@ -318173,6 +318173,16 @@
           "timestamp": "2026-02-19T16:15:31.000Z",
           "bpm": 66,
           "source": "rest"
+        },
+        {
+          "timestamp": "2026-02-19T16:32:31.000Z",
+          "bpm": 69,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-02-19T16:37:31.000Z",
+          "bpm": 71,
+          "source": "rest"
         }
       ],
       "next_token": null
@@ -326047,9 +326057,9 @@
         {
           "id": "a20378c7-e998-4a85-930e-863b8e84fd73",
           "day": "2026-02-19",
-          "day_summary": null,
-          "recovery_high": 0,
-          "stress_high": 9900
+          "day_summary": "stressful",
+          "recovery_high": 900,
+          "stress_high": 10800
         }
       ],
       "next_token": null
