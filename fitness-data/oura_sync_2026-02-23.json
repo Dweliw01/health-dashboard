@@ -343266,6 +343266,91 @@
           "timestamp": "2026-02-23T15:24:15.000Z",
           "bpm": 91,
           "source": "rest"
+        },
+        {
+          "timestamp": "2026-02-23T15:25:31.000Z",
+          "bpm": 81,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-02-23T15:30:31.000Z",
+          "bpm": 79,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-02-23T15:35:31.000Z",
+          "bpm": 84,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-02-23T15:51:31.000Z",
+          "bpm": 75,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-02-23T16:09:21.000Z",
+          "bpm": 81,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-02-23T16:09:22.000Z",
+          "bpm": 91,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-02-23T16:09:27.000Z",
+          "bpm": 98,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-02-23T16:18:49.000Z",
+          "bpm": 93,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-02-23T16:18:54.000Z",
+          "bpm": 98,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-02-23T16:19:15.000Z",
+          "bpm": 65,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-02-23T16:25:13.000Z",
+          "bpm": 96,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-02-23T16:25:14.000Z",
+          "bpm": 107,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-02-23T16:25:26.000Z",
+          "bpm": 123,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-02-23T16:37:32.000Z",
+          "bpm": 78,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-02-23T16:43:32.000Z",
+          "bpm": 70,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-02-23T16:48:32.000Z",
+          "bpm": 72,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-02-23T17:05:40.000Z",
+          "bpm": 57,
+          "source": "awake"
         }
       ],
       "next_token": null
@@ -351814,9 +351899,9 @@
         {
           "id": "c310b2ba-45b9-4dae-b4c1-73cc9700545d",
           "day": "2026-02-23",
-          "day_summary": null,
+          "day_summary": "stressful",
           "recovery_high": 0,
-          "stress_high": 0
+          "stress_high": 6300
         }
       ],
       "next_token": null
@@ -352062,6 +352147,16 @@
             "stress": 68.8
           },
           "level": "adequate"
+        },
+        {
+          "id": "b504a77b-cc99-4591-89b4-55017176125c",
+          "day": "2026-02-23",
+          "contributors": {
+            "sleep_recovery": 45.6,
+            "daytime_recovery": 40.1,
+            "stress": 68.1
+          },
+          "level": "solid"
         }
       ],
       "next_token": null
