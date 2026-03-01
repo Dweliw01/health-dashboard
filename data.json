@@ -1,9 +1,9 @@
 {
-  "lastUpdated": "2026-03-01T02:54:50.025Z",
+  "lastUpdated": "2026-03-01T05:00:11.157Z",
   "today": {
-    "steps": 19262,
-    "avgHeartRate": 104,
-    "calories": 917
+    "steps": 19930,
+    "avgHeartRate": 83,
+    "calories": 981
   },
   "todayScores": {
     "sleep": 72,
@@ -15,8 +15,8 @@
   },
   "thisWeek": {
     "workouts": 0,
-    "avgSteps": 11866,
-    "avgCalories": 664
+    "avgSteps": 11962,
+    "avgCalories": 673
   },
   "last7Days": {
     "labels": [
@@ -35,45 +35,45 @@
       12408,
       12326,
       13295,
-      19262
+      19930
     ]
   },
   "heartRateTrends": {
     "labels": [
-      "Sun",
       "Mon",
       "Tue",
       "Wed",
       "Thu",
       "Fri",
-      "Sat"
+      "Sat",
+      "Sun"
     ],
     "values": [
-      101,
       101,
       94,
       91,
       86,
       93,
-      104
+      101,
+      83
     ],
     "max": [
-      133,
       150,
       150,
       123,
       131,
       140,
-      156
+      156,
+      102
     ],
     "min": [
-      63,
       48,
       50,
       46,
       48,
       50,
-      49
+      49,
+      53
     ]
   },
   "workoutDistribution": {
@@ -97,7 +97,7 @@
       11502,
       12467,
       13004,
-      11866
+      11962
     ],
     "workouts": [
       0,
@@ -109,7 +109,7 @@
       791,
       785,
       840,
-      664
+      673
     ]
   },
   "projection": {
@@ -120,16 +120,16 @@
       "Day 30"
     ],
     "actual": [
-      11866,
+      11962,
       null,
       null,
       null
     ],
     "projected": [
-      11866,
-      11332,
-      11065,
-      10798
+      11962,
+      11484,
+      11244,
+      11005
     ]
   },
   "timeOfDay": {
@@ -151,20 +151,20 @@
       167,
       237,
       187,
-      159,
+      175,
       102,
       93
     ]
   },
   "metrics": {
-    "dailyAvgSteps": 11866,
-    "avgHeartRate": 96,
+    "dailyAvgSteps": 11962,
+    "avgHeartRate": 93,
     "restingHR": 52,
     "activeDays": 6,
     "totalWorkouts": 3,
-    "bestDaySteps": 19262,
+    "bestDaySteps": 19930,
     "bestDayLabel": "Sat",
-    "caloriesPerDay": 664,
+    "caloriesPerDay": 673,
     "currentStreak": 6,
     "longestStreak": 6,
     "fitnessScore": 74,
@@ -172,14 +172,14 @@
     "sleepScore": 69,
     "readinessScore": 77,
     "consistency": 77,
-    "totalSteps30Days": 358406,
-    "totalCalories30Days": 22585,
+    "totalSteps30Days": 359074,
+    "totalCalories30Days": 22649,
     "daysTracked": 30
   },
   "insights": {
     "performance": {
-      "weekChange": -9,
-      "monthChange": -1,
+      "weekChange": -8,
+      "monthChange": 0,
       "trend": "declining"
     },
     "recovery": {
@@ -206,13 +206,6 @@
     {
       "type": "warning",
       "title": "HR Spike Detected",
-      "message": "Sun: 133 bpm peak",
-      "severity": "medium",
-      "category": "activity"
-    },
-    {
-      "type": "warning",
-      "title": "HR Spike Detected",
       "message": "Mon: 150 bpm peak",
       "severity": "medium",
       "category": "activity"
@@ -221,6 +214,13 @@
       "type": "warning",
       "title": "HR Spike Detected",
       "message": "Tue: 150 bpm peak",
+      "severity": "medium",
+      "category": "activity"
+    },
+    {
+      "type": "warning",
+      "title": "HR Spike Detected",
+      "message": "Wed: 123 bpm peak",
       "severity": "medium",
       "category": "activity"
     }
@@ -813,8 +813,8 @@
   "stress": {
     "available": true,
     "today": {
-      "stressMinutes": 135,
-      "recoveryMinutes": 195,
+      "stressMinutes": 150,
+      "recoveryMinutes": 225,
       "summary": "restored"
     },
     "trend7Days": [
@@ -826,8 +826,8 @@
       "restored",
       "restored"
     ],
-    "avgStressMinutes": 148,
-    "avgRecoveryMinutes": 135,
+    "avgStressMinutes": 150,
+    "avgRecoveryMinutes": 139,
     "records": [
       {
         "day": "2026-01-30",
@@ -1005,8 +1005,8 @@
       },
       {
         "day": "2026-02-28",
-        "stressHigh": 8100,
-        "recoveryHigh": 11700,
+        "stressHigh": 9000,
+        "recoveryHigh": 13500,
         "daySummary": "restored"
       }
     ]
