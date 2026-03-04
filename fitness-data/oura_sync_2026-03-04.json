@@ -378658,6 +378658,191 @@
           "timestamp": "2026-03-04T16:23:49.000Z",
           "bpm": 66,
           "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-04T16:28:31.000Z",
+          "bpm": 64,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-04T16:28:35.000Z",
+          "bpm": 58,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-04T16:28:55.000Z",
+          "bpm": 70,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-04T16:32:53.000Z",
+          "bpm": 76,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-04T16:32:57.000Z",
+          "bpm": 71,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-04T16:34:00.000Z",
+          "bpm": 66,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-04T16:37:37.000Z",
+          "bpm": 74,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-04T16:37:44.000Z",
+          "bpm": 84,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-04T16:38:26.000Z",
+          "bpm": 68,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-04T16:40:30.000Z",
+          "bpm": 79,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-04T16:40:32.000Z",
+          "bpm": 82,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-04T16:40:33.000Z",
+          "bpm": 84,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-04T16:42:44.000Z",
+          "bpm": 63,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-04T16:43:04.000Z",
+          "bpm": 72,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-04T16:43:05.000Z",
+          "bpm": 61,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-04T16:45:12.000Z",
+          "bpm": 81,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-04T16:45:19.000Z",
+          "bpm": 76,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-04T16:45:29.000Z",
+          "bpm": 67,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-04T16:50:37.000Z",
+          "bpm": 59,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-04T16:51:19.000Z",
+          "bpm": 54,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-04T16:51:39.000Z",
+          "bpm": 62,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-04T16:54:00.000Z",
+          "bpm": 59,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-04T17:11:11.000Z",
+          "bpm": 71,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-04T17:11:30.000Z",
+          "bpm": 68,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-04T17:12:17.000Z",
+          "bpm": 65,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-04T17:16:25.000Z",
+          "bpm": 68,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-04T17:16:29.000Z",
+          "bpm": 66,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-04T17:17:01.000Z",
+          "bpm": 72,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-04T17:18:41.000Z",
+          "bpm": 64,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-04T17:18:44.000Z",
+          "bpm": 70,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-04T17:18:49.000Z",
+          "bpm": 68,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-04T17:21:34.000Z",
+          "bpm": 69,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-04T17:21:37.000Z",
+          "bpm": 75,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-04T17:22:00.000Z",
+          "bpm": 72,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-04T17:26:18.000Z",
+          "bpm": 65,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-04T17:26:46.000Z",
+          "bpm": 63,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-04T17:26:49.000Z",
+          "bpm": 61,
+          "source": "awake"
         }
       ],
       "next_token": null
@@ -388032,16 +388217,16 @@
         {
           "id": "64fb971c-e86f-42db-a4cb-d6afe36f815b",
           "day": "2026-03-03",
-          "day_summary": null,
-          "recovery_high": 0,
-          "stress_high": 0
+          "day_summary": "stressful",
+          "recovery_high": 8100,
+          "stress_high": 13500
         },
         {
           "id": "aa4b2692-7ad4-4dd4-b5f3-6496faec8b5a",
           "day": "2026-03-04",
-          "day_summary": null,
-          "recovery_high": 0,
-          "stress_high": 0
+          "day_summary": "stressful",
+          "recovery_high": 3600,
+          "stress_high": 4500
         }
       ],
       "next_token": null
@@ -388315,6 +388500,16 @@
             "sleep_recovery": 47.1,
             "daytime_recovery": 47.8,
             "stress": 46.9
+          },
+          "level": "solid"
+        },
+        {
+          "id": "53b22bd7-fb2b-4b66-807e-60dd09fa2b28",
+          "day": "2026-03-04",
+          "contributors": {
+            "sleep_recovery": 47.7,
+            "daytime_recovery": 48,
+            "stress": 47.2
           },
           "level": "solid"
         }
