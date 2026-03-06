@@ -42930,8 +42930,8 @@
         {
           "id": "75724a68-8e26-4c2f-a951-a97ffceb8f99",
           "active_calories": 874,
-          "average_met_minutes": 1.78125,
-          "class_5_min": "111111112211233223333332334444444444333343343343443332232233333323333332222222222222222222222222222222222222222222222222222222222122222332222222222222222222222222222222232222222222222233333344444443332323332233222222222222223222323322222222111111121111",
+          "average_met_minutes": 1.71875,
+          "class_5_min": "111111112211233223333332334444444444333343343343443332232233333323333332222222222222222222222222222222222222222222222222222222222122222332222222222222222222222222222222232222222222222233333344444443332323332233222222222222223222323322222222111111121111111112111111111111111111",
           "contributors": {
             "meet_daily_targets": 43,
             "move_every_hour": 43,
@@ -44206,12 +44206,15 @@
               0.9,
               0.9,
               0.9,
+              1.1,
               0.9,
               0.9,
               0.9,
+              1,
               0.9,
               0.9,
               0.9,
+              1,
               0.9,
               0.9,
               0.9,
@@ -44238,7 +44241,12 @@
               0.9,
               0.9,
               0.9,
+              1.3,
+              1.6,
+              1.1,
+              1.2,
               0.9,
+              1,
               0.9,
               0.9,
               0.9,
@@ -44247,8 +44255,10 @@
               0.9,
               0.9,
               0.9,
+              1.1,
               0.9,
               0.9,
+              1.1,
               0.9,
               0.9,
               0.9,
@@ -44269,6 +44279,7 @@
               0.9,
               0.9,
               0.9,
+              1.1,
               0.9,
               0.9,
               0.9,
@@ -44294,30 +44305,19 @@
               0.9,
               0.9,
               0.9,
+              1.4,
               0.9,
               0.9,
               0.9,
+              1.1,
               0.9,
               0.9,
+              1.3,
               0.9,
               0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
+              1,
+              1.2,
+              1,
               0.9,
               0.9,
               0.9,
@@ -44397,15 +44397,15 @@
           },
           "meters_to_target": 3000,
           "non_wear_time": 0,
-          "resting_time": 7920,
+          "resting_time": 14760,
           "score": 71,
           "sedentary_met_minutes": 9,
-          "sedentary_time": 46140,
+          "sedentary_time": 46500,
           "steps": 11715,
           "target_calories": 1050,
           "target_meters": 18000,
           "timestamp": "2026-03-05T04:00:00.000-05:00",
-          "total_calories": 3380
+          "total_calories": 3383
         }
       ],
       "next_token": null
@@ -376863,6 +376863,341 @@
           "timestamp": "2026-03-06T01:54:32.000Z",
           "bpm": 56,
           "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-06T02:04:47.000Z",
+          "bpm": 64,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-06T02:04:49.000Z",
+          "bpm": 62,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-06T02:04:51.000Z",
+          "bpm": 57,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-06T02:14:09.000Z",
+          "bpm": 104,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-06T02:14:13.000Z",
+          "bpm": 75,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-06T02:14:20.000Z",
+          "bpm": 68,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-06T02:24:19.000Z",
+          "bpm": 79,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-06T02:24:22.000Z",
+          "bpm": 74,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-06T02:24:23.000Z",
+          "bpm": 72,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-06T02:34:55.000Z",
+          "bpm": 69,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-06T02:34:57.000Z",
+          "bpm": 65,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-06T02:35:02.000Z",
+          "bpm": 57,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-06T02:36:59.000Z",
+          "bpm": 56,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-06T02:38:17.000Z",
+          "bpm": 56,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-06T02:38:18.000Z",
+          "bpm": 60,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-06T02:38:20.000Z",
+          "bpm": 53,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-06T02:54:00.000Z",
+          "bpm": 59,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-06T03:23:13.000Z",
+          "bpm": 55,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-06T03:23:16.000Z",
+          "bpm": 64,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-06T03:23:28.000Z",
+          "bpm": 56,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-06T03:38:33.000Z",
+          "bpm": 50,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-06T03:38:34.000Z",
+          "bpm": 58,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-06T03:38:36.000Z",
+          "bpm": 66,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-06T03:46:00.000Z",
+          "bpm": 51,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-06T03:48:02.000Z",
+          "bpm": 52,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-06T03:48:33.000Z",
+          "bpm": 54,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-06T03:48:54.000Z",
+          "bpm": 50,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-06T04:08:24.000Z",
+          "bpm": 53,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-06T04:08:26.000Z",
+          "bpm": 54,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-06T04:08:49.000Z",
+          "bpm": 53,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-06T04:18:08.000Z",
+          "bpm": 51,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-06T04:18:14.000Z",
+          "bpm": 57,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-06T04:18:54.000Z",
+          "bpm": 53,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-06T04:21:01.000Z",
+          "bpm": 49,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-06T04:23:05.000Z",
+          "bpm": 52,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-06T04:23:06.000Z",
+          "bpm": 53,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-06T04:23:13.000Z",
+          "bpm": 54,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-06T04:43:13.000Z",
+          "bpm": 54,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-06T04:43:21.000Z",
+          "bpm": 60,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-06T04:44:13.000Z",
+          "bpm": 51,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-06T04:48:22.000Z",
+          "bpm": 57,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-06T04:49:37.000Z",
+          "bpm": 49,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-06T04:49:46.000Z",
+          "bpm": 51,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-06T04:53:30.000Z",
+          "bpm": 53,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-06T04:53:31.000Z",
+          "bpm": 55,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-06T04:53:49.000Z",
+          "bpm": 66,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-06T05:04:14.000Z",
+          "bpm": 45,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-06T05:09:14.000Z",
+          "bpm": 46,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-06T05:14:14.000Z",
+          "bpm": 46,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-06T05:19:14.000Z",
+          "bpm": 45,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-06T05:24:14.000Z",
+          "bpm": 46,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-06T05:34:14.000Z",
+          "bpm": 48,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-06T05:44:14.000Z",
+          "bpm": 45,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-06T05:49:14.000Z",
+          "bpm": 45,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-06T05:54:14.000Z",
+          "bpm": 44,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-06T05:59:14.000Z",
+          "bpm": 45,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-06T06:01:00.000Z",
+          "bpm": 54,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-06T06:06:00.000Z",
+          "bpm": 57,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-06T06:11:00.000Z",
+          "bpm": 53,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-06T06:16:00.000Z",
+          "bpm": 50,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-06T06:21:00.000Z",
+          "bpm": 60,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-06T06:34:14.000Z",
+          "bpm": 44,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-06T06:39:14.000Z",
+          "bpm": 42,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-06T06:44:14.000Z",
+          "bpm": 43,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-06T06:49:14.000Z",
+          "bpm": 44,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-06T06:54:14.000Z",
+          "bpm": 45,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-06T06:59:14.000Z",
+          "bpm": 45,
+          "source": "rest"
         }
       ],
       "next_token": null
