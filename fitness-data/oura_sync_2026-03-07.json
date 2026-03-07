@@ -44831,6 +44831,21 @@
           "day": "2026-03-06",
           "score": 52,
           "timestamp": "2026-03-06T00:00:00.000+00:00"
+        },
+        {
+          "id": "1100701a-3825-4de9-9f48-4cd31ab879fd",
+          "contributors": {
+            "deep_sleep": 30,
+            "efficiency": 90,
+            "latency": 62,
+            "rem_sleep": 96,
+            "restfulness": 58,
+            "timing": 100,
+            "total_sleep": 71
+          },
+          "day": "2026-03-07",
+          "score": 71,
+          "timestamp": "2026-03-07T00:00:00.000+00:00"
         }
       ],
       "next_token": null
@@ -45368,6 +45383,25 @@
           "temperature_deviation": -0.43,
           "temperature_trend_deviation": -0.16,
           "timestamp": "2026-03-06T00:00:00.000+00:00"
+        },
+        {
+          "id": "ac81a73f-7c7e-49fa-82d5-0e18db47b5d0",
+          "contributors": {
+            "activity_balance": 74,
+            "body_temperature": 100,
+            "hrv_balance": 88,
+            "previous_day_activity": 68,
+            "previous_night": 74,
+            "recovery_index": 90,
+            "resting_heart_rate": 100,
+            "sleep_balance": 60,
+            "sleep_regularity": 79
+          },
+          "day": "2026-03-07",
+          "score": 79,
+          "temperature_deviation": -0.06,
+          "temperature_trend_deviation": -0.02,
+          "timestamp": "2026-03-07T00:00:00.000+00:00"
         }
       ],
       "next_token": null
@@ -390444,6 +390478,14 @@
           "spo2_percentage": {
             "average": 98.315
           }
+        },
+        {
+          "id": "bbe00837-ee23-499e-a65b-62d2a52a3c06",
+          "breathing_disturbance_index": 0,
+          "day": "2026-03-07",
+          "spo2_percentage": {
+            "average": 97.356
+          }
         }
       ],
       "next_token": null
@@ -390659,6 +390701,13 @@
           "day_summary": "restored",
           "recovery_high": 9000,
           "stress_high": 2700
+        },
+        {
+          "id": "9c1423d8-473b-4f63-bf1d-2a273d3c95c9",
+          "day": "2026-03-07",
+          "day_summary": null,
+          "recovery_high": 0,
+          "stress_high": 0
         }
       ],
       "next_token": null
@@ -390944,6 +390993,16 @@
             "stress": 43.1
           },
           "level": "adequate"
+        },
+        {
+          "id": "71768ab2-7169-4327-86fd-97a59b5acfe4",
+          "day": "2026-03-07",
+          "contributors": {
+            "sleep_recovery": 48.2,
+            "daytime_recovery": 50.2,
+            "stress": 40.1
+          },
+          "level": "solid"
         }
       ],
       "next_token": null
