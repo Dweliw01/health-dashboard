@@ -1,8 +1,8 @@
 {
-  "lastUpdated": "2026-03-10T14:57:31.194Z",
+  "lastUpdated": "2026-03-10T16:08:01.537Z",
   "today": {
     "steps": 0,
-    "avgHeartRate": 69,
+    "avgHeartRate": 72,
     "calories": 245
   },
   "todayScores": {
@@ -40,40 +40,40 @@
   },
   "heartRateTrends": {
     "labels": [
-      "Tue",
       "Wed",
       "Thu",
       "Fri",
       "Sat",
       "Sun",
-      "Mon"
+      "Mon",
+      "Tue"
     ],
     "values": [
-      93,
       85,
       85,
       87,
       99,
       90,
-      69
+      69,
+      72
     ],
     "max": [
-      125,
       132,
       128,
       120,
       176,
       128,
-      81
+      81,
+      75
     ],
     "min": [
-      46,
       49,
       47,
       42,
       45,
       50,
-      58
+      58,
+      69
     ]
   },
   "workoutDistribution": {
@@ -152,7 +152,7 @@
   },
   "metrics": {
     "dailyAvgSteps": 11303,
-    "avgHeartRate": 87,
+    "avgHeartRate": 84,
     "restingHR": 49,
     "activeDays": 6,
     "totalWorkouts": 0,
@@ -193,13 +193,6 @@
     {
       "type": "warning",
       "title": "HR Spike Detected",
-      "message": "Tue: 125 bpm peak",
-      "severity": "medium",
-      "category": "activity"
-    },
-    {
-      "type": "warning",
-      "title": "HR Spike Detected",
       "message": "Wed: 132 bpm peak",
       "severity": "medium",
       "category": "activity"
@@ -215,6 +208,13 @@
       "type": "warning",
       "title": "HR Spike Detected",
       "message": "Fri: 120 bpm peak",
+      "severity": "medium",
+      "category": "activity"
+    },
+    {
+      "type": "warning",
+      "title": "HR Spike Detected",
+      "message": "Sat: 176 bpm peak",
       "severity": "medium",
       "category": "activity"
     }
