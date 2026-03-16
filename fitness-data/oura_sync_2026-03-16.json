@@ -44801,6 +44801,21 @@
           "day": "2026-03-15",
           "score": 82,
           "timestamp": "2026-03-15T00:00:00.000+00:00"
+        },
+        {
+          "id": "a1a08d55-9070-4930-8b3d-54f9af466bc4",
+          "contributors": {
+            "deep_sleep": 33,
+            "efficiency": 96,
+            "latency": 81,
+            "rem_sleep": 82,
+            "restfulness": 51,
+            "timing": 87,
+            "total_sleep": 58
+          },
+          "day": "2026-03-16",
+          "score": 66,
+          "timestamp": "2026-03-16T00:00:00.000+00:00"
         }
       ],
       "next_token": null
@@ -45300,6 +45315,25 @@
           "temperature_deviation": 0.03,
           "temperature_trend_deviation": 0.01,
           "timestamp": "2026-03-15T00:00:00.000+00:00"
+        },
+        {
+          "id": "9ec8396a-3c20-4265-8061-907fd5af5309",
+          "contributors": {
+            "activity_balance": 81,
+            "body_temperature": 97,
+            "hrv_balance": 77,
+            "previous_day_activity": 100,
+            "previous_night": 67,
+            "recovery_index": 48,
+            "resting_heart_rate": 78,
+            "sleep_balance": 53,
+            "sleep_regularity": 85
+          },
+          "day": "2026-03-16",
+          "score": 73,
+          "temperature_deviation": 0.1,
+          "temperature_trend_deviation": 0.11,
+          "timestamp": "2026-03-16T00:00:00.000+00:00"
         }
       ],
       "next_token": null
@@ -390285,6 +390319,12 @@
           "spo2_percentage": {
             "average": 97.346
           }
+        },
+        {
+          "id": "a0839a72-02fc-4b7b-a634-0f86fcf9e96b",
+          "breathing_disturbance_index": 3,
+          "day": "2026-03-16",
+          "spo2_percentage": null
         }
       ],
       "next_token": null
@@ -390500,6 +390540,13 @@
           "day_summary": "stressful",
           "recovery_high": 0,
           "stress_high": 12600
+        },
+        {
+          "id": "39c59841-efb7-4346-8d67-3878f5f6df68",
+          "day": "2026-03-16",
+          "day_summary": null,
+          "recovery_high": 0,
+          "stress_high": 0
         }
       ],
       "next_token": null
