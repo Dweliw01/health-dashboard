@@ -1,8 +1,8 @@
 {
-  "lastUpdated": "2026-03-17T15:04:28.058Z",
+  "lastUpdated": "2026-03-17T17:11:22.219Z",
   "today": {
     "steps": 13658,
-    "avgHeartRate": 59,
+    "avgHeartRate": 63,
     "calories": 1065
   },
   "todayScores": {
@@ -55,7 +55,7 @@
       95,
       90,
       86,
-      59
+      63
     ],
     "max": [
       135,
@@ -64,7 +64,7 @@
       164,
       126,
       127,
-      114
+      127
     ],
     "min": [
       45,
@@ -833,8 +833,8 @@
   "stress": {
     "available": true,
     "today": {
-      "stressMinutes": 0,
-      "recoveryMinutes": 0,
+      "stressMinutes": 60,
+      "recoveryMinutes": 30,
       "summary": "unknown"
     },
     "trend7Days": [
@@ -846,8 +846,8 @@
       "stressful",
       "unknown"
     ],
-    "avgStressMinutes": 159,
-    "avgRecoveryMinutes": 146,
+    "avgStressMinutes": 167,
+    "avgRecoveryMinutes": 150,
     "records": [
       {
         "day": "2026-02-16",
@@ -1025,8 +1025,8 @@
       },
       {
         "day": "2026-03-17",
-        "stressHigh": 0,
-        "recoveryHigh": 0,
+        "stressHigh": 3600,
+        "recoveryHigh": 1800,
         "daySummary": "unknown"
       }
     ]
