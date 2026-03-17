@@ -42930,8 +42930,8 @@
         {
           "id": "15125e16-6346-433d-a0ae-804f143e42a0",
           "active_calories": 1065,
-          "average_met_minutes": 1.78125,
-          "class_5_min": "11112321233232223333322223334444444444332222334344444422233322232332122222222222222222222222323333343322211133322222222223344333333222222212222211111221122232322222222233333444444432344222222222233333223222223222222332222222111111111111111111111123111111111111111111111111111111",
+          "average_met_minutes": 1.75,
+          "class_5_min": "111123212332322233333222233344444444443322223343444444222333222323321222222222222222222222223233333433222111333222222222233443333332222222122222111112211222323222222222333334444444323442222222222333332232222232222223322222221111111111111111111111231111111111111111111111111111111111111111",
           "contributors": {
             "meet_daily_targets": 78,
             "move_every_hour": 95,
@@ -44344,6 +44344,26 @@
               0.9,
               0.9,
               0.9,
+              1.3,
+              1,
+              0.9,
+              0.9,
+              0.9,
+              0.9,
+              0.9,
+              0.9,
+              1.1,
+              0.9,
+              0.9,
+              0.9,
+              0.9,
+              0.9,
+              0.9,
+              0.9,
+              0.9,
+              0.9,
+              1.1,
+              1.1,
               0.9,
               0.9,
               0.9,
@@ -44365,30 +44385,10 @@
               0.9,
               0.9,
               0.9,
+              1.2,
               0.9,
               0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
+              1,
               0.9,
               0.9,
               0.9
@@ -44397,7 +44397,7 @@
           },
           "meters_to_target": -100,
           "non_wear_time": 60,
-          "resting_time": 23280,
+          "resting_time": 26220,
           "score": 90,
           "sedentary_met_minutes": 6,
           "sedentary_time": 34920,
@@ -44801,6 +44801,21 @@
           "day": "2026-03-16",
           "score": 66,
           "timestamp": "2026-03-16T00:00:00.000+00:00"
+        },
+        {
+          "id": "9be16734-a71c-4017-8c05-82d49ee54444",
+          "contributors": {
+            "deep_sleep": 59,
+            "efficiency": 98,
+            "latency": 67,
+            "rem_sleep": 74,
+            "restfulness": 72,
+            "timing": 80,
+            "total_sleep": 52
+          },
+          "day": "2026-03-17",
+          "score": 67,
+          "timestamp": "2026-03-17T00:00:00.000+00:00"
         }
       ],
       "next_token": null
@@ -45300,6 +45315,25 @@
           "temperature_deviation": 0.1,
           "temperature_trend_deviation": 0.11,
           "timestamp": "2026-03-16T00:00:00.000+00:00"
+        },
+        {
+          "id": "bfc67ba8-7bda-45fb-a810-b958e4ed5ed9",
+          "contributors": {
+            "activity_balance": 83,
+            "body_temperature": 100,
+            "hrv_balance": 80,
+            "previous_day_activity": 81,
+            "previous_night": 69,
+            "recovery_index": 62,
+            "resting_heart_rate": 100,
+            "sleep_balance": 61,
+            "sleep_regularity": 85
+          },
+          "day": "2026-03-17",
+          "score": 78,
+          "temperature_deviation": -0.01,
+          "temperature_trend_deviation": 0.12,
+          "timestamp": "2026-03-17T00:00:00.000+00:00"
         }
       ],
       "next_token": null
@@ -378332,6 +378366,12 @@
           "breathing_disturbance_index": 3,
           "day": "2026-03-16",
           "spo2_percentage": null
+        },
+        {
+          "id": "3cd43e83-e8c6-403f-a10b-21161323e964",
+          "breathing_disturbance_index": 1,
+          "day": "2026-03-17",
+          "spo2_percentage": null
         }
       ],
       "next_token": null
@@ -378545,8 +378585,15 @@
           "id": "39c59841-efb7-4346-8d67-3878f5f6df68",
           "day": "2026-03-16",
           "day_summary": "stressful",
-          "recovery_high": 11700,
+          "recovery_high": 7200,
           "stress_high": 13500
+        },
+        {
+          "id": "ee2f6494-b8a4-4bf8-b6c4-69b7673f4b18",
+          "day": "2026-03-17",
+          "day_summary": null,
+          "recovery_high": 0,
+          "stress_high": 0
         }
       ],
       "next_token": null
@@ -378810,6 +378857,16 @@
             "sleep_recovery": 47.5,
             "daytime_recovery": 48.6,
             "stress": 44.6
+          },
+          "level": "solid"
+        },
+        {
+          "id": "bf28a65d-6583-443f-ac8c-ec660e301d58",
+          "day": "2026-03-17",
+          "contributors": {
+            "sleep_recovery": 47.4,
+            "daytime_recovery": 47.7,
+            "stress": 47.3
           },
           "level": "solid"
         }
