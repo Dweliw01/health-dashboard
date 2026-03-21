@@ -44801,6 +44801,21 @@
           "day": "2026-03-20",
           "score": 68,
           "timestamp": "2026-03-20T00:00:00.000+00:00"
+        },
+        {
+          "id": "3733833e-5deb-4602-a37e-abcafc73d926",
+          "contributors": {
+            "deep_sleep": 65,
+            "efficiency": 69,
+            "latency": 97,
+            "rem_sleep": 98,
+            "restfulness": 27,
+            "timing": 100,
+            "total_sleep": 99
+          },
+          "day": "2026-03-21",
+          "score": 82,
+          "timestamp": "2026-03-21T00:00:00.000+00:00"
         }
       ],
       "next_token": null
@@ -45300,6 +45315,25 @@
           "temperature_deviation": -0.14,
           "temperature_trend_deviation": -0.15,
           "timestamp": "2026-03-20T00:00:00.000+00:00"
+        },
+        {
+          "id": "fb23705e-f527-40b7-9b3c-c361ff717ab5",
+          "contributors": {
+            "activity_balance": 78,
+            "body_temperature": 95,
+            "hrv_balance": 88,
+            "previous_day_activity": 45,
+            "previous_night": 88,
+            "recovery_index": 100,
+            "resting_heart_rate": 100,
+            "sleep_balance": 65,
+            "sleep_regularity": 86
+          },
+          "day": "2026-03-21",
+          "score": 82,
+          "temperature_deviation": 0.12,
+          "temperature_trend_deviation": -0.19,
+          "timestamp": "2026-03-21T00:00:00.000+00:00"
         }
       ],
       "next_token": null
@@ -380240,6 +380274,14 @@
           "spo2_percentage": {
             "average": 96.325
           }
+        },
+        {
+          "id": "f13d8827-32a9-45fd-900e-8ea9ed7ad5e1",
+          "breathing_disturbance_index": 1,
+          "day": "2026-03-21",
+          "spo2_percentage": {
+            "average": 97.424
+          }
         }
       ],
       "next_token": null
@@ -380452,16 +380494,16 @@
         {
           "id": "5b2da4a8-5eec-44e3-914f-8ca62249fe16",
           "day": "2026-03-20",
-          "day_summary": "restored",
-          "recovery_high": 27900,
+          "day_summary": "stressful",
+          "recovery_high": 900,
           "stress_high": 19800
         },
         {
           "id": "5f13e4c2-d5e7-4940-9064-9f14e6c3e440",
           "day": "2026-03-21",
           "day_summary": null,
-          "recovery_high": 9900,
-          "stress_high": 2700
+          "recovery_high": 0,
+          "stress_high": 4500
         }
       ],
       "next_token": null
@@ -380727,6 +380769,16 @@
             "stress": 49.5
           },
           "level": "adequate"
+        },
+        {
+          "id": "52e213be-893c-40ee-8d27-0208493b0df5",
+          "day": "2026-03-21",
+          "contributors": {
+            "sleep_recovery": 50.1,
+            "daytime_recovery": 47.5,
+            "stress": 54.4
+          },
+          "level": "solid"
         }
       ],
       "next_token": null
