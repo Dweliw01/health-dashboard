@@ -372319,6 +372319,126 @@
           "timestamp": "2026-03-22T14:41:53.000Z",
           "bpm": 74,
           "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-22T15:01:25.000Z",
+          "bpm": 62,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-22T15:01:52.000Z",
+          "bpm": 60,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-22T15:02:05.000Z",
+          "bpm": 64,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-22T15:15:14.000Z",
+          "bpm": 64,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-22T15:15:17.000Z",
+          "bpm": 69,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-22T15:15:21.000Z",
+          "bpm": 60,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-22T15:27:28.000Z",
+          "bpm": 66,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-22T15:27:31.000Z",
+          "bpm": 78,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-22T15:27:32.000Z",
+          "bpm": 73,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-22T15:32:37.000Z",
+          "bpm": 93,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-22T15:32:44.000Z",
+          "bpm": 86,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-22T15:33:53.000Z",
+          "bpm": 89,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-22T15:38:58.000Z",
+          "bpm": 102,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-22T15:39:13.000Z",
+          "bpm": 98,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-22T15:39:21.000Z",
+          "bpm": 104,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-22T15:43:23.000Z",
+          "bpm": 101,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-22T15:43:44.000Z",
+          "bpm": 105,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-22T15:43:54.000Z",
+          "bpm": 107,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-22T16:05:11.000Z",
+          "bpm": 99,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-22T16:05:19.000Z",
+          "bpm": 80,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-22T16:05:21.000Z",
+          "bpm": 83,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-22T16:14:55.000Z",
+          "bpm": 72,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-22T16:16:14.000Z",
+          "bpm": 74,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-03-22T16:16:40.000Z",
+          "bpm": 68,
+          "source": "awake"
         }
       ],
       "next_token": null
@@ -381506,14 +381626,14 @@
           "day": "2026-03-21",
           "day_summary": "stressful",
           "recovery_high": 9900,
-          "stress_high": 16200
+          "stress_high": 18000
         },
         {
           "id": "929f623b-f8c9-4c80-b4be-ed05cb7c0d2d",
           "day": "2026-03-22",
           "day_summary": null,
-          "recovery_high": 0,
-          "stress_high": 0
+          "recovery_high": 2700,
+          "stress_high": 7200
         }
       ],
       "next_token": null
@@ -381777,6 +381897,16 @@
             "sleep_recovery": 50.1,
             "daytime_recovery": 47.5,
             "stress": 54.4
+          },
+          "level": "solid"
+        },
+        {
+          "id": "9cd6e564-f314-43ef-b0fb-0aca7d4f1966",
+          "day": "2026-03-22",
+          "contributors": {
+            "sleep_recovery": 51.7,
+            "daytime_recovery": 48.5,
+            "stress": 55.1
           },
           "level": "solid"
         }
