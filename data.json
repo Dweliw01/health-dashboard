@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-03-22T13:06:33.185Z",
+  "lastUpdated": "2026-03-22T14:35:23.402Z",
   "today": {
     "steps": 12537,
     "avgHeartRate": 74,
     "calories": 740
   },
   "todayScores": {
-    "sleep": 82,
-    "readiness": 82,
+    "sleep": 72,
+    "readiness": 81,
     "activity": 93,
-    "sleepDate": "2026-03-21",
-    "readinessDate": "2026-03-21",
+    "sleepDate": "2026-03-22",
+    "readinessDate": "2026-03-22",
     "activityDate": "2026-03-21"
   },
   "thisWeek": {
@@ -167,7 +167,7 @@
     "longestStreak": 7,
     "fitnessScore": 80,
     "activityScore": 91,
-    "sleepScore": 69,
+    "sleepScore": 68,
     "readinessScore": 77,
     "consistency": 80,
     "totalSteps30Days": 372300,
@@ -183,7 +183,7 @@
     "recovery": {
       "readinessScore": 77,
       "restingHR": 46,
-      "sleepScore": 69
+      "sleepScore": 68
     }
   },
   "alerts": [
@@ -823,28 +823,22 @@
   "stress": {
     "available": true,
     "today": {
-      "stressMinutes": 270,
-      "recoveryMinutes": 165,
-      "summary": "stressful"
+      "stressMinutes": 0,
+      "recoveryMinutes": 0,
+      "summary": "unknown"
     },
     "trend7Days": [
-      "stressful",
       "stressful",
       "restored",
       "normal",
       "stressful",
       "stressful",
-      "stressful"
+      "stressful",
+      "unknown"
     ],
-    "avgStressMinutes": 238,
-    "avgRecoveryMinutes": 114,
+    "avgStressMinutes": 204,
+    "avgRecoveryMinutes": 111,
     "records": [
-      {
-        "day": "2026-02-20",
-        "stressHigh": 17100,
-        "recoveryHigh": 900,
-        "daySummary": "stressful"
-      },
       {
         "day": "2026-02-21",
         "stressHigh": 31500,
@@ -1018,36 +1012,42 @@
         "stressHigh": 16200,
         "recoveryHigh": 9900,
         "daySummary": "stressful"
+      },
+      {
+        "day": "2026-03-22",
+        "stressHigh": 0,
+        "recoveryHigh": 0,
+        "daySummary": "unknown"
       }
     ]
   },
   "spo2": {
     "available": true,
-    "current": 97.424,
+    "current": 97.173,
     "trend7Days": [
-      97.395,
       95.878,
       97.346,
       98.32,
       99.237,
       96.325,
-      97.424
+      97.424,
+      97.173
     ],
     "baseline": 97.5
   },
   "readinessBreakdown": {
-    "day": "2026-03-21",
-    "score": 82,
-    "overall": 82,
-    "activityBalance": 78,
-    "bodyTemperature": 95,
-    "hrvBalance": 88,
-    "previousDayActivity": 45,
-    "previousNight": 88,
-    "recoveryIndex": 100,
-    "restingHeartRateScore": 100,
-    "sleepBalance": 65,
-    "tempDeviation": 0.12,
-    "tempTrend": -0.19
+    "day": "2026-03-22",
+    "score": 81,
+    "overall": 81,
+    "activityBalance": 85,
+    "bodyTemperature": 100,
+    "hrvBalance": 87,
+    "previousDayActivity": 100,
+    "previousNight": 75,
+    "recoveryIndex": 69,
+    "restingHeartRateScore": 98,
+    "sleepBalance": 55,
+    "tempDeviation": 0.03,
+    "tempTrend": 0.01
   }
 }
