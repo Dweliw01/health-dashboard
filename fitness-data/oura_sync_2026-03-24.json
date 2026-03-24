@@ -42936,7 +42936,7 @@
             "meet_daily_targets": 60,
             "move_every_hour": 100,
             "recovery_time": 100,
-            "stay_active": 82,
+            "stay_active": 84,
             "training_frequency": 100,
             "training_volume": 100
           },
@@ -44397,10 +44397,10 @@
           },
           "meters_to_target": 2400,
           "non_wear_time": 7800,
-          "resting_time": 24300,
-          "score": 87,
+          "resting_time": 25260,
+          "score": 88,
           "sedentary_met_minutes": 4,
-          "sedentary_time": 30420,
+          "sedentary_time": 29460,
           "steps": 15018,
           "target_calories": 1050,
           "target_meters": 18000,
@@ -44801,6 +44801,21 @@
           "day": "2026-03-23",
           "score": 61,
           "timestamp": "2026-03-23T00:00:00.000+00:00"
+        },
+        {
+          "id": "2345f900-0196-4f45-999f-31262db29663",
+          "contributors": {
+            "deep_sleep": 53,
+            "efficiency": 83,
+            "latency": 67,
+            "rem_sleep": 32,
+            "restfulness": 67,
+            "timing": 43,
+            "total_sleep": 23
+          },
+          "day": "2026-03-24",
+          "score": 46,
+          "timestamp": "2026-03-24T00:00:00.000+00:00"
         }
       ],
       "next_token": null
@@ -45300,6 +45315,25 @@
           "temperature_deviation": -0.13,
           "temperature_trend_deviation": -0.03,
           "timestamp": "2026-03-23T00:00:00.000+00:00"
+        },
+        {
+          "id": "c046bd10-2ea7-4d23-a39c-5f1ef48637dc",
+          "contributors": {
+            "activity_balance": 79,
+            "body_temperature": 100,
+            "hrv_balance": 85,
+            "previous_day_activity": 82,
+            "previous_night": 43,
+            "recovery_index": 47,
+            "resting_heart_rate": 65,
+            "sleep_balance": 58,
+            "sleep_regularity": 86
+          },
+          "day": "2026-03-24",
+          "score": 67,
+          "temperature_deviation": -0.07,
+          "temperature_trend_deviation": 0.07,
+          "timestamp": "2026-03-24T00:00:00.000+00:00"
         }
       ],
       "next_token": null
@@ -362545,6 +362579,141 @@
           "timestamp": "2026-03-24T03:26:44.000Z",
           "bpm": 53,
           "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-24T03:31:44.000Z",
+          "bpm": 53,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-24T03:36:44.000Z",
+          "bpm": 52,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-24T03:41:44.000Z",
+          "bpm": 54,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-24T03:46:44.000Z",
+          "bpm": 52,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-24T03:51:44.000Z",
+          "bpm": 53,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-24T03:56:44.000Z",
+          "bpm": 54,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-24T04:00:49.000Z",
+          "bpm": 53,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-24T04:16:44.000Z",
+          "bpm": 52,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-24T04:21:44.000Z",
+          "bpm": 58,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-24T04:26:44.000Z",
+          "bpm": 61,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-24T04:31:44.000Z",
+          "bpm": 58,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-24T04:36:44.000Z",
+          "bpm": 57,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-24T04:41:44.000Z",
+          "bpm": 56,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-24T04:44:00.000Z",
+          "bpm": 54,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-24T04:49:00.000Z",
+          "bpm": 58,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-24T04:54:00.000Z",
+          "bpm": 55,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-24T04:59:00.000Z",
+          "bpm": 53,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-24T05:04:00.000Z",
+          "bpm": 53,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-24T05:16:44.000Z",
+          "bpm": 50,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-24T05:21:44.000Z",
+          "bpm": 51,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-24T05:26:44.000Z",
+          "bpm": 52,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-24T05:31:44.000Z",
+          "bpm": 51,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-24T05:36:44.000Z",
+          "bpm": 52,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-24T05:41:44.000Z",
+          "bpm": 52,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-24T05:44:20.000Z",
+          "bpm": 52,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-24T05:49:20.000Z",
+          "bpm": 52,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-24T05:54:20.000Z",
+          "bpm": 52,
+          "source": "rest"
         }
       ],
       "next_token": null
@@ -371620,6 +371789,14 @@
           "spo2_percentage": {
             "average": 97.083
           }
+        },
+        {
+          "id": "0acf7371-a900-48f7-a5d6-8cbe0c44b40b",
+          "breathing_disturbance_index": 0,
+          "day": "2026-03-24",
+          "spo2_percentage": {
+            "average": 97.321
+          }
         }
       ],
       "next_token": null
@@ -371833,8 +372010,15 @@
           "id": "b316b12a-20ca-47d9-8502-eaf547c5478b",
           "day": "2026-03-23",
           "day_summary": "stressful",
-          "recovery_high": 7200,
+          "recovery_high": 6300,
           "stress_high": 13500
+        },
+        {
+          "id": "3fa2f34a-410d-4cdc-88f2-055cd4827350",
+          "day": "2026-03-24",
+          "day_summary": null,
+          "recovery_high": 0,
+          "stress_high": 0
         }
       ],
       "next_token": null
@@ -372098,6 +372282,16 @@
             "sleep_recovery": 50.8,
             "daytime_recovery": 47.9,
             "stress": 54.8
+          },
+          "level": "solid"
+        },
+        {
+          "id": "49fbfac5-d63a-466c-8bbb-ae89e9d8a350",
+          "day": "2026-03-24",
+          "contributors": {
+            "sleep_recovery": 48,
+            "daytime_recovery": 45.9,
+            "stress": 55.1
           },
           "level": "solid"
         }
