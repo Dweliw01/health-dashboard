@@ -44816,6 +44816,21 @@
           "day": "2026-03-24",
           "score": 46,
           "timestamp": "2026-03-24T00:00:00.000+00:00"
+        },
+        {
+          "id": "fcdf6e8d-bfbc-4349-a7ea-9a7efd59f471",
+          "contributors": {
+            "deep_sleep": 96,
+            "efficiency": 88,
+            "latency": 75,
+            "rem_sleep": 53,
+            "restfulness": 50,
+            "timing": 100,
+            "total_sleep": 42
+          },
+          "day": "2026-03-25",
+          "score": 63,
+          "timestamp": "2026-03-25T00:00:00.000+00:00"
         }
       ],
       "next_token": null
@@ -45334,6 +45349,25 @@
           "temperature_deviation": -0.07,
           "temperature_trend_deviation": 0.07,
           "timestamp": "2026-03-24T00:00:00.000+00:00"
+        },
+        {
+          "id": "5ce870b3-c02d-4943-a5df-4724df9301fc",
+          "contributors": {
+            "activity_balance": 82,
+            "body_temperature": 90,
+            "hrv_balance": 86,
+            "previous_day_activity": 77,
+            "previous_night": 64,
+            "recovery_index": 50,
+            "resting_heart_rate": 93,
+            "sleep_balance": 61,
+            "sleep_regularity": 86
+          },
+          "day": "2026-03-25",
+          "score": 75,
+          "temperature_deviation": 0.19,
+          "temperature_trend_deviation": 0.1,
+          "timestamp": "2026-03-25T00:00:00.000+00:00"
         }
       ],
       "next_token": null
@@ -378848,6 +378882,14 @@
           "spo2_percentage": {
             "average": 97.321
           }
+        },
+        {
+          "id": "f30a4a1d-c930-4ea6-9983-93f476ed18f7",
+          "breathing_disturbance_index": 3,
+          "day": "2026-03-25",
+          "spo2_percentage": {
+            "average": 98.341
+          }
         }
       ],
       "next_token": null
@@ -379062,7 +379104,7 @@
           "day": "2026-03-24",
           "day_summary": "stressful",
           "recovery_high": 8100,
-          "stress_high": 18000
+          "stress_high": 18900
         },
         {
           "id": "c12198a4-7420-4c11-b108-6bd67eeb262b",
