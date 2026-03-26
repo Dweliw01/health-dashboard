@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-03-26T09:06:10.464Z",
+  "lastUpdated": "2026-03-26T11:00:31.791Z",
   "today": {
     "steps": 16226,
-    "avgHeartRate": 79,
+    "avgHeartRate": 66,
     "calories": 1321
   },
   "todayScores": {
-    "sleep": 63,
-    "readiness": 75,
+    "sleep": 62,
+    "readiness": 77,
     "activity": 88,
-    "sleepDate": "2026-03-25",
-    "readinessDate": "2026-03-25",
+    "sleepDate": "2026-03-26",
+    "readinessDate": "2026-03-26",
     "activityDate": "2026-03-25"
   },
   "thisWeek": {
@@ -55,7 +55,7 @@
       90,
       84,
       92,
-      79
+      66
     ],
     "max": [
       154,
@@ -73,7 +73,7 @@
       44,
       50,
       47,
-      53
+      45
     ]
   },
   "workoutDistribution": {
@@ -156,7 +156,7 @@
   },
   "metrics": {
     "dailyAvgSteps": 12986,
-    "avgHeartRate": 86,
+    "avgHeartRate": 84,
     "restingHR": 50,
     "activeDays": 7,
     "totalWorkouts": 2,
@@ -167,7 +167,7 @@
     "longestStreak": 7,
     "fitnessScore": 78,
     "activityScore": 89,
-    "sleepScore": 64,
+    "sleepScore": 65,
     "readinessScore": 77,
     "consistency": 80,
     "totalSteps30Days": 381562,
@@ -183,17 +183,10 @@
     "recovery": {
       "readinessScore": 77,
       "restingHR": 50,
-      "sleepScore": 64
+      "sleepScore": 65
     }
   },
   "alerts": [
-    {
-      "type": "warning",
-      "title": "High Stress Day",
-      "message": "7h in high stress",
-      "severity": "medium",
-      "category": "stress"
-    },
     {
       "type": "warning",
       "title": "HR Spike Detected",
@@ -219,6 +212,13 @@
       "type": "warning",
       "title": "HR Spike Detected",
       "message": "Mon: 131 bpm peak",
+      "severity": "medium",
+      "category": "activity"
+    },
+    {
+      "type": "warning",
+      "title": "HR Spike Detected",
+      "message": "Tue: 130 bpm peak",
       "severity": "medium",
       "category": "activity"
     }
@@ -854,9 +854,9 @@
   "stress": {
     "available": true,
     "today": {
-      "stressMinutes": 420,
-      "recoveryMinutes": 60,
-      "summary": "stressful"
+      "stressMinutes": 0,
+      "recoveryMinutes": 0,
+      "summary": "unknown"
     },
     "trend7Days": [
       "stressful",
@@ -865,17 +865,11 @@
       "stressful",
       "stressful",
       "stressful",
-      "stressful"
+      "unknown"
     ],
-    "avgStressMinutes": 298,
-    "avgRecoveryMinutes": 101,
+    "avgStressMinutes": 266,
+    "avgRecoveryMinutes": 90,
     "records": [
-      {
-        "day": "2026-02-24",
-        "stressHigh": 16200,
-        "recoveryHigh": 6300,
-        "daySummary": "stressful"
-      },
       {
         "day": "2026-02-25",
         "stressHigh": 7200,
@@ -1046,39 +1040,45 @@
       },
       {
         "day": "2026-03-25",
-        "stressHigh": 25200,
-        "recoveryHigh": 3600,
+        "stressHigh": 26100,
+        "recoveryHigh": 2700,
         "daySummary": "stressful"
+      },
+      {
+        "day": "2026-03-26",
+        "stressHigh": 0,
+        "recoveryHigh": 0,
+        "daySummary": "unknown"
       }
     ]
   },
   "spo2": {
     "available": true,
-    "current": 98.341,
+    "current": 97.615,
     "trend7Days": [
-      99.237,
       96.325,
       97.424,
       97.173,
       97.083,
       97.321,
-      98.341
+      98.341,
+      97.615
     ],
     "baseline": 97.5
   },
   "readinessBreakdown": {
-    "day": "2026-03-25",
-    "score": 75,
-    "overall": 75,
-    "activityBalance": 82,
-    "bodyTemperature": 90,
-    "hrvBalance": 86,
-    "previousDayActivity": 77,
-    "previousNight": 64,
-    "recoveryIndex": 50,
-    "restingHeartRateScore": 93,
-    "sleepBalance": 61,
-    "tempDeviation": 0.19,
-    "tempTrend": 0.1
+    "day": "2026-03-26",
+    "score": 77,
+    "overall": 77,
+    "activityBalance": 79,
+    "bodyTemperature": 100,
+    "hrvBalance": 85,
+    "previousDayActivity": 84,
+    "previousNight": 63,
+    "recoveryIndex": 71,
+    "restingHeartRateScore": 100,
+    "sleepBalance": 54,
+    "tempDeviation": -0.05,
+    "tempTrend": -0.04
   }
 }
