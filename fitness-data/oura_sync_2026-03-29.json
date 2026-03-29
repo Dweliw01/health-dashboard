@@ -44816,6 +44816,21 @@
           "day": "2026-03-28",
           "score": 63,
           "timestamp": "2026-03-28T00:00:00.000+00:00"
+        },
+        {
+          "id": "f3b95de8-bba2-4afd-ab31-91a344ef1a66",
+          "contributors": {
+            "deep_sleep": 50,
+            "efficiency": 90,
+            "latency": 94,
+            "rem_sleep": 96,
+            "restfulness": 49,
+            "timing": 100,
+            "total_sleep": 97
+          },
+          "day": "2026-03-29",
+          "score": 84,
+          "timestamp": "2026-03-29T00:00:00.000+00:00"
         }
       ],
       "next_token": null
@@ -45334,6 +45349,25 @@
           "temperature_deviation": 0,
           "temperature_trend_deviation": 0.11,
           "timestamp": "2026-03-28T00:00:00.000+00:00"
+        },
+        {
+          "id": "053352ac-dd49-4cb8-8c70-62ccc1f671a1",
+          "contributors": {
+            "activity_balance": 81,
+            "body_temperature": 91,
+            "hrv_balance": 86,
+            "previous_day_activity": 99,
+            "previous_night": 90,
+            "recovery_index": 100,
+            "resting_heart_rate": 91,
+            "sleep_balance": 57,
+            "sleep_regularity": 78
+          },
+          "day": "2026-03-29",
+          "score": 84,
+          "temperature_deviation": 0.17,
+          "temperature_trend_deviation": 0.1,
+          "timestamp": "2026-03-29T00:00:00.000+00:00"
         }
       ],
       "next_token": null
@@ -368034,6 +368068,121 @@
           "timestamp": "2026-03-29T08:10:59.000Z",
           "bpm": 46,
           "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-29T08:23:13.000Z",
+          "bpm": 46,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-29T08:28:13.000Z",
+          "bpm": 47,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-29T08:33:13.000Z",
+          "bpm": 47,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-29T08:38:13.000Z",
+          "bpm": 49,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-29T08:43:13.000Z",
+          "bpm": 49,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-29T08:48:13.000Z",
+          "bpm": 46,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-29T08:53:13.000Z",
+          "bpm": 44,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-29T08:58:13.000Z",
+          "bpm": 44,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-29T09:03:13.000Z",
+          "bpm": 47,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-29T09:08:13.000Z",
+          "bpm": 48,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-29T09:13:13.000Z",
+          "bpm": 44,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-29T09:23:13.000Z",
+          "bpm": 48,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-29T09:28:13.000Z",
+          "bpm": 53,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-29T09:33:13.000Z",
+          "bpm": 50,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-29T09:38:13.000Z",
+          "bpm": 48,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-29T09:43:13.000Z",
+          "bpm": 49,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-29T09:48:13.000Z",
+          "bpm": 47,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-29T09:53:13.000Z",
+          "bpm": 49,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-29T09:58:13.000Z",
+          "bpm": 48,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-29T10:03:13.000Z",
+          "bpm": 48,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-29T10:08:13.000Z",
+          "bpm": 49,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-29T10:13:13.000Z",
+          "bpm": 52,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-03-29T10:18:13.000Z",
+          "bpm": 51,
+          "source": "rest"
         }
       ],
       "next_token": null
@@ -377137,6 +377286,12 @@
           "breathing_disturbance_index": 4,
           "day": "2026-03-28",
           "spo2_percentage": null
+        },
+        {
+          "id": "8e5290b3-5558-4fd7-9c07-652ee99748d1",
+          "breathing_disturbance_index": 3,
+          "day": "2026-03-29",
+          "spo2_percentage": null
         }
       ],
       "next_token": null
@@ -377350,8 +377505,15 @@
           "id": "3f7acdff-9f07-44a9-ac3d-2cb3c633bf6c",
           "day": "2026-03-28",
           "day_summary": "restored",
-          "recovery_high": 20700,
+          "recovery_high": 12600,
           "stress_high": 8100
+        },
+        {
+          "id": "5ebbb3a6-4e63-439b-bea2-c62a61f6e563",
+          "day": "2026-03-29",
+          "day_summary": null,
+          "recovery_high": 0,
+          "stress_high": 0
         }
       ],
       "next_token": null
@@ -377625,6 +377787,16 @@
             "sleep_recovery": 54.5,
             "daytime_recovery": 49.7,
             "stress": 58.4
+          },
+          "level": "solid"
+        },
+        {
+          "id": "97bd00b6-2ffa-4ba0-ba52-16767c07fb09",
+          "day": "2026-03-29",
+          "contributors": {
+            "sleep_recovery": 56.6,
+            "daytime_recovery": 51.4,
+            "stress": 57.4
           },
           "level": "solid"
         }
