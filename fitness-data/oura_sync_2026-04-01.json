@@ -42929,9 +42929,9 @@
         },
         {
           "id": "2926c855-cb0c-4366-9397-55637cef58bd",
-          "active_calories": 1202,
-          "average_met_minutes": 1.875,
-          "class_5_min": "21212122222232223333332334555555555555533333334434333344333323333332222223323222221222222222222222222222222222222222133422222221322222222222222222222222222222221133333232343333333323332222333333332223222333332223333322322222211111222222223332222222222111111111111111111112111111",
+          "active_calories": 1204,
+          "average_met_minutes": 1.84375,
+          "class_5_min": "212121222222322233333323345555555555555333333344343333443333233333322222233232222212222222222222222222222222222222221334222222213222222222222222222222222222222211333332323433333333233322223333333322232223333322233333223222222111112222222233322222222221111111111111111111121111122111111111",
           "contributors": {
             "meet_daily_targets": 60,
             "move_every_hour": 95,
@@ -42941,12 +42941,12 @@
             "training_volume": 100
           },
           "day": "2026-03-31",
-          "equivalent_walking_distance": 18313,
+          "equivalent_walking_distance": 18357,
           "high_activity_met_minutes": 460,
           "high_activity_time": 3840,
           "inactivity_alerts": 1,
-          "low_activity_met_minutes": 290,
-          "low_activity_time": 21060,
+          "low_activity_met_minutes": 292,
+          "low_activity_time": 21120,
           "medium_activity_met_minutes": 82,
           "medium_activity_time": 1740,
           "met": {
@@ -44343,6 +44343,26 @@
               0.9,
               0.9,
               0.9,
+              3,
+              0.9,
+              1,
+              0.9,
+              0.9,
+              0.9,
+              0.9,
+              1.1,
+              0.9,
+              0.9,
+              0.9,
+              0.9,
+              0.9,
+              0.9,
+              0.9,
+              0.9,
+              0.9,
+              0.9,
+              0.9,
+              1.1,
               0.9,
               0.9,
               0.9,
@@ -44361,31 +44381,11 @@
               0.9,
               0.9,
               0.9,
+              1.1,
               0.9,
               0.9,
               0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
+              1,
               0.9,
               0.9,
               0.9,
@@ -44397,15 +44397,15 @@
           },
           "meters_to_target": -2400,
           "non_wear_time": 0,
-          "resting_time": 13980,
+          "resting_time": 16560,
           "score": 83,
           "sedentary_met_minutes": 9,
-          "sedentary_time": 42900,
+          "sedentary_time": 43140,
           "steps": 10765,
           "target_calories": 1050,
           "target_meters": 18000,
           "timestamp": "2026-03-31T04:00:00.000-04:00",
-          "total_calories": 3745
+          "total_calories": 3747
         }
       ],
       "next_token": null
@@ -44816,6 +44816,21 @@
           "day": "2026-03-31",
           "score": 61,
           "timestamp": "2026-03-31T00:00:00.000+00:00"
+        },
+        {
+          "id": "f25e3d24-1964-4040-9a88-13bf06b360b5",
+          "contributors": {
+            "deep_sleep": 7,
+            "efficiency": 86,
+            "latency": 89,
+            "rem_sleep": 47,
+            "restfulness": 57,
+            "timing": 100,
+            "total_sleep": 34
+          },
+          "day": "2026-04-01",
+          "score": 53,
+          "timestamp": "2026-04-01T00:00:00.000+00:00"
         }
       ],
       "next_token": null
@@ -45334,6 +45349,25 @@
           "temperature_deviation": 0.11,
           "temperature_trend_deviation": 0.12,
           "timestamp": "2026-03-31T00:00:00.000+00:00"
+        },
+        {
+          "id": "6121384d-47c4-4159-8291-7decfdbacbc7",
+          "contributors": {
+            "activity_balance": 78,
+            "body_temperature": 99,
+            "hrv_balance": 90,
+            "previous_day_activity": 34,
+            "previous_night": 51,
+            "recovery_index": 51,
+            "resting_heart_rate": 96,
+            "sleep_balance": 54,
+            "sleep_regularity": 77
+          },
+          "day": "2026-04-01",
+          "score": 68,
+          "temperature_deviation": 0.07,
+          "temperature_trend_deviation": 0.05,
+          "timestamp": "2026-04-01T00:00:00.000+00:00"
         }
       ],
       "next_token": null
@@ -368788,6 +368822,14 @@
           "spo2_percentage": {
             "average": 98.185
           }
+        },
+        {
+          "id": "099b3cef-a197-4d85-9862-6490023b9ce6",
+          "breathing_disturbance_index": 1,
+          "day": "2026-04-01",
+          "spo2_percentage": {
+            "average": 96.556
+          }
         }
       ],
       "next_token": null
@@ -369001,8 +369043,15 @@
           "id": "af05a65e-9d6b-4b1f-a943-8843538120ab",
           "day": "2026-03-31",
           "day_summary": "stressful",
-          "recovery_high": 7200,
-          "stress_high": 25200
+          "recovery_high": 8100,
+          "stress_high": 27000
+        },
+        {
+          "id": "f8f92342-b06d-4346-bcc6-f45adffa2c05",
+          "day": "2026-04-01",
+          "day_summary": null,
+          "recovery_high": 0,
+          "stress_high": 0
         }
       ],
       "next_token": null
@@ -369276,6 +369325,16 @@
             "sleep_recovery": 55.2,
             "daytime_recovery": 51.5,
             "stress": 54.2
+          },
+          "level": "solid"
+        },
+        {
+          "id": "83767bf1-b31e-4d66-841e-b9e74c223c7e",
+          "day": "2026-04-01",
+          "contributors": {
+            "sleep_recovery": 54.5,
+            "daytime_recovery": 50.6,
+            "stress": 55.8
           },
           "level": "solid"
         }
