@@ -363603,6 +363603,21 @@
           "timestamp": "2026-04-03T14:58:28.000Z",
           "bpm": 120,
           "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-03T15:45:23.000Z",
+          "bpm": 88,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-03T15:45:48.000Z",
+          "bpm": 82,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-03T15:46:15.000Z",
+          "bpm": 84,
+          "source": "awake"
         }
       ],
       "next_token": null
@@ -372907,7 +372922,7 @@
           "day": "2026-04-03",
           "day_summary": null,
           "recovery_high": 0,
-          "stress_high": 0
+          "stress_high": 7200
         }
       ],
       "next_token": null
