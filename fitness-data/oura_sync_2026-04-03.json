@@ -44816,6 +44816,21 @@
           "day": "2026-04-02",
           "score": 57,
           "timestamp": "2026-04-02T00:00:00.000+00:00"
+        },
+        {
+          "id": "ffdb0356-5b94-42a8-b518-95e16a669c9d",
+          "contributors": {
+            "deep_sleep": 44,
+            "efficiency": 83,
+            "latency": 91,
+            "rem_sleep": 94,
+            "restfulness": 62,
+            "timing": 91,
+            "total_sleep": 64
+          },
+          "day": "2026-04-03",
+          "score": 72,
+          "timestamp": "2026-04-03T00:00:00.000+00:00"
         }
       ],
       "next_token": null
@@ -45334,6 +45349,25 @@
           "temperature_deviation": -0.45,
           "temperature_trend_deviation": -0.27,
           "timestamp": "2026-04-02T00:00:00.000+00:00"
+        },
+        {
+          "id": "d88ed1e9-8216-4091-b41f-f6e7bf631a8d",
+          "contributors": {
+            "activity_balance": 80,
+            "body_temperature": 100,
+            "hrv_balance": 92,
+            "previous_day_activity": 52,
+            "previous_night": 75,
+            "recovery_index": 61,
+            "resting_heart_rate": 100,
+            "sleep_balance": 54,
+            "sleep_regularity": 80
+          },
+          "day": "2026-04-03",
+          "score": 75,
+          "temperature_deviation": -0.02,
+          "temperature_trend_deviation": 0.08,
+          "timestamp": "2026-04-03T00:00:00.000+00:00"
         }
       ],
       "next_token": null
@@ -370309,6 +370343,14 @@
           "spo2_percentage": {
             "average": 97.902
           }
+        },
+        {
+          "id": "faa66692-5381-4579-b679-59401827620d",
+          "breathing_disturbance_index": 1,
+          "day": "2026-04-03",
+          "spo2_percentage": {
+            "average": 98.018
+          }
         }
       ],
       "next_token": null
@@ -370522,7 +370564,7 @@
           "id": "bc8bd2e7-2d8b-4999-aecf-d923e60477e4",
           "day": "2026-04-02",
           "day_summary": "stressful",
-          "recovery_high": 5400,
+          "recovery_high": 0,
           "stress_high": 20700
         },
         {
