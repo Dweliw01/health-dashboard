@@ -1,8 +1,8 @@
 {
-  "lastUpdated": "2026-04-04T22:38:27.060Z",
+  "lastUpdated": "2026-04-04T23:38:49.769Z",
   "today": {
     "steps": 14608,
-    "avgHeartRate": 105,
+    "avgHeartRate": 100,
     "calories": 1263
   },
   "todayScores": {
@@ -55,7 +55,7 @@
       93,
       87,
       97,
-      105
+      100
     ],
     "max": [
       117,
@@ -64,7 +64,7 @@
       152,
       140,
       146,
-      142
+      149
     ],
     "min": [
       42,
@@ -73,7 +73,7 @@
       46,
       45,
       45,
-      52
+      51
     ]
   },
   "workoutDistribution": {
@@ -196,6 +196,13 @@
     },
     {
       "type": "warning",
+      "title": "High Stress Day",
+      "message": "6h in high stress",
+      "severity": "medium",
+      "category": "stress"
+    },
+    {
+      "type": "warning",
       "title": "HR Spike Detected",
       "message": "Sun: 117 bpm peak",
       "severity": "medium",
@@ -212,13 +219,6 @@
       "type": "warning",
       "title": "HR Spike Detected",
       "message": "Tue: 127 bpm peak",
-      "severity": "medium",
-      "category": "activity"
-    },
-    {
-      "type": "warning",
-      "title": "HR Spike Detected",
-      "message": "Wed: 152 bpm peak",
       "severity": "medium",
       "category": "activity"
     }
@@ -854,9 +854,9 @@
   "stress": {
     "available": true,
     "today": {
-      "stressMinutes": 0,
-      "recoveryMinutes": 0,
-      "summary": "unknown"
+      "stressMinutes": 375,
+      "recoveryMinutes": 90,
+      "summary": "stressful"
     },
     "trend7Days": [
       "restored",
@@ -865,10 +865,10 @@
       "stressful",
       "stressful",
       "stressful",
-      "unknown"
+      "stressful"
     ],
-    "avgStressMinutes": 287,
-    "avgRecoveryMinutes": 84,
+    "avgStressMinutes": 345,
+    "avgRecoveryMinutes": 96,
     "records": [
       {
         "day": "2026-03-06",
@@ -1040,15 +1040,15 @@
       },
       {
         "day": "2026-04-03",
-        "stressHigh": 18900,
+        "stressHigh": 20700,
         "recoveryHigh": 1800,
         "daySummary": "stressful"
       },
       {
         "day": "2026-04-04",
-        "stressHigh": 0,
-        "recoveryHigh": 0,
-        "daySummary": "unknown"
+        "stressHigh": 22500,
+        "recoveryHigh": 5400,
+        "daySummary": "stressful"
       }
     ]
   },
