@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-04-06T11:52:59.683Z",
+  "lastUpdated": "2026-04-06T13:25:33.341Z",
   "today": {
     "steps": 10324,
     "avgHeartRate": 89,
     "calories": 554
   },
   "todayScores": {
-    "sleep": 81,
-    "readiness": 87,
-    "activity": 93,
-    "sleepDate": "2026-04-05",
-    "readinessDate": "2026-04-05",
+    "sleep": 38,
+    "readiness": 64,
+    "activity": 92,
+    "sleepDate": "2026-04-06",
+    "readinessDate": "2026-04-06",
     "activityDate": "2026-04-05"
   },
   "thisWeek": {
@@ -165,10 +165,10 @@
     "caloriesPerDay": 964,
     "currentStreak": 1,
     "longestStreak": 7,
-    "fitnessScore": 77,
+    "fitnessScore": 74,
     "activityScore": 86,
-    "sleepScore": 66,
-    "readinessScore": 76,
+    "sleepScore": 60,
+    "readinessScore": 73,
     "consistency": 77,
     "totalSteps30Days": 376499,
     "totalCalories30Days": 28199,
@@ -181,9 +181,9 @@
       "trend": "declining"
     },
     "recovery": {
-      "readinessScore": 76,
+      "readinessScore": 73,
       "restingHR": 49,
-      "sleepScore": 66
+      "sleepScore": 60
     }
   },
   "alerts": [
@@ -861,7 +861,7 @@
       "stressful",
       "unknown"
     ],
-    "avgStressMinutes": 343,
+    "avgStressMinutes": 345,
     "avgRecoveryMinutes": 73,
     "records": [
       {
@@ -1034,7 +1034,7 @@
       },
       {
         "day": "2026-04-05",
-        "stressHigh": 18000,
+        "stressHigh": 18900,
         "recoveryHigh": 2700,
         "daySummary": "stressful"
       },
@@ -1061,18 +1061,18 @@
     "baseline": 97.6
   },
   "readinessBreakdown": {
-    "day": "2026-04-05",
-    "score": 87,
-    "overall": 87,
-    "activityBalance": 82,
+    "day": "2026-04-06",
+    "score": 64,
+    "overall": 64,
+    "activityBalance": 79,
     "bodyTemperature": 100,
-    "hrvBalance": 93,
-    "previousDayActivity": 85,
-    "previousNight": 86,
-    "recoveryIndex": 100,
-    "restingHeartRateScore": 100,
-    "sleepBalance": 68,
-    "tempDeviation": -0.15,
-    "tempTrend": -0.2
+    "hrvBalance": 89,
+    "previousDayActivity": 100,
+    "previousNight": 33,
+    "recoveryIndex": 39,
+    "restingHeartRateScore": 68,
+    "sleepBalance": 43,
+    "tempDeviation": -0.01,
+    "tempTrend": 0.02
   }
 }
