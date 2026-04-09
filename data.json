@@ -1,22 +1,22 @@
 {
-  "lastUpdated": "2026-04-09T02:53:54.834Z",
+  "lastUpdated": "2026-04-09T05:19:33.905Z",
   "today": {
-    "steps": 21020,
+    "steps": 21099,
     "avgHeartRate": 74,
-    "calories": 1319
+    "calories": 1327
   },
   "todayScores": {
     "sleep": 66,
     "readiness": 70,
-    "activity": 94,
+    "activity": 93,
     "sleepDate": "2026-04-08",
     "readinessDate": "2026-04-08",
     "activityDate": "2026-04-08"
   },
   "thisWeek": {
     "workouts": 2,
-    "avgSteps": 14646,
-    "avgCalories": 1086
+    "avgSteps": 14657,
+    "avgCalories": 1088
   },
   "last7Days": {
     "labels": [
@@ -35,7 +35,7 @@
       10324,
       17591,
       18669,
-      21020
+      21099
     ]
   },
   "heartRateTrends": {
@@ -95,7 +95,7 @@
       13438,
       12986,
       13099,
-      14646
+      14657
     ],
     "workouts": [
       2,
@@ -107,7 +107,7 @@
       979,
       977,
       1032,
-      1086
+      1088
     ]
   },
   "projection": {
@@ -118,16 +118,16 @@
       "Day 30"
     ],
     "actual": [
-      14646,
+      14657,
       null,
       null,
       null
     ],
     "projected": [
-      14646,
-      15525,
-      15964,
-      16404
+      14657,
+      15536,
+      15976,
+      16416
     ]
   },
   "timeOfDay": {
@@ -149,20 +149,20 @@
       204,
       277,
       204,
-      136,
+      141,
       106,
       86
     ]
   },
   "metrics": {
-    "dailyAvgSteps": 14646,
+    "dailyAvgSteps": 14657,
     "avgHeartRate": 91,
     "restingHR": 50,
     "activeDays": 7,
     "totalWorkouts": 7,
-    "bestDaySteps": 21020,
+    "bestDaySteps": 21099,
     "bestDayLabel": "Wed",
-    "caloriesPerDay": 1086,
+    "caloriesPerDay": 1088,
     "currentStreak": 4,
     "longestStreak": 7,
     "fitnessScore": 77,
@@ -170,8 +170,8 @@
     "sleepScore": 61,
     "readinessScore": 72,
     "consistency": 83,
-    "totalSteps30Days": 407977,
-    "totalCalories30Days": 30458,
+    "totalSteps30Days": 408056,
+    "totalCalories30Days": 30466,
     "daysTracked": 30
   },
   "insights": {
@@ -197,7 +197,7 @@
     {
       "type": "warning",
       "title": "High Stress Day",
-      "message": "5h in high stress",
+      "message": "6h in high stress",
       "severity": "medium",
       "category": "stress"
     },
@@ -858,7 +858,7 @@
   "stress": {
     "available": true,
     "today": {
-      "stressMinutes": 315,
+      "stressMinutes": 330,
       "recoveryMinutes": 30,
       "summary": "stressful"
     },
@@ -871,7 +871,7 @@
       "stressful",
       "stressful"
     ],
-    "avgStressMinutes": 328,
+    "avgStressMinutes": 330,
     "avgRecoveryMinutes": 45,
     "records": [
       {
@@ -1050,7 +1050,7 @@
       },
       {
         "day": "2026-04-08",
-        "stressHigh": 18900,
+        "stressHigh": 19800,
         "recoveryHigh": 1800,
         "daySummary": "stressful"
       }
