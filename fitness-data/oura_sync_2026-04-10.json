@@ -393857,6 +393857,66 @@
           "timestamp": "2026-04-10T14:52:14.000Z",
           "bpm": 74,
           "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-10T15:04:07.000Z",
+          "bpm": 76,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-10T15:04:44.000Z",
+          "bpm": 71,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-10T15:05:07.000Z",
+          "bpm": 68,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-10T15:13:47.000Z",
+          "bpm": 74,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-10T15:13:49.000Z",
+          "bpm": 69,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-10T15:14:00.000Z",
+          "bpm": 57,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-10T15:23:33.000Z",
+          "bpm": 70,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-10T15:23:34.000Z",
+          "bpm": 76,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-10T15:24:45.000Z",
+          "bpm": 63,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-10T15:51:59.000Z",
+          "bpm": 63,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-10T15:52:28.000Z",
+          "bpm": 60,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-10T15:52:33.000Z",
+          "bpm": 72,
+          "source": "awake"
         }
       ],
       "next_token": null
@@ -403742,14 +403802,14 @@
           "day": "2026-04-09",
           "day_summary": "stressful",
           "recovery_high": 0,
-          "stress_high": 20700
+          "stress_high": 22500
         },
         {
           "id": "e7366072-9397-4f27-aaa5-90188e8f6408",
           "day": "2026-04-10",
           "day_summary": null,
           "recovery_high": 0,
-          "stress_high": 0
+          "stress_high": 4500
         }
       ],
       "next_token": null
@@ -404033,6 +404093,16 @@
             "sleep_recovery": 51,
             "daytime_recovery": 45.5,
             "stress": 64.1
+          },
+          "level": "solid"
+        },
+        {
+          "id": "1e473c66-5fdd-49f1-ad12-03120736daeb",
+          "day": "2026-04-10",
+          "contributors": {
+            "sleep_recovery": 46.7,
+            "daytime_recovery": 41.6,
+            "stress": 67
           },
           "level": "solid"
         }
