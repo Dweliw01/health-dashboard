@@ -44846,6 +44846,21 @@
           "day": "2026-04-10",
           "score": 59,
           "timestamp": "2026-04-10T00:00:00.000+00:00"
+        },
+        {
+          "id": "1aeb491f-8ec8-4eee-a773-230317b2fb20",
+          "contributors": {
+            "deep_sleep": 43,
+            "efficiency": 79,
+            "latency": 81,
+            "rem_sleep": 35,
+            "restfulness": 70,
+            "timing": 53,
+            "total_sleep": 21
+          },
+          "day": "2026-04-11",
+          "score": 47,
+          "timestamp": "2026-04-11T00:00:00.000+00:00"
         }
       ],
       "next_token": null
@@ -45402,6 +45417,25 @@
           "temperature_deviation": -0.16,
           "temperature_trend_deviation": 0.04,
           "timestamp": "2026-04-10T00:00:00.000+00:00"
+        },
+        {
+          "id": "c8ab1cf6-54a6-4a8c-aed7-c059549c5a5b",
+          "contributors": {
+            "activity_balance": 78,
+            "body_temperature": 100,
+            "hrv_balance": 85,
+            "previous_day_activity": 76,
+            "previous_night": 44,
+            "recovery_index": 46,
+            "resting_heart_rate": 25,
+            "sleep_balance": 36,
+            "sleep_regularity": 86
+          },
+          "day": "2026-04-11",
+          "score": 57,
+          "temperature_deviation": -0.08,
+          "temperature_trend_deviation": 0.06,
+          "timestamp": "2026-04-11T00:00:00.000+00:00"
         }
       ],
       "next_token": null
@@ -391994,6 +392028,14 @@
           "day": "2026-04-10",
           "spo2_percentage": {
             "average": 97.263
+          }
+        },
+        {
+          "id": "4153829b-8af1-49f8-a419-49baad23503e",
+          "breathing_disturbance_index": 1,
+          "day": "2026-04-11",
+          "spo2_percentage": {
+            "average": 97.302
           }
         }
       ],
