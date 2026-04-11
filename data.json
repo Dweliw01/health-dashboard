@@ -1,22 +1,22 @@
 {
-  "lastUpdated": "2026-04-11T02:50:34.465Z",
+  "lastUpdated": "2026-04-11T05:01:55.100Z",
   "today": {
-    "steps": 9348,
-    "avgHeartRate": 96,
-    "calories": 948
+    "steps": 9411,
+    "avgHeartRate": 95,
+    "calories": 954
   },
   "todayScores": {
     "sleep": 59,
     "readiness": 62,
-    "activity": 84,
+    "activity": 81,
     "sleepDate": "2026-04-10",
     "readinessDate": "2026-04-10",
     "activityDate": "2026-04-10"
   },
   "thisWeek": {
     "workouts": 2,
-    "avgSteps": 14765,
-    "avgCalories": 1072
+    "avgSteps": 14774,
+    "avgCalories": 1073
   },
   "last7Days": {
     "labels": [
@@ -35,45 +35,45 @@
       18669,
       21099,
       17008,
-      9348
+      9411
     ]
   },
   "heartRateTrends": {
     "labels": [
-      "Sat",
       "Sun",
       "Mon",
       "Tue",
       "Wed",
       "Thu",
-      "Fri"
+      "Fri",
+      "Sat"
     ],
     "values": [
-      100,
       89,
       87,
       94,
       99,
       94,
-      96
+      94,
+      95
     ],
     "max": [
-      149,
       133,
       120,
       167,
       174,
       143,
-      147
+      147,
+      137
     ],
     "min": [
-      51,
       44,
       49,
       46,
       45,
       47,
-      49
+      49,
+      54
     ]
   },
   "workoutDistribution": {
@@ -95,7 +95,7 @@
       13207,
       13680,
       12128,
-      14765
+      14774
     ],
     "workouts": [
       0,
@@ -107,7 +107,7 @@
       952,
       1045,
       1006,
-      1072
+      1073
     ]
   },
   "projection": {
@@ -118,16 +118,16 @@
       "Day 30"
     ],
     "actual": [
-      14765,
+      14774,
       null,
       null,
       null
     ],
     "projected": [
-      14765,
-      16389,
-      17201,
-      18013
+      14774,
+      16399,
+      17212,
+      18024
     ]
   },
   "timeOfDay": {
@@ -149,29 +149,29 @@
       215,
       281,
       206,
-      132,
+      145,
       117,
       89
     ]
   },
   "metrics": {
-    "dailyAvgSteps": 14765,
-    "avgHeartRate": 94,
+    "dailyAvgSteps": 14774,
+    "avgHeartRate": 93,
     "restingHR": 49,
     "activeDays": 7,
     "totalWorkouts": 7,
     "bestDaySteps": 21099,
     "bestDayLabel": "Wed",
-    "caloriesPerDay": 1072,
+    "caloriesPerDay": 1073,
     "currentStreak": 0,
     "longestStreak": 7,
     "fitnessScore": 77,
-    "activityScore": 91,
+    "activityScore": 90,
     "sleepScore": 63,
     "readinessScore": 72,
     "consistency": 80,
-    "totalSteps30Days": 405624,
-    "totalCalories30Days": 30829,
+    "totalSteps30Days": 405687,
+    "totalCalories30Days": 30835,
     "daysTracked": 30
   },
   "insights": {
@@ -197,13 +197,6 @@
     {
       "type": "warning",
       "title": "HR Spike Detected",
-      "message": "Sat: 149 bpm peak",
-      "severity": "medium",
-      "category": "activity"
-    },
-    {
-      "type": "warning",
-      "title": "HR Spike Detected",
       "message": "Sun: 133 bpm peak",
       "severity": "medium",
       "category": "activity"
@@ -219,6 +212,13 @@
       "type": "warning",
       "title": "HR Spike Detected",
       "message": "Wed: 174 bpm peak",
+      "severity": "medium",
+      "category": "activity"
+    },
+    {
+      "type": "warning",
+      "title": "HR Spike Detected",
+      "message": "Thu: 143 bpm peak",
       "severity": "medium",
       "category": "activity"
     }
@@ -885,7 +885,7 @@
   "stress": {
     "available": true,
     "today": {
-      "stressMinutes": 225,
+      "stressMinutes": 300,
       "recoveryMinutes": 90,
       "summary": "stressful"
     },
@@ -898,7 +898,7 @@
       "stressful",
       "stressful"
     ],
-    "avgStressMinutes": 317,
+    "avgStressMinutes": 328,
     "avgRecoveryMinutes": 54,
     "records": [
       {
@@ -1077,7 +1077,7 @@
       },
       {
         "day": "2026-04-10",
-        "stressHigh": 13500,
+        "stressHigh": 18000,
         "recoveryHigh": 5400,
         "daySummary": "stressful"
       }
