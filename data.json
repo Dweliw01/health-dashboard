@@ -1,14 +1,14 @@
 {
-  "lastUpdated": "2026-04-12T03:30:20.195Z",
+  "lastUpdated": "2026-04-12T05:59:25.046Z",
   "today": {
-    "steps": 20571,
-    "avgHeartRate": 109,
-    "calories": 1646
+    "steps": 20573,
+    "avgHeartRate": 89,
+    "calories": 1649
   },
   "todayScores": {
     "sleep": 47,
     "readiness": 57,
-    "activity": 98,
+    "activity": 100,
     "sleepDate": "2026-04-11",
     "readinessDate": "2026-04-11",
     "activityDate": "2026-04-11"
@@ -35,45 +35,45 @@
       21099,
       17008,
       9885,
-      20571
+      20573
     ]
   },
   "heartRateTrends": {
     "labels": [
-      "Sun",
       "Mon",
       "Tue",
       "Wed",
       "Thu",
       "Fri",
-      "Sat"
+      "Sat",
+      "Sun"
     ],
     "values": [
-      89,
       87,
       94,
       99,
       94,
       94,
-      109
+      109,
+      89
     ],
     "max": [
-      133,
       120,
       167,
       174,
       143,
       147,
-      175
+      175,
+      112
     ],
     "min": [
-      44,
       49,
       46,
       45,
       47,
       49,
-      48
+      48,
+      55
     ]
   },
   "workoutDistribution": {
@@ -150,7 +150,7 @@
       312,
       236,
       155,
-      133,
+      134,
       114
     ]
   },
@@ -166,12 +166,12 @@
     "currentStreak": 1,
     "longestStreak": 7,
     "fitnessScore": 76,
-    "activityScore": 92,
+    "activityScore": 93,
     "sleepScore": 60,
     "readinessScore": 69,
     "consistency": 80,
-    "totalSteps30Days": 415701,
-    "totalCalories30Days": 31456,
+    "totalSteps30Days": 415703,
+    "totalCalories30Days": 31459,
     "daysTracked": 30
   },
   "insights": {
@@ -204,13 +204,6 @@
     {
       "type": "warning",
       "title": "HR Spike Detected",
-      "message": "Sun: 133 bpm peak",
-      "severity": "medium",
-      "category": "activity"
-    },
-    {
-      "type": "warning",
-      "title": "HR Spike Detected",
       "message": "Tue: 167 bpm peak",
       "severity": "medium",
       "category": "activity"
@@ -219,6 +212,13 @@
       "type": "warning",
       "title": "HR Spike Detected",
       "message": "Wed: 174 bpm peak",
+      "severity": "medium",
+      "category": "activity"
+    },
+    {
+      "type": "warning",
+      "title": "HR Spike Detected",
+      "message": "Thu: 143 bpm peak",
       "severity": "medium",
       "category": "activity"
     }
@@ -890,7 +890,7 @@
   "stress": {
     "available": true,
     "today": {
-      "stressMinutes": 330,
+      "stressMinutes": 345,
       "recoveryMinutes": 15,
       "summary": "stressful"
     },
@@ -903,7 +903,7 @@
       "stressful",
       "stressful"
     ],
-    "avgStressMinutes": 321,
+    "avgStressMinutes": 324,
     "avgRecoveryMinutes": 60,
     "records": [
       {
@@ -1082,7 +1082,7 @@
       },
       {
         "day": "2026-04-11",
-        "stressHigh": 19800,
+        "stressHigh": 20700,
         "recoveryHigh": 900,
         "daySummary": "stressful"
       }
