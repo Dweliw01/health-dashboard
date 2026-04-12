@@ -395166,6 +395166,96 @@
           "timestamp": "2026-04-12T14:15:26.600Z",
           "bpm": 80,
           "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-12T14:27:19.000Z",
+          "bpm": 60,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-12T14:27:24.000Z",
+          "bpm": 55,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-12T14:27:30.000Z",
+          "bpm": 57,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-12T14:37:20.000Z",
+          "bpm": 62,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-12T14:37:23.000Z",
+          "bpm": 68,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-12T14:37:38.000Z",
+          "bpm": 56,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-12T14:47:07.000Z",
+          "bpm": 53,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-12T14:47:10.000Z",
+          "bpm": 58,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-12T14:47:11.000Z",
+          "bpm": 55,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-12T15:16:39.000Z",
+          "bpm": 57,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-12T15:17:23.000Z",
+          "bpm": 61,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-12T15:18:17.000Z",
+          "bpm": 66,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-12T15:27:12.000Z",
+          "bpm": 59,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-12T15:27:13.000Z",
+          "bpm": 54,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-12T15:27:20.000Z",
+          "bpm": 55,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-12T15:59:59.000Z",
+          "bpm": 64,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-12T16:00:10.000Z",
+          "bpm": 58,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-12T16:00:14.000Z",
+          "bpm": 61,
+          "source": "awake"
         }
       ],
       "next_token": null
@@ -405203,8 +405293,8 @@
           "id": "cf7ddbd8-e953-4967-b59e-64820437a4bf",
           "day": "2026-04-12",
           "day_summary": null,
-          "recovery_high": 0,
-          "stress_high": 0
+          "recovery_high": 900,
+          "stress_high": 4500
         }
       ],
       "next_token": null
