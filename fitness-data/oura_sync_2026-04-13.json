@@ -44846,6 +44846,21 @@
           "day": "2026-04-12",
           "score": 74,
           "timestamp": "2026-04-12T00:00:00.000+00:00"
+        },
+        {
+          "id": "edec7823-7c1c-4de9-8a6d-62e42bcf90fc",
+          "contributors": {
+            "deep_sleep": 68,
+            "efficiency": 97,
+            "latency": 75,
+            "rem_sleep": 49,
+            "restfulness": 72,
+            "timing": 100,
+            "total_sleep": 33
+          },
+          "day": "2026-04-13",
+          "score": 61,
+          "timestamp": "2026-04-13T00:00:00.000+00:00"
         }
       ],
       "next_token": null
@@ -45402,6 +45417,25 @@
           "temperature_deviation": 0.15,
           "temperature_trend_deviation": 0.01,
           "timestamp": "2026-04-12T00:00:00.000+00:00"
+        },
+        {
+          "id": "cf678e52-7581-44fa-8397-708705492c72",
+          "contributors": {
+            "activity_balance": 80,
+            "body_temperature": 100,
+            "hrv_balance": 81,
+            "previous_day_activity": 92,
+            "previous_night": 61,
+            "recovery_index": 67,
+            "resting_heart_rate": 100,
+            "sleep_balance": 30,
+            "sleep_regularity": 81
+          },
+          "day": "2026-04-13",
+          "score": 73,
+          "temperature_deviation": -0.05,
+          "temperature_trend_deviation": -0.06,
+          "timestamp": "2026-04-13T00:00:00.000+00:00"
         }
       ],
       "next_token": null
@@ -397028,6 +397062,14 @@
           "spo2_percentage": {
             "average": 98.066
           }
+        },
+        {
+          "id": "cb908891-b4ad-4e5f-b974-a64a4192ade3",
+          "breathing_disturbance_index": 0,
+          "day": "2026-04-13",
+          "spo2_percentage": {
+            "average": 97.952
+          }
         }
       ],
       "next_token": null
@@ -397243,6 +397285,13 @@
           "day_summary": "stressful",
           "recovery_high": 900,
           "stress_high": 19800
+        },
+        {
+          "id": "9623001c-4bac-484d-aa33-791517c1e642",
+          "day": "2026-04-13",
+          "day_summary": null,
+          "recovery_high": 0,
+          "stress_high": 0
         }
       ],
       "next_token": null
