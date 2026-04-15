@@ -1,8 +1,8 @@
 {
-  "lastUpdated": "2026-04-15T10:22:30.267Z",
+  "lastUpdated": "2026-04-15T12:00:13.530Z",
   "today": {
     "steps": 7533,
-    "avgHeartRate": 61,
+    "avgHeartRate": 72,
     "calories": 887
   },
   "todayScores": {
@@ -55,7 +55,7 @@
       81,
       88,
       88,
-      61
+      72
     ],
     "max": [
       143,
@@ -64,7 +64,7 @@
       119,
       131,
       133,
-      76
+      97
     ],
     "min": [
       47,
@@ -73,7 +73,7 @@
       45,
       44,
       46,
-      49
+      46
     ]
   },
   "workoutDistribution": {
@@ -156,7 +156,7 @@
   },
   "metrics": {
     "dailyAvgSteps": 14115,
-    "avgHeartRate": 88,
+    "avgHeartRate": 89,
     "restingHR": 48,
     "activeDays": 7,
     "totalWorkouts": 5,
@@ -880,9 +880,9 @@
   "stress": {
     "available": true,
     "today": {
-      "stressMinutes": 45,
-      "recoveryMinutes": 30,
-      "summary": "normal"
+      "stressMinutes": 0,
+      "recoveryMinutes": 0,
+      "summary": "unknown"
     },
     "trend7Days": [
       "stressful",
@@ -890,18 +890,12 @@
       "stressful",
       "stressful",
       "stressful",
-      "stressful",
-      "normal"
+      "normal",
+      "unknown"
     ],
-    "avgStressMinutes": 296,
-    "avgRecoveryMinutes": 62,
+    "avgStressMinutes": 249,
+    "avgRecoveryMinutes": 58,
     "records": [
-      {
-        "day": "2026-03-16",
-        "stressHigh": 13500,
-        "recoveryHigh": 7200,
-        "daySummary": "stressful"
-      },
       {
         "day": "2026-03-17",
         "stressHigh": 8100,
@@ -1075,6 +1069,12 @@
         "stressHigh": 2700,
         "recoveryHigh": 1800,
         "daySummary": "normal"
+      },
+      {
+        "day": "2026-04-15",
+        "stressHigh": 0,
+        "recoveryHigh": 0,
+        "daySummary": "unknown"
       }
     ]
   },
