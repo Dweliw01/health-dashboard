@@ -42929,9 +42929,9 @@
         },
         {
           "id": "5a044e26-21dd-40ef-ac22-a0fd34d63ef5",
-          "active_calories": 808,
-          "average_met_minutes": 1.71875,
-          "class_5_min": "1211000000000000333333323444444444444444000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000033333344442223222323332223223222232322221111122222222211",
+          "active_calories": 814,
+          "average_met_minutes": 1.65625,
+          "class_5_min": "1211000000000000333333323444444444444444000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000033333344442223222323332223223222232322221111122222222221111122211111112011112333",
           "contributors": {
             "meet_daily_targets": 78,
             "move_every_hour": 100,
@@ -42941,12 +42941,12 @@
             "training_volume": 100
           },
           "day": "2026-04-14",
-          "equivalent_walking_distance": 12590,
+          "equivalent_walking_distance": 12638,
           "high_activity_met_minutes": 0,
           "high_activity_time": 0,
           "inactivity_alerts": 0,
-          "low_activity_met_minutes": 108,
-          "low_activity_time": 6360,
+          "low_activity_met_minutes": 112,
+          "low_activity_time": 6780,
           "medium_activity_met_minutes": 456,
           "medium_activity_time": 5340,
           "met": {
@@ -44102,27 +44102,55 @@
               1.2,
               1.2,
               1.2,
+              1.2,
+              1.2,
+              1.1,
               0.9,
+              1,
+              1.1,
               0.9,
               0.9,
+              1.2,
+              1.2,
               0.9,
               0.9,
               0.9,
               0.9,
+              1.1,
+              1,
               0.9,
               0.9,
+              1,
               0.9,
+              1.2,
               0.9,
+              1,
+              1,
               0.9,
               0.9,
+              1.4,
               0.9,
               0.9,
               0.9,
+              1.1,
+              1,
+              1.1,
+              1.3,
               0.9,
+              1,
+              1.5,
+              1.4,
               0.9,
               0.9,
+              1.2,
               0.9,
+              1,
+              1.2,
+              1.1,
               0.9,
+              1.1,
+              1.2,
+              1,
               0.9,
               0.9,
               0.9,
@@ -44142,17 +44170,30 @@
               0.9,
               0.9,
               0.9,
+              1.2,
               0.9,
               0.9,
               0.9,
+              1,
               0.9,
               0.9,
               0.9,
               0.9,
+              1.1,
               0.9,
               0.9,
               0.9,
               0.9,
+              0.1,
+              0.1,
+              0.1,
+              0.1,
+              0.1,
+              0.1,
+              0.1,
+              0.1,
+              0.1,
+              1.1,
               0.9,
               0.9,
               0.9,
@@ -44175,60 +44216,19 @@
               0.9,
               0.9,
               0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
+              1.4,
+              1.2,
+              2.1,
+              1.7,
+              1.7,
+              1.9,
+              1.5,
+              1.8,
+              1.3,
+              2,
+              1.8,
+              2.2,
+              2.1,
               0.9,
               0.9,
               0.9,
@@ -44395,17 +44395,17 @@
             ],
             "timestamp": "2026-04-14T04:00:00.000-04:00"
           },
-          "meters_to_target": 4100,
-          "non_wear_time": 44520,
-          "resting_time": 3540,
+          "meters_to_target": 4000,
+          "non_wear_time": 45060,
+          "resting_time": 7920,
           "score": 94,
-          "sedentary_met_minutes": 1,
-          "sedentary_time": 9960,
-          "steps": 6335,
+          "sedentary_met_minutes": 2,
+          "sedentary_time": 11700,
+          "steps": 6444,
           "target_calories": 1050,
           "target_meters": 18000,
           "timestamp": "2026-04-14T04:00:00.000-04:00",
-          "total_calories": 3164
+          "total_calories": 3182
         }
       ],
       "next_token": null
@@ -449315,6 +449315,4044 @@
           "bpm": 105,
           "producer_timestamp": 1776205441750,
           "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-14T22:41:30.000Z",
+          "bpm": 87,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:41:40.000Z",
+          "bpm": 87,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:41:50.000Z",
+          "bpm": 88,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:42:00.000Z",
+          "bpm": 87,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:42:10.000Z",
+          "bpm": 85,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:42:20.000Z",
+          "bpm": 84,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:42:30.000Z",
+          "bpm": 83,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:42:40.000Z",
+          "bpm": 83,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:42:50.000Z",
+          "bpm": 83,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:43:00.000Z",
+          "bpm": 83,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:43:10.000Z",
+          "bpm": 84,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:43:20.000Z",
+          "bpm": 85,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:43:30.000Z",
+          "bpm": 85,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:43:40.000Z",
+          "bpm": 86,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:43:50.000Z",
+          "bpm": 86,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:44:00.000Z",
+          "bpm": 86,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:44:10.000Z",
+          "bpm": 85,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:44:20.000Z",
+          "bpm": 84,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:44:29.200Z",
+          "bpm": 79,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:44:34.200Z",
+          "bpm": 79,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:44:39.200Z",
+          "bpm": 80,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:44:44.200Z",
+          "bpm": 81,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:44:49.200Z",
+          "bpm": 82,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:44:54.200Z",
+          "bpm": 83,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:44:59.200Z",
+          "bpm": 84,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:45:04.200Z",
+          "bpm": 83,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:45:09.200Z",
+          "bpm": 83,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:45:14.200Z",
+          "bpm": 83,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:45:19.200Z",
+          "bpm": 84,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:45:24.200Z",
+          "bpm": 85,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:45:29.200Z",
+          "bpm": 85,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:45:34.200Z",
+          "bpm": 84,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:45:39.200Z",
+          "bpm": 83,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:45:44.200Z",
+          "bpm": 84,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:45:49.200Z",
+          "bpm": 84,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:45:54.200Z",
+          "bpm": 84,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:45:59.200Z",
+          "bpm": 85,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:46:04.200Z",
+          "bpm": 86,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:46:09.200Z",
+          "bpm": 86,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:46:14.200Z",
+          "bpm": 86,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:46:19.200Z",
+          "bpm": 85,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:46:24.200Z",
+          "bpm": 85,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:46:29.200Z",
+          "bpm": 84,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:46:34.200Z",
+          "bpm": 84,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:46:39.200Z",
+          "bpm": 85,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:46:44.200Z",
+          "bpm": 85,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:46:49.200Z",
+          "bpm": 85,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:46:54.200Z",
+          "bpm": 85,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:46:59.200Z",
+          "bpm": 85,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:47:04.200Z",
+          "bpm": 84,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:47:09.200Z",
+          "bpm": 84,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:47:14.200Z",
+          "bpm": 84,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:47:19.200Z",
+          "bpm": 84,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:47:24.200Z",
+          "bpm": 84,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:47:29.200Z",
+          "bpm": 84,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:47:34.200Z",
+          "bpm": 84,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:47:39.200Z",
+          "bpm": 84,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:47:44.200Z",
+          "bpm": 84,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:47:49.200Z",
+          "bpm": 84,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:47:54.200Z",
+          "bpm": 85,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:47:59.200Z",
+          "bpm": 85,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:48:04.200Z",
+          "bpm": 86,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:48:09.200Z",
+          "bpm": 86,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:48:14.200Z",
+          "bpm": 87,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:48:19.200Z",
+          "bpm": 87,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:48:24.200Z",
+          "bpm": 87,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:48:29.200Z",
+          "bpm": 87,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:48:34.200Z",
+          "bpm": 87,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:48:39.200Z",
+          "bpm": 86,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:48:44.200Z",
+          "bpm": 86,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:48:49.200Z",
+          "bpm": 86,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:48:54.200Z",
+          "bpm": 85,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:48:59.200Z",
+          "bpm": 85,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:49:04.200Z",
+          "bpm": 86,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:49:09.200Z",
+          "bpm": 86,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:49:14.200Z",
+          "bpm": 86,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:49:19.200Z",
+          "bpm": 86,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:49:24.200Z",
+          "bpm": 86,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:49:29.200Z",
+          "bpm": 86,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:49:34.200Z",
+          "bpm": 87,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:49:39.200Z",
+          "bpm": 88,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:49:44.200Z",
+          "bpm": 89,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:49:49.200Z",
+          "bpm": 88,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:49:54.200Z",
+          "bpm": 88,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:49:59.200Z",
+          "bpm": 87,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:50:04.200Z",
+          "bpm": 86,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:50:09.200Z",
+          "bpm": 86,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:50:14.200Z",
+          "bpm": 86,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:50:19.200Z",
+          "bpm": 85,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:50:24.200Z",
+          "bpm": 86,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:50:29.200Z",
+          "bpm": 86,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:50:34.200Z",
+          "bpm": 86,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:50:39.200Z",
+          "bpm": 86,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:50:44.200Z",
+          "bpm": 86,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:50:49.200Z",
+          "bpm": 85,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:50:54.200Z",
+          "bpm": 85,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:50:59.200Z",
+          "bpm": 85,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:51:04.200Z",
+          "bpm": 86,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:51:07.000Z",
+          "bpm": 87,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-14T22:51:09.000Z",
+          "bpm": 90,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-14T22:51:09.200Z",
+          "bpm": 86,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:51:13.000Z",
+          "bpm": 87,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-14T22:51:14.200Z",
+          "bpm": 86,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:51:19.200Z",
+          "bpm": 86,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:51:24.200Z",
+          "bpm": 85,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:51:29.200Z",
+          "bpm": 84,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:51:34.200Z",
+          "bpm": 84,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:51:39.200Z",
+          "bpm": 84,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:51:44.200Z",
+          "bpm": 83,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:51:49.200Z",
+          "bpm": 83,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:51:54.200Z",
+          "bpm": 83,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:51:59.200Z",
+          "bpm": 84,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:52:04.200Z",
+          "bpm": 84,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:52:09.200Z",
+          "bpm": 85,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:52:14.200Z",
+          "bpm": 85,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:52:19.200Z",
+          "bpm": 86,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:52:24.200Z",
+          "bpm": 86,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:52:29.200Z",
+          "bpm": 86,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:52:34.200Z",
+          "bpm": 86,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:52:39.200Z",
+          "bpm": 87,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:52:44.200Z",
+          "bpm": 87,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:52:49.200Z",
+          "bpm": 88,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:52:54.200Z",
+          "bpm": 88,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:52:59.200Z",
+          "bpm": 89,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:53:04.200Z",
+          "bpm": 89,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:53:09.200Z",
+          "bpm": 89,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:53:14.200Z",
+          "bpm": 89,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:53:19.200Z",
+          "bpm": 89,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:53:24.200Z",
+          "bpm": 89,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:53:29.200Z",
+          "bpm": 88,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:53:34.200Z",
+          "bpm": 88,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:53:39.200Z",
+          "bpm": 88,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:53:44.200Z",
+          "bpm": 89,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:53:49.200Z",
+          "bpm": 90,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:53:54.200Z",
+          "bpm": 90,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:53:59.200Z",
+          "bpm": 91,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:54:04.200Z",
+          "bpm": 92,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:54:09.200Z",
+          "bpm": 93,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:54:14.200Z",
+          "bpm": 93,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:54:19.200Z",
+          "bpm": 93,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:54:24.200Z",
+          "bpm": 93,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:54:29.200Z",
+          "bpm": 93,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:54:34.200Z",
+          "bpm": 93,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:54:39.200Z",
+          "bpm": 92,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:54:44.200Z",
+          "bpm": 92,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:54:49.200Z",
+          "bpm": 92,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:54:54.200Z",
+          "bpm": 93,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:54:59.200Z",
+          "bpm": 93,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:55:04.200Z",
+          "bpm": 93,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:55:09.200Z",
+          "bpm": 93,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:55:14.200Z",
+          "bpm": 93,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:55:19.200Z",
+          "bpm": 93,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:55:24.200Z",
+          "bpm": 93,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:55:29.200Z",
+          "bpm": 93,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:55:34.200Z",
+          "bpm": 93,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:55:39.200Z",
+          "bpm": 93,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:55:44.200Z",
+          "bpm": 93,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:55:49.200Z",
+          "bpm": 94,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:55:54.200Z",
+          "bpm": 94,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:55:59.200Z",
+          "bpm": 95,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:56:04.200Z",
+          "bpm": 94,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:56:09.200Z",
+          "bpm": 94,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:56:14.200Z",
+          "bpm": 94,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:56:19.200Z",
+          "bpm": 94,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:56:24.200Z",
+          "bpm": 94,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:56:29.200Z",
+          "bpm": 95,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:56:34.200Z",
+          "bpm": 95,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:56:39.200Z",
+          "bpm": 96,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:56:44.200Z",
+          "bpm": 96,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:56:49.200Z",
+          "bpm": 96,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:56:54.200Z",
+          "bpm": 96,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:56:59.200Z",
+          "bpm": 96,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:57:04.200Z",
+          "bpm": 96,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:57:09.200Z",
+          "bpm": 96,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:57:14.200Z",
+          "bpm": 96,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:57:19.200Z",
+          "bpm": 96,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:57:24.200Z",
+          "bpm": 96,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:57:29.200Z",
+          "bpm": 96,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:57:34.200Z",
+          "bpm": 96,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:57:39.200Z",
+          "bpm": 96,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:57:44.200Z",
+          "bpm": 96,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:57:49.200Z",
+          "bpm": 96,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:57:54.200Z",
+          "bpm": 95,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:57:59.200Z",
+          "bpm": 95,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:58:04.200Z",
+          "bpm": 94,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:58:09.200Z",
+          "bpm": 94,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:58:14.200Z",
+          "bpm": 94,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:58:19.200Z",
+          "bpm": 94,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:58:24.200Z",
+          "bpm": 95,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:58:29.200Z",
+          "bpm": 95,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:58:34.200Z",
+          "bpm": 95,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:58:39.200Z",
+          "bpm": 94,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:58:44.200Z",
+          "bpm": 94,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:58:49.200Z",
+          "bpm": 94,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:58:54.200Z",
+          "bpm": 93,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:58:59.200Z",
+          "bpm": 93,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:59:04.200Z",
+          "bpm": 93,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:59:09.200Z",
+          "bpm": 93,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:59:14.200Z",
+          "bpm": 92,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:59:19.200Z",
+          "bpm": 91,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:59:24.200Z",
+          "bpm": 91,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:59:29.200Z",
+          "bpm": 91,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:59:34.200Z",
+          "bpm": 91,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:59:39.200Z",
+          "bpm": 91,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:59:44.200Z",
+          "bpm": 90,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:59:49.200Z",
+          "bpm": 89,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:59:54.200Z",
+          "bpm": 88,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T22:59:59.200Z",
+          "bpm": 87,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:00:04.200Z",
+          "bpm": 87,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:00:09.200Z",
+          "bpm": 87,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:00:14.200Z",
+          "bpm": 87,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:00:19.200Z",
+          "bpm": 88,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:00:24.200Z",
+          "bpm": 89,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:00:29.200Z",
+          "bpm": 89,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:00:34.200Z",
+          "bpm": 88,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:00:39.200Z",
+          "bpm": 87,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:00:44.200Z",
+          "bpm": 87,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:00:49.200Z",
+          "bpm": 86,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:00:54.200Z",
+          "bpm": 85,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:00:59.200Z",
+          "bpm": 84,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:01:04.200Z",
+          "bpm": 83,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:01:09.200Z",
+          "bpm": 82,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:01:14.200Z",
+          "bpm": 82,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:01:19.200Z",
+          "bpm": 83,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:01:24.200Z",
+          "bpm": 83,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:01:29.200Z",
+          "bpm": 84,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:01:34.200Z",
+          "bpm": 85,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:01:39.200Z",
+          "bpm": 87,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:01:44.200Z",
+          "bpm": 88,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:01:49.200Z",
+          "bpm": 89,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:01:54.200Z",
+          "bpm": 89,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:01:59.200Z",
+          "bpm": 89,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:02:04.200Z",
+          "bpm": 88,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:02:09.200Z",
+          "bpm": 88,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:02:14.200Z",
+          "bpm": 88,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:02:19.200Z",
+          "bpm": 89,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:02:24.200Z",
+          "bpm": 89,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:02:29.200Z",
+          "bpm": 90,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:02:34.200Z",
+          "bpm": 90,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:02:39.200Z",
+          "bpm": 90,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:02:44.200Z",
+          "bpm": 90,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:02:49.200Z",
+          "bpm": 91,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:02:54.200Z",
+          "bpm": 92,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:02:59.200Z",
+          "bpm": 93,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:03:04.200Z",
+          "bpm": 94,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:03:09.200Z",
+          "bpm": 94,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:03:14.200Z",
+          "bpm": 94,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:03:19.200Z",
+          "bpm": 93,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:03:24.200Z",
+          "bpm": 92,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:03:29.200Z",
+          "bpm": 91,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:03:34.200Z",
+          "bpm": 90,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:03:39.200Z",
+          "bpm": 89,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:03:44.200Z",
+          "bpm": 88,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:03:49.200Z",
+          "bpm": 87,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:03:54.200Z",
+          "bpm": 87,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:03:59.200Z",
+          "bpm": 88,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:04:04.200Z",
+          "bpm": 89,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:04:09.200Z",
+          "bpm": 90,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:04:14.000Z",
+          "bpm": 89,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-14T23:04:14.200Z",
+          "bpm": 90,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:04:18.000Z",
+          "bpm": 90,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-14T23:04:19.200Z",
+          "bpm": 90,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:04:21.000Z",
+          "bpm": 92,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-14T23:04:24.200Z",
+          "bpm": 89,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:04:29.200Z",
+          "bpm": 89,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:04:34.200Z",
+          "bpm": 88,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:04:39.200Z",
+          "bpm": 87,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:04:44.200Z",
+          "bpm": 87,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:04:49.200Z",
+          "bpm": 86,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:04:54.200Z",
+          "bpm": 86,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:04:59.200Z",
+          "bpm": 86,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:05:04.200Z",
+          "bpm": 86,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:05:09.200Z",
+          "bpm": 86,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:05:14.200Z",
+          "bpm": 85,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:05:19.200Z",
+          "bpm": 85,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:05:24.200Z",
+          "bpm": 85,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:05:29.200Z",
+          "bpm": 85,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:05:34.200Z",
+          "bpm": 86,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:05:39.200Z",
+          "bpm": 87,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:05:44.200Z",
+          "bpm": 87,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:05:49.200Z",
+          "bpm": 86,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:05:54.200Z",
+          "bpm": 86,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:05:59.200Z",
+          "bpm": 85,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:06:04.200Z",
+          "bpm": 86,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:06:09.200Z",
+          "bpm": 87,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:06:14.200Z",
+          "bpm": 89,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:06:19.200Z",
+          "bpm": 90,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:06:24.200Z",
+          "bpm": 91,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:06:29.200Z",
+          "bpm": 90,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:06:34.200Z",
+          "bpm": 89,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:06:39.200Z",
+          "bpm": 89,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:06:44.200Z",
+          "bpm": 89,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:06:49.200Z",
+          "bpm": 90,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:06:54.200Z",
+          "bpm": 91,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:06:59.200Z",
+          "bpm": 91,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:07:04.200Z",
+          "bpm": 90,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:07:09.200Z",
+          "bpm": 90,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:07:14.200Z",
+          "bpm": 89,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:07:19.200Z",
+          "bpm": 89,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:07:24.200Z",
+          "bpm": 89,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:07:29.200Z",
+          "bpm": 89,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:07:34.200Z",
+          "bpm": 89,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:07:39.200Z",
+          "bpm": 89,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:07:44.200Z",
+          "bpm": 89,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:07:49.200Z",
+          "bpm": 88,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:07:54.200Z",
+          "bpm": 88,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:07:59.200Z",
+          "bpm": 89,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:08:04.200Z",
+          "bpm": 89,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:08:09.200Z",
+          "bpm": 89,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:08:14.200Z",
+          "bpm": 89,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:08:19.200Z",
+          "bpm": 89,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:08:24.200Z",
+          "bpm": 89,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:08:29.200Z",
+          "bpm": 89,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:08:34.200Z",
+          "bpm": 88,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:08:39.200Z",
+          "bpm": 86,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:08:44.200Z",
+          "bpm": 85,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:08:49.200Z",
+          "bpm": 85,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:08:54.200Z",
+          "bpm": 85,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:08:59.200Z",
+          "bpm": 86,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:09:04.200Z",
+          "bpm": 87,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:09:09.200Z",
+          "bpm": 88,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:09:14.200Z",
+          "bpm": 88,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:09:19.200Z",
+          "bpm": 89,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:09:24.200Z",
+          "bpm": 91,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:09:29.200Z",
+          "bpm": 93,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:09:34.200Z",
+          "bpm": 93,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:09:39.200Z",
+          "bpm": 93,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:09:44.200Z",
+          "bpm": 92,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:09:49.200Z",
+          "bpm": 91,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:09:54.200Z",
+          "bpm": 89,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:09:59.200Z",
+          "bpm": 88,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:10:04.200Z",
+          "bpm": 87,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:10:09.200Z",
+          "bpm": 86,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:10:14.200Z",
+          "bpm": 85,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:10:19.200Z",
+          "bpm": 86,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:10:24.200Z",
+          "bpm": 87,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:10:29.200Z",
+          "bpm": 88,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:10:34.200Z",
+          "bpm": 89,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:10:39.200Z",
+          "bpm": 89,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:10:44.200Z",
+          "bpm": 90,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:10:49.200Z",
+          "bpm": 92,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:10:54.200Z",
+          "bpm": 93,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:10:59.200Z",
+          "bpm": 93,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:11:04.200Z",
+          "bpm": 93,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:11:09.200Z",
+          "bpm": 93,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:11:14.200Z",
+          "bpm": 93,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:11:19.200Z",
+          "bpm": 93,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:11:24.200Z",
+          "bpm": 92,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:11:29.200Z",
+          "bpm": 92,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:11:34.200Z",
+          "bpm": 91,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:11:39.200Z",
+          "bpm": 91,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:11:44.200Z",
+          "bpm": 91,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:11:49.200Z",
+          "bpm": 90,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:11:54.200Z",
+          "bpm": 90,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:11:59.200Z",
+          "bpm": 90,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:12:04.200Z",
+          "bpm": 90,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:12:09.200Z",
+          "bpm": 91,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:12:14.200Z",
+          "bpm": 92,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:12:19.200Z",
+          "bpm": 92,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:12:24.200Z",
+          "bpm": 92,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:12:29.200Z",
+          "bpm": 93,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:12:34.200Z",
+          "bpm": 93,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:12:39.200Z",
+          "bpm": 93,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:12:44.200Z",
+          "bpm": 93,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:12:49.200Z",
+          "bpm": 94,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:12:54.200Z",
+          "bpm": 94,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:12:59.200Z",
+          "bpm": 94,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:13:04.200Z",
+          "bpm": 94,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:13:09.200Z",
+          "bpm": 94,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:13:14.200Z",
+          "bpm": 94,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:13:19.200Z",
+          "bpm": 94,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:13:24.200Z",
+          "bpm": 94,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:13:29.200Z",
+          "bpm": 94,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:13:34.200Z",
+          "bpm": 94,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:13:39.200Z",
+          "bpm": 94,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:13:44.200Z",
+          "bpm": 94,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:13:49.200Z",
+          "bpm": 94,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:13:54.200Z",
+          "bpm": 94,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:13:59.200Z",
+          "bpm": 94,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:14:04.200Z",
+          "bpm": 94,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:14:09.200Z",
+          "bpm": 94,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:14:14.200Z",
+          "bpm": 94,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:14:19.200Z",
+          "bpm": 95,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:14:24.200Z",
+          "bpm": 94,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:14:29.200Z",
+          "bpm": 94,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:14:34.200Z",
+          "bpm": 94,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:14:39.200Z",
+          "bpm": 94,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:14:44.200Z",
+          "bpm": 95,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:14:49.200Z",
+          "bpm": 95,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:14:54.200Z",
+          "bpm": 95,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:14:59.200Z",
+          "bpm": 95,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:15:04.200Z",
+          "bpm": 95,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:15:09.200Z",
+          "bpm": 95,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:15:14.200Z",
+          "bpm": 95,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:15:19.200Z",
+          "bpm": 96,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:15:24.200Z",
+          "bpm": 95,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:15:29.200Z",
+          "bpm": 95,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:15:34.200Z",
+          "bpm": 94,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:15:39.200Z",
+          "bpm": 94,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:15:44.200Z",
+          "bpm": 95,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:15:49.200Z",
+          "bpm": 95,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:15:54.200Z",
+          "bpm": 94,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:15:59.200Z",
+          "bpm": 94,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:16:04.200Z",
+          "bpm": 94,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:16:09.200Z",
+          "bpm": 95,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:16:14.200Z",
+          "bpm": 95,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:16:19.200Z",
+          "bpm": 95,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:16:24.200Z",
+          "bpm": 96,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:16:29.200Z",
+          "bpm": 96,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:16:34.200Z",
+          "bpm": 96,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:16:39.200Z",
+          "bpm": 97,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:16:44.200Z",
+          "bpm": 97,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:16:49.200Z",
+          "bpm": 97,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:16:54.200Z",
+          "bpm": 97,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:16:59.200Z",
+          "bpm": 97,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:17:04.200Z",
+          "bpm": 97,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:17:09.200Z",
+          "bpm": 98,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:17:14.200Z",
+          "bpm": 98,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:17:19.200Z",
+          "bpm": 98,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:17:24.200Z",
+          "bpm": 99,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:17:29.200Z",
+          "bpm": 99,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:17:34.200Z",
+          "bpm": 99,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:17:39.200Z",
+          "bpm": 100,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:17:44.200Z",
+          "bpm": 101,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:17:49.200Z",
+          "bpm": 102,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:17:54.200Z",
+          "bpm": 103,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:17:59.200Z",
+          "bpm": 103,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:18:04.200Z",
+          "bpm": 103,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:18:09.200Z",
+          "bpm": 104,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:18:14.200Z",
+          "bpm": 104,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:18:19.200Z",
+          "bpm": 105,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:18:24.200Z",
+          "bpm": 106,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:18:29.200Z",
+          "bpm": 107,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:18:34.200Z",
+          "bpm": 108,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:18:39.200Z",
+          "bpm": 110,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:18:44.200Z",
+          "bpm": 110,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:18:49.200Z",
+          "bpm": 111,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:18:54.200Z",
+          "bpm": 112,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:18:59.200Z",
+          "bpm": 112,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:19:04.200Z",
+          "bpm": 112,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:19:09.200Z",
+          "bpm": 113,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:19:14.200Z",
+          "bpm": 113,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:19:19.200Z",
+          "bpm": 112,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:19:24.200Z",
+          "bpm": 111,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:19:29.200Z",
+          "bpm": 110,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:19:34.200Z",
+          "bpm": 110,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:19:39.200Z",
+          "bpm": 111,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:19:44.200Z",
+          "bpm": 111,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:19:49.200Z",
+          "bpm": 111,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:19:54.200Z",
+          "bpm": 112,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:19:59.200Z",
+          "bpm": 112,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:20:04.200Z",
+          "bpm": 113,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:20:09.200Z",
+          "bpm": 114,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:20:14.200Z",
+          "bpm": 115,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:20:19.200Z",
+          "bpm": 117,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:20:24.200Z",
+          "bpm": 117,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:20:29.200Z",
+          "bpm": 116,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:20:34.200Z",
+          "bpm": 115,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:20:39.200Z",
+          "bpm": 114,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:20:44.200Z",
+          "bpm": 113,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:20:49.200Z",
+          "bpm": 113,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:20:54.200Z",
+          "bpm": 112,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:20:59.200Z",
+          "bpm": 112,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:21:04.200Z",
+          "bpm": 112,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:21:09.200Z",
+          "bpm": 111,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:21:14.200Z",
+          "bpm": 110,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:21:19.200Z",
+          "bpm": 109,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:21:24.200Z",
+          "bpm": 108,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:21:29.200Z",
+          "bpm": 107,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:21:34.200Z",
+          "bpm": 107,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:21:39.200Z",
+          "bpm": 106,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:21:44.200Z",
+          "bpm": 106,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:21:49.200Z",
+          "bpm": 105,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:21:54.200Z",
+          "bpm": 104,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:21:59.200Z",
+          "bpm": 103,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:22:04.200Z",
+          "bpm": 103,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:22:09.200Z",
+          "bpm": 103,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:22:14.200Z",
+          "bpm": 102,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:22:19.200Z",
+          "bpm": 101,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:22:24.200Z",
+          "bpm": 101,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:22:29.200Z",
+          "bpm": 100,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:22:34.200Z",
+          "bpm": 99,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:22:39.200Z",
+          "bpm": 98,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:22:44.200Z",
+          "bpm": 97,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:22:49.200Z",
+          "bpm": 97,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:22:54.200Z",
+          "bpm": 97,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:22:59.200Z",
+          "bpm": 97,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:23:04.200Z",
+          "bpm": 96,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:23:09.200Z",
+          "bpm": 95,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:23:14.200Z",
+          "bpm": 95,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:23:19.200Z",
+          "bpm": 96,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:23:24.200Z",
+          "bpm": 96,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:23:29.200Z",
+          "bpm": 96,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:23:34.200Z",
+          "bpm": 95,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:23:39.200Z",
+          "bpm": 95,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:23:44.200Z",
+          "bpm": 95,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:23:49.200Z",
+          "bpm": 96,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:23:54.200Z",
+          "bpm": 96,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:23:59.200Z",
+          "bpm": 95,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:24:04.200Z",
+          "bpm": 95,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:24:09.200Z",
+          "bpm": 96,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:24:14.200Z",
+          "bpm": 96,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:24:19.200Z",
+          "bpm": 97,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:24:24.200Z",
+          "bpm": 97,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:24:29.200Z",
+          "bpm": 97,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:24:34.200Z",
+          "bpm": 97,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:24:39.200Z",
+          "bpm": 97,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:24:44.200Z",
+          "bpm": 97,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:24:49.200Z",
+          "bpm": 97,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:24:54.200Z",
+          "bpm": 97,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:24:59.200Z",
+          "bpm": 97,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:25:04.200Z",
+          "bpm": 96,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:25:09.200Z",
+          "bpm": 96,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:25:14.200Z",
+          "bpm": 96,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:25:19.200Z",
+          "bpm": 96,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:25:24.200Z",
+          "bpm": 96,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:25:29.200Z",
+          "bpm": 96,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:25:34.200Z",
+          "bpm": 96,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:25:39.200Z",
+          "bpm": 96,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:25:44.200Z",
+          "bpm": 96,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:25:49.200Z",
+          "bpm": 96,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:25:54.200Z",
+          "bpm": 96,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:25:59.200Z",
+          "bpm": 96,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:26:04.200Z",
+          "bpm": 96,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:26:09.200Z",
+          "bpm": 95,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:26:14.200Z",
+          "bpm": 95,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:26:19.200Z",
+          "bpm": 95,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:26:24.200Z",
+          "bpm": 94,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:26:29.200Z",
+          "bpm": 94,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:26:34.200Z",
+          "bpm": 93,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:26:39.200Z",
+          "bpm": 92,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:26:44.200Z",
+          "bpm": 92,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:26:49.200Z",
+          "bpm": 92,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:26:54.200Z",
+          "bpm": 92,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:26:59.200Z",
+          "bpm": 92,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:27:04.200Z",
+          "bpm": 92,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:27:09.200Z",
+          "bpm": 91,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:27:14.200Z",
+          "bpm": 92,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:27:19.200Z",
+          "bpm": 92,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:27:24.200Z",
+          "bpm": 92,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:27:29.200Z",
+          "bpm": 92,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:27:34.200Z",
+          "bpm": 92,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:27:39.200Z",
+          "bpm": 93,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:27:44.200Z",
+          "bpm": 93,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:27:49.200Z",
+          "bpm": 93,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:27:54.200Z",
+          "bpm": 92,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:27:59.200Z",
+          "bpm": 93,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:28:04.200Z",
+          "bpm": 93,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:28:09.200Z",
+          "bpm": 93,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:28:14.200Z",
+          "bpm": 93,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:28:19.200Z",
+          "bpm": 93,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:28:24.200Z",
+          "bpm": 93,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:28:29.200Z",
+          "bpm": 93,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:28:34.200Z",
+          "bpm": 93,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:28:39.200Z",
+          "bpm": 93,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:28:44.200Z",
+          "bpm": 94,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:28:49.200Z",
+          "bpm": 94,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:28:54.200Z",
+          "bpm": 94,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:28:59.200Z",
+          "bpm": 93,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:29:04.200Z",
+          "bpm": 93,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:29:09.200Z",
+          "bpm": 92,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:29:14.200Z",
+          "bpm": 91,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:29:19.200Z",
+          "bpm": 90,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:29:24.200Z",
+          "bpm": 88,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:29:29.200Z",
+          "bpm": 87,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:29:34.200Z",
+          "bpm": 84,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:29:39.200Z",
+          "bpm": 82,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:29:44.200Z",
+          "bpm": 79,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:29:49.200Z",
+          "bpm": 75,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:29:54.200Z",
+          "bpm": 73,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:29:59.200Z",
+          "bpm": 72,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:30:04.200Z",
+          "bpm": 71,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:30:09.200Z",
+          "bpm": 71,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:30:14.200Z",
+          "bpm": 73,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:30:19.200Z",
+          "bpm": 73,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:30:24.200Z",
+          "bpm": 72,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:30:29.200Z",
+          "bpm": 71,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:30:31.000Z",
+          "bpm": 71,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-14T23:30:34.200Z",
+          "bpm": 70,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:30:39.200Z",
+          "bpm": 70,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:30:43.000Z",
+          "bpm": 73,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-14T23:30:44.200Z",
+          "bpm": 70,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:30:49.200Z",
+          "bpm": 70,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:30:54.200Z",
+          "bpm": 70,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:30:59.200Z",
+          "bpm": 71,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:31:04.200Z",
+          "bpm": 71,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:31:09.200Z",
+          "bpm": 72,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:31:14.200Z",
+          "bpm": 73,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:31:19.200Z",
+          "bpm": 75,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:31:24.200Z",
+          "bpm": 75,
+          "producer_timestamp": 1776205441750,
+          "source": "workout"
+        },
+        {
+          "timestamp": "2026-04-14T23:31:39.000Z",
+          "bpm": 68,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-14T23:35:27.000Z",
+          "bpm": 64,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-14T23:36:35.000Z",
+          "bpm": 67,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-14T23:36:41.000Z",
+          "bpm": 65,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-14T23:40:18.000Z",
+          "bpm": 59,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-14T23:40:57.000Z",
+          "bpm": 65,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-14T23:42:03.000Z",
+          "bpm": 61,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-14T23:46:06.000Z",
+          "bpm": 61,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-14T23:46:34.000Z",
+          "bpm": 66,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-14T23:47:06.000Z",
+          "bpm": 63,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-14T23:50:55.000Z",
+          "bpm": 58,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-14T23:51:49.000Z",
+          "bpm": 60,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-14T23:52:37.000Z",
+          "bpm": 62,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-14T23:56:47.000Z",
+          "bpm": 61,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-14T23:56:52.000Z",
+          "bpm": 65,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-14T23:57:16.000Z",
+          "bpm": 67,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-15T00:01:58.000Z",
+          "bpm": 74,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-15T00:02:41.000Z",
+          "bpm": 72,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-15T00:02:44.000Z",
+          "bpm": 66,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-15T00:04:47.000Z",
+          "bpm": 67,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-15T00:04:58.000Z",
+          "bpm": 63,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-15T00:05:52.000Z",
+          "bpm": 60,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-15T00:12:20.000Z",
+          "bpm": 69,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-15T00:13:22.000Z",
+          "bpm": 73,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-15T00:13:38.000Z",
+          "bpm": 65,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-15T00:29:24.000Z",
+          "bpm": 63,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-15T00:29:51.000Z",
+          "bpm": 66,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-15T00:29:58.000Z",
+          "bpm": 64,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-15T00:34:46.000Z",
+          "bpm": 53,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-15T00:35:04.000Z",
+          "bpm": 57,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-15T00:35:07.000Z",
+          "bpm": 54,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-15T00:37:27.000Z",
+          "bpm": 67,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-15T00:37:54.000Z",
+          "bpm": 62,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-15T00:38:09.000Z",
+          "bpm": 64,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-15T00:43:29.000Z",
+          "bpm": 67,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-15T00:43:48.000Z",
+          "bpm": 62,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-15T00:43:51.000Z",
+          "bpm": 65,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-15T00:55:17.000Z",
+          "bpm": 76,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-15T00:55:37.000Z",
+          "bpm": 71,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-15T00:55:47.000Z",
+          "bpm": 66,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-15T01:21:50.000Z",
+          "bpm": 71,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-15T01:22:12.000Z",
+          "bpm": 67,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-15T01:22:23.000Z",
+          "bpm": 74,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-15T01:29:19.000Z",
+          "bpm": 74,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-15T01:29:25.000Z",
+          "bpm": 60,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-15T01:29:50.000Z",
+          "bpm": 67,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-15T01:36:33.000Z",
+          "bpm": 56,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-15T01:36:55.000Z",
+          "bpm": 58,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-15T01:37:10.000Z",
+          "bpm": 61,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-15T01:40:45.000Z",
+          "bpm": 67,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-15T01:41:34.000Z",
+          "bpm": 65,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-15T01:41:47.000Z",
+          "bpm": 62,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-15T01:46:04.000Z",
+          "bpm": 65,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-15T01:47:09.000Z",
+          "bpm": 62,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-15T01:47:21.000Z",
+          "bpm": 66,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-15T01:53:00.000Z",
+          "bpm": 61,
+          "producer_timestamp": 1776205441750,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-15T02:06:43.000Z",
+          "bpm": 58,
+          "producer_timestamp": 1776205441750,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-15T02:11:43.000Z",
+          "bpm": 59,
+          "producer_timestamp": 1776205441750,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-15T02:16:43.000Z",
+          "bpm": 56,
+          "producer_timestamp": 1776205441750,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-15T02:21:43.000Z",
+          "bpm": 56,
+          "producer_timestamp": 1776205441750,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-15T02:26:43.000Z",
+          "bpm": 57,
+          "producer_timestamp": 1776205441750,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-15T02:31:43.000Z",
+          "bpm": 56,
+          "producer_timestamp": 1776205441750,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-15T02:36:43.000Z",
+          "bpm": 60,
+          "producer_timestamp": 1776205441750,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-15T02:41:43.000Z",
+          "bpm": 61,
+          "producer_timestamp": 1776205441750,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-15T02:46:43.000Z",
+          "bpm": 57,
+          "producer_timestamp": 1776205441750,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-15T02:51:43.000Z",
+          "bpm": 57,
+          "producer_timestamp": 1776205441750,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-15T02:56:43.000Z",
+          "bpm": 60,
+          "producer_timestamp": 1776205441750,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-15T03:01:43.000Z",
+          "bpm": 59,
+          "producer_timestamp": 1776205441750,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-15T03:06:43.000Z",
+          "bpm": 56,
+          "producer_timestamp": 1776205441750,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-15T03:11:43.000Z",
+          "bpm": 56,
+          "producer_timestamp": 1776205441750,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-15T03:16:43.000Z",
+          "bpm": 56,
+          "producer_timestamp": 1776205441750,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-15T03:21:43.000Z",
+          "bpm": 58,
+          "producer_timestamp": 1776205441750,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-15T03:26:43.000Z",
+          "bpm": 59,
+          "producer_timestamp": 1776205441750,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-15T03:31:43.000Z",
+          "bpm": 57,
+          "producer_timestamp": 1776205441750,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-15T03:32:59.000Z",
+          "bpm": 52,
+          "producer_timestamp": 1776205441750,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-15T03:37:59.000Z",
+          "bpm": 53,
+          "producer_timestamp": 1776205441750,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-15T04:00:44.000Z",
+          "bpm": 53,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-15T04:01:26.000Z",
+          "bpm": 50,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-15T04:01:32.000Z",
+          "bpm": 55,
+          "producer_timestamp": 1776205441750,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-15T04:02:49.000Z",
+          "bpm": 51,
+          "producer_timestamp": 1776205441750,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-15T04:07:49.000Z",
+          "bpm": 50,
+          "producer_timestamp": 1776205441750,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-15T04:12:49.000Z",
+          "bpm": 51,
+          "producer_timestamp": 1776205441750,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-15T04:17:49.000Z",
+          "bpm": 49,
+          "producer_timestamp": 1776205441750,
+          "source": "rest"
         }
       ],
       "next_token": null
