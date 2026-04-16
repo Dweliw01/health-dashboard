@@ -1,8 +1,8 @@
 {
-  "lastUpdated": "2026-04-16T03:32:20.772Z",
+  "lastUpdated": "2026-04-16T06:07:51.263Z",
   "today": {
-    "steps": 7926,
-    "avgHeartRate": 79,
+    "steps": 7930,
+    "avgHeartRate": 69,
     "calories": 698
   },
   "todayScores": {
@@ -15,7 +15,7 @@
   },
   "thisWeek": {
     "workouts": 0,
-    "avgSteps": 12233,
+    "avgSteps": 12234,
     "avgCalories": 1026
   },
   "last7Days": {
@@ -35,45 +35,45 @@
       11576,
       11127,
       7533,
-      7926
+      7930
     ]
   },
   "heartRateTrends": {
     "labels": [
-      "Thu",
       "Fri",
       "Sat",
       "Sun",
       "Mon",
       "Tue",
-      "Wed"
+      "Wed",
+      "Thu"
     ],
     "values": [
-      94,
       94,
       109,
       81,
       88,
       88,
-      79
+      80,
+      69
     ],
     "max": [
-      143,
       147,
       175,
       119,
       131,
       133,
-      114
+      133,
+      99
     ],
     "min": [
-      47,
       49,
       48,
       45,
       44,
       46,
-      46
+      46,
+      50
     ]
   },
   "workoutDistribution": {
@@ -95,7 +95,7 @@
       12986,
       13099,
       14657,
-      12233
+      12234
     ],
     "workouts": [
       1,
@@ -118,16 +118,16 @@
       "Day 30"
     ],
     "actual": [
-      12233,
+      12234,
       null,
       null,
       null
     ],
     "projected": [
-      12233,
-      11193,
-      10673,
-      10153
+      12234,
+      11194,
+      10674,
+      10154
     ]
   },
   "timeOfDay": {
@@ -149,14 +149,14 @@
       206,
       227,
       229,
-      143,
-      124,
+      153,
+      132,
       111
     ]
   },
   "metrics": {
-    "dailyAvgSteps": 12233,
-    "avgHeartRate": 90,
+    "dailyAvgSteps": 12234,
+    "avgHeartRate": 87,
     "restingHR": 48,
     "activeDays": 7,
     "totalWorkouts": 5,
@@ -170,7 +170,7 @@
     "sleepScore": 60,
     "readinessScore": 68,
     "consistency": 77,
-    "totalSteps30Days": 399624,
+    "totalSteps30Days": 399628,
     "totalCalories30Days": 31085,
     "daysTracked": 30
   },
@@ -197,13 +197,6 @@
     {
       "type": "warning",
       "title": "HR Spike Detected",
-      "message": "Thu: 143 bpm peak",
-      "severity": "medium",
-      "category": "activity"
-    },
-    {
-      "type": "warning",
-      "title": "HR Spike Detected",
       "message": "Fri: 147 bpm peak",
       "severity": "medium",
       "category": "activity"
@@ -219,6 +212,13 @@
       "type": "warning",
       "title": "HR Spike Detected",
       "message": "Sun: 119 bpm peak",
+      "severity": "medium",
+      "category": "activity"
+    },
+    {
+      "type": "warning",
+      "title": "HR Spike Detected",
+      "message": "Mon: 131 bpm peak",
       "severity": "medium",
       "category": "activity"
     }
