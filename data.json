@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-18T23:43:10.985Z",
+  "lastUpdated": "2026-04-19T03:34:52.245Z",
   "today": {
     "steps": 3835,
     "avgHeartRate": 73,
@@ -98,8 +98,8 @@
       10395
     ],
     "workouts": [
-      2,
-      1,
+      3,
+      0,
       2,
       0
     ],
@@ -169,10 +169,10 @@
     "activityScore": 90,
     "sleepScore": 59,
     "readinessScore": 67,
-    "consistency": 72,
-    "totalSteps30Days": 374970,
-    "totalCalories30Days": 29419,
-    "daysTracked": 29
+    "consistency": 71,
+    "totalSteps30Days": 362878,
+    "totalCalories30Days": 28571,
+    "daysTracked": 28
   },
   "insights": {
     "performance": {
@@ -271,11 +271,6 @@
     "baseline": 142,
     "status": "normal",
     "records": [
-      {
-        "day": "2026-03-19",
-        "avgHrv": 150,
-        "lowestHR": 46
-      },
       {
         "day": "2026-03-20",
         "avgHrv": 150,
@@ -556,17 +551,6 @@
     ],
     "last30Days": [
       {
-        "day": "2026-03-19",
-        "deep": 31,
-        "rem": 72,
-        "light": 192,
-        "awake": 70,
-        "total": 294,
-        "efficiency": 81,
-        "latency": 20,
-        "breathRate": 14.5
-      },
-      {
         "day": "2026-03-20",
         "deep": 44,
         "rem": 112,
@@ -844,9 +828,9 @@
     ],
     "avgDeep": 39,
     "avgRem": 77,
-    "avgLight": 203,
-    "avgTotal": 318,
-    "avgEfficiency": 85,
+    "avgLight": 204,
+    "avgTotal": 319,
+    "avgEfficiency": 86,
     "avgLatency": 16,
     "avgBreathRate": 14.6
   },
@@ -1063,7 +1047,7 @@
       97.952,
       96.96
     ],
-    "baseline": 97.8
+    "baseline": 97.7
   },
   "readinessBreakdown": {
     "day": "2026-04-16",
