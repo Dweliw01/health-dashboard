@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-19T23:46:17.641Z",
+  "lastUpdated": "2026-04-20T03:36:51.184Z",
   "today": {
     "steps": 3835,
     "avgHeartRate": 73,
@@ -92,10 +92,10 @@
       "This Week"
     ],
     "steps": [
-      13759,
-      12169,
-      15517,
-      10395
+      13680,
+      12128,
+      14842,
+      10480
     ],
     "workouts": [
       3,
@@ -104,10 +104,10 @@
       0
     ],
     "calories": [
-      1043,
-      1009,
-      1117,
-      913
+      1045,
+      1006,
+      1077,
+      901
     ]
   },
   "projection": {
@@ -125,9 +125,9 @@
     ],
     "projected": [
       10395,
-      8680,
-      7822,
-      6965
+      8888,
+      8134,
+      7380
     ]
   },
   "timeOfDay": {
@@ -169,15 +169,15 @@
     "activityScore": 90,
     "sleepScore": 59,
     "readinessScore": 67,
-    "consistency": 71,
-    "totalSteps30Days": 362878,
-    "totalCalories30Days": 28571,
-    "daysTracked": 28
+    "consistency": 70,
+    "totalSteps30Days": 347430,
+    "totalCalories30Days": 27303,
+    "daysTracked": 27
   },
   "insights": {
     "performance": {
-      "weekChange": -33,
-      "monthChange": -20,
+      "weekChange": -29,
+      "monthChange": -19,
       "trend": "declining"
     },
     "recovery": {
@@ -271,11 +271,6 @@
     "baseline": 142,
     "status": "normal",
     "records": [
-      {
-        "day": "2026-03-20",
-        "avgHrv": 150,
-        "lowestHR": 46
-      },
       {
         "day": "2026-03-21",
         "avgHrv": 154,
@@ -551,17 +546,6 @@
     ],
     "last30Days": [
       {
-        "day": "2026-03-20",
-        "deep": 44,
-        "rem": 112,
-        "light": 158,
-        "awake": 59,
-        "total": 314,
-        "efficiency": 84,
-        "latency": 8,
-        "breathRate": 14.375
-      },
-      {
         "day": "2026-03-21",
         "deep": 57,
         "rem": 131,
@@ -827,12 +811,12 @@
       }
     ],
     "avgDeep": 39,
-    "avgRem": 77,
-    "avgLight": 204,
-    "avgTotal": 319,
+    "avgRem": 75,
+    "avgLight": 206,
+    "avgTotal": 320,
     "avgEfficiency": 86,
     "avgLatency": 16,
-    "avgBreathRate": 14.6
+    "avgBreathRate": 14.7
   },
   "stress": {
     "available": true,
