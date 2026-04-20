@@ -1,8 +1,8 @@
 {
-  "lastUpdated": "2026-04-20T15:26:26.886Z",
+  "lastUpdated": "2026-04-20T17:14:14.517Z",
   "today": {
     "steps": 0,
-    "avgHeartRate": 68,
+    "avgHeartRate": 86,
     "calories": 429
   },
   "todayScores": {
@@ -40,40 +40,40 @@
   },
   "heartRateTrends": {
     "labels": [
-      "Sat",
       "Sun",
       "Mon",
       "Tue",
       "Wed",
       "Thu",
-      "Fri"
+      "Fri",
+      "Mon"
     ],
     "values": [
-      109,
       81,
       88,
       88,
       80,
       73,
-      68
+      68,
+      86
     ],
     "max": [
-      175,
       119,
       131,
       133,
       133,
       120,
-      101
+      101,
+      121
     ],
     "min": [
-      48,
       45,
       44,
       46,
       46,
       45,
-      50
+      50,
+      46
     ]
   },
   "workoutDistribution": {
@@ -156,7 +156,7 @@
   },
   "metrics": {
     "dailyAvgSteps": 9854,
-    "avgHeartRate": 84,
+    "avgHeartRate": 81,
     "restingHR": 47,
     "activeDays": 6,
     "totalWorkouts": 5,
@@ -197,13 +197,6 @@
     {
       "type": "warning",
       "title": "HR Spike Detected",
-      "message": "Sat: 175 bpm peak",
-      "severity": "medium",
-      "category": "activity"
-    },
-    {
-      "type": "warning",
-      "title": "HR Spike Detected",
       "message": "Sun: 119 bpm peak",
       "severity": "medium",
       "category": "activity"
@@ -219,6 +212,13 @@
       "type": "warning",
       "title": "HR Spike Detected",
       "message": "Tue: 133 bpm peak",
+      "severity": "medium",
+      "category": "activity"
+    },
+    {
+      "type": "warning",
+      "title": "HR Spike Detected",
+      "message": "Wed: 133 bpm peak",
       "severity": "medium",
       "category": "activity"
     }
@@ -822,7 +822,7 @@
     "available": true,
     "today": {
       "stressMinutes": 15,
-      "recoveryMinutes": 60,
+      "recoveryMinutes": 75,
       "summary": "unknown"
     },
     "trend7Days": [
@@ -835,7 +835,7 @@
       "unknown"
     ],
     "avgStressMinutes": 114,
-    "avgRecoveryMinutes": 56,
+    "avgRecoveryMinutes": 58,
     "records": [
       {
         "day": "2026-03-22",
@@ -1014,7 +1014,7 @@
       {
         "day": "2026-04-20",
         "stressHigh": 900,
-        "recoveryHigh": 3600,
+        "recoveryHigh": 4500,
         "daySummary": "unknown"
       }
     ]
