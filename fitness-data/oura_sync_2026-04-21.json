@@ -39976,7 +39976,7 @@
             "meet_daily_targets": 57,
             "move_every_hour": 78,
             "recovery_time": 100,
-            "stay_active": 54,
+            "stay_active": 56,
             "training_frequency": 100,
             "training_volume": 100
           },
@@ -41437,10 +41437,10 @@
           },
           "meters_to_target": 3700,
           "non_wear_time": 600,
-          "resting_time": 21780,
+          "resting_time": 23220,
           "score": 80,
           "sedentary_met_minutes": 7,
-          "sedentary_time": 44040,
+          "sedentary_time": 42600,
           "steps": 9957,
           "target_calories": 1050,
           "target_meters": 18000,
@@ -41826,6 +41826,21 @@
           "day": "2026-04-16",
           "score": 57,
           "timestamp": "2026-04-16T00:00:00.000+00:00"
+        },
+        {
+          "id": "00441c98-e11c-4f23-b751-17605901db3a",
+          "contributors": {
+            "deep_sleep": 38,
+            "efficiency": 81,
+            "latency": 78,
+            "rem_sleep": 36,
+            "restfulness": 68,
+            "timing": 100,
+            "total_sleep": 23
+          },
+          "day": "2026-04-21",
+          "score": 51,
+          "timestamp": "2026-04-21T00:00:00.000+00:00"
         }
       ],
       "next_token": null
@@ -42306,6 +42321,25 @@
           "temperature_deviation": -0.04,
           "temperature_trend_deviation": 0,
           "timestamp": "2026-04-16T00:00:00.000+00:00"
+        },
+        {
+          "id": "7c7481b8-1721-41a4-bc3b-324c85664706",
+          "contributors": {
+            "activity_balance": 90,
+            "body_temperature": 96,
+            "hrv_balance": null,
+            "previous_day_activity": 82,
+            "previous_night": 49,
+            "recovery_index": 59,
+            "resting_heart_rate": 86,
+            "sleep_balance": null,
+            "sleep_regularity": 76
+          },
+          "day": "2026-04-21",
+          "score": 73,
+          "temperature_deviation": -0.27,
+          "temperature_trend_deviation": null,
+          "timestamp": "2026-04-21T00:00:00.000+00:00"
         }
       ],
       "next_token": null
@@ -400209,301 +400243,301 @@
         {
           "timestamp": "2026-04-21T03:52:35.000Z",
           "bpm": 73,
-          "producer_timestamp": 1776728046647,
+          "producer_timestamp": 1776810643317,
           "source": "awake"
         },
         {
           "timestamp": "2026-04-21T03:52:43.000Z",
           "bpm": 69,
-          "producer_timestamp": 1776728046647,
+          "producer_timestamp": 1776810643317,
           "source": "awake"
         },
         {
           "timestamp": "2026-04-21T03:53:25.000Z",
           "bpm": 65,
-          "producer_timestamp": 1776728046647,
+          "producer_timestamp": 1776810643317,
           "source": "awake"
         },
         {
           "timestamp": "2026-04-21T03:58:16.000Z",
           "bpm": 49,
-          "producer_timestamp": 1776728046647,
+          "producer_timestamp": 1776810643317,
           "source": "awake"
         },
         {
           "timestamp": "2026-04-21T03:58:19.000Z",
           "bpm": 48,
-          "producer_timestamp": 1776728046647,
+          "producer_timestamp": 1776810643317,
           "source": "awake"
         },
         {
           "timestamp": "2026-04-21T03:58:20.000Z",
           "bpm": 53,
-          "producer_timestamp": 1776728046647,
+          "producer_timestamp": 1776810643317,
           "source": "awake"
         },
         {
           "timestamp": "2026-04-21T04:13:04.000Z",
           "bpm": 60,
-          "producer_timestamp": 1776728046647,
+          "producer_timestamp": 1776810643317,
           "source": "awake"
         },
         {
           "timestamp": "2026-04-21T04:13:31.000Z",
           "bpm": 49,
-          "producer_timestamp": 1776728046647,
+          "producer_timestamp": 1776810643317,
           "source": "awake"
         },
         {
           "timestamp": "2026-04-21T04:13:47.000Z",
           "bpm": 54,
-          "producer_timestamp": 1776728046647,
+          "producer_timestamp": 1776810643317,
           "source": "awake"
         },
         {
           "timestamp": "2026-04-21T04:18:47.000Z",
           "bpm": 58,
-          "producer_timestamp": 1776728046647,
+          "producer_timestamp": 1776810643317,
           "source": "rest"
         },
         {
           "timestamp": "2026-04-21T04:23:47.000Z",
           "bpm": 54,
-          "producer_timestamp": 1776728046647,
+          "producer_timestamp": 1776810643317,
           "source": "rest"
         },
         {
           "timestamp": "2026-04-21T04:28:47.000Z",
           "bpm": 49,
-          "producer_timestamp": 1776728046647,
+          "producer_timestamp": 1776810643317,
           "source": "rest"
         },
         {
           "timestamp": "2026-04-21T04:33:47.000Z",
           "bpm": 47,
-          "producer_timestamp": 1776728046647,
+          "producer_timestamp": 1776810643317,
           "source": "rest"
         },
         {
           "timestamp": "2026-04-21T04:38:47.000Z",
           "bpm": 48,
-          "producer_timestamp": 1776728046647,
+          "producer_timestamp": 1776810643317,
           "source": "rest"
         },
         {
           "timestamp": "2026-04-21T04:43:47.000Z",
           "bpm": 49,
-          "producer_timestamp": 1776728046647,
+          "producer_timestamp": 1776810643317,
           "source": "rest"
         },
         {
           "timestamp": "2026-04-21T04:48:47.000Z",
           "bpm": 48,
-          "producer_timestamp": 1776728046647,
+          "producer_timestamp": 1776810643317,
           "source": "rest"
         },
         {
           "timestamp": "2026-04-21T04:53:47.000Z",
           "bpm": 50,
-          "producer_timestamp": 1776728046647,
+          "producer_timestamp": 1776810643317,
           "source": "rest"
         },
         {
           "timestamp": "2026-04-21T04:58:47.000Z",
           "bpm": 52,
-          "producer_timestamp": 1776728046647,
+          "producer_timestamp": 1776810643317,
           "source": "rest"
         },
         {
           "timestamp": "2026-04-21T05:03:47.000Z",
           "bpm": 53,
-          "producer_timestamp": 1776728046647,
+          "producer_timestamp": 1776810643317,
           "source": "rest"
         },
         {
           "timestamp": "2026-04-21T05:13:47.000Z",
           "bpm": 50,
-          "producer_timestamp": 1776728046647,
+          "producer_timestamp": 1776810643317,
           "source": "rest"
         },
         {
           "timestamp": "2026-04-21T05:18:47.000Z",
           "bpm": 50,
-          "producer_timestamp": 1776728046647,
+          "producer_timestamp": 1776810643317,
           "source": "rest"
         },
         {
           "timestamp": "2026-04-21T05:23:47.000Z",
           "bpm": 51,
-          "producer_timestamp": 1776728046647,
+          "producer_timestamp": 1776810643317,
           "source": "rest"
         },
         {
           "timestamp": "2026-04-21T05:28:47.000Z",
           "bpm": 50,
-          "producer_timestamp": 1776728046647,
+          "producer_timestamp": 1776810643317,
           "source": "rest"
         },
         {
           "timestamp": "2026-04-21T05:33:47.000Z",
           "bpm": 51,
-          "producer_timestamp": 1776728046647,
+          "producer_timestamp": 1776810643317,
           "source": "rest"
         },
         {
           "timestamp": "2026-04-21T05:38:47.000Z",
           "bpm": 59,
-          "producer_timestamp": 1776728046647,
+          "producer_timestamp": 1776810643317,
           "source": "rest"
         },
         {
           "timestamp": "2026-04-21T05:43:47.000Z",
           "bpm": 58,
-          "producer_timestamp": 1776728046647,
+          "producer_timestamp": 1776810643317,
           "source": "rest"
         },
         {
           "timestamp": "2026-04-21T05:48:47.000Z",
           "bpm": 53,
-          "producer_timestamp": 1776728046647,
+          "producer_timestamp": 1776810643317,
           "source": "rest"
         },
         {
           "timestamp": "2026-04-21T05:53:47.000Z",
           "bpm": 51,
-          "producer_timestamp": 1776728046647,
+          "producer_timestamp": 1776810643317,
           "source": "rest"
         },
         {
           "timestamp": "2026-04-21T05:58:47.000Z",
           "bpm": 50,
-          "producer_timestamp": 1776728046647,
+          "producer_timestamp": 1776810643317,
           "source": "rest"
         },
         {
           "timestamp": "2026-04-21T06:03:47.000Z",
           "bpm": 49,
-          "producer_timestamp": 1776728046647,
+          "producer_timestamp": 1776810643317,
           "source": "rest"
         },
         {
           "timestamp": "2026-04-21T06:08:47.000Z",
           "bpm": 51,
-          "producer_timestamp": 1776728046647,
+          "producer_timestamp": 1776810643317,
           "source": "rest"
         },
         {
           "timestamp": "2026-04-21T06:13:47.000Z",
           "bpm": 51,
-          "producer_timestamp": 1776728046647,
+          "producer_timestamp": 1776810643317,
           "source": "rest"
         },
         {
           "timestamp": "2026-04-21T06:18:47.000Z",
           "bpm": 50,
-          "producer_timestamp": 1776728046647,
+          "producer_timestamp": 1776810643317,
           "source": "rest"
         },
         {
           "timestamp": "2026-04-21T06:23:47.000Z",
           "bpm": 52,
-          "producer_timestamp": 1776728046647,
+          "producer_timestamp": 1776810643317,
           "source": "rest"
         },
         {
           "timestamp": "2026-04-21T06:28:47.000Z",
           "bpm": 51,
-          "producer_timestamp": 1776728046647,
+          "producer_timestamp": 1776810643317,
           "source": "rest"
         },
         {
           "timestamp": "2026-04-21T06:33:47.000Z",
           "bpm": 52,
-          "producer_timestamp": 1776728046647,
+          "producer_timestamp": 1776810643317,
           "source": "rest"
         },
         {
           "timestamp": "2026-04-21T06:38:47.000Z",
           "bpm": 50,
-          "producer_timestamp": 1776728046647,
+          "producer_timestamp": 1776810643317,
           "source": "rest"
         },
         {
           "timestamp": "2026-04-21T06:43:47.000Z",
           "bpm": 51,
-          "producer_timestamp": 1776728046647,
+          "producer_timestamp": 1776810643317,
           "source": "rest"
         },
         {
           "timestamp": "2026-04-21T06:47:02.000Z",
           "bpm": 51,
-          "producer_timestamp": 1776728046647,
+          "producer_timestamp": 1776810643317,
           "source": "rest"
         },
         {
           "timestamp": "2026-04-21T06:52:02.000Z",
           "bpm": 52,
-          "producer_timestamp": 1776728046647,
+          "producer_timestamp": 1776810643317,
           "source": "rest"
         },
         {
           "timestamp": "2026-04-21T06:57:02.000Z",
           "bpm": 57,
-          "producer_timestamp": 1776728046647,
+          "producer_timestamp": 1776810643317,
           "source": "rest"
         },
         {
           "timestamp": "2026-04-21T07:02:02.000Z",
           "bpm": 56,
-          "producer_timestamp": 1776728046647,
+          "producer_timestamp": 1776810643317,
           "source": "rest"
         },
         {
           "timestamp": "2026-04-21T07:07:02.000Z",
           "bpm": 62,
-          "producer_timestamp": 1776728046647,
+          "producer_timestamp": 1776810643317,
           "source": "rest"
         },
         {
           "timestamp": "2026-04-21T07:12:02.000Z",
           "bpm": 59,
-          "producer_timestamp": 1776728046647,
+          "producer_timestamp": 1776810643317,
           "source": "rest"
         },
         {
           "timestamp": "2026-04-21T07:18:47.000Z",
           "bpm": 47,
-          "producer_timestamp": 1776728046647,
+          "producer_timestamp": 1776810643317,
           "source": "rest"
         },
         {
           "timestamp": "2026-04-21T07:23:47.000Z",
           "bpm": 49,
-          "producer_timestamp": 1776728046647,
+          "producer_timestamp": 1776810643317,
           "source": "rest"
         },
         {
           "timestamp": "2026-04-21T07:28:47.000Z",
           "bpm": 48,
-          "producer_timestamp": 1776728046647,
+          "producer_timestamp": 1776810643317,
           "source": "rest"
         },
         {
           "timestamp": "2026-04-21T07:33:47.000Z",
           "bpm": 48,
-          "producer_timestamp": 1776728046647,
+          "producer_timestamp": 1776810643317,
           "source": "rest"
         },
         {
           "timestamp": "2026-04-21T07:38:47.000Z",
           "bpm": 47,
-          "producer_timestamp": 1776728046647,
+          "producer_timestamp": 1776810643317,
           "source": "rest"
         },
         {
           "timestamp": "2026-04-21T07:43:47.000Z",
           "bpm": 47,
-          "producer_timestamp": 1776728046647,
+          "producer_timestamp": 1776810643317,
           "source": "rest"
         }
       ],
@@ -408277,8 +408311,81 @@
       "next_token": null
     },
     "workout": {
-      "data": [],
-      "error": "HTTP 504: <!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n<HTML><HEAD><META HTTP-EQUIV=\"Content-Type\" CONTENT=\"text/html; charset=UTF-8\">\n<TITLE>ERROR: The request could not be satisfied</TITLE>\n</HEAD><BODY>\n<H1>504 Gateway Timeout ERROR</H1>\n<H2>The request could not be satisfied.</H2>\n<HR noshade size=\"1px\">\nWe can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again later, or contact the app or website owner.\n<BR clear=\"all\">\nIf you provide content to customers through CloudFront, you can find steps to troubleshoot and help prevent this error by reviewing the CloudFront documentation.\n<BR clear=\"all\">\n<HR noshade size=\"1px\">\n<PRE>\nGenerated by cloudfront (CloudFront) HTTP3 Server\nRequest ID: jz5nl8X3nCW4ExwQRZpxYHhsRKaTxmxyojlwdFW3k8lhQXGoZakQTw&#x3D;&#x3D;\n</PRE>\n<ADDRESS>\n</ADDRESS>\n</BODY></HTML>"
+      "data": [
+        {
+          "id": "3c84a6ce-edab-49c2-8f6d-c7324a8fb5ff",
+          "activity": "walking",
+          "calories": 188.23941040039062,
+          "day": "2026-03-26",
+          "distance": 602.4643271293827,
+          "end_datetime": "2026-03-26T08:45:00.000-04:00",
+          "intensity": "moderate",
+          "label": null,
+          "source": "confirmed",
+          "start_datetime": "2026-03-26T07:53:00.000-04:00"
+        },
+        {
+          "id": "aba4ab26-b48e-4f3c-b3ea-06c31b99474a",
+          "activity": "walking",
+          "calories": 142.11322021484375,
+          "day": "2026-03-28",
+          "distance": null,
+          "end_datetime": "2026-03-28T08:22:00.000-04:00",
+          "intensity": "moderate",
+          "label": null,
+          "source": "confirmed",
+          "start_datetime": "2026-03-28T07:51:00.000-04:00"
+        },
+        {
+          "id": "6af943bb-2281-4f0a-9f59-53d4037f0c1b",
+          "activity": "walking",
+          "calories": 187.084716796875,
+          "day": "2026-03-29",
+          "distance": 2087.4202718505826,
+          "end_datetime": "2026-03-29T18:40:00.000-04:00",
+          "intensity": "moderate",
+          "label": null,
+          "source": "confirmed",
+          "start_datetime": "2026-03-29T17:56:00.000-04:00"
+        },
+        {
+          "id": "a577e792-053d-49d8-bebd-f491adfaa8f0",
+          "activity": "walking",
+          "calories": 79.51266479492188,
+          "day": "2026-04-07",
+          "distance": 91.59630042344483,
+          "end_datetime": "2026-04-07T05:32:00.000-04:00",
+          "intensity": "moderate",
+          "label": null,
+          "source": "confirmed",
+          "start_datetime": "2026-04-07T05:06:00.000-04:00"
+        },
+        {
+          "id": "22d525c2-452c-484f-98ad-9499c2f75fee",
+          "activity": "walking",
+          "calories": 147.88050842285156,
+          "day": "2026-04-07",
+          "distance": 336.55581108189256,
+          "end_datetime": "2026-04-07T07:57:00.000-04:00",
+          "intensity": "moderate",
+          "label": null,
+          "source": "confirmed",
+          "start_datetime": "2026-04-07T07:17:00.000-04:00"
+        },
+        {
+          "id": "f130285b-db2b-48b2-b9d6-4797bb8843ff",
+          "activity": "walking",
+          "calories": 96.08140563964844,
+          "day": "2026-04-20",
+          "distance": 918.0820719828399,
+          "end_datetime": "2026-04-20T08:35:00.000-04:00",
+          "intensity": "moderate",
+          "label": null,
+          "source": "confirmed",
+          "start_datetime": "2026-04-20T08:14:00.000-04:00"
+        }
+      ],
+      "next_token": null
     },
     "session": {
       "data": [],
@@ -408469,6 +408576,14 @@
           "breathing_disturbance_index": 0,
           "day": "2026-04-16",
           "spo2_percentage": null
+        },
+        {
+          "id": "de145437-da77-423d-96ed-6910ef96e190",
+          "breathing_disturbance_index": 2,
+          "day": "2026-04-21",
+          "spo2_percentage": {
+            "average": 97.386
+          }
         }
       ],
       "next_token": null
@@ -408944,6 +409059,16 @@
             "sleep_recovery": 40.3,
             "daytime_recovery": 37,
             "stress": 66.9
+          },
+          "level": "adequate"
+        },
+        {
+          "id": "e09ea624-b9f2-4398-9616-dfbc5961eddb",
+          "day": "2026-04-21",
+          "contributors": {
+            "sleep_recovery": 36.1,
+            "daytime_recovery": 36.9,
+            "stress": 57.5
           },
           "level": "adequate"
         }
