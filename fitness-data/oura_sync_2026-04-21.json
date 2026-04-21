@@ -39970,8 +39970,8 @@
         {
           "id": "d5654c70-e9cc-4b49-bd37-531a24935bb3",
           "active_calories": 832,
-          "average_met_minutes": 1.6875,
-          "class_5_min": "1111111111111111133333332234444444444443333332222234444332233443222223322222222222222222211121222223322222222222222222221222222222222222222222222222222222222222222222223333334444343222222333322233222323333334322222222222222222222211111322222321111111111111121111",
+          "average_met_minutes": 1.625,
+          "class_5_min": "11111111111111111333333322344444444444433333322222344443322334432222233222222222222222222111212222233222222222222222222212222222222222222222222222222222222222222222222233333344443432222223333222332223233333343222222222222222222222111113222223211111111111111211111111111111111111121111111",
           "contributors": {
             "meet_daily_targets": 57,
             "move_every_hour": 78,
@@ -41299,6 +41299,7 @@
               0.9,
               0.9,
               0.9,
+              1.1,
               0.9,
               0.9,
               0.9,
@@ -41315,7 +41316,10 @@
               0.9,
               0.9,
               0.9,
+              1.1,
+              1,
               0.9,
+              1,
               0.9,
               0.9,
               0.9,
@@ -41346,6 +41350,8 @@
               0.9,
               0.9,
               0.9,
+              1.1,
+              1,
               0.9,
               0.9,
               0.9,
@@ -41355,6 +41361,7 @@
               0.9,
               0.9,
               0.9,
+              1,
               0.9,
               0.9,
               0.9,
@@ -41381,43 +41388,36 @@
               0.9,
               0.9,
               0.9,
+              1.4,
+              1.1,
+              1.2,
               0.9,
               0.9,
+              1.1,
+              1,
               0.9,
+              1,
               0.9,
               0.9,
               0.9,
+              1.3,
               0.9,
               0.9,
               0.9,
               0.9,
+              1.1,
+              1.2,
               0.9,
               0.9,
               0.9,
               0.9,
+              1.2,
+              1,
               0.9,
               0.9,
               0.9,
               0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
+              1.1,
               0.9,
               0.9,
               0.9,
@@ -41437,15 +41437,15 @@
           },
           "meters_to_target": 3700,
           "non_wear_time": 300,
-          "resting_time": 15060,
+          "resting_time": 22260,
           "score": 80,
           "sedentary_met_minutes": 7,
-          "sedentary_time": 43440,
+          "sedentary_time": 43620,
           "steps": 9957,
           "target_calories": 1050,
           "target_meters": 18000,
           "timestamp": "2026-04-20T04:00:00.000-04:00",
-          "total_calories": 3294
+          "total_calories": 3296
         }
       ],
       "next_token": null
@@ -400043,6 +400043,468 @@
           "bpm": 60,
           "producer_timestamp": 1776728046647,
           "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-21T02:39:31.000Z",
+          "bpm": 52,
+          "producer_timestamp": 1776728046647,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-21T02:39:45.000Z",
+          "bpm": 55,
+          "producer_timestamp": 1776728046647,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-21T02:39:53.000Z",
+          "bpm": 56,
+          "producer_timestamp": 1776728046647,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-21T02:44:34.000Z",
+          "bpm": 49,
+          "producer_timestamp": 1776728046647,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-21T02:44:39.000Z",
+          "bpm": 56,
+          "producer_timestamp": 1776728046647,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-21T02:45:32.000Z",
+          "bpm": 52,
+          "producer_timestamp": 1776728046647,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-21T02:49:51.000Z",
+          "bpm": 62,
+          "producer_timestamp": 1776728046647,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-21T02:49:52.000Z",
+          "bpm": 64,
+          "producer_timestamp": 1776728046647,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-21T02:49:54.000Z",
+          "bpm": 61,
+          "producer_timestamp": 1776728046647,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-21T02:51:25.000Z",
+          "bpm": 51,
+          "producer_timestamp": 1776728046647,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-21T02:51:27.000Z",
+          "bpm": 56,
+          "producer_timestamp": 1776728046647,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-21T02:52:08.000Z",
+          "bpm": 53,
+          "producer_timestamp": 1776728046647,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-21T02:53:35.000Z",
+          "bpm": 61,
+          "producer_timestamp": 1776728046647,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-21T02:53:36.000Z",
+          "bpm": 56,
+          "producer_timestamp": 1776728046647,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-21T02:53:57.000Z",
+          "bpm": 65,
+          "producer_timestamp": 1776728046647,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-21T02:56:15.000Z",
+          "bpm": 52,
+          "producer_timestamp": 1776728046647,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-21T02:56:41.000Z",
+          "bpm": 56,
+          "producer_timestamp": 1776728046647,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-21T02:56:46.000Z",
+          "bpm": 49,
+          "producer_timestamp": 1776728046647,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-21T03:01:25.000Z",
+          "bpm": 54,
+          "producer_timestamp": 1776728046647,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-21T03:01:54.000Z",
+          "bpm": 51,
+          "producer_timestamp": 1776728046647,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-21T03:02:59.000Z",
+          "bpm": 55,
+          "producer_timestamp": 1776728046647,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-21T03:06:39.000Z",
+          "bpm": 51,
+          "producer_timestamp": 1776728046647,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-21T03:07:17.000Z",
+          "bpm": 53,
+          "producer_timestamp": 1776728046647,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-21T03:07:49.000Z",
+          "bpm": 48,
+          "producer_timestamp": 1776728046647,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-21T03:23:04.000Z",
+          "bpm": 46,
+          "producer_timestamp": 1776728046647,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-21T03:28:04.000Z",
+          "bpm": 46,
+          "producer_timestamp": 1776728046647,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-21T03:33:04.000Z",
+          "bpm": 47,
+          "producer_timestamp": 1776728046647,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-21T03:52:35.000Z",
+          "bpm": 73,
+          "producer_timestamp": 1776728046647,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-21T03:52:43.000Z",
+          "bpm": 69,
+          "producer_timestamp": 1776728046647,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-21T03:53:25.000Z",
+          "bpm": 65,
+          "producer_timestamp": 1776728046647,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-21T03:58:16.000Z",
+          "bpm": 49,
+          "producer_timestamp": 1776728046647,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-21T03:58:19.000Z",
+          "bpm": 48,
+          "producer_timestamp": 1776728046647,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-21T03:58:20.000Z",
+          "bpm": 53,
+          "producer_timestamp": 1776728046647,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-21T04:13:04.000Z",
+          "bpm": 60,
+          "producer_timestamp": 1776728046647,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-21T04:13:31.000Z",
+          "bpm": 49,
+          "producer_timestamp": 1776728046647,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-21T04:13:47.000Z",
+          "bpm": 54,
+          "producer_timestamp": 1776728046647,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-04-21T04:18:47.000Z",
+          "bpm": 58,
+          "producer_timestamp": 1776728046647,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-21T04:23:47.000Z",
+          "bpm": 54,
+          "producer_timestamp": 1776728046647,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-21T04:28:47.000Z",
+          "bpm": 49,
+          "producer_timestamp": 1776728046647,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-21T04:33:47.000Z",
+          "bpm": 47,
+          "producer_timestamp": 1776728046647,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-21T04:38:47.000Z",
+          "bpm": 48,
+          "producer_timestamp": 1776728046647,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-21T04:43:47.000Z",
+          "bpm": 49,
+          "producer_timestamp": 1776728046647,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-21T04:48:47.000Z",
+          "bpm": 48,
+          "producer_timestamp": 1776728046647,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-21T04:53:47.000Z",
+          "bpm": 50,
+          "producer_timestamp": 1776728046647,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-21T04:58:47.000Z",
+          "bpm": 52,
+          "producer_timestamp": 1776728046647,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-21T05:03:47.000Z",
+          "bpm": 53,
+          "producer_timestamp": 1776728046647,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-21T05:13:47.000Z",
+          "bpm": 50,
+          "producer_timestamp": 1776728046647,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-21T05:18:47.000Z",
+          "bpm": 50,
+          "producer_timestamp": 1776728046647,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-21T05:23:47.000Z",
+          "bpm": 51,
+          "producer_timestamp": 1776728046647,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-21T05:28:47.000Z",
+          "bpm": 50,
+          "producer_timestamp": 1776728046647,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-21T05:33:47.000Z",
+          "bpm": 51,
+          "producer_timestamp": 1776728046647,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-21T05:38:47.000Z",
+          "bpm": 59,
+          "producer_timestamp": 1776728046647,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-21T05:43:47.000Z",
+          "bpm": 58,
+          "producer_timestamp": 1776728046647,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-21T05:48:47.000Z",
+          "bpm": 53,
+          "producer_timestamp": 1776728046647,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-21T05:53:47.000Z",
+          "bpm": 51,
+          "producer_timestamp": 1776728046647,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-21T05:58:47.000Z",
+          "bpm": 50,
+          "producer_timestamp": 1776728046647,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-21T06:03:47.000Z",
+          "bpm": 49,
+          "producer_timestamp": 1776728046647,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-21T06:08:47.000Z",
+          "bpm": 51,
+          "producer_timestamp": 1776728046647,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-21T06:13:47.000Z",
+          "bpm": 51,
+          "producer_timestamp": 1776728046647,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-21T06:18:47.000Z",
+          "bpm": 50,
+          "producer_timestamp": 1776728046647,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-21T06:23:47.000Z",
+          "bpm": 52,
+          "producer_timestamp": 1776728046647,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-21T06:28:47.000Z",
+          "bpm": 51,
+          "producer_timestamp": 1776728046647,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-21T06:33:47.000Z",
+          "bpm": 52,
+          "producer_timestamp": 1776728046647,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-21T06:38:47.000Z",
+          "bpm": 50,
+          "producer_timestamp": 1776728046647,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-21T06:43:47.000Z",
+          "bpm": 51,
+          "producer_timestamp": 1776728046647,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-21T06:47:02.000Z",
+          "bpm": 51,
+          "producer_timestamp": 1776728046647,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-21T06:52:02.000Z",
+          "bpm": 52,
+          "producer_timestamp": 1776728046647,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-21T06:57:02.000Z",
+          "bpm": 57,
+          "producer_timestamp": 1776728046647,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-21T07:02:02.000Z",
+          "bpm": 56,
+          "producer_timestamp": 1776728046647,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-21T07:07:02.000Z",
+          "bpm": 62,
+          "producer_timestamp": 1776728046647,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-21T07:12:02.000Z",
+          "bpm": 59,
+          "producer_timestamp": 1776728046647,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-21T07:18:47.000Z",
+          "bpm": 47,
+          "producer_timestamp": 1776728046647,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-21T07:23:47.000Z",
+          "bpm": 49,
+          "producer_timestamp": 1776728046647,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-21T07:28:47.000Z",
+          "bpm": 48,
+          "producer_timestamp": 1776728046647,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-21T07:33:47.000Z",
+          "bpm": 48,
+          "producer_timestamp": 1776728046647,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-21T07:38:47.000Z",
+          "bpm": 47,
+          "producer_timestamp": 1776728046647,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-04-21T07:43:47.000Z",
+          "bpm": 47,
+          "producer_timestamp": 1776728046647,
+          "source": "rest"
         }
       ],
       "next_token": null
