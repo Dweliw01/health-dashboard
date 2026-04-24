@@ -1,8 +1,8 @@
 {
-  "lastUpdated": "2026-04-24T15:15:11.742Z",
+  "lastUpdated": "2026-04-24T17:06:36.377Z",
   "today": {
     "steps": 3558,
-    "avgHeartRate": 60,
+    "avgHeartRate": 93,
     "calories": 749
   },
   "todayScores": {
@@ -55,7 +55,7 @@
       55,
       83,
       85,
-      60
+      93
     ],
     "max": [
       120,
@@ -64,7 +64,7 @@
       73,
       123,
       111,
-      67
+      138
     ],
     "min": [
       45,
@@ -156,7 +156,7 @@
   },
   "metrics": {
     "dailyAvgSteps": 5728,
-    "avgHeartRate": 73,
+    "avgHeartRate": 78,
     "restingHR": 46,
     "activeDays": 4,
     "totalWorkouts": 6,
@@ -204,13 +204,6 @@
     {
       "type": "warning",
       "title": "HR Spike Detected",
-      "message": "Fri: 101 bpm peak",
-      "severity": "medium",
-      "category": "activity"
-    },
-    {
-      "type": "warning",
-      "title": "HR Spike Detected",
       "message": "Mon: 122 bpm peak",
       "severity": "medium",
       "category": "activity"
@@ -219,6 +212,13 @@
       "type": "warning",
       "title": "HR Spike Detected",
       "message": "Wed: 123 bpm peak",
+      "severity": "medium",
+      "category": "activity"
+    },
+    {
+      "type": "warning",
+      "title": "HR Spike Detected",
+      "message": "Thu: 111 bpm peak",
       "severity": "medium",
       "category": "activity"
     }
@@ -795,7 +795,7 @@
   "stress": {
     "available": true,
     "today": {
-      "stressMinutes": 0,
+      "stressMinutes": 90,
       "recoveryMinutes": 0,
       "summary": "unknown"
     },
@@ -808,7 +808,7 @@
       "stressful",
       "unknown"
     ],
-    "avgStressMinutes": 75,
+    "avgStressMinutes": 88,
     "avgRecoveryMinutes": 64,
     "records": [
       {
@@ -987,7 +987,7 @@
       },
       {
         "day": "2026-04-24",
-        "stressHigh": 0,
+        "stressHigh": 5400,
         "recoveryHigh": 0,
         "daySummary": "unknown"
       }
