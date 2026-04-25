@@ -41811,6 +41811,21 @@
           "day": "2026-04-23",
           "score": 61,
           "timestamp": "2026-04-23T00:00:00.000+00:00"
+        },
+        {
+          "id": "436765fb-c0aa-4d4d-a742-1b084178b137",
+          "contributors": {
+            "deep_sleep": 44,
+            "efficiency": 90,
+            "latency": 83,
+            "rem_sleep": 52,
+            "restfulness": 69,
+            "timing": 78,
+            "total_sleep": 43
+          },
+          "day": "2026-04-25",
+          "score": 60,
+          "timestamp": "2026-04-25T00:00:00.000+00:00"
         }
       ],
       "next_token": null
@@ -42272,6 +42287,25 @@
           "temperature_deviation": null,
           "temperature_trend_deviation": null,
           "timestamp": "2026-04-23T00:00:00.000+00:00"
+        },
+        {
+          "id": "db6be2dd-625c-4bc8-9973-8ff780cc7163",
+          "contributors": {
+            "activity_balance": 86,
+            "body_temperature": 100,
+            "hrv_balance": 88,
+            "previous_day_activity": 78,
+            "previous_night": 60,
+            "recovery_index": 60,
+            "resting_heart_rate": 100,
+            "sleep_balance": 28,
+            "sleep_regularity": 84
+          },
+          "day": "2026-04-25",
+          "score": 72,
+          "temperature_deviation": 0.02,
+          "temperature_trend_deviation": 0,
+          "timestamp": "2026-04-25T00:00:00.000+00:00"
         }
       ],
       "next_token": null
@@ -386316,6 +386350,14 @@
           "spo2_percentage": {
             "average": 97.786
           }
+        },
+        {
+          "id": "91c31a36-4201-4536-a9b7-3af1eefb4b50",
+          "breathing_disturbance_index": 1,
+          "day": "2026-04-25",
+          "spo2_percentage": {
+            "average": 98.44
+          }
         }
       ],
       "next_token": null
@@ -386531,6 +386573,13 @@
           "day_summary": null,
           "recovery_high": 0,
           "stress_high": 5400
+        },
+        {
+          "id": "61cc653e-52a1-4564-ad11-84b4f3f25084",
+          "day": "2026-04-25",
+          "day_summary": null,
+          "recovery_high": 0,
+          "stress_high": 0
         }
       ],
       "next_token": null
