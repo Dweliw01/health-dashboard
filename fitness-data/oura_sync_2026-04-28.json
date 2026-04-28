@@ -39971,7 +39971,7 @@
           "id": "7bd7c73e-309c-48e3-ae56-67eb6d0e2a00",
           "active_calories": 789,
           "average_met_minutes": 1.59375,
-          "class_5_min": "000000000000000000233333433344444444444443333333333333433333232222332222222333221111111112222222222222232222333322223323222333223322222222222222111111222222222222222222333223322221120022223323222222233223333333333333211111111111111112111111111211111111200111111111111111111111211111111111",
+          "class_5_min": "000000000000000000233333433344444444444443333333333333433333232222332222222333221111111112222222222222232222333322223323222333223322222222222222111111222222222222222222333223322221120022223323222222233223333333333333211111111111111112111111111211111111200111111111111111111111211111111211",
           "contributors": {
             "meet_daily_targets": 1,
             "move_every_hour": 95,
@@ -41420,15 +41420,15 @@
               0.9,
               0.9,
               0.9,
+              1.5,
+              1,
+              0.9,
+              1.3,
+              1.1,
               0.9,
               0.9,
               0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
+              1.1,
               0.9,
               0.9,
               0.9
@@ -41437,15 +41437,15 @@
           },
           "meters_to_target": 4400,
           "non_wear_time": 7020,
-          "resting_time": 24840,
+          "resting_time": 24720,
           "score": 71,
           "sedentary_met_minutes": 5,
-          "sedentary_time": 33780,
+          "sedentary_time": 33900,
           "steps": 7718,
           "target_calories": 1050,
           "target_meters": 18000,
           "timestamp": "2026-04-27T04:00:00.000-04:00",
-          "total_calories": 3261
+          "total_calories": 3262
         }
       ],
       "next_token": null
@@ -41781,6 +41781,21 @@
           "day": "2026-04-25",
           "score": 60,
           "timestamp": "2026-04-25T00:00:00.000+00:00"
+        },
+        {
+          "id": "9c275b0f-6be8-4d8c-9a8e-b42c677b6391",
+          "contributors": {
+            "deep_sleep": 80,
+            "efficiency": 86,
+            "latency": 72,
+            "rem_sleep": 95,
+            "restfulness": 70,
+            "timing": 83,
+            "total_sleep": 62
+          },
+          "day": "2026-04-28",
+          "score": 74,
+          "timestamp": "2026-04-28T00:00:00.000+00:00"
         }
       ],
       "next_token": null
@@ -42204,6 +42219,25 @@
           "temperature_deviation": 0.02,
           "temperature_trend_deviation": 0,
           "timestamp": "2026-04-25T00:00:00.000+00:00"
+        },
+        {
+          "id": "284d4b5b-0c28-4e94-ae0e-5b31c6946612",
+          "contributors": {
+            "activity_balance": 88,
+            "body_temperature": 92,
+            "hrv_balance": 89,
+            "previous_day_activity": 88,
+            "previous_night": 78,
+            "recovery_index": 71,
+            "resting_heart_rate": 72,
+            "sleep_balance": 39,
+            "sleep_regularity": 85
+          },
+          "day": "2026-04-28",
+          "score": 75,
+          "temperature_deviation": 0.16,
+          "temperature_trend_deviation": 0.13,
+          "timestamp": "2026-04-28T00:00:00.000+00:00"
         }
       ],
       "next_token": null
@@ -384328,6 +384362,14 @@
           "spo2_percentage": {
             "average": 98.44
           }
+        },
+        {
+          "id": "1cfc495e-a93a-4209-a49f-e5f9a0404a13",
+          "breathing_disturbance_index": 0,
+          "day": "2026-04-28",
+          "spo2_percentage": {
+            "average": 98.34
+          }
         }
       ],
       "next_token": null
@@ -384541,7 +384583,7 @@
           "id": "ba06c634-9c0d-4956-afe1-8d7042627bd6",
           "day": "2026-04-27",
           "day_summary": "stressful",
-          "recovery_high": 9000,
+          "recovery_high": 3600,
           "stress_high": 11700
         },
         {
@@ -384773,6 +384815,16 @@
             "sleep_recovery": 40.6,
             "daytime_recovery": 40.4,
             "stress": 56.2
+          },
+          "level": "adequate"
+        },
+        {
+          "id": "07c802fd-5242-476b-bf47-9aceebb1983b",
+          "day": "2026-04-28",
+          "contributors": {
+            "sleep_recovery": 40.9,
+            "daytime_recovery": 41.9,
+            "stress": 50.9
           },
           "level": "adequate"
         }
