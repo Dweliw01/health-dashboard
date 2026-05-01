@@ -39976,7 +39976,7 @@
             "meet_daily_targets": 43,
             "move_every_hour": 100,
             "recovery_time": 100,
-            "stay_active": 74,
+            "stay_active": 68,
             "training_frequency": 100,
             "training_volume": 100
           },
@@ -41437,10 +41437,10 @@
           },
           "meters_to_target": -9700,
           "non_wear_time": 1020,
-          "resting_time": 19860,
-          "score": 82,
+          "resting_time": 15780,
+          "score": 81,
           "sedentary_met_minutes": 9,
-          "sedentary_time": 34020,
+          "sedentary_time": 38100,
           "steps": 20090,
           "target_calories": 750,
           "target_meters": 13000,
@@ -41785,16 +41785,16 @@
         {
           "id": "934ed99c-2aa2-4e66-83f8-772c527856f7",
           "contributors": {
-            "deep_sleep": 32,
-            "efficiency": 58,
-            "latency": 89,
-            "rem_sleep": 40,
-            "restfulness": 52,
-            "timing": 87,
-            "total_sleep": 25
+            "deep_sleep": 34,
+            "efficiency": 53,
+            "latency": 86,
+            "rem_sleep": 54,
+            "restfulness": 36,
+            "timing": 100,
+            "total_sleep": 35
           },
           "day": "2026-05-01",
-          "score": 47,
+          "score": 50,
           "timestamp": "2026-05-01T00:00:00.000+00:00"
         }
       ],
@@ -42225,16 +42225,16 @@
           "contributors": {
             "activity_balance": 80,
             "body_temperature": 99,
-            "hrv_balance": 80,
-            "previous_day_activity": 76,
-            "previous_night": 44,
-            "recovery_index": 17,
+            "hrv_balance": 81,
+            "previous_day_activity": 73,
+            "previous_night": 48,
+            "recovery_index": 34,
             "resting_heart_rate": 73,
-            "sleep_balance": 42,
-            "sleep_regularity": 85
+            "sleep_balance": 46,
+            "sleep_regularity": 86
           },
           "day": "2026-05-01",
-          "score": 62,
+          "score": 65,
           "temperature_deviation": -0.16,
           "temperature_trend_deviation": 0,
           "timestamp": "2026-05-01T00:00:00.000+00:00"
@@ -394343,10 +394343,10 @@
         },
         {
           "id": "f1da5251-89f5-4c46-a862-a324a0fa9485",
-          "breathing_disturbance_index": 5,
+          "breathing_disturbance_index": 2,
           "day": "2026-05-01",
           "spo2_percentage": {
-            "average": 98.069
+            "average": 98.212
           }
         }
       ],
@@ -394800,8 +394800,8 @@
           "id": "bb73ac45-3d12-4cc8-a30d-8bd2b6b1a0a9",
           "day": "2026-05-01",
           "contributors": {
-            "sleep_recovery": 35.2,
-            "daytime_recovery": 33.7,
+            "sleep_recovery": 36.1,
+            "daytime_recovery": 34.3,
             "stress": 65.7
           },
           "level": "adequate"
