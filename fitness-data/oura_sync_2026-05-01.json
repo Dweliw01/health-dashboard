@@ -39970,13 +39970,13 @@
         {
           "id": "93ff28fe-389a-4901-8406-3602d485c57b",
           "active_calories": 1342,
-          "average_met_minutes": 2,
-          "class_5_min": "122122122322322333333332323344444444444443333433333333333333232333322233332322222222222322222222222223222322222222322222222212333222233233332323332222222222222223222222222333333444444443443444443444323322222222233333333432222222221111111111122212322233311111111111111111111111",
+          "average_met_minutes": 1.9375,
+          "class_5_min": "122122122322322333333332323344444444444443333433333333333333232333322233332322222222222322222222222223222322222222322222222212333222233233332323332222222222222223222222222333333444444443443444443444323322222222233333333432222222221111111111122212322233311111111111111111111111122211222000",
           "contributors": {
             "meet_daily_targets": 43,
             "move_every_hour": 100,
             "recovery_time": 100,
-            "stay_active": 68,
+            "stay_active": 74,
             "training_frequency": 100,
             "training_volume": 100
           },
@@ -41380,6 +41380,17 @@
               0.9,
               0.9,
               0.9,
+              1.1,
+              1.3,
+              1.6,
+              1.2,
+              1.2,
+              1.3,
+              1.2,
+              1.2,
+              1.3,
+              1.2,
+              1.2,
               0.9,
               0.9,
               0.9,
@@ -41391,61 +41402,50 @@
               0.9,
               0.9,
               0.9,
+              1.3,
+              0.9,
+              0.9,
+              1.3,
+              1.2,
+              1,
+              1.1,
+              1.4,
+              1.2,
               0.9,
               0.9,
               0.9,
               0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9
+              0.1,
+              0.1,
+              0.1,
+              0.1,
+              0.1,
+              0.1,
+              0.1,
+              0.1,
+              0.1,
+              0.1,
+              0.1,
+              0.1,
+              0.1,
+              0.1,
+              0.1,
+              0.1,
+              0.1
             ],
             "timestamp": "2026-04-30T04:00:00.000-04:00"
           },
           "meters_to_target": -9700,
-          "non_wear_time": 0,
-          "resting_time": 14460,
-          "score": 81,
+          "non_wear_time": 1020,
+          "resting_time": 19860,
+          "score": 82,
           "sedentary_met_minutes": 9,
-          "sedentary_time": 36900,
+          "sedentary_time": 34020,
           "steps": 20090,
           "target_calories": 750,
           "target_meters": 13000,
           "timestamp": "2026-04-30T04:00:00.000-04:00",
-          "total_calories": 3925
+          "total_calories": 3933
         }
       ],
       "next_token": null
@@ -41781,6 +41781,21 @@
           "day": "2026-04-30",
           "score": 62,
           "timestamp": "2026-04-30T00:00:00.000+00:00"
+        },
+        {
+          "id": "934ed99c-2aa2-4e66-83f8-772c527856f7",
+          "contributors": {
+            "deep_sleep": 32,
+            "efficiency": 58,
+            "latency": 89,
+            "rem_sleep": 40,
+            "restfulness": 52,
+            "timing": 87,
+            "total_sleep": 25
+          },
+          "day": "2026-05-01",
+          "score": 47,
+          "timestamp": "2026-05-01T00:00:00.000+00:00"
         }
       ],
       "next_token": null
@@ -42204,6 +42219,25 @@
           "temperature_deviation": 0.09,
           "temperature_trend_deviation": 0.16,
           "timestamp": "2026-04-30T00:00:00.000+00:00"
+        },
+        {
+          "id": "daabb35b-aa44-44ed-a5c3-04a45619ba74",
+          "contributors": {
+            "activity_balance": 80,
+            "body_temperature": 99,
+            "hrv_balance": 80,
+            "previous_day_activity": 76,
+            "previous_night": 44,
+            "recovery_index": 17,
+            "resting_heart_rate": 73,
+            "sleep_balance": 42,
+            "sleep_regularity": 85
+          },
+          "day": "2026-05-01",
+          "score": 62,
+          "temperature_deviation": -0.16,
+          "temperature_trend_deviation": 0,
+          "timestamp": "2026-05-01T00:00:00.000+00:00"
         }
       ],
       "next_token": null
@@ -386855,6 +386889,360 @@
           "bpm": 60,
           "producer_timestamp": 1777594695938,
           "source": "rest"
+        },
+        {
+          "timestamp": "2026-05-01T03:36:12.000Z",
+          "bpm": 58,
+          "producer_timestamp": 1777594695938,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-05-01T03:41:12.000Z",
+          "bpm": 60,
+          "producer_timestamp": 1777594695938,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-05-01T03:46:12.000Z",
+          "bpm": 58,
+          "producer_timestamp": 1777594695938,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-05-01T03:51:12.000Z",
+          "bpm": 62,
+          "producer_timestamp": 1777594695938,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-05-01T03:56:12.000Z",
+          "bpm": 58,
+          "producer_timestamp": 1777594695938,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-05-01T04:01:12.000Z",
+          "bpm": 57,
+          "producer_timestamp": 1777594695938,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-05-01T04:05:27.000Z",
+          "bpm": 56,
+          "producer_timestamp": 1777594695938,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-05-01T04:17:28.000Z",
+          "bpm": 58,
+          "producer_timestamp": 1777594695938,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-05-01T04:22:28.000Z",
+          "bpm": 61,
+          "producer_timestamp": 1777594695938,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-05-01T04:45:03.000Z",
+          "bpm": 103,
+          "producer_timestamp": 1777594695938,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-05-01T04:46:07.000Z",
+          "bpm": 90,
+          "producer_timestamp": 1777594695938,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-05-01T04:46:12.000Z",
+          "bpm": 97,
+          "producer_timestamp": 1777594695938,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-05-01T04:49:51.000Z",
+          "bpm": 106,
+          "producer_timestamp": 1777594695938,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-05-01T04:49:55.000Z",
+          "bpm": 102,
+          "producer_timestamp": 1777594695938,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-05-01T04:50:13.000Z",
+          "bpm": 98,
+          "producer_timestamp": 1777594695938,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-05-01T04:55:04.000Z",
+          "bpm": 113,
+          "producer_timestamp": 1777594695938,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-05-01T04:55:33.000Z",
+          "bpm": 119,
+          "producer_timestamp": 1777594695938,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-05-01T04:55:38.000Z",
+          "bpm": 110,
+          "producer_timestamp": 1777594695938,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-05-01T05:03:02.000Z",
+          "bpm": 67,
+          "producer_timestamp": 1777594695938,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-05-01T05:04:01.000Z",
+          "bpm": 63,
+          "producer_timestamp": 1777594695938,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-05-01T05:04:15.000Z",
+          "bpm": 60,
+          "producer_timestamp": 1777594695938,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-05-01T05:16:11.000Z",
+          "bpm": 60,
+          "producer_timestamp": 1777594695938,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-05-01T05:21:11.000Z",
+          "bpm": 58,
+          "producer_timestamp": 1777594695938,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-05-01T05:26:11.000Z",
+          "bpm": 58,
+          "producer_timestamp": 1777594695938,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-05-01T05:31:11.000Z",
+          "bpm": 59,
+          "producer_timestamp": 1777594695938,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-05-01T05:36:11.000Z",
+          "bpm": 58,
+          "producer_timestamp": 1777594695938,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-05-01T05:41:11.000Z",
+          "bpm": 58,
+          "producer_timestamp": 1777594695938,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-05-01T05:46:12.000Z",
+          "bpm": 56,
+          "producer_timestamp": 1777594695938,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-05-01T05:51:12.000Z",
+          "bpm": 58,
+          "producer_timestamp": 1777594695938,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-05-01T05:56:12.000Z",
+          "bpm": 57,
+          "producer_timestamp": 1777594695938,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-05-01T06:01:12.000Z",
+          "bpm": 60,
+          "producer_timestamp": 1777594695938,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-05-01T06:06:12.000Z",
+          "bpm": 60,
+          "producer_timestamp": 1777594695938,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-05-01T06:11:12.000Z",
+          "bpm": 56,
+          "producer_timestamp": 1777594695938,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-05-01T06:16:11.000Z",
+          "bpm": 57,
+          "producer_timestamp": 1777594695938,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-05-01T06:21:11.000Z",
+          "bpm": 56,
+          "producer_timestamp": 1777594695938,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-05-01T06:26:11.000Z",
+          "bpm": 59,
+          "producer_timestamp": 1777594695938,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-05-01T06:31:11.000Z",
+          "bpm": 59,
+          "producer_timestamp": 1777594695938,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-05-01T06:36:11.000Z",
+          "bpm": 59,
+          "producer_timestamp": 1777594695938,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-05-01T06:41:11.000Z",
+          "bpm": 57,
+          "producer_timestamp": 1777594695938,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-05-01T06:46:12.000Z",
+          "bpm": 58,
+          "producer_timestamp": 1777594695938,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-05-01T06:51:12.000Z",
+          "bpm": 57,
+          "producer_timestamp": 1777594695938,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-05-01T06:56:12.000Z",
+          "bpm": 60,
+          "producer_timestamp": 1777594695938,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-05-01T07:01:12.000Z",
+          "bpm": 55,
+          "producer_timestamp": 1777594695938,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-05-01T07:06:12.000Z",
+          "bpm": 57,
+          "producer_timestamp": 1777594695938,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-05-01T07:13:55.000Z",
+          "bpm": 49,
+          "producer_timestamp": 1777594695938,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-05-01T07:18:55.000Z",
+          "bpm": 50,
+          "producer_timestamp": 1777594695938,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-05-01T07:23:55.000Z",
+          "bpm": 48,
+          "producer_timestamp": 1777594695938,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-05-01T07:28:55.000Z",
+          "bpm": 49,
+          "producer_timestamp": 1777594695938,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-05-01T08:11:11.000Z",
+          "bpm": 53,
+          "producer_timestamp": 1777594695938,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-05-01T08:16:11.000Z",
+          "bpm": 54,
+          "producer_timestamp": 1777594695938,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-05-01T08:21:11.000Z",
+          "bpm": 56,
+          "producer_timestamp": 1777594695938,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-05-01T08:26:11.000Z",
+          "bpm": 62,
+          "producer_timestamp": 1777594695938,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-05-01T08:31:11.000Z",
+          "bpm": 55,
+          "producer_timestamp": 1777594695938,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-05-01T08:36:11.000Z",
+          "bpm": 51,
+          "producer_timestamp": 1777594695938,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-05-01T08:38:27.000Z",
+          "bpm": 58,
+          "producer_timestamp": 1777594695938,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-05-01T08:43:27.000Z",
+          "bpm": 52,
+          "producer_timestamp": 1777594695938,
+          "source": "rest"
+        },
+        {
+          "timestamp": "2026-05-01T09:21:42.000Z",
+          "bpm": 89,
+          "producer_timestamp": 1777594695938,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-05-01T09:21:52.000Z",
+          "bpm": 97,
+          "producer_timestamp": 1777594695938,
+          "source": "awake"
+        },
+        {
+          "timestamp": "2026-05-01T09:21:55.000Z",
+          "bpm": 92,
+          "producer_timestamp": 1777594695938,
+          "source": "awake"
         }
       ],
       "next_token": null
@@ -393952,6 +394340,14 @@
           "spo2_percentage": {
             "average": 98
           }
+        },
+        {
+          "id": "f1da5251-89f5-4c46-a862-a324a0fa9485",
+          "breathing_disturbance_index": 5,
+          "day": "2026-05-01",
+          "spo2_percentage": {
+            "average": 98.069
+          }
         }
       ],
       "next_token": null
@@ -394167,6 +394563,13 @@
           "day_summary": "stressful",
           "recovery_high": 3600,
           "stress_high": 36900
+        },
+        {
+          "id": "f79bc63c-bf0f-41a4-a075-d7cdf03a98e5",
+          "day": "2026-05-01",
+          "day_summary": null,
+          "recovery_high": 0,
+          "stress_high": 0
         }
       ],
       "next_token": null
@@ -394390,6 +394793,16 @@
             "sleep_recovery": 39,
             "daytime_recovery": 37.7,
             "stress": 60.5
+          },
+          "level": "adequate"
+        },
+        {
+          "id": "bb73ac45-3d12-4cc8-a30d-8bd2b6b1a0a9",
+          "day": "2026-05-01",
+          "contributors": {
+            "sleep_recovery": 35.2,
+            "daytime_recovery": 33.7,
+            "stress": 65.7
           },
           "level": "adequate"
         }
