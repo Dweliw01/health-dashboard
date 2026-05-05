@@ -1,41 +1,41 @@
 {
-  "lastUpdated": "2026-05-04T22:09:47.956Z",
+  "lastUpdated": "2026-05-05T00:01:31.600Z",
   "today": {
-    "steps": 17162,
-    "avgHeartRate": 86,
-    "calories": 1139
+    "steps": 7668,
+    "avgHeartRate": 85,
+    "calories": 769
   },
   "todayScores": {
     "sleep": 46,
     "readiness": 65,
-    "activity": 97,
+    "activity": 92,
     "sleepDate": "2026-05-04",
     "readinessDate": "2026-05-04",
-    "activityDate": "2026-05-03"
+    "activityDate": "2026-05-04"
   },
   "thisWeek": {
     "workouts": 0,
-    "avgSteps": 14434,
-    "avgCalories": 1149
+    "avgSteps": 14426,
+    "avgCalories": 1146
   },
   "last7Days": {
     "labels": [
-      "Mon",
       "Tue",
       "Wed",
       "Thu",
       "Fri",
       "Sat",
-      "Sun"
+      "Sun",
+      "Mon"
     ],
     "values": [
-      7718,
       12489,
       12425,
       20090,
       8860,
       22291,
-      17162
+      17162,
+      7668
     ]
   },
   "heartRateTrends": {
@@ -55,7 +55,7 @@
       92,
       101,
       90,
-      86
+      85
     ],
     "max": [
       113,
@@ -92,22 +92,22 @@
       "This Week"
     ],
     "steps": [
-      14842,
-      9854,
-      7705,
-      14434
+      16450,
+      8337,
+      7385,
+      14426
     ],
     "workouts": [
-      2,
+      0,
       1,
       1,
       0
     ],
     "calories": [
-      1077,
-      882,
-      757,
-      1149
+      1241,
+      765,
+      750,
+      1146
     ]
   },
   "projection": {
@@ -118,16 +118,16 @@
       "Day 30"
     ],
     "actual": [
-      14434,
+      14426,
       null,
       null,
       null
     ],
     "projected": [
-      14434,
-      20713,
-      23852,
-      26992
+      14426,
+      21278,
+      24705,
+      28131
     ]
   },
   "timeOfDay": {
@@ -143,50 +143,57 @@
       "10pm"
     ],
     "values": [
-      144,
-      143,
-      171,
-      153,
-      193,
-      177,
-      110,
-      110,
-      95
+      167,
+      166,
+      196,
+      175,
+      227,
+      215,
+      160,
+      182,
+      156
     ]
   },
   "metrics": {
-    "dailyAvgSteps": 14434,
-    "avgHeartRate": 91,
-    "restingHR": 51,
+    "dailyAvgSteps": 14426,
+    "avgHeartRate": 90,
+    "restingHR": 49,
     "activeDays": 7,
     "totalWorkouts": 4,
     "bestDaySteps": 22291,
     "bestDayLabel": "Sat",
-    "caloriesPerDay": 1149,
-    "currentStreak": 2,
+    "caloriesPerDay": 1146,
+    "currentStreak": 0,
     "longestStreak": 5,
-    "fitnessScore": 68,
-    "activityScore": 83,
+    "fitnessScore": 69,
+    "activityScore": 86,
     "sleepScore": 61,
     "readinessScore": 71,
     "consistency": 50,
-    "totalSteps30Days": 327840,
-    "totalCalories30Days": 27055,
+    "totalSteps30Days": 326190,
+    "totalCalories30Days": 27317,
     "daysTracked": 28
   },
   "insights": {
     "performance": {
-      "weekChange": 87,
-      "monthChange": 23,
+      "weekChange": 95,
+      "monthChange": 24,
       "trend": "improving"
     },
     "recovery": {
       "readinessScore": 71,
-      "restingHR": 51,
+      "restingHR": 49,
       "sleepScore": 61
     }
   },
   "alerts": [
+    {
+      "type": "warning",
+      "title": "Low Deep Sleep",
+      "message": "24 min last night (target: 90+ min)",
+      "severity": "medium",
+      "category": "sleep"
+    },
     {
       "type": "warning",
       "title": "HR Spike Detected",
@@ -214,28 +221,20 @@
       "message": "Sat: 172 bpm peak",
       "severity": "medium",
       "category": "activity"
-    },
-    {
-      "type": "warning",
-      "title": "HR Spike Detected",
-      "message": "Sun: 143 bpm peak",
-      "severity": "medium",
-      "category": "activity"
     }
   ],
   "hrv": {
-    "current": 156,
+    "current": 163,
     "trend7Days": [
-      92,
       155,
       147,
       122,
       122,
       136,
-      156
+      156,
+      163
     ],
     "trend30Days": [
-      102,
       183,
       195,
       84,
@@ -262,18 +261,14 @@
       122,
       122,
       136,
-      156
+      156,
+      163
     ],
-    "avg7Days": 133,
-    "avg30Days": 142,
-    "baseline": 142,
+    "avg7Days": 143,
+    "avg30Days": 144,
+    "baseline": 144,
     "status": "normal",
     "records": [
-      {
-        "day": "2026-04-04",
-        "avgHrv": 102,
-        "lowestHR": 60
-      },
       {
         "day": "2026-04-05",
         "avgHrv": 183,
@@ -408,33 +403,27 @@
         "day": "2026-05-03",
         "avgHrv": 156,
         "lowestHR": 45
+      },
+      {
+        "day": "2026-05-04",
+        "avgHrv": 163,
+        "lowestHR": 48
       }
     ]
   },
   "sleepStages": {
     "lastNight": {
-      "day": "2026-05-03",
-      "deep": 72,
-      "rem": 127,
-      "light": 278,
-      "awake": 236,
-      "total": 477,
-      "efficiency": 67,
-      "latency": 41,
-      "breathRate": 14.25
+      "day": "2026-05-04",
+      "deep": 24,
+      "rem": 41,
+      "light": 121,
+      "awake": 32,
+      "total": 186,
+      "efficiency": 85,
+      "latency": 10,
+      "breathRate": 13.625
     },
     "last7Days": [
-      {
-        "day": "2026-04-23",
-        "deep": 29,
-        "rem": 68,
-        "light": 147,
-        "awake": 16,
-        "total": 244,
-        "efficiency": 94,
-        "latency": 6,
-        "breathRate": 14.625
-      },
       {
         "day": "2026-04-25",
         "deep": 39,
@@ -500,6 +489,17 @@
         "efficiency": 67,
         "latency": 41,
         "breathRate": 14.25
+      },
+      {
+        "day": "2026-05-04",
+        "deep": 24,
+        "rem": 41,
+        "light": 121,
+        "awake": 32,
+        "total": 186,
+        "efficiency": 85,
+        "latency": 10,
+        "breathRate": 13.625
       }
     ],
     "last30Days": [
@@ -711,15 +711,26 @@
         "efficiency": 67,
         "latency": 41,
         "breathRate": 14.25
+      },
+      {
+        "day": "2026-05-04",
+        "deep": 24,
+        "rem": 41,
+        "light": 121,
+        "awake": 32,
+        "total": 186,
+        "efficiency": 85,
+        "latency": 10,
+        "breathRate": 13.625
       }
     ],
-    "avgDeep": 45,
-    "avgRem": 75,
-    "avgLight": 181,
-    "avgTotal": 301,
+    "avgDeep": 44,
+    "avgRem": 73,
+    "avgLight": 178,
+    "avgTotal": 295,
     "avgEfficiency": 84,
     "avgLatency": 16,
-    "avgBreathRate": 14.9
+    "avgBreathRate": 14.8
   },
   "stress": {
     "available": true,
