@@ -1,8 +1,8 @@
 {
-  "lastUpdated": "2026-05-07T20:20:54.200Z",
+  "lastUpdated": "2026-05-07T22:08:49.583Z",
   "today": {
     "steps": 11599,
-    "avgHeartRate": 83,
+    "avgHeartRate": 97,
     "calories": 1222
   },
   "todayScores": {
@@ -40,39 +40,15 @@
   },
   "heartRateTrends": {
     "labels": [
-      "Fri",
-      "Sat",
-      "Sun",
-      "Mon",
-      "Tue",
-      "Wed",
-      "Thu"
+      "Tue"
     ],
     "values": [
-      92,
-      101,
-      90,
-      85,
-      96,
-      81,
-      83
+      97
     ],
     "max": [
-      150,
-      172,
-      143,
-      122,
-      149,
-      120,
-      128
+      167
     ],
     "min": [
-      48,
-      52,
-      45,
-      46,
-      49,
-      51,
       46
     ]
   },
@@ -156,7 +132,7 @@
   },
   "metrics": {
     "dailyAvgSteps": 13955,
-    "avgHeartRate": 90,
+    "avgHeartRate": 97,
     "restingHR": 58,
     "activeDays": 7,
     "totalWorkouts": 4,
@@ -204,23 +180,23 @@
     {
       "type": "warning",
       "title": "HR Spike Detected",
-      "message": "Fri: 150 bpm peak",
+      "message": "Tue: 167 bpm peak",
       "severity": "medium",
       "category": "activity"
     },
     {
       "type": "warning",
-      "title": "HR Spike Detected",
-      "message": "Sat: 172 bpm peak",
+      "title": "Workout Gap",
+      "message": "No workouts logged this week",
       "severity": "medium",
       "category": "activity"
     },
     {
       "type": "warning",
-      "title": "HR Spike Detected",
-      "message": "Sun: 143 bpm peak",
+      "title": "Sleep Quality Low",
+      "message": "Average sleep score: 59%",
       "severity": "medium",
-      "category": "activity"
+      "category": "sleep"
     }
   ],
   "hrv": {
