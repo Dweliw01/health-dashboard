@@ -1,9 +1,9 @@
 {
-  "lastUpdated": "2026-05-14T04:52:31.794Z",
+  "lastUpdated": "2026-05-14T07:48:59.844Z",
   "today": {
     "steps": 9184,
     "avgHeartRate": 64,
-    "calories": 699
+    "calories": 700
   },
   "todayScores": {
     "sleep": 58,
@@ -151,7 +151,7 @@
     "readinessScore": 71,
     "consistency": 32,
     "totalSteps30Days": 267373,
-    "totalCalories30Days": 23145,
+    "totalCalories30Days": 23146,
     "daysTracked": 28
   },
   "insights": {
@@ -167,6 +167,13 @@
     }
   },
   "alerts": [
+    {
+      "type": "warning",
+      "title": "HRV Below Baseline",
+      "message": "122ms vs 138ms baseline",
+      "severity": "medium",
+      "category": "recovery"
+    },
     {
       "type": "warning",
       "title": "Low Deep Sleep",
@@ -194,25 +201,18 @@
       "message": "No workouts logged this week",
       "severity": "medium",
       "category": "activity"
-    },
-    {
-      "type": "warning",
-      "title": "Sleep Quality Low",
-      "message": "Average sleep score: 59%",
-      "severity": "medium",
-      "category": "sleep"
     }
   ],
   "hrv": {
-    "current": 130,
+    "current": 122,
     "trend7Days": [
-      104,
       145,
       147,
       135,
       114,
       114,
-      130
+      130,
+      122
     ],
     "trend30Days": [
       124,
@@ -238,11 +238,12 @@
       135,
       114,
       114,
-      130
+      130,
+      122
     ],
-    "avg7Days": 127,
-    "avg30Days": 139,
-    "baseline": 139,
+    "avg7Days": 130,
+    "avg30Days": 138,
+    "baseline": 138,
     "status": "normal",
     "records": [
       {
@@ -364,6 +365,11 @@
         "day": "2026-05-13",
         "avgHrv": 130,
         "lowestHR": 46
+      },
+      {
+        "day": "2026-05-14",
+        "avgHrv": 122,
+        "lowestHR": 55
       }
     ]
   },
