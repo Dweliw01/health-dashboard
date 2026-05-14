@@ -41736,6 +41736,21 @@
           "day": "2026-05-13",
           "score": 58,
           "timestamp": "2026-05-13T00:00:00.000+00:00"
+        },
+        {
+          "id": "d2420693-cf51-4aa0-9c4d-2f7c467bf8ac",
+          "contributors": {
+            "deep_sleep": 43,
+            "efficiency": 83,
+            "latency": 91,
+            "rem_sleep": 37,
+            "restfulness": 42,
+            "timing": 100,
+            "total_sleep": 33
+          },
+          "day": "2026-05-14",
+          "score": 53,
+          "timestamp": "2026-05-14T00:00:00.000+00:00"
         }
       ],
       "next_token": null
@@ -42102,6 +42117,25 @@
           "temperature_deviation": -0.11,
           "temperature_trend_deviation": -0.01,
           "timestamp": "2026-05-13T00:00:00.000+00:00"
+        },
+        {
+          "id": "0ce33802-9a8a-4a75-86e6-58e86c1446a2",
+          "contributors": {
+            "activity_balance": 88,
+            "body_temperature": 99,
+            "hrv_balance": 72,
+            "previous_day_activity": 86,
+            "previous_night": 51,
+            "recovery_index": 68,
+            "resting_heart_rate": 85,
+            "sleep_balance": 37,
+            "sleep_regularity": 78
+          },
+          "day": "2026-05-14",
+          "score": 69,
+          "temperature_deviation": -0.17,
+          "temperature_trend_deviation": -0.04,
+          "timestamp": "2026-05-14T00:00:00.000+00:00"
         }
       ],
       "next_token": null
@@ -54922,6 +54956,14 @@
           "spo2_percentage": {
             "average": 98.078
           }
+        },
+        {
+          "id": "bc964c70-4e75-48f5-98a0-228c4ae89ffb",
+          "breathing_disturbance_index": 11,
+          "day": "2026-05-14",
+          "spo2_percentage": {
+            "average": 97.269
+          }
         }
       ],
       "next_token": null
@@ -55337,6 +55379,16 @@
             "sleep_recovery": 38.7,
             "daytime_recovery": 38.3,
             "stress": 58.3
+          },
+          "level": "adequate"
+        },
+        {
+          "id": "7317fb1c-4612-420f-9423-12049a97a810",
+          "day": "2026-05-14",
+          "contributors": {
+            "sleep_recovery": 38.5,
+            "daytime_recovery": 37.9,
+            "stress": 59.8
           },
           "level": "adequate"
         }
