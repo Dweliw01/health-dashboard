@@ -39970,13 +39970,13 @@
         {
           "id": "a4c9b3df-977c-4ed6-b778-86b3e62230ee",
           "active_calories": 616,
-          "average_met_minutes": 1.53125,
-          "class_5_min": "00000000000000000000000000000000044444444440000000000000000000000033222222332122233222222222222212112222222211121222222222222222222222333222232212222221111111111111122333443422222222222222322222222221112223223323222222222333333333322222222223321111111111112121111111",
+          "average_met_minutes": 1.5,
+          "class_5_min": "000000000000000000000000000000000444444444400000000000000000000000332222223321222332222222222222121122222222111212222222222222222222223332222322122222211111111111111223334434222222222222223222222222211122232233232222222223333333333222222222233211111111111121211111112111111211111111111111",
           "contributors": {
             "meet_daily_targets": 60,
             "move_every_hour": 95,
             "recovery_time": 100,
-            "stay_active": 74,
+            "stay_active": 73,
             "training_frequency": 100,
             "training_volume": 100
           },
@@ -41311,6 +41311,7 @@
               1,
               0.9,
               0.9,
+              1.1,
               0.9,
               0.9,
               0.9,
@@ -41322,11 +41323,18 @@
               0.9,
               0.9,
               0.9,
+              1.1,
+              1.1,
+              1.3,
+              1.1,
+              1.4,
+              1.1,
               0.9,
               0.9,
               0.9,
               0.9,
               0.9,
+              1,
               0.9,
               0.9,
               0.9,
@@ -41345,16 +41353,25 @@
               0.9,
               0.9,
               0.9,
+              1.2,
               0.9,
+              1,
               0.9,
               0.9,
+              1.1,
               0.9,
+              1.1,
+              1.2,
+              1.3,
               0.9,
               0.9,
               0.9,
               0.9,
               0.9,
+              1.1,
               0.9,
+              1,
+              1,
               0.9,
               0.9,
               0.9,
@@ -41362,13 +41379,16 @@
               0.9,
               0.9,
               0.9,
+              1,
               0.9,
               0.9,
               0.9,
               0.9,
+              1.2,
               0.9,
               0.9,
               0.9,
+              1.1,
               0.9,
               0.9,
               0.9,
@@ -41380,36 +41400,16 @@
               0.9,
               0.9,
               0.9,
+              1.3,
+              1,
               0.9,
               0.9,
               0.9,
               0.9,
+              1,
               0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
-              0.9,
+              1.1,
+              1.2,
               0.9,
               0.9,
               0.9,
@@ -41437,15 +41437,15 @@
           },
           "meters_to_target": 7300,
           "non_wear_time": 16920,
-          "resting_time": 15780,
-          "score": 86,
+          "resting_time": 21720,
+          "score": 85,
           "sedentary_met_minutes": 5,
-          "sedentary_time": 34140,
+          "sedentary_time": 34680,
           "steps": 3871,
           "target_calories": 1050,
           "target_meters": 18000,
           "timestamp": "2026-05-15T04:00:00.000-04:00",
-          "total_calories": 3024
+          "total_calories": 3027
         }
       ],
       "next_token": null
@@ -41721,6 +41721,21 @@
           "day": "2026-05-14",
           "score": 53,
           "timestamp": "2026-05-14T00:00:00.000+00:00"
+        },
+        {
+          "id": "fe163c31-8cbd-4216-a726-7aacf9cc3b25",
+          "contributors": {
+            "deep_sleep": 31,
+            "efficiency": 95,
+            "latency": 97,
+            "rem_sleep": 61,
+            "restfulness": 68,
+            "timing": 100,
+            "total_sleep": 34
+          },
+          "day": "2026-05-16",
+          "score": 61,
+          "timestamp": "2026-05-16T00:00:00.000+00:00"
         }
       ],
       "next_token": null
@@ -42068,6 +42083,25 @@
           "temperature_deviation": -0.17,
           "temperature_trend_deviation": -0.04,
           "timestamp": "2026-05-14T00:00:00.000+00:00"
+        },
+        {
+          "id": "23b97472-90b9-424a-9e99-00bbf0736d5f",
+          "contributors": {
+            "activity_balance": 92,
+            "body_temperature": 100,
+            "hrv_balance": 67,
+            "previous_day_activity": 82,
+            "previous_night": 61,
+            "recovery_index": 47,
+            "resting_heart_rate": 68,
+            "sleep_balance": 34,
+            "sleep_regularity": 82
+          },
+          "day": "2026-05-16",
+          "score": 65,
+          "temperature_deviation": 0,
+          "temperature_trend_deviation": -0.03,
+          "timestamp": "2026-05-16T00:00:00.000+00:00"
         }
       ],
       "next_token": null
@@ -55002,6 +55036,14 @@
           "spo2_percentage": {
             "average": 97.269
           }
+        },
+        {
+          "id": "c3a0f376-1f0c-4702-947b-075d7ce74840",
+          "breathing_disturbance_index": 0,
+          "day": "2026-05-16",
+          "spo2_percentage": {
+            "average": 97.403
+          }
         }
       ],
       "next_token": null
@@ -55215,8 +55257,15 @@
           "id": "c29a8acd-5a15-4ed8-9848-483e83988e76",
           "day": "2026-05-15",
           "day_summary": "stressful",
-          "recovery_high": 11700,
+          "recovery_high": 12600,
           "stress_high": 14400
+        },
+        {
+          "id": "b3c13d56-92ae-459d-b8b9-af0b05990bc6",
+          "day": "2026-05-16",
+          "day_summary": null,
+          "recovery_high": 0,
+          "stress_high": 0
         }
       ],
       "next_token": null
