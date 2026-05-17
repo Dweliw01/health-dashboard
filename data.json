@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-17T11:16:04.864Z",
+  "lastUpdated": "2026-05-17T13:47:04.526Z",
   "today": {
     "steps": 17017,
     "avgHeartRate": 87,
@@ -176,13 +176,6 @@
     },
     {
       "type": "warning",
-      "title": "High Stress Day",
-      "message": "8h in high stress",
-      "severity": "medium",
-      "category": "stress"
-    },
-    {
-      "type": "warning",
       "title": "HR Spike Detected",
       "message": "Fri: 101 bpm peak",
       "severity": "medium",
@@ -201,6 +194,13 @@
       "message": "No workouts logged this week",
       "severity": "medium",
       "category": "activity"
+    },
+    {
+      "type": "warning",
+      "title": "Sleep Quality Low",
+      "message": "Average sleep score: 59%",
+      "severity": "medium",
+      "category": "sleep"
     }
   ],
   "hrv": {
@@ -681,28 +681,22 @@
   "stress": {
     "available": true,
     "today": {
-      "stressMinutes": 465,
-      "recoveryMinutes": 45,
-      "summary": "stressful"
+      "stressMinutes": 0,
+      "recoveryMinutes": 0,
+      "summary": "unknown"
     },
     "trend7Days": [
       "stressful",
       "stressful",
       "stressful",
-      "stressful",
       "restored",
       "normal",
-      "stressful"
+      "stressful",
+      "unknown"
     ],
-    "avgStressMinutes": 274,
-    "avgRecoveryMinutes": 141,
+    "avgStressMinutes": 249,
+    "avgRecoveryMinutes": 126,
     "records": [
-      {
-        "day": "2026-04-17",
-        "stressHigh": 0,
-        "recoveryHigh": 0,
-        "daySummary": "unknown"
-      },
       {
         "day": "2026-04-18",
         "stressHigh": 0,
@@ -876,6 +870,12 @@
         "stressHigh": 27900,
         "recoveryHigh": 2700,
         "daySummary": "stressful"
+      },
+      {
+        "day": "2026-05-17",
+        "stressHigh": 0,
+        "recoveryHigh": 0,
+        "daySummary": "unknown"
       }
     ]
   },
