@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-18T19:54:34.051Z",
+  "lastUpdated": "2026-05-18T21:19:50.308Z",
   "today": {
     "steps": 0,
     "avgHeartRate": 87,
@@ -173,7 +173,7 @@
     {
       "type": "warning",
       "title": "High Stress Day",
-      "message": "6h in high stress",
+      "message": "7h in high stress",
       "severity": "medium",
       "category": "stress"
     },
@@ -677,7 +677,7 @@
   "stress": {
     "available": true,
     "today": {
-      "stressMinutes": 345,
+      "stressMinutes": 405,
       "recoveryMinutes": 0,
       "summary": "stressful"
     },
@@ -690,7 +690,7 @@
       "unknown",
       "stressful"
     ],
-    "avgStressMinutes": 253,
+    "avgStressMinutes": 261,
     "avgRecoveryMinutes": 103,
     "records": [
       {
@@ -869,7 +869,7 @@
       },
       {
         "day": "2026-05-18",
-        "stressHigh": 20700,
+        "stressHigh": 24300,
         "recoveryHigh": 0,
         "daySummary": "stressful"
       }
