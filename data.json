@@ -1,41 +1,41 @@
 {
-  "lastUpdated": "2026-05-18T00:05:22.664Z",
+  "lastUpdated": "2026-05-18T05:12:42.429Z",
   "today": {
-    "steps": 17017,
+    "steps": 0,
     "avgHeartRate": 87,
-    "calories": 950
+    "calories": 1
   },
   "todayScores": {
     "sleep": 61,
     "readiness": 65,
-    "activity": 91,
+    "activity": 94,
     "sleepDate": "2026-05-16",
     "readinessDate": "2026-05-16",
-    "activityDate": "2026-05-16"
+    "activityDate": "2026-05-17"
   },
   "thisWeek": {
     "workouts": 0,
-    "avgSteps": 9535,
-    "avgCalories": 740
+    "avgSteps": 8796,
+    "avgCalories": 707
   },
   "last7Days": {
     "labels": [
-      "Sun",
       "Mon",
       "Tue",
       "Wed",
       "Thu",
       "Fri",
-      "Sat"
+      "Sat",
+      "Sun"
     ],
     "values": [
-      5172,
       16345,
       6878,
       9184,
       8276,
       3871,
-      17017
+      17017,
+      0
     ]
   },
   "heartRateTrends": {
@@ -71,7 +71,7 @@
       7705,
       14434,
       7757,
-      10262
+      8796
     ],
     "workouts": [
       1,
@@ -83,7 +83,7 @@
       757,
       1149,
       620,
-      825
+      707
     ]
   },
   "projection": {
@@ -94,16 +94,16 @@
       "Day 30"
     ],
     "actual": [
-      9535,
+      8796,
       null,
       null,
       null
     ],
     "projected": [
-      9535,
-      11061,
-      11823,
-      12586
+      8796,
+      9368,
+      9654,
+      9939
     ]
   },
   "timeOfDay": {
@@ -120,40 +120,40 @@
     ],
     "values": [
       151,
+      162,
       163,
-      165,
-      157,
-      187,
-      165,
-      116,
+      155,
+      185,
+      163,
+      114,
       118,
       76
     ]
   },
   "metrics": {
-    "dailyAvgSteps": 9535,
+    "dailyAvgSteps": 8796,
     "avgHeartRate": 87,
     "restingHR": 52,
-    "activeDays": 6,
+    "activeDays": 5,
     "totalWorkouts": 2,
     "bestDaySteps": 17017,
     "bestDayLabel": "Sat",
-    "caloriesPerDay": 740,
-    "currentStreak": 1,
+    "caloriesPerDay": 707,
+    "currentStreak": 0,
     "longestStreak": 3,
-    "fitnessScore": 65,
-    "activityScore": 86,
+    "fitnessScore": 66,
+    "activityScore": 87,
     "sleepScore": 59,
     "readinessScore": 70,
-    "consistency": 37,
+    "consistency": 36,
     "totalSteps30Days": 270839,
-    "totalCalories30Days": 22627,
-    "daysTracked": 27
+    "totalCalories30Days": 22628,
+    "daysTracked": 28
   },
   "insights": {
     "performance": {
-      "weekChange": 32,
-      "monthChange": -5,
+      "weekChange": 13,
+      "monthChange": -9,
       "trend": "improving"
     },
     "recovery": {
