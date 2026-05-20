@@ -1,22 +1,22 @@
 {
-  "lastUpdated": "2026-05-20T04:12:20.916Z",
+  "lastUpdated": "2026-05-20T08:32:11.588Z",
   "today": {
-    "steps": 18432,
+    "steps": 18791,
     "avgHeartRate": 87,
-    "calories": 1230
+    "calories": 1260
   },
   "todayScores": {
     "sleep": 36,
     "readiness": 56,
-    "activity": 89,
+    "activity": 87,
     "sleepDate": "2026-05-19",
     "readinessDate": "2026-05-19",
     "activityDate": "2026-05-19"
   },
   "thisWeek": {
     "workouts": 0,
-    "avgSteps": 9657,
-    "avgCalories": 749
+    "avgSteps": 9708,
+    "avgCalories": 754
   },
   "last7Days": {
     "labels": [
@@ -35,7 +35,7 @@
       17017,
       0,
       10816,
-      18432
+      18791
     ]
   },
   "heartRateTrends": {
@@ -71,7 +71,7 @@
       9091,
       14073,
       8548,
-      9657
+      9708
     ],
     "workouts": [
       1,
@@ -83,7 +83,7 @@
       849,
       1106,
       646,
-      749
+      754
     ]
   },
   "projection": {
@@ -94,16 +94,16 @@
       "Day 30"
     ],
     "actual": [
-      9657,
+      9708,
       null,
       null,
       null
     ],
     "projected": [
-      9657,
-      10285,
-      10599,
-      10912
+      9708,
+      10388,
+      10727,
+      11067
     ]
   },
   "timeOfDay": {
@@ -126,19 +126,19 @@
       194,
       154,
       154,
-      128,
-      95
+      222,
+      99
     ]
   },
   "metrics": {
-    "dailyAvgSteps": 9657,
+    "dailyAvgSteps": 9708,
     "avgHeartRate": 87,
     "restingHR": 54,
     "activeDays": 5,
     "totalWorkouts": 2,
-    "bestDaySteps": 18432,
+    "bestDaySteps": 18791,
     "bestDayLabel": "Tue",
-    "caloriesPerDay": 749,
+    "caloriesPerDay": 754,
     "currentStreak": 2,
     "longestStreak": 3,
     "fitnessScore": 66,
@@ -146,13 +146,13 @@
     "sleepScore": 57,
     "readinessScore": 69,
     "consistency": 40,
-    "totalSteps30Days": 300087,
-    "totalCalories30Days": 24776,
+    "totalSteps30Days": 300446,
+    "totalCalories30Days": 24806,
     "daysTracked": 30
   },
   "insights": {
     "performance": {
-      "weekChange": 13,
+      "weekChange": 14,
       "monthChange": -3,
       "trend": "improving"
     },
@@ -700,7 +700,7 @@
   "stress": {
     "available": true,
     "today": {
-      "stressMinutes": 525,
+      "stressMinutes": 540,
       "recoveryMinutes": 60,
       "summary": "stressful"
     },
@@ -713,7 +713,7 @@
       "stressful",
       "stressful"
     ],
-    "avgStressMinutes": 324,
+    "avgStressMinutes": 326,
     "avgRecoveryMinutes": 103,
     "records": [
       {
@@ -892,7 +892,7 @@
       },
       {
         "day": "2026-05-19",
-        "stressHigh": 31500,
+        "stressHigh": 32400,
         "recoveryHigh": 3600,
         "daySummary": "stressful"
       }
