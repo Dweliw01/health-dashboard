@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-20T21:03:18.610Z",
+  "lastUpdated": "2026-05-20T23:19:57.665Z",
   "today": {
     "steps": 18791,
     "avgHeartRate": 87,
@@ -172,6 +172,13 @@
     },
     {
       "type": "warning",
+      "title": "High Stress Day",
+      "message": "6h in high stress",
+      "severity": "medium",
+      "category": "stress"
+    },
+    {
+      "type": "warning",
       "title": "HR Spike Detected",
       "message": "Mon: 121 bpm peak",
       "severity": "medium",
@@ -190,13 +197,6 @@
       "message": "Average sleep score: 53%",
       "severity": "medium",
       "category": "sleep"
-    },
-    {
-      "type": "warning",
-      "title": "Low Activity Day",
-      "message": "Fri: 3,871 steps",
-      "severity": "low",
-      "category": "activity"
     }
   ],
   "hrv": {
@@ -700,7 +700,7 @@
   "stress": {
     "available": true,
     "today": {
-      "stressMinutes": 270,
+      "stressMinutes": 330,
       "recoveryMinutes": 15,
       "summary": "stressful"
     },
@@ -713,7 +713,7 @@
       "stressful",
       "stressful"
     ],
-    "avgStressMinutes": 313,
+    "avgStressMinutes": 321,
     "avgRecoveryMinutes": 92,
     "records": [
       {
@@ -892,7 +892,7 @@
       },
       {
         "day": "2026-05-20",
-        "stressHigh": 16200,
+        "stressHigh": 19800,
         "recoveryHigh": 900,
         "daySummary": "stressful"
       }
