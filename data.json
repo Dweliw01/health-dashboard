@@ -1,21 +1,21 @@
 {
-  "lastUpdated": "2026-05-21T04:20:56.321Z",
+  "lastUpdated": "2026-05-21T08:39:20.263Z",
   "today": {
-    "steps": 6193,
+    "steps": 6200,
     "avgHeartRate": 78,
-    "calories": 340
+    "calories": 342
   },
   "todayScores": {
     "sleep": 52,
     "readiness": 49,
-    "activity": 81,
+    "activity": 83,
     "sleepDate": "2026-05-20",
     "readinessDate": "2026-05-20",
     "activityDate": "2026-05-20"
   },
   "thisWeek": {
     "workouts": 0,
-    "avgSteps": 9281,
+    "avgSteps": 9282,
     "avgCalories": 702
   },
   "last7Days": {
@@ -35,7 +35,7 @@
       0,
       10816,
       18791,
-      6193
+      6200
     ]
   },
   "heartRateTrends": {
@@ -75,7 +75,7 @@
       9742,
       13955,
       8203,
-      9281
+      9282
     ],
     "workouts": [
       1,
@@ -98,16 +98,16 @@
       "Day 30"
     ],
     "actual": [
-      9281,
+      9282,
       null,
       null,
       null
     ],
     "projected": [
-      9281,
-      9884,
-      10186,
-      10488
+      9282,
+      9885,
+      10187,
+      10489
     ]
   },
   "timeOfDay": {
@@ -129,13 +129,13 @@
       217,
       186,
       170,
-      154,
+      163,
       216,
       99
     ]
   },
   "metrics": {
-    "dailyAvgSteps": 9281,
+    "dailyAvgSteps": 9282,
     "avgHeartRate": 67,
     "restingHR": 56,
     "activeDays": 5,
@@ -150,8 +150,8 @@
     "sleepScore": 53,
     "readinessScore": 64,
     "consistency": 40,
-    "totalSteps30Days": 296682,
-    "totalCalories30Days": 24313,
+    "totalSteps30Days": 296689,
+    "totalCalories30Days": 24315,
     "daysTracked": 30
   },
   "insights": {
@@ -722,7 +722,7 @@
     "available": true,
     "today": {
       "stressMinutes": 405,
-      "recoveryMinutes": 15,
+      "recoveryMinutes": 45,
       "summary": "stressful"
     },
     "trend7Days": [
@@ -735,7 +735,7 @@
       "stressful"
     ],
     "avgStressMinutes": 332,
-    "avgRecoveryMinutes": 92,
+    "avgRecoveryMinutes": 96,
     "records": [
       {
         "day": "2026-04-21",
@@ -914,7 +914,7 @@
       {
         "day": "2026-05-20",
         "stressHigh": 24300,
-        "recoveryHigh": 900,
+        "recoveryHigh": 2700,
         "daySummary": "stressful"
       }
     ]
