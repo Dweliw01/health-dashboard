@@ -1,9 +1,9 @@
 {
-  "lastUpdated": "2026-05-25T05:25:52.047Z",
+  "lastUpdated": "2026-05-25T10:23:14.266Z",
   "today": {
-    "steps": 1869,
+    "steps": 1973,
     "avgHeartRate": 85,
-    "calories": 149
+    "calories": 167
   },
   "todayScores": {
     "sleep": 76,
@@ -15,8 +15,8 @@
   },
   "thisWeek": {
     "workouts": 0,
-    "avgSteps": 8856,
-    "avgCalories": 568
+    "avgSteps": 8871,
+    "avgCalories": 571
   },
   "last7Days": {
     "labels": [
@@ -35,7 +35,7 @@
       8099,
       9941,
       6274,
-      1869
+      1973
     ]
   },
   "heartRateTrends": {
@@ -71,7 +71,7 @@
       14434,
       7757,
       8796,
-      8856
+      8871
     ],
     "workouts": [
       0,
@@ -83,7 +83,7 @@
       1149,
       620,
       707,
-      568
+      571
     ]
   },
   "projection": {
@@ -94,16 +94,16 @@
       "Day 30"
     ],
     "actual": [
-      8856,
+      8871,
       null,
       null,
       null
     ],
     "projected": [
-      8856,
-      8900,
-      8922,
-      8945
+      8871,
+      8915,
+      8938,
+      8960
     ]
   },
   "timeOfDay": {
@@ -131,14 +131,14 @@
     ]
   },
   "metrics": {
-    "dailyAvgSteps": 8856,
+    "dailyAvgSteps": 8871,
     "avgHeartRate": 85,
     "restingHR": 55,
     "activeDays": 6,
     "totalWorkouts": 1,
     "bestDaySteps": 18791,
     "bestDayLabel": "Tue",
-    "caloriesPerDay": 568,
+    "caloriesPerDay": 571,
     "currentStreak": 0,
     "longestStreak": 3,
     "fitnessScore": 62,
@@ -146,8 +146,8 @@
     "sleepScore": 58,
     "readinessScore": 56,
     "consistency": 40,
-    "totalSteps30Days": 301575,
-    "totalCalories30Days": 22602,
+    "totalSteps30Days": 301679,
+    "totalCalories30Days": 22620,
     "daysTracked": 30
   },
   "insights": {
@@ -194,7 +194,7 @@
     {
       "type": "warning",
       "title": "Low Activity Day",
-      "message": "Sun: 1,869 steps",
+      "message": "Sun: 1,973 steps",
       "severity": "low",
       "category": "activity"
     }
