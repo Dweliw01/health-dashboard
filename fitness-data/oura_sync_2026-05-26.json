@@ -42931,7 +42931,7 @@
           "id": "f072c234-2f1d-4546-82aa-8d8cde8e02b8",
           "active_calories": 816,
           "average_met_minutes": 1.65625,
-          "class_5_min": "11111111121111111112311111111111111111112211111111121111122233444443343432222222333333332333233233333322343333320333332222222222222332233222233333333322332222323322222333333344444333443323222233333333222211123222222223222222233333333333233333433223233332211111112221112111111111111111221",
+          "class_5_min": "111111111211111111123111111111111111111122111111111211111222334444433434322222223333333323332332333333223433333203333322222222222223322332222333333333223322223233222223333333444443334433232222333333332222111232222222232222222333333333332333334332232333322111111122211121111111111111112221",
           "contributors": {
             "meet_daily_targets": 78,
             "move_every_hour": 95,
@@ -44386,7 +44386,7 @@
               1.2,
               1.1,
               0.9,
-              0.9,
+              1.3,
               0.9,
               0.9,
               0.9,
@@ -44397,15 +44397,15 @@
           },
           "meters_to_target": -2600,
           "non_wear_time": 540,
-          "resting_time": 27600,
+          "resting_time": 27720,
           "score": 89,
           "sedentary_met_minutes": 10,
-          "sedentary_time": 27480,
+          "sedentary_time": 27540,
           "steps": 13590,
           "target_calories": 650,
           "target_meters": 11000,
           "timestamp": "2026-05-25T04:00:00.000-04:00",
-          "total_calories": 3331
+          "total_calories": 3332
         }
       ],
       "next_token": null
@@ -44711,6 +44711,21 @@
           "day": "2026-05-25",
           "score": 55,
           "timestamp": "2026-05-25T00:00:00.000+00:00"
+        },
+        {
+          "id": "1cb7fc46-7d6b-44b0-b4ea-8e401a4cc634",
+          "contributors": {
+            "deep_sleep": 55,
+            "efficiency": 83,
+            "latency": 72,
+            "rem_sleep": 30,
+            "restfulness": 61,
+            "timing": 96,
+            "total_sleep": 24
+          },
+          "day": "2026-05-26",
+          "score": 51,
+          "timestamp": "2026-05-26T00:00:00.000+00:00"
         }
       ],
       "next_token": null
@@ -45096,6 +45111,25 @@
           "temperature_deviation": 0.28,
           "temperature_trend_deviation": 0.47,
           "timestamp": "2026-05-25T00:00:00.000+00:00"
+        },
+        {
+          "id": "c2ec083d-f5b1-48fc-89d3-2308888cc8b5",
+          "contributors": {
+            "activity_balance": 91,
+            "body_temperature": 100,
+            "hrv_balance": 18,
+            "previous_day_activity": 95,
+            "previous_night": 48,
+            "recovery_index": 42,
+            "resting_heart_rate": 40,
+            "sleep_balance": 40,
+            "sleep_regularity": 68
+          },
+          "day": "2026-05-26",
+          "score": 52,
+          "temperature_deviation": -0.01,
+          "temperature_trend_deviation": 0.09,
+          "timestamp": "2026-05-26T00:00:00.000+00:00"
         }
       ],
       "next_token": null
@@ -58303,6 +58337,14 @@
           "spo2_percentage": {
             "average": 96.321
           }
+        },
+        {
+          "id": "22878b63-3e3b-4f43-9f00-9c3fb0373a68",
+          "breathing_disturbance_index": 3,
+          "day": "2026-05-26",
+          "spo2_percentage": {
+            "average": 96.254
+          }
         }
       ],
       "next_token": null
@@ -58517,7 +58559,14 @@
           "day": "2026-05-25",
           "day_summary": "stressful",
           "recovery_high": 0,
-          "stress_high": 29700
+          "stress_high": 36000
+        },
+        {
+          "id": "e4a48a13-bb29-4422-898c-13459d86b4b2",
+          "day": "2026-05-26",
+          "day_summary": "stressful",
+          "recovery_high": 0,
+          "stress_high": 14400
         }
       ],
       "next_token": null
@@ -58721,6 +58770,16 @@
             "sleep_recovery": 22,
             "daytime_recovery": 22.8,
             "stress": 71.5
+          },
+          "level": "limited"
+        },
+        {
+          "id": "a5aafffb-ddf5-4823-bcde-28cba9443df8",
+          "day": "2026-05-26",
+          "contributors": {
+            "sleep_recovery": 19.8,
+            "daytime_recovery": 20.1,
+            "stress": 75.2
           },
           "level": "limited"
         }
