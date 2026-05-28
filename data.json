@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-28T14:42:45.218Z",
+  "lastUpdated": "2026-05-28T18:16:45.081Z",
   "today": {
     "steps": 5383,
     "avgHeartRate": 87,
@@ -165,13 +165,6 @@
       "message": "34 min last night (target: 90+ min)",
       "severity": "medium",
       "category": "sleep"
-    },
-    {
-      "type": "warning",
-      "title": "High Stress Day",
-      "message": "6h in high stress",
-      "severity": "medium",
-      "category": "stress"
     },
     {
       "type": "warning",
@@ -734,28 +727,22 @@
   "stress": {
     "available": true,
     "today": {
-      "stressMinutes": 330,
+      "stressMinutes": 30,
       "recoveryMinutes": 0,
-      "summary": "stressful"
+      "summary": "unknown"
     },
     "trend7Days": [
-      "stressful",
       "stressful",
       "unknown",
       "stressful",
       "stressful",
       "stressful",
-      "stressful"
+      "stressful",
+      "unknown"
     ],
-    "avgStressMinutes": 330,
-    "avgRecoveryMinutes": 43,
+    "avgStressMinutes": 274,
+    "avgRecoveryMinutes": 41,
     "records": [
-      {
-        "day": "2026-04-28",
-        "stressHigh": 19800,
-        "recoveryHigh": 900,
-        "daySummary": "stressful"
-      },
       {
         "day": "2026-04-29",
         "stressHigh": 17100,
@@ -927,8 +914,14 @@
       {
         "day": "2026-05-27",
         "stressHigh": 19800,
-        "recoveryHigh": 0,
+        "recoveryHigh": 900,
         "daySummary": "stressful"
+      },
+      {
+        "day": "2026-05-28",
+        "stressHigh": 1800,
+        "recoveryHigh": 0,
+        "daySummary": "unknown"
       }
     ]
   },
