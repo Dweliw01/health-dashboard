@@ -1,22 +1,22 @@
 {
-  "lastUpdated": "2026-05-30T04:01:55.776Z",
+  "lastUpdated": "2026-05-30T07:44:57.025Z",
   "today": {
-    "steps": 770,
+    "steps": 880,
     "avgHeartRate": 102,
-    "calories": 312
+    "calories": 323
   },
   "todayScores": {
     "sleep": 75,
     "readiness": 70,
-    "activity": 77,
+    "activity": 76,
     "sleepDate": "2026-05-29",
     "readinessDate": "2026-05-29",
     "activityDate": "2026-05-29"
   },
   "thisWeek": {
     "workouts": 0,
-    "avgSteps": 6757,
-    "avgCalories": 409
+    "avgSteps": 6772,
+    "avgCalories": 411
   },
   "last7Days": {
     "labels": [
@@ -35,7 +35,7 @@
       11406,
       5383,
       7901,
-      770
+      880
     ]
   },
   "heartRateTrends": {
@@ -67,7 +67,7 @@
       12654,
       7104,
       10124,
-      6757
+      6772
     ],
     "workouts": [
       0,
@@ -79,7 +79,7 @@
       987,
       605,
       638,
-      409
+      411
     ]
   },
   "projection": {
@@ -90,16 +90,16 @@
       "Day 30"
     ],
     "actual": [
-      6757,
+      6772,
       null,
       null,
       null
     ],
     "projected": [
-      6757,
-      5642,
-      5085,
-      4527
+      6772,
+      5655,
+      5096,
+      4537
     ]
   },
   "timeOfDay": {
@@ -122,19 +122,19 @@
       137,
       139,
       125,
-      117,
+      118,
       75
     ]
   },
   "metrics": {
-    "dailyAvgSteps": 6757,
+    "dailyAvgSteps": 6772,
     "avgHeartRate": 102,
     "restingHR": 53,
     "activeDays": 5,
     "totalWorkouts": 0,
     "bestDaySteps": 13590,
     "bestDayLabel": "Mon",
-    "caloriesPerDay": 409,
+    "caloriesPerDay": 411,
     "currentStreak": 0,
     "longestStreak": 2,
     "fitnessScore": 62,
@@ -142,8 +142,8 @@
     "sleepScore": 61,
     "readinessScore": 56,
     "consistency": 37,
-    "totalSteps30Days": 285419,
-    "totalCalories30Days": 20774,
+    "totalSteps30Days": 285529,
+    "totalCalories30Days": 20785,
     "daysTracked": 30
   },
   "insights": {
@@ -176,7 +176,7 @@
     {
       "type": "warning",
       "title": "Low Activity Day",
-      "message": "Fri: 770 steps",
+      "message": "Fri: 880 steps",
       "severity": "low",
       "category": "activity"
     }
