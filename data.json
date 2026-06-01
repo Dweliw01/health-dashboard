@@ -1,14 +1,14 @@
 {
-  "lastUpdated": "2026-06-01T04:58:58.609Z",
+  "lastUpdated": "2026-06-01T10:29:58.585Z",
   "today": {
     "steps": 15146,
     "avgHeartRate": 89,
-    "calories": 775
+    "calories": 780
   },
   "todayScores": {
     "sleep": 68,
     "readiness": 68,
-    "activity": 86,
+    "activity": 87,
     "sleepDate": "2026-05-31",
     "readinessDate": "2026-05-31",
     "activityDate": "2026-05-31"
@@ -16,7 +16,7 @@
   "thisWeek": {
     "workouts": 0,
     "avgSteps": 9116,
-    "avgCalories": 528
+    "avgCalories": 529
   },
   "last7Days": {
     "labels": [
@@ -79,7 +79,7 @@
       620,
       707,
       571,
-      528
+      529
     ]
   },
   "projection": {
@@ -122,7 +122,7 @@
       187,
       192,
       170,
-      134,
+      138,
       85
     ]
   },
@@ -134,7 +134,7 @@
     "totalWorkouts": 0,
     "bestDaySteps": 15146,
     "bestDayLabel": "Sun",
-    "caloriesPerDay": 528,
+    "caloriesPerDay": 529,
     "currentStreak": 1,
     "longestStreak": 2,
     "fitnessScore": 64,
@@ -143,7 +143,7 @@
     "readinessScore": 64,
     "consistency": 37,
     "totalSteps30Days": 281228,
-    "totalCalories30Days": 19783,
+    "totalCalories30Days": 19788,
     "daysTracked": 30
   },
   "insights": {
@@ -731,28 +731,22 @@
   "stress": {
     "available": true,
     "today": {
-      "stressMinutes": 285,
-      "recoveryMinutes": 135,
-      "summary": "stressful"
+      "stressMinutes": 0,
+      "recoveryMinutes": 0,
+      "summary": "unknown"
     },
     "trend7Days": [
       "stressful",
       "stressful",
       "stressful",
-      "stressful",
       "restored",
       "normal",
-      "stressful"
+      "stressful",
+      "unknown"
     ],
-    "avgStressMinutes": 287,
+    "avgStressMinutes": 201,
     "avgRecoveryMinutes": 92,
     "records": [
-      {
-        "day": "2026-05-02",
-        "stressHigh": 9000,
-        "recoveryHigh": 4500,
-        "daySummary": "unknown"
-      },
       {
         "day": "2026-05-03",
         "stressHigh": 27000,
@@ -926,6 +920,12 @@
         "stressHigh": 17100,
         "recoveryHigh": 8100,
         "daySummary": "stressful"
+      },
+      {
+        "day": "2026-06-01",
+        "stressHigh": 0,
+        "recoveryHigh": 0,
+        "daySummary": "unknown"
       }
     ]
   },
