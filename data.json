@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-06-03T04:54:44.488Z",
+  "lastUpdated": "2026-06-03T10:00:09.870Z",
   "today": {
     "steps": 9966,
     "avgHeartRate": 88,
     "calories": 872
   },
   "todayScores": {
-    "sleep": 68,
-    "readiness": 72,
-    "activity": 71,
-    "sleepDate": "2026-06-02",
-    "readinessDate": "2026-06-02",
+    "sleep": 32,
+    "readiness": 61,
+    "activity": 72,
+    "sleepDate": "2026-06-03",
+    "readinessDate": "2026-06-03",
     "activityDate": "2026-06-02"
   },
   "thisWeek": {
@@ -122,7 +122,7 @@
       144,
       171,
       140,
-      90,
+      91,
       73
     ]
   },
@@ -139,7 +139,7 @@
     "longestStreak": 2,
     "fitnessScore": 62,
     "activityScore": 80,
-    "sleepScore": 62,
+    "sleepScore": 59,
     "readinessScore": 65,
     "consistency": 33,
     "totalSteps30Days": 261874,
@@ -155,7 +155,7 @@
     "recovery": {
       "readinessScore": 65,
       "restingHR": 54,
-      "sleepScore": 62
+      "sleepScore": 59
     }
   },
   "alerts": [
@@ -165,6 +165,13 @@
       "message": "Mon: 122 bpm peak",
       "severity": "medium",
       "category": "activity"
+    },
+    {
+      "type": "warning",
+      "title": "Sleep Quality Low",
+      "message": "Average sleep score: 59%",
+      "severity": "medium",
+      "category": "sleep"
     },
     {
       "type": "warning",
@@ -942,18 +949,18 @@
     "baseline": 97.2
   },
   "readinessBreakdown": {
-    "day": "2026-06-02",
-    "score": 72,
-    "overall": 72,
-    "activityBalance": 95,
-    "bodyTemperature": 100,
-    "hrvBalance": 63,
-    "previousDayActivity": 78,
-    "previousNight": 70,
-    "recoveryIndex": 33,
-    "restingHeartRateScore": 100,
-    "sleepBalance": 62,
-    "tempDeviation": -0.02,
-    "tempTrend": 0.14
+    "day": "2026-06-03",
+    "score": 61,
+    "overall": 61,
+    "activityBalance": 93,
+    "bodyTemperature": 95,
+    "hrvBalance": 66,
+    "previousDayActivity": 73,
+    "previousNight": 23,
+    "recoveryIndex": 43,
+    "restingHeartRateScore": 86,
+    "sleepBalance": 46,
+    "tempDeviation": -0.31,
+    "tempTrend": null
   }
 }
