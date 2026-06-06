@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-06-06T14:48:57.241Z",
+  "lastUpdated": "2026-06-06T16:13:21.869Z",
   "today": {
     "steps": 10133,
     "avgHeartRate": 83,
     "calories": 661
   },
   "todayScores": {
-    "sleep": 65,
-    "readiness": 72,
+    "sleep": 80,
+    "readiness": 68,
     "activity": 80,
-    "sleepDate": "2026-06-05",
-    "readinessDate": "2026-06-05",
+    "sleepDate": "2026-06-06",
+    "readinessDate": "2026-06-06",
     "activityDate": "2026-06-05"
   },
   "thisWeek": {
@@ -137,10 +137,10 @@
     "caloriesPerDay": 750,
     "currentStreak": 1,
     "longestStreak": 2,
-    "fitnessScore": 63,
+    "fitnessScore": 64,
     "activityScore": 79,
-    "sleepScore": 61,
-    "readinessScore": 68,
+    "sleepScore": 66,
+    "readinessScore": 69,
     "consistency": 33,
     "totalSteps30Days": 254226,
     "totalCalories30Days": 18037,
@@ -153,9 +153,9 @@
       "trend": "improving"
     },
     "recovery": {
-      "readinessScore": 68,
+      "readinessScore": 69,
       "restingHR": 56,
-      "sleepScore": 61
+      "sleepScore": 66
     }
   },
   "alerts": [
@@ -745,7 +745,7 @@
       "stressful",
       "unknown"
     ],
-    "avgStressMinutes": 212,
+    "avgStressMinutes": 210,
     "avgRecoveryMinutes": 111,
     "records": [
       {
@@ -912,7 +912,7 @@
       },
       {
         "day": "2026-06-04",
-        "stressHigh": 17100,
+        "stressHigh": 16200,
         "recoveryHigh": 3600,
         "daySummary": "stressful"
       },
@@ -932,31 +932,31 @@
   },
   "spo2": {
     "available": true,
-    "current": 97.512,
+    "current": 97.987,
     "trend7Days": [
-      96.254,
       96.302,
       96.615,
       98.25,
       97.732,
       97.1,
-      97.512
+      97.512,
+      97.987
     ],
-    "baseline": 97.2
+    "baseline": 97.3
   },
   "readinessBreakdown": {
-    "day": "2026-06-05",
-    "score": 72,
-    "overall": 72,
-    "activityBalance": 89,
-    "bodyTemperature": 97,
-    "hrvBalance": 76,
-    "previousDayActivity": 76,
-    "previousNight": 66,
-    "recoveryIndex": 100,
-    "restingHeartRateScore": 69,
-    "sleepBalance": 49,
-    "tempDeviation": 0.1,
-    "tempTrend": 0.01
+    "day": "2026-06-06",
+    "score": 68,
+    "overall": 68,
+    "activityBalance": 90,
+    "bodyTemperature": 84,
+    "hrvBalance": 72,
+    "previousDayActivity": 89,
+    "previousNight": 85,
+    "recoveryIndex": 20,
+    "restingHeartRateScore": 61,
+    "sleepBalance": 54,
+    "tempDeviation": 0.25,
+    "tempTrend": 0.03
   }
 }
