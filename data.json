@@ -1,14 +1,14 @@
 {
-  "lastUpdated": "2026-06-06T10:12:44.251Z",
+  "lastUpdated": "2026-06-06T12:11:04.704Z",
   "today": {
     "steps": 9891,
     "avgHeartRate": 83,
-    "calories": 644
+    "calories": 661
   },
   "todayScores": {
     "sleep": 65,
     "readiness": 72,
-    "activity": 81,
+    "activity": 80,
     "sleepDate": "2026-06-05",
     "readinessDate": "2026-06-05",
     "activityDate": "2026-06-05"
@@ -16,7 +16,7 @@
   "thisWeek": {
     "workouts": 0,
     "avgSteps": 9449,
-    "avgCalories": 748
+    "avgCalories": 750
   },
   "last7Days": {
     "labels": [
@@ -79,7 +79,7 @@
       605,
       638,
       411,
-      748
+      750
     ]
   },
   "projection": {
@@ -120,10 +120,10 @@
       124,
       112,
       130,
-      139,
-      100,
+      140,
+      114,
       76,
-      60
+      61
     ]
   },
   "metrics": {
@@ -134,7 +134,7 @@
     "totalWorkouts": 0,
     "bestDaySteps": 15146,
     "bestDayLabel": "Sun",
-    "caloriesPerDay": 748,
+    "caloriesPerDay": 750,
     "currentStreak": 0,
     "longestStreak": 2,
     "fitnessScore": 62,
@@ -143,7 +143,7 @@
     "readinessScore": 68,
     "consistency": 30,
     "totalSteps30Days": 253984,
-    "totalCalories30Days": 18020,
+    "totalCalories30Days": 18037,
     "daysTracked": 30
   },
   "insights": {
@@ -172,13 +172,6 @@
       "message": "52 min last night (target: 90+ min)",
       "severity": "medium",
       "category": "sleep"
-    },
-    {
-      "type": "warning",
-      "title": "High Stress Day",
-      "message": "6h in high stress",
-      "severity": "medium",
-      "category": "stress"
     },
     {
       "type": "warning",
@@ -739,28 +732,22 @@
   "stress": {
     "available": true,
     "today": {
-      "stressMinutes": 330,
-      "recoveryMinutes": 90,
-      "summary": "stressful"
+      "stressMinutes": 0,
+      "recoveryMinutes": 0,
+      "summary": "unknown"
     },
     "trend7Days": [
-      "normal",
       "stressful",
       "stressful",
       "restored",
       "restored",
       "stressful",
-      "stressful"
+      "stressful",
+      "unknown"
     ],
-    "avgStressMinutes": 219,
-    "avgRecoveryMinutes": 129,
+    "avgStressMinutes": 212,
+    "avgRecoveryMinutes": 111,
     "records": [
-      {
-        "day": "2026-05-07",
-        "stressHigh": 9900,
-        "recoveryHigh": 6300,
-        "daySummary": "normal"
-      },
       {
         "day": "2026-05-08",
         "stressHigh": 7200,
@@ -934,6 +921,12 @@
         "stressHigh": 19800,
         "recoveryHigh": 5400,
         "daySummary": "stressful"
+      },
+      {
+        "day": "2026-06-06",
+        "stressHigh": 0,
+        "recoveryHigh": 0,
+        "daySummary": "unknown"
       }
     ]
   },
