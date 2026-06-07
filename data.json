@@ -1,21 +1,21 @@
 {
-  "lastUpdated": "2026-06-07T00:13:07.081Z",
+  "lastUpdated": "2026-06-07T05:44:35.162Z",
   "today": {
-    "steps": 7709,
+    "steps": 7782,
     "avgHeartRate": 83,
-    "calories": 377
+    "calories": 381
   },
   "todayScores": {
     "sleep": 80,
     "readiness": 68,
-    "activity": 82,
+    "activity": 83,
     "sleepDate": "2026-06-06",
     "readinessDate": "2026-06-06",
     "activityDate": "2026-06-06"
   },
   "thisWeek": {
     "workouts": 0,
-    "avgSteps": 9227,
+    "avgSteps": 9237,
     "avgCalories": 729
   },
   "last7Days": {
@@ -35,7 +35,7 @@
       4567,
       6935,
       10133,
-      7709
+      7782
     ]
   },
   "heartRateTrends": {
@@ -67,7 +67,7 @@
       9535,
       8589,
       7234,
-      9227
+      9237
     ],
     "workouts": [
       0,
@@ -90,16 +90,16 @@
       "Day 30"
     ],
     "actual": [
-      9227,
+      9237,
       null,
       null,
       null
     ],
     "projected": [
-      9227,
-      10519,
-      11165,
-      11811
+      9237,
+      10530,
+      11177,
+      11823
     ]
   },
   "timeOfDay": {
@@ -120,16 +120,16 @@
       130,
       106,
       122,
-      128,
+      135,
       101,
       62,
       62
     ]
   },
   "metrics": {
-    "dailyAvgSteps": 9227,
+    "dailyAvgSteps": 9237,
     "avgHeartRate": 83,
-    "restingHR": 55,
+    "restingHR": 58,
     "activeDays": 6,
     "totalWorkouts": 0,
     "bestDaySteps": 15146,
@@ -142,8 +142,8 @@
     "sleepScore": 66,
     "readinessScore": 69,
     "consistency": 33,
-    "totalSteps30Days": 252248,
-    "totalCalories30Days": 17686,
+    "totalSteps30Days": 252321,
+    "totalCalories30Days": 17690,
     "daysTracked": 30
   },
   "insights": {
@@ -154,11 +154,18 @@
     },
     "recovery": {
       "readinessScore": 69,
-      "restingHR": 55,
+      "restingHR": 58,
       "sleepScore": 66
     }
   },
   "alerts": [
+    {
+      "type": "warning",
+      "title": "HRV Significantly Low",
+      "message": "77ms vs 109ms baseline (-29%)",
+      "severity": "high",
+      "category": "recovery"
+    },
     {
       "type": "warning",
       "title": "Low Deep Sleep",
@@ -189,18 +196,17 @@
     }
   ],
   "hrv": {
-    "current": 134,
+    "current": 77,
     "trend7Days": [
-      56,
       124,
       102,
       125,
       147,
       81,
-      134
+      134,
+      77
     ],
     "trend30Days": [
-      130,
       122,
       143,
       82,
@@ -229,12 +235,13 @@
       125,
       147,
       81,
-      134
+      134,
+      77
     ],
-    "avg7Days": 110,
-    "avg30Days": 110,
-    "baseline": 110,
-    "status": "high",
+    "avg7Days": 113,
+    "avg30Days": 109,
+    "baseline": 109,
+    "status": "low",
     "records": [
       {
         "day": "2026-05-08",
@@ -405,6 +412,11 @@
         "day": "2026-06-06",
         "avgHrv": 134,
         "lowestHR": 51
+      },
+      {
+        "day": "2026-06-07",
+        "avgHrv": 77,
+        "lowestHR": 66
       }
     ]
   },
@@ -733,7 +745,7 @@
     "available": true,
     "today": {
       "stressMinutes": 330,
-      "recoveryMinutes": 45,
+      "recoveryMinutes": 150,
       "summary": "stressful"
     },
     "trend7Days": [
@@ -746,7 +758,7 @@
       "stressful"
     ],
     "avgStressMinutes": 266,
-    "avgRecoveryMinutes": 124,
+    "avgRecoveryMinutes": 139,
     "records": [
       {
         "day": "2026-05-08",
@@ -925,7 +937,7 @@
       {
         "day": "2026-06-06",
         "stressHigh": 19800,
-        "recoveryHigh": 2700,
+        "recoveryHigh": 9000,
         "daySummary": "stressful"
       }
     ]
