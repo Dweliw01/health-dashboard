@@ -59377,14 +59377,14 @@
           "day": "2026-06-08",
           "day_summary": "stressful",
           "recovery_high": 6300,
-          "stress_high": 14400
+          "stress_high": 15300
         },
         {
           "id": "7fd31ce8-fb31-4ebe-ac26-ad4c943864fd",
           "day": "2026-06-09",
-          "day_summary": null,
-          "recovery_high": 0,
-          "stress_high": 0
+          "day_summary": "stressful",
+          "recovery_high": 900,
+          "stress_high": 12600
         }
       ],
       "next_token": null
@@ -59588,6 +59588,16 @@
             "sleep_recovery": 29.6,
             "daytime_recovery": 32.1,
             "stress": 58.7
+          },
+          "level": "limited"
+        },
+        {
+          "id": "9daf93a3-f623-416d-8942-b22640d8ccff",
+          "day": "2026-06-09",
+          "contributors": {
+            "sleep_recovery": 32.2,
+            "daytime_recovery": 35.7,
+            "stress": 52.5
           },
           "level": "limited"
         }
