@@ -44715,16 +44715,16 @@
         {
           "id": "0485c93b-6b18-49ec-81b5-015ef5895b78",
           "contributors": {
-            "deep_sleep": 44,
-            "efficiency": 96,
-            "latency": 78,
+            "deep_sleep": 46,
+            "efficiency": 88,
+            "latency": 81,
             "rem_sleep": 42,
-            "restfulness": 88,
-            "timing": 93,
-            "total_sleep": 26
+            "restfulness": 79,
+            "timing": 88,
+            "total_sleep": 30
           },
           "day": "2026-06-16",
-          "score": 58,
+          "score": 57,
           "timestamp": "2026-06-16T00:00:00.000+00:00"
         }
       ],
@@ -45119,11 +45119,11 @@
             "body_temperature": 92,
             "hrv_balance": 81,
             "previous_day_activity": 100,
-            "previous_night": 57,
-            "recovery_index": 22,
+            "previous_night": 56,
+            "recovery_index": 28,
             "resting_heart_rate": 70,
-            "sleep_balance": 31,
-            "sleep_regularity": 79
+            "sleep_balance": 32,
+            "sleep_regularity": 81
           },
           "day": "2026-06-16",
           "score": 65,
@@ -58991,7 +58991,7 @@
           "breathing_disturbance_index": 0,
           "day": "2026-06-16",
           "spo2_percentage": {
-            "average": 97.815
+            "average": 97.818
           }
         }
       ],
@@ -59213,8 +59213,8 @@
           "id": "69880259-dc82-4d66-886b-e849820f909b",
           "day": "2026-06-16",
           "day_summary": null,
-          "recovery_high": 0,
-          "stress_high": 0
+          "recovery_high": 2700,
+          "stress_high": 4500
         }
       ],
       "next_token": null
@@ -59418,6 +59418,16 @@
             "sleep_recovery": 34.3,
             "daytime_recovery": 35.9,
             "stress": 56.1
+          },
+          "level": "adequate"
+        },
+        {
+          "id": "8dc22ccf-d310-4d7f-8d77-08daf41aec8d",
+          "day": "2026-06-16",
+          "contributors": {
+            "sleep_recovery": 34.3,
+            "daytime_recovery": 36.5,
+            "stress": 54.6
           },
           "level": "adequate"
         }
