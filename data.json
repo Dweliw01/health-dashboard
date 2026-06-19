@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-19T10:49:30.095Z",
+  "lastUpdated": "2026-06-19T14:17:32.987Z",
   "today": {
     "steps": 20234,
     "avgHeartRate": 77,
@@ -8,7 +8,7 @@
   "todayScores": {
     "sleep": 68,
     "readiness": 66,
-    "activity": 97,
+    "activity": 99,
     "sleepDate": "2026-06-18",
     "readinessDate": "2026-06-18",
     "activityDate": "2026-06-18"
@@ -179,13 +179,6 @@
     },
     {
       "type": "warning",
-      "title": "High Stress Day",
-      "message": "8h in high stress",
-      "severity": "medium",
-      "category": "stress"
-    },
-    {
-      "type": "warning",
       "title": "HR Spike Detected",
       "message": "Wed: 148 bpm peak",
       "severity": "medium",
@@ -197,6 +190,13 @@
       "message": "Average sleep score: 56%",
       "severity": "medium",
       "category": "sleep"
+    },
+    {
+      "type": "warning",
+      "title": "Low Activity Day",
+      "message": "Sun: 5,835 steps",
+      "severity": "low",
+      "category": "activity"
     }
   ],
   "hrv": {
@@ -754,28 +754,22 @@
   "stress": {
     "available": true,
     "today": {
-      "stressMinutes": 480,
+      "stressMinutes": 0,
       "recoveryMinutes": 0,
-      "summary": "stressful"
+      "summary": "unknown"
     },
     "trend7Days": [
-      "stressful",
       "stressful",
       "normal",
       "unknown",
       "stressful",
       "stressful",
-      "stressful"
+      "stressful",
+      "unknown"
     ],
-    "avgStressMinutes": 339,
-    "avgRecoveryMinutes": 73,
+    "avgStressMinutes": 264,
+    "avgRecoveryMinutes": 62,
     "records": [
-      {
-        "day": "2026-05-20",
-        "stressHigh": 24300,
-        "recoveryHigh": 900,
-        "daySummary": "stressful"
-      },
       {
         "day": "2026-05-21",
         "stressHigh": 25200,
@@ -949,6 +943,12 @@
         "stressHigh": 28800,
         "recoveryHigh": 0,
         "daySummary": "stressful"
+      },
+      {
+        "day": "2026-06-19",
+        "stressHigh": 0,
+        "recoveryHigh": 0,
+        "daySummary": "unknown"
       }
     ]
   },
