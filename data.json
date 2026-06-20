@@ -1,7 +1,7 @@
 {
-  "lastUpdated": "2026-06-20T08:25:29.501Z",
+  "lastUpdated": "2026-06-20T11:23:30.549Z",
   "today": {
-    "steps": 10367,
+    "steps": 11660,
     "avgHeartRate": 93,
     "calories": 543
   },
@@ -15,7 +15,7 @@
   },
   "thisWeek": {
     "workouts": 0,
-    "avgSteps": 11166,
+    "avgSteps": 11351,
     "avgCalories": 646
   },
   "last7Days": {
@@ -35,7 +35,7 @@
       8863,
       10213,
       20234,
-      10367
+      11660
     ]
   },
   "heartRateTrends": {
@@ -71,7 +71,7 @@
       6772,
       9483,
       9386,
-      11166
+      11351
     ],
     "workouts": [
       0,
@@ -94,16 +94,16 @@
       "Day 30"
     ],
     "actual": [
-      11166,
+      11351,
       null,
       null,
       null
     ],
     "projected": [
-      11166,
-      12227,
-      12757,
-      13288
+      11351,
+      12543,
+      13139,
+      13735
     ]
   },
   "timeOfDay": {
@@ -131,7 +131,7 @@
     ]
   },
   "metrics": {
-    "dailyAvgSteps": 11166,
+    "dailyAvgSteps": 11351,
     "avgHeartRate": 91,
     "restingHR": 55,
     "activeDays": 6,
@@ -146,14 +146,14 @@
     "sleepScore": 56,
     "readinessScore": 65,
     "consistency": 37,
-    "totalSteps30Days": 275698,
+    "totalSteps30Days": 276991,
     "totalCalories30Days": 19193,
     "daysTracked": 30
   },
   "insights": {
     "performance": {
-      "weekChange": 19,
-      "monthChange": 22,
+      "weekChange": 21,
+      "monthChange": 23,
       "trend": "improving"
     },
     "recovery": {
@@ -179,13 +179,6 @@
     },
     {
       "type": "warning",
-      "title": "High Stress Day",
-      "message": "6h in high stress",
-      "severity": "medium",
-      "category": "stress"
-    },
-    {
-      "type": "warning",
       "title": "HR Spike Detected",
       "message": "Thu: 146 bpm peak",
       "severity": "medium",
@@ -197,6 +190,13 @@
       "message": "Average sleep score: 56%",
       "severity": "medium",
       "category": "sleep"
+    },
+    {
+      "type": "warning",
+      "title": "Low Activity Day",
+      "message": "Mon: 27 steps",
+      "severity": "low",
+      "category": "activity"
     }
   ],
   "hrv": {
@@ -738,28 +738,22 @@
   "stress": {
     "available": true,
     "today": {
-      "stressMinutes": 330,
+      "stressMinutes": 0,
       "recoveryMinutes": 0,
-      "summary": "stressful"
+      "summary": "unknown"
     },
     "trend7Days": [
-      "stressful",
       "normal",
       "unknown",
       "stressful",
       "stressful",
       "stressful",
-      "stressful"
+      "stressful",
+      "unknown"
     ],
-    "avgStressMinutes": 311,
-    "avgRecoveryMinutes": 62,
+    "avgStressMinutes": 268,
+    "avgRecoveryMinutes": 39,
     "records": [
-      {
-        "day": "2026-05-21",
-        "stressHigh": 25200,
-        "recoveryHigh": 1800,
-        "daySummary": "stressful"
-      },
       {
         "day": "2026-05-22",
         "stressHigh": 10800,
@@ -933,6 +927,12 @@
         "stressHigh": 19800,
         "recoveryHigh": 0,
         "daySummary": "stressful"
+      },
+      {
+        "day": "2026-06-20",
+        "stressHigh": 0,
+        "recoveryHigh": 0,
+        "daySummary": "unknown"
       }
     ]
   },
