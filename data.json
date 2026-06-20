@@ -1,22 +1,22 @@
 {
-  "lastUpdated": "2026-06-20T11:23:30.549Z",
+  "lastUpdated": "2026-06-20T14:20:02.326Z",
   "today": {
-    "steps": 11660,
+    "steps": 16668,
     "avgHeartRate": 93,
-    "calories": 543
+    "calories": 746
   },
   "todayScores": {
     "sleep": 68,
     "readiness": 66,
-    "activity": 94,
+    "activity": 92,
     "sleepDate": "2026-06-18",
     "readinessDate": "2026-06-18",
     "activityDate": "2026-06-19"
   },
   "thisWeek": {
     "workouts": 0,
-    "avgSteps": 11351,
-    "avgCalories": 646
+    "avgSteps": 12066,
+    "avgCalories": 675
   },
   "last7Days": {
     "labels": [
@@ -35,7 +35,7 @@
       8863,
       10213,
       20234,
-      11660
+      16668
     ]
   },
   "heartRateTrends": {
@@ -71,7 +71,7 @@
       6772,
       9483,
       9386,
-      11351
+      12066
     ],
     "workouts": [
       0,
@@ -83,7 +83,7 @@
       411,
       750,
       792,
-      646
+      675
     ]
   },
   "projection": {
@@ -94,16 +94,16 @@
       "Day 30"
     ],
     "actual": [
-      11351,
+      12066,
       null,
       null,
       null
     ],
     "projected": [
-      11351,
-      12543,
-      13139,
-      13735
+      12066,
+      13816,
+      14690,
+      15565
     ]
   },
   "timeOfDay": {
@@ -123,22 +123,22 @@
       205,
       161,
       154,
-      153,
-      163,
+      156,
+      164,
       132,
       125,
       88
     ]
   },
   "metrics": {
-    "dailyAvgSteps": 11351,
+    "dailyAvgSteps": 12066,
     "avgHeartRate": 91,
     "restingHR": 55,
     "activeDays": 6,
     "totalWorkouts": 0,
     "bestDaySteps": 22624,
     "bestDayLabel": "Sat",
-    "caloriesPerDay": 646,
+    "caloriesPerDay": 675,
     "currentStreak": 3,
     "longestStreak": 3,
     "fitnessScore": 65,
@@ -146,14 +146,14 @@
     "sleepScore": 56,
     "readinessScore": 65,
     "consistency": 37,
-    "totalSteps30Days": 276991,
-    "totalCalories30Days": 19193,
+    "totalSteps30Days": 281999,
+    "totalCalories30Days": 19396,
     "daysTracked": 30
   },
   "insights": {
     "performance": {
-      "weekChange": 21,
-      "monthChange": 23,
+      "weekChange": 29,
+      "monthChange": 28,
       "trend": "improving"
     },
     "recovery": {
@@ -194,7 +194,7 @@
     {
       "type": "warning",
       "title": "Low Activity Day",
-      "message": "Mon: 27 steps",
+      "message": "Sun: 5,835 steps",
       "severity": "low",
       "category": "activity"
     }
