@@ -59302,15 +59302,15 @@
           "id": "5cb567a4-df30-4187-b4b8-c67dac58efc8",
           "day": "2026-06-20",
           "day_summary": null,
-          "recovery_high": 0,
-          "stress_high": 3600
+          "recovery_high": 900,
+          "stress_high": 5400
         },
         {
           "id": "70f8a7a1-47cd-4998-8d16-53fb169e3ba1",
           "day": "2026-06-21",
           "day_summary": null,
-          "recovery_high": 0,
-          "stress_high": 0
+          "recovery_high": 3600,
+          "stress_high": 900
         }
       ],
       "next_token": null
@@ -59514,6 +59514,16 @@
             "sleep_recovery": 34.1,
             "daytime_recovery": 33.7,
             "stress": 63.8
+          },
+          "level": "adequate"
+        },
+        {
+          "id": "3dce4fed-cd61-449c-b579-7cba4aeda187",
+          "day": "2026-06-21",
+          "contributors": {
+            "sleep_recovery": 33.2,
+            "daytime_recovery": 32.9,
+            "stress": 64.1
           },
           "level": "adequate"
         }
