@@ -1,8 +1,8 @@
 {
-  "lastUpdated": "2026-06-24T23:13:13.047Z",
+  "lastUpdated": "2026-06-25T04:10:25.016Z",
   "today": {
     "steps": 5121,
-    "avgHeartRate": 88,
+    "avgHeartRate": 89,
     "calories": 590
   },
   "todayScores": {
@@ -40,16 +40,16 @@
   },
   "heartRateTrends": {
     "labels": [
-      "Mon"
+      "Tue"
     ],
     "values": [
-      88
+      89
     ],
     "max": [
-      115
+      129
     ],
     "min": [
-      50
+      53
     ]
   },
   "workoutDistribution": {
@@ -128,7 +128,7 @@
   },
   "metrics": {
     "dailyAvgSteps": 9400,
-    "avgHeartRate": 88,
+    "avgHeartRate": 89,
     "restingHR": 54,
     "activeDays": 5,
     "totalWorkouts": 0,
@@ -141,15 +141,15 @@
     "activityScore": 91,
     "sleepScore": 55,
     "readinessScore": 65,
-    "consistency": 38,
-    "totalSteps30Days": 265537,
-    "totalCalories30Days": 18784,
-    "daysTracked": 29
+    "consistency": 36,
+    "totalSteps30Days": 251947,
+    "totalCalories30Days": 17968,
+    "daysTracked": 28
   },
   "insights": {
     "performance": {
       "weekChange": -14,
-      "monthChange": 3,
+      "monthChange": 4,
       "trend": "declining"
     },
     "recovery": {
@@ -169,7 +169,7 @@
     {
       "type": "warning",
       "title": "HR Spike Detected",
-      "message": "Mon: 115 bpm peak",
+      "message": "Tue: 129 bpm peak",
       "severity": "medium",
       "category": "activity"
     },
@@ -243,11 +243,6 @@
     "baseline": 115,
     "status": "high",
     "records": [
-      {
-        "day": "2026-05-25",
-        "avgHrv": 114,
-        "lowestHR": 50
-      },
       {
         "day": "2026-05-26",
         "avgHrv": 98,
@@ -493,17 +488,6 @@
     ],
     "last30Days": [
       {
-        "day": "2026-05-25",
-        "deep": 12,
-        "rem": 105,
-        "light": 246,
-        "awake": 74,
-        "total": 363,
-        "efficiency": 83,
-        "latency": 23,
-        "breathRate": 15.375
-      },
-      {
         "day": "2026-05-26",
         "deep": 48,
         "rem": 36,
@@ -691,10 +675,10 @@
         "breathRate": 13.875
       }
     ],
-    "avgDeep": 40,
-    "avgRem": 77,
-    "avgLight": 190,
-    "avgTotal": 306,
+    "avgDeep": 42,
+    "avgRem": 75,
+    "avgLight": 187,
+    "avgTotal": 303,
     "avgEfficiency": 83,
     "avgLatency": 24,
     "avgBreathRate": 14.7
@@ -912,7 +896,7 @@
       98.439,
       97.702
     ],
-    "baseline": 97.5
+    "baseline": 97.6
   },
   "readinessBreakdown": {
     "day": "2026-06-21",
