@@ -58324,9 +58324,9 @@
         {
           "id": "53b68611-b81c-42c6-a8bb-3949bc62d41e",
           "day": "2026-06-26",
-          "day_summary": null,
-          "recovery_high": 0,
-          "stress_high": 0
+          "day_summary": "normal",
+          "recovery_high": 2700,
+          "stress_high": 4500
         }
       ],
       "next_token": null
@@ -58502,6 +58502,16 @@
             "stress": 64.1
           },
           "level": "adequate"
+        },
+        {
+          "id": "b76d8640-1871-4186-bc8b-7b5090cc85df",
+          "day": "2026-06-26",
+          "contributors": {
+            "sleep_recovery": 30.2,
+            "daytime_recovery": 30.2,
+            "stress": 65.5
+          },
+          "level": "limited"
         }
       ],
       "next_token": null
