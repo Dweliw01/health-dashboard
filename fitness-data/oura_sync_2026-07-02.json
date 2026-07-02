@@ -44389,8 +44389,8 @@
               0.9,
               0.9,
               0.9,
-              0.9,
-              0.9,
+              1.1,
+              1.4,
               0.9
             ],
             "timestamp": "2026-07-01T04:00:00.000-04:00"
@@ -44405,7 +44405,7 @@
           "target_calories": 1000,
           "target_meters": 18000,
           "timestamp": "2026-07-01T04:00:00.000-04:00",
-          "total_calories": 3003
+          "total_calories": 3004
         }
       ],
       "next_token": null
@@ -44651,6 +44651,21 @@
           "day": "2026-06-30",
           "score": 43,
           "timestamp": "2026-06-30T00:00:00.000+00:00"
+        },
+        {
+          "id": "82a62385-2e3c-4fdc-b58e-fd1c46a3cad2",
+          "contributors": {
+            "deep_sleep": 35,
+            "efficiency": 72,
+            "latency": 19,
+            "rem_sleep": 67,
+            "restfulness": 71,
+            "timing": 84,
+            "total_sleep": 37
+          },
+          "day": "2026-07-02",
+          "score": 51,
+          "timestamp": "2026-07-02T00:00:00.000+00:00"
         }
       ],
       "next_token": null
@@ -44960,6 +44975,25 @@
           "temperature_deviation": 0.02,
           "temperature_trend_deviation": 0.12,
           "timestamp": "2026-06-30T00:00:00.000+00:00"
+        },
+        {
+          "id": "980f1fd0-efa9-4ee5-acbd-1dd729c57a44",
+          "contributors": {
+            "activity_balance": 85,
+            "body_temperature": 98,
+            "hrv_balance": 67,
+            "previous_day_activity": 76,
+            "previous_night": 49,
+            "recovery_index": 61,
+            "resting_heart_rate": 89,
+            "sleep_balance": 35,
+            "sleep_regularity": 88
+          },
+          "day": "2026-07-02",
+          "score": 67,
+          "temperature_deviation": -0.2,
+          "temperature_trend_deviation": -0.04,
+          "timestamp": "2026-07-02T00:00:00.000+00:00"
         }
       ],
       "next_token": null
@@ -57337,6 +57371,14 @@
           "spo2_percentage": {
             "average": 97.689
           }
+        },
+        {
+          "id": "fd9b30db-abcd-4dd2-acfa-658bf1a73cb2",
+          "breathing_disturbance_index": 1,
+          "day": "2026-07-02",
+          "spo2_percentage": {
+            "average": 97.743
+          }
         }
       ],
       "next_token": null
@@ -57552,6 +57594,13 @@
           "day_summary": "normal",
           "recovery_high": 10800,
           "stress_high": 9000
+        },
+        {
+          "id": "8532cee6-ac47-468c-98a7-1c02e185e164",
+          "day": "2026-07-02",
+          "day_summary": null,
+          "recovery_high": 0,
+          "stress_high": 0
         }
       ],
       "next_token": null
