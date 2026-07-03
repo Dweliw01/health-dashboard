@@ -57644,14 +57644,14 @@
           "id": "8532cee6-ac47-468c-98a7-1c02e185e164",
           "day": "2026-07-02",
           "day_summary": "restored",
-          "recovery_high": 16200,
+          "recovery_high": 19800,
           "stress_high": 9000
         },
         {
           "id": "3665d9b6-6d23-430a-960a-bbe08670ae8e",
           "day": "2026-07-03",
           "day_summary": null,
-          "recovery_high": 0,
+          "recovery_high": 9000,
           "stress_high": 0
         }
       ],
@@ -57796,6 +57796,16 @@
             "sleep_recovery": 22,
             "daytime_recovery": 28.5,
             "stress": 51.7
+          },
+          "level": "limited"
+        },
+        {
+          "id": "93afc106-bb26-47fa-b382-d7609a05232a",
+          "day": "2026-07-03",
+          "contributors": {
+            "sleep_recovery": 26.6,
+            "daytime_recovery": 34.5,
+            "stress": 42
           },
           "level": "limited"
         }
