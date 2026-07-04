@@ -1,9 +1,9 @@
 {
-  "lastUpdated": "2026-07-04T04:41:07.982Z",
+  "lastUpdated": "2026-07-04T07:52:27.080Z",
   "today": {
-    "steps": 4275,
+    "steps": 4713,
     "avgHeartRate": 88,
-    "calories": 233
+    "calories": 276
   },
   "todayScores": {
     "sleep": 56,
@@ -15,8 +15,8 @@
   },
   "thisWeek": {
     "workouts": 0,
-    "avgSteps": 9025,
-    "avgCalories": 632
+    "avgSteps": 9088,
+    "avgCalories": 638
   },
   "last7Days": {
     "labels": [
@@ -35,7 +35,7 @@
       10394,
       8688,
       8302,
-      4275
+      4713
     ]
   },
   "heartRateTrends": {
@@ -71,7 +71,7 @@
       9386,
       12066,
       4546,
-      9025
+      9088
     ],
     "workouts": [
       0,
@@ -83,7 +83,7 @@
       792,
       675,
       452,
-      632
+      638
     ]
   },
   "projection": {
@@ -94,16 +94,16 @@
       "Day 30"
     ],
     "actual": [
-      9025,
+      9088,
       null,
       null,
       null
     ],
     "projected": [
-      9025,
-      13492,
-      15726,
-      17960
+      9088,
+      13632,
+      15904,
+      18176
     ]
   },
   "timeOfDay": {
@@ -126,19 +126,19 @@
       129,
       129,
       130,
-      83,
-      59
+      99,
+      64
     ]
   },
   "metrics": {
-    "dailyAvgSteps": 9025,
+    "dailyAvgSteps": 9088,
     "avgHeartRate": 88,
     "restingHR": 55,
     "activeDays": 6,
     "totalWorkouts": 0,
     "bestDaySteps": 16527,
     "bestDayLabel": "Sun",
-    "caloriesPerDay": 632,
+    "caloriesPerDay": 638,
     "currentStreak": 0,
     "longestStreak": 3,
     "fitnessScore": 60,
@@ -146,14 +146,14 @@
     "sleepScore": 56,
     "readinessScore": 69,
     "consistency": 30,
-    "totalSteps30Days": 262238,
-    "totalCalories30Days": 19249,
+    "totalSteps30Days": 262676,
+    "totalCalories30Days": 19292,
     "daysTracked": 30
   },
   "insights": {
     "performance": {
-      "weekChange": 99,
-      "monthChange": 3,
+      "weekChange": 100,
+      "monthChange": 4,
       "trend": "improving"
     },
     "recovery": {
@@ -183,13 +183,6 @@
       "message": "Average sleep score: 56%",
       "severity": "medium",
       "category": "sleep"
-    },
-    {
-      "type": "warning",
-      "title": "Low Activity Day",
-      "message": "Fri: 4,275 steps",
-      "severity": "low",
-      "category": "activity"
     }
   ],
   "hrv": {
