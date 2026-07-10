@@ -44685,16 +44685,16 @@
         {
           "id": "4ec982df-c394-47e3-8dff-211028feaeed",
           "contributors": {
-            "deep_sleep": 39,
-            "efficiency": 20,
-            "latency": 67,
-            "rem_sleep": 8,
-            "restfulness": 32,
-            "timing": 1,
-            "total_sleep": 12
+            "deep_sleep": 22,
+            "efficiency": 67,
+            "latency": 72,
+            "rem_sleep": 10,
+            "restfulness": 68,
+            "timing": 63,
+            "total_sleep": 19
           },
           "day": "2026-07-10",
-          "score": 22,
+          "score": 40,
           "timestamp": "2026-07-10T00:00:00.000+00:00"
         }
       ],
@@ -45048,19 +45048,19 @@
           "id": "c96f35c3-f90e-4ab1-9c0d-7e54190b26a3",
           "contributors": {
             "activity_balance": 92,
-            "body_temperature": 83,
-            "hrv_balance": 83,
+            "body_temperature": 99,
+            "hrv_balance": 91,
             "previous_day_activity": 34,
-            "previous_night": 12,
-            "recovery_index": 11,
-            "resting_heart_rate": 52,
-            "sleep_balance": 28,
+            "previous_night": 35,
+            "recovery_index": 44,
+            "resting_heart_rate": 88,
+            "sleep_balance": 32,
             "sleep_regularity": 79
           },
           "day": "2026-07-10",
-          "score": 48,
-          "temperature_deviation": 0.27,
-          "temperature_trend_deviation": 0.02,
+          "score": 62,
+          "temperature_deviation": 0.08,
+          "temperature_trend_deviation": -0.05,
           "timestamp": "2026-07-10T00:00:00.000+00:00"
         }
       ],
