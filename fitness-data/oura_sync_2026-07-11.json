@@ -44685,16 +44685,16 @@
         {
           "id": "5a6d607a-9e54-44a7-b907-98719127ca9f",
           "contributors": {
-            "deep_sleep": 88,
-            "efficiency": 96,
+            "deep_sleep": 95,
+            "efficiency": 93,
             "latency": 86,
-            "rem_sleep": 56,
-            "restfulness": 79,
+            "rem_sleep": 61,
+            "restfulness": 82,
             "timing": 1,
-            "total_sleep": 48
+            "total_sleep": 57
           },
           "day": "2026-07-11",
-          "score": 61,
+          "score": 66,
           "timestamp": "2026-07-11T00:00:00.000+00:00"
         }
       ],
@@ -45049,16 +45049,16 @@
           "contributors": {
             "activity_balance": 89,
             "body_temperature": 71,
-            "hrv_balance": 72,
+            "hrv_balance": 73,
             "previous_day_activity": 75,
-            "previous_night": 61,
-            "recovery_index": 42,
+            "previous_night": 68,
+            "recovery_index": 54,
             "resting_heart_rate": 61,
-            "sleep_balance": 39,
-            "sleep_regularity": 69
+            "sleep_balance": 42,
+            "sleep_regularity": 59
           },
           "day": "2026-07-11",
-          "score": 62,
+          "score": 64,
           "temperature_deviation": 0.41,
           "temperature_trend_deviation": 0.08,
           "timestamp": "2026-07-11T00:00:00.000+00:00"
@@ -57518,7 +57518,7 @@
         },
         {
           "id": "93bc7a4a-30c6-4ea8-9624-7570feb0fcb4",
-          "breathing_disturbance_index": 8,
+          "breathing_disturbance_index": 3,
           "day": "2026-07-11",
           "spo2_percentage": {
             "average": 97.213
@@ -57743,8 +57743,8 @@
           "id": "4c080b56-c639-4467-85be-7f16d1654887",
           "day": "2026-07-11",
           "day_summary": null,
-          "recovery_high": 5400,
-          "stress_high": 0
+          "recovery_high": 1800,
+          "stress_high": 3600
         }
       ],
       "next_token": null
@@ -57915,8 +57915,8 @@
           "id": "9da3d642-0b0f-4a94-afc6-be26fb920038",
           "day": "2026-07-11",
           "contributors": {
-            "sleep_recovery": 34.3,
-            "daytime_recovery": 40.6,
+            "sleep_recovery": 35.2,
+            "daytime_recovery": 41.2,
             "stress": 40.1
           },
           "level": "adequate"
