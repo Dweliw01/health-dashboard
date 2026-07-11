@@ -57737,13 +57737,13 @@
           "day": "2026-07-10",
           "day_summary": "stressful",
           "recovery_high": 6300,
-          "stress_high": 19800
+          "stress_high": 29700
         },
         {
           "id": "4c080b56-c639-4467-85be-7f16d1654887",
           "day": "2026-07-11",
           "day_summary": null,
-          "recovery_high": 0,
+          "recovery_high": 4500,
           "stress_high": 0
         }
       ],
@@ -57908,6 +57908,16 @@
             "sleep_recovery": 35.7,
             "daytime_recovery": 42.8,
             "stress": 36.2
+          },
+          "level": "adequate"
+        },
+        {
+          "id": "9da3d642-0b0f-4a94-afc6-be26fb920038",
+          "day": "2026-07-11",
+          "contributors": {
+            "sleep_recovery": 34.3,
+            "daytime_recovery": 40.6,
+            "stress": 40.1
           },
           "level": "adequate"
         }
