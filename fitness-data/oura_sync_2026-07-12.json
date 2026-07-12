@@ -57714,7 +57714,7 @@
           "id": "4c080b56-c639-4467-85be-7f16d1654887",
           "day": "2026-07-11",
           "day_summary": "restored",
-          "recovery_high": 11700,
+          "recovery_high": 15300,
           "stress_high": 7200
         },
         {
@@ -57896,6 +57896,16 @@
             "sleep_recovery": 35.2,
             "daytime_recovery": 41.2,
             "stress": 40.1
+          },
+          "level": "adequate"
+        },
+        {
+          "id": "b61af62f-2b3a-4e98-b09b-006699b40c29",
+          "day": "2026-07-12",
+          "contributors": {
+            "sleep_recovery": 37.6,
+            "daytime_recovery": 43,
+            "stress": 40.2
           },
           "level": "adequate"
         }
