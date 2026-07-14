@@ -44681,6 +44681,21 @@
           "day": "2026-07-12",
           "score": 58,
           "timestamp": "2026-07-12T00:00:00.000+00:00"
+        },
+        {
+          "id": "e53cb6a1-172b-429a-b320-77e35fbdbcf6",
+          "contributors": {
+            "deep_sleep": 61,
+            "efficiency": 98,
+            "latency": 72,
+            "rem_sleep": 75,
+            "restfulness": 66,
+            "timing": 97,
+            "total_sleep": 59
+          },
+          "day": "2026-07-14",
+          "score": 71,
+          "timestamp": "2026-07-14T00:00:00.000+00:00"
         }
       ],
       "next_token": null
@@ -45028,6 +45043,25 @@
           "temperature_deviation": 0.03,
           "temperature_trend_deviation": 0.18,
           "timestamp": "2026-07-12T00:00:00.000+00:00"
+        },
+        {
+          "id": "813bcbce-abc3-44ac-a8b7-ac640d36b3ec",
+          "contributors": {
+            "activity_balance": 82,
+            "body_temperature": 89,
+            "hrv_balance": 87,
+            "previous_day_activity": 78,
+            "previous_night": 74,
+            "recovery_index": 78,
+            "resting_heart_rate": 100,
+            "sleep_balance": 36,
+            "sleep_regularity": 59
+          },
+          "day": "2026-07-14",
+          "score": 74,
+          "temperature_deviation": -0.47,
+          "temperature_trend_deviation": 0.03,
+          "timestamp": "2026-07-14T00:00:00.000+00:00"
         }
       ],
       "next_token": null
@@ -57239,6 +57273,14 @@
           "breathing_disturbance_index": 0,
           "day": "2026-07-12",
           "spo2_percentage": null
+        },
+        {
+          "id": "b5cd5b83-44b5-46b7-8d1f-83071250315c",
+          "breathing_disturbance_index": 0,
+          "day": "2026-07-14",
+          "spo2_percentage": {
+            "average": 97.875
+          }
         }
       ],
       "next_token": null
@@ -57452,7 +57494,7 @@
           "id": "0c29887b-c169-4521-90a9-311d051c5640",
           "day": "2026-07-13",
           "day_summary": "restored",
-          "recovery_high": 15300,
+          "recovery_high": 11700,
           "stress_high": 4500
         },
         {
@@ -57624,6 +57666,16 @@
             "sleep_recovery": 37.6,
             "daytime_recovery": 43,
             "stress": 40.2
+          },
+          "level": "adequate"
+        },
+        {
+          "id": "fcc36aa5-c5e7-42cf-9f4b-2a697e0a890a",
+          "day": "2026-07-14",
+          "contributors": {
+            "sleep_recovery": 42.2,
+            "daytime_recovery": 46.1,
+            "stress": 40.5
           },
           "level": "adequate"
         }
