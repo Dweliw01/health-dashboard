@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-20T11:52:28.810Z",
+  "lastUpdated": "2026-07-20T14:22:47.538Z",
   "today": {
     "steps": 0,
     "avgHeartRate": 80,
@@ -133,7 +133,7 @@
   "metrics": {
     "dailyAvgSteps": 5327,
     "avgHeartRate": 89,
-    "restingHR": 60,
+    "restingHR": 51,
     "activeDays": 3,
     "totalWorkouts": 0,
     "bestDaySteps": 15724,
@@ -158,11 +158,18 @@
     },
     "recovery": {
       "readinessScore": 68,
-      "restingHR": 60,
+      "restingHR": 51,
       "sleepScore": 54
     }
   },
   "alerts": [
+    {
+      "type": "warning",
+      "title": "Low Deep Sleep",
+      "message": "53 min last night (target: 90+ min)",
+      "severity": "medium",
+      "category": "sleep"
+    },
     {
       "type": "warning",
       "title": "HR Spike Detected",
@@ -186,18 +193,399 @@
     }
   ],
   "hrv": {
-    "current": null,
-    "trend7Days": [],
-    "avg7Days": null,
-    "avg30Days": null,
-    "baseline": null,
-    "status": "no_data"
+    "current": 159,
+    "trend7Days": [
+      96,
+      104,
+      161,
+      121,
+      168,
+      87,
+      159
+    ],
+    "trend30Days": [
+      154,
+      60,
+      110,
+      97,
+      90,
+      145,
+      130,
+      131,
+      142,
+      155,
+      143,
+      163,
+      128,
+      96,
+      104,
+      161,
+      121,
+      168,
+      87,
+      159
+    ],
+    "avg7Days": 128,
+    "avg30Days": 127,
+    "baseline": 127,
+    "status": "high",
+    "records": [
+      {
+        "day": "2026-06-21",
+        "avgHrv": 154,
+        "lowestHR": 46
+      },
+      {
+        "day": "2026-06-25",
+        "avgHrv": 60,
+        "lowestHR": 74
+      },
+      {
+        "day": "2026-06-26",
+        "avgHrv": 110,
+        "lowestHR": 49
+      },
+      {
+        "day": "2026-06-28",
+        "avgHrv": 97,
+        "lowestHR": 54
+      },
+      {
+        "day": "2026-06-29",
+        "avgHrv": 90,
+        "lowestHR": 55
+      },
+      {
+        "day": "2026-06-30",
+        "avgHrv": 145,
+        "lowestHR": 48
+      },
+      {
+        "day": "2026-07-02",
+        "avgHrv": 130,
+        "lowestHR": 48
+      },
+      {
+        "day": "2026-07-02",
+        "avgHrv": 131,
+        "lowestHR": 53
+      },
+      {
+        "day": "2026-07-03",
+        "avgHrv": 142,
+        "lowestHR": 46
+      },
+      {
+        "day": "2026-07-04",
+        "avgHrv": 155,
+        "lowestHR": 46
+      },
+      {
+        "day": "2026-07-05",
+        "avgHrv": 143,
+        "lowestHR": 47
+      },
+      {
+        "day": "2026-07-07",
+        "avgHrv": 163,
+        "lowestHR": 47
+      },
+      {
+        "day": "2026-07-08",
+        "avgHrv": 128,
+        "lowestHR": 47
+      },
+      {
+        "day": "2026-07-09",
+        "avgHrv": 96,
+        "lowestHR": 55
+      },
+      {
+        "day": "2026-07-10",
+        "avgHrv": 104,
+        "lowestHR": 52
+      },
+      {
+        "day": "2026-07-10",
+        "avgHrv": 161,
+        "lowestHR": 48
+      },
+      {
+        "day": "2026-07-11",
+        "avgHrv": 121,
+        "lowestHR": 51
+      },
+      {
+        "day": "2026-07-12",
+        "avgHrv": 168,
+        "lowestHR": 45
+      },
+      {
+        "day": "2026-07-13",
+        "avgHrv": 87,
+        "lowestHR": 60
+      },
+      {
+        "day": "2026-07-14",
+        "avgHrv": 159,
+        "lowestHR": 46
+      }
+    ]
   },
   "sleepStages": {
-    "last7Days": [],
-    "avgDeep": null,
-    "avgRem": null,
-    "avgEfficiency": null
+    "lastNight": {
+      "day": "2026-07-14",
+      "deep": 53,
+      "rem": 85,
+      "light": 213,
+      "awake": 27,
+      "total": 350,
+      "efficiency": 93,
+      "latency": 6,
+      "breathRate": 15.125
+    },
+    "last7Days": [
+      {
+        "day": "2026-07-05",
+        "deep": 35,
+        "rem": 78,
+        "light": 210,
+        "awake": 107,
+        "total": 323,
+        "efficiency": 75,
+        "latency": 6,
+        "breathRate": 15.375
+      },
+      {
+        "day": "2026-07-07",
+        "deep": 8,
+        "rem": 86,
+        "light": 202,
+        "awake": 54,
+        "total": 295,
+        "efficiency": 85,
+        "latency": 27,
+        "breathRate": 14
+      },
+      {
+        "day": "2026-07-08",
+        "deep": 29,
+        "rem": 41,
+        "light": 149,
+        "awake": 64,
+        "total": 219,
+        "efficiency": 77,
+        "latency": 35,
+        "breathRate": 13.75
+      },
+      {
+        "day": "2026-07-09",
+        "deep": 35,
+        "rem": 59,
+        "light": 158,
+        "awake": 52,
+        "total": 252,
+        "efficiency": 83,
+        "latency": 20,
+        "breathRate": 13.5
+      },
+      {
+        "day": "2026-07-11",
+        "deep": 81,
+        "rem": 70,
+        "light": 192,
+        "awake": 42,
+        "total": 342,
+        "efficiency": 89,
+        "latency": 11,
+        "breathRate": 15
+      },
+      {
+        "day": "2026-07-12",
+        "deep": 14,
+        "rem": 55,
+        "light": 163,
+        "awake": 41,
+        "total": 231,
+        "efficiency": 85,
+        "latency": 16,
+        "breathRate": 15.875
+      },
+      {
+        "day": "2026-07-14",
+        "deep": 53,
+        "rem": 85,
+        "light": 213,
+        "awake": 27,
+        "total": 350,
+        "efficiency": 93,
+        "latency": 6,
+        "breathRate": 15.125
+      }
+    ],
+    "last30Days": [
+      {
+        "day": "2026-06-21",
+        "deep": 20,
+        "rem": 106,
+        "light": 208,
+        "awake": 109,
+        "total": 333,
+        "efficiency": 75,
+        "latency": 65,
+        "breathRate": 13.875
+      },
+      {
+        "day": "2026-06-26",
+        "deep": 28,
+        "rem": 77,
+        "light": 200,
+        "awake": 92,
+        "total": 304,
+        "efficiency": 77,
+        "latency": 10,
+        "breathRate": 14
+      },
+      {
+        "day": "2026-06-28",
+        "deep": 41,
+        "rem": 68,
+        "light": 146,
+        "awake": 56,
+        "total": 254,
+        "efficiency": 82,
+        "latency": 15,
+        "breathRate": 15.375
+      },
+      {
+        "day": "2026-06-30",
+        "deep": 8,
+        "rem": 69,
+        "light": 189,
+        "awake": 97,
+        "total": 266,
+        "efficiency": 73,
+        "latency": 45,
+        "breathRate": 14.625
+      },
+      {
+        "day": "2026-07-02",
+        "deep": 31,
+        "rem": 76,
+        "light": 156,
+        "awake": 65,
+        "total": 262,
+        "efficiency": 80,
+        "latency": 50,
+        "breathRate": 14
+      },
+      {
+        "day": "2026-07-03",
+        "deep": 39,
+        "rem": 81,
+        "light": 253,
+        "awake": 98,
+        "total": 372,
+        "efficiency": 79,
+        "latency": 9,
+        "breathRate": 14.75
+      },
+      {
+        "day": "2026-07-04",
+        "deep": 43,
+        "rem": 60,
+        "light": 209,
+        "awake": 82,
+        "total": 312,
+        "efficiency": 79,
+        "latency": 9,
+        "breathRate": 14.625
+      },
+      {
+        "day": "2026-07-05",
+        "deep": 35,
+        "rem": 78,
+        "light": 210,
+        "awake": 107,
+        "total": 323,
+        "efficiency": 75,
+        "latency": 6,
+        "breathRate": 15.375
+      },
+      {
+        "day": "2026-07-07",
+        "deep": 8,
+        "rem": 86,
+        "light": 202,
+        "awake": 54,
+        "total": 295,
+        "efficiency": 85,
+        "latency": 27,
+        "breathRate": 14
+      },
+      {
+        "day": "2026-07-08",
+        "deep": 29,
+        "rem": 41,
+        "light": 149,
+        "awake": 64,
+        "total": 219,
+        "efficiency": 77,
+        "latency": 35,
+        "breathRate": 13.75
+      },
+      {
+        "day": "2026-07-09",
+        "deep": 35,
+        "rem": 59,
+        "light": 158,
+        "awake": 52,
+        "total": 252,
+        "efficiency": 83,
+        "latency": 20,
+        "breathRate": 13.5
+      },
+      {
+        "day": "2026-07-11",
+        "deep": 81,
+        "rem": 70,
+        "light": 192,
+        "awake": 42,
+        "total": 342,
+        "efficiency": 89,
+        "latency": 11,
+        "breathRate": 15
+      },
+      {
+        "day": "2026-07-12",
+        "deep": 14,
+        "rem": 55,
+        "light": 163,
+        "awake": 41,
+        "total": 231,
+        "efficiency": 85,
+        "latency": 16,
+        "breathRate": 15.875
+      },
+      {
+        "day": "2026-07-14",
+        "deep": 53,
+        "rem": 85,
+        "light": 213,
+        "awake": 27,
+        "total": 350,
+        "efficiency": 93,
+        "latency": 6,
+        "breathRate": 15.125
+      }
+    ],
+    "avgDeep": 33,
+    "avgRem": 72,
+    "avgLight": 189,
+    "avgTotal": 294,
+    "avgEfficiency": 81,
+    "avgLatency": 23,
+    "avgBreathRate": 14.6
   },
   "stress": {
     "available": true,
