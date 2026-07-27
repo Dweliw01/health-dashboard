@@ -1,8 +1,8 @@
 {
-  "lastUpdated": "2026-07-26T22:05:20.949Z",
+  "lastUpdated": "2026-07-27T00:07:41.071Z",
   "today": {
     "steps": 1830,
-    "avgHeartRate": 84,
+    "avgHeartRate": 86,
     "calories": 122
   },
   "todayScores": {
@@ -40,16 +40,16 @@
   },
   "heartRateTrends": {
     "labels": [
-      "Fri"
+      "Sat"
     ],
     "values": [
-      84
+      86
     ],
     "max": [
-      120
+      106
     ],
     "min": [
-      49
+      51
     ]
   },
   "workoutDistribution": {
@@ -64,10 +64,10 @@
       "This Week"
     ],
     "steps": [
-      9703,
-      7217,
-      7757,
-      1736
+      9088,
+      8974,
+      5327,
+      2026
     ],
     "workouts": [
       0,
@@ -76,10 +76,10 @@
       0
     ],
     "calories": [
-      687,
-      556,
-      640,
-      349
+      638,
+      625,
+      609,
+      318
     ]
   },
   "projection": {
@@ -97,9 +97,9 @@
     ],
     "projected": [
       1736,
-      1059,
-      720,
-      382
+      1198,
+      929,
+      660
     ]
   },
   "timeOfDay": {
@@ -128,7 +128,7 @@
   },
   "metrics": {
     "dailyAvgSteps": 1736,
-    "avgHeartRate": 84,
+    "avgHeartRate": 86,
     "restingHR": 55,
     "activeDays": 1,
     "totalWorkouts": 0,
@@ -141,15 +141,15 @@
     "activityScore": 74,
     "sleepScore": 54,
     "readinessScore": 68,
-    "consistency": 14,
-    "totalSteps30Days": 184891,
-    "totalCalories30Days": 15626,
-    "daysTracked": 28
+    "consistency": 15,
+    "totalSteps30Days": 175874,
+    "totalCalories30Days": 15002,
+    "daysTracked": 27
   },
   "insights": {
     "performance": {
-      "weekChange": -78,
-      "monthChange": -74,
+      "weekChange": -62,
+      "monthChange": -73,
       "trend": "declining"
     },
     "recovery": {
@@ -165,13 +165,6 @@
       "message": "53 min last night (target: 90+ min)",
       "severity": "medium",
       "category": "sleep"
-    },
-    {
-      "type": "warning",
-      "title": "HR Spike Detected",
-      "message": "Fri: 120 bpm peak",
-      "severity": "medium",
-      "category": "activity"
     },
     {
       "type": "warning",
@@ -193,7 +186,6 @@
       159
     ],
     "trend30Days": [
-      110,
       97,
       90,
       145,
@@ -213,15 +205,10 @@
       159
     ],
     "avg7Days": 128,
-    "avg30Days": 129,
-    "baseline": 129,
+    "avg30Days": 131,
+    "baseline": 131,
     "status": "high",
     "records": [
-      {
-        "day": "2026-06-26",
-        "avgHrv": 110,
-        "lowestHR": 49
-      },
       {
         "day": "2026-06-28",
         "avgHrv": 97,
@@ -402,17 +389,6 @@
     ],
     "last30Days": [
       {
-        "day": "2026-06-26",
-        "deep": 28,
-        "rem": 77,
-        "light": 200,
-        "awake": 92,
-        "total": 304,
-        "efficiency": 77,
-        "latency": 10,
-        "breathRate": 14
-      },
-      {
         "day": "2026-06-28",
         "deep": 41,
         "rem": 68,
@@ -545,13 +521,13 @@
         "breathRate": 15.125
       }
     ],
-    "avgDeep": 34,
-    "avgRem": 70,
-    "avgLight": 188,
-    "avgTotal": 291,
-    "avgEfficiency": 81,
-    "avgLatency": 20,
-    "avgBreathRate": 14.6
+    "avgDeep": 35,
+    "avgRem": 69,
+    "avgLight": 187,
+    "avgTotal": 290,
+    "avgEfficiency": 82,
+    "avgLatency": 21,
+    "avgBreathRate": 14.7
   },
   "stress": {
     "available": true,
@@ -572,12 +548,6 @@
     "avgStressMinutes": 101,
     "avgRecoveryMinutes": 36,
     "records": [
-      {
-        "day": "2026-06-26",
-        "stressHigh": 7200,
-        "recoveryHigh": 9000,
-        "daySummary": "normal"
-      },
       {
         "day": "2026-06-27",
         "stressHigh": 3600,
