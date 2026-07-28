@@ -1,8 +1,8 @@
 {
-  "lastUpdated": "2026-07-27T23:11:36.340Z",
+  "lastUpdated": "2026-07-28T03:15:47.748Z",
   "today": {
     "steps": 1830,
-    "avgHeartRate": 86,
+    "avgHeartRate": 83,
     "calories": 122
   },
   "todayScores": {
@@ -40,16 +40,16 @@
   },
   "heartRateTrends": {
     "labels": [
-      "Sat"
+      "Sun"
     ],
     "values": [
-      86
+      83
     ],
     "max": [
-      106
+      140
     ],
     "min": [
-      51
+      54
     ]
   },
   "workoutDistribution": {
@@ -64,10 +64,10 @@
       "This Week"
     ],
     "steps": [
-      9088,
-      8974,
-      5327,
-      2026
+      9674,
+      9031,
+      3949,
+      2431
     ],
     "workouts": [
       0,
@@ -76,10 +76,10 @@
       0
     ],
     "calories": [
-      638,
-      625,
-      609,
-      318
+      674,
+      692,
+      499,
+      335
     ]
   },
   "projection": {
@@ -97,9 +97,9 @@
     ],
     "projected": [
       1736,
-      1198,
-      929,
-      660
+      1406,
+      1241,
+      1076
     ]
   },
   "timeOfDay": {
@@ -128,7 +128,7 @@
   },
   "metrics": {
     "dailyAvgSteps": 1736,
-    "avgHeartRate": 86,
+    "avgHeartRate": 83,
     "restingHR": 55,
     "activeDays": 1,
     "totalWorkouts": 0,
@@ -142,14 +142,14 @@
     "sleepScore": 54,
     "readinessScore": 68,
     "consistency": 15,
-    "totalSteps30Days": 175874,
-    "totalCalories30Days": 15002,
-    "daysTracked": 27
+    "totalSteps30Days": 170738,
+    "totalCalories30Days": 14734,
+    "daysTracked": 26
   },
   "insights": {
     "performance": {
-      "weekChange": -62,
-      "monthChange": -73,
+      "weekChange": -38,
+      "monthChange": -74,
       "trend": "declining"
     },
     "recovery": {
@@ -165,6 +165,13 @@
       "message": "53 min last night (target: 90+ min)",
       "severity": "medium",
       "category": "sleep"
+    },
+    {
+      "type": "warning",
+      "title": "HR Spike Detected",
+      "message": "Sun: 140 bpm peak",
+      "severity": "medium",
+      "category": "activity"
     },
     {
       "type": "warning",
@@ -548,12 +555,6 @@
     "avgStressMinutes": 101,
     "avgRecoveryMinutes": 36,
     "records": [
-      {
-        "day": "2026-06-27",
-        "stressHigh": 3600,
-        "recoveryHigh": 2700,
-        "daySummary": "normal"
-      },
       {
         "day": "2026-06-28",
         "stressHigh": 10800,
