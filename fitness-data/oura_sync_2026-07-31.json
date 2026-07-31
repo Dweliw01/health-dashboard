@@ -35696,6 +35696,21 @@
           "day": "2026-07-14",
           "score": 71,
           "timestamp": "2026-07-14T00:00:00.000+00:00"
+        },
+        {
+          "id": "898fdd26-287d-4b44-a2db-ea9660558758",
+          "contributors": {
+            "deep_sleep": 33,
+            "efficiency": 81,
+            "latency": 56,
+            "rem_sleep": 43,
+            "restfulness": 69,
+            "timing": 99,
+            "total_sleep": 26
+          },
+          "day": "2026-07-31",
+          "score": 51,
+          "timestamp": "2026-07-31T00:00:00.000+00:00"
         }
       ],
       "next_token": null
@@ -35910,6 +35925,25 @@
           "temperature_deviation": -0.47,
           "temperature_trend_deviation": 0.03,
           "timestamp": "2026-07-14T00:00:00.000+00:00"
+        },
+        {
+          "id": "f91dd7d8-d07c-4364-a0d5-e4e3e1f7860a",
+          "contributors": {
+            "activity_balance": 80,
+            "body_temperature": 98,
+            "hrv_balance": null,
+            "previous_day_activity": 76,
+            "previous_night": 49,
+            "recovery_index": 52,
+            "resting_heart_rate": 86,
+            "sleep_balance": null,
+            "sleep_regularity": null
+          },
+          "day": "2026-07-31",
+          "score": 68,
+          "temperature_deviation": -0.2,
+          "temperature_trend_deviation": null,
+          "timestamp": "2026-07-31T00:00:00.000+00:00"
         }
       ],
       "next_token": null
@@ -45907,6 +45941,12 @@
           "spo2_percentage": {
             "average": 97.875
           }
+        },
+        {
+          "id": "7580465e-e923-473c-b62d-a8beba39acc1",
+          "breathing_disturbance_index": 1,
+          "day": "2026-07-31",
+          "spo2_percentage": null
         }
       ],
       "next_token": null
@@ -46120,7 +46160,7 @@
           "id": "39d9cbcc-3afe-4a53-96b1-7600fa58f685",
           "day": "2026-07-30",
           "day_summary": "restored",
-          "recovery_high": 20700,
+          "recovery_high": 21600,
           "stress_high": 9000
         },
         {

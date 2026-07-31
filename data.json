@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-07-31T10:47:13.605Z",
+  "lastUpdated": "2026-07-31T13:01:58.017Z",
   "today": {
     "steps": 8692,
     "avgHeartRate": 86,
     "calories": 711
   },
   "todayScores": {
-    "sleep": 71,
-    "readiness": 74,
+    "sleep": 51,
+    "readiness": 68,
     "activity": 67,
-    "sleepDate": "2026-07-14",
-    "readinessDate": "2026-07-14",
+    "sleepDate": "2026-07-31",
+    "readinessDate": "2026-07-31",
     "activityDate": "2026-07-30"
   },
   "thisWeek": {
@@ -137,10 +137,10 @@
     "caloriesPerDay": 374,
     "currentStreak": 0,
     "longestStreak": 1,
-    "fitnessScore": 54,
+    "fitnessScore": 53,
     "activityScore": 72,
-    "sleepScore": 54,
-    "readinessScore": 68,
+    "sleepScore": 53,
+    "readinessScore": 66,
     "consistency": 8,
     "totalSteps30Days": 142655,
     "totalCalories30Days": 12671,
@@ -153,9 +153,9 @@
       "trend": "improving"
     },
     "recovery": {
-      "readinessScore": 68,
+      "readinessScore": 66,
       "restingHR": 55,
-      "sleepScore": 54
+      "sleepScore": 53
     }
   },
   "alerts": [
@@ -176,7 +176,7 @@
     {
       "type": "warning",
       "title": "Sleep Quality Low",
-      "message": "Average sleep score: 54%",
+      "message": "Average sleep score: 53%",
       "severity": "medium",
       "category": "sleep"
     }
@@ -513,7 +513,7 @@
       "unknown"
     ],
     "avgStressMinutes": 21,
-    "avgRecoveryMinutes": 49,
+    "avgRecoveryMinutes": 51,
     "records": [
       {
         "day": "2026-07-02",
@@ -686,7 +686,7 @@
       {
         "day": "2026-07-30",
         "stressHigh": 9000,
-        "recoveryHigh": 20700,
+        "recoveryHigh": 21600,
         "daySummary": "restored"
       },
       {
@@ -712,18 +712,18 @@
     "baseline": 97.7
   },
   "readinessBreakdown": {
-    "day": "2026-07-14",
-    "score": 74,
-    "overall": 74,
-    "activityBalance": 82,
-    "bodyTemperature": 89,
-    "hrvBalance": 87,
-    "previousDayActivity": 78,
-    "previousNight": 74,
-    "recoveryIndex": 78,
-    "restingHeartRateScore": 100,
-    "sleepBalance": 36,
-    "tempDeviation": -0.47,
-    "tempTrend": 0.03
+    "day": "2026-07-31",
+    "score": 68,
+    "overall": 68,
+    "activityBalance": 80,
+    "bodyTemperature": 98,
+    "hrvBalance": null,
+    "previousDayActivity": 76,
+    "previousNight": 49,
+    "recoveryIndex": 52,
+    "restingHeartRateScore": 86,
+    "sleepBalance": null,
+    "tempDeviation": -0.2,
+    "tempTrend": null
   }
 }
