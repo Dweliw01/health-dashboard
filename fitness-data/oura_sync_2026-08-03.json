@@ -35508,19 +35508,19 @@
               0.9,
               0.9,
               0.9,
-              0.9,
-              0.9,
-              0.9,
+              1.2,
+              1.2,
+              1.1,
               0.9
             ],
             "timestamp": "2026-08-02T04:00:00.000-04:00"
           },
           "meters_to_target": 9500,
           "non_wear_time": 0,
-          "resting_time": 23220,
+          "resting_time": 23100,
           "score": 64,
           "sedentary_met_minutes": 12,
-          "sedentary_time": 42960,
+          "sedentary_time": 43080,
           "steps": 8748,
           "target_calories": 1000,
           "target_meters": 18000,
@@ -35700,16 +35700,16 @@
         {
           "id": "7ba5ab60-dc75-4a69-8686-def1011afc50",
           "contributors": {
-            "deep_sleep": 12,
-            "efficiency": 81,
-            "latency": 46,
-            "rem_sleep": 23,
-            "restfulness": 67,
+            "deep_sleep": 9,
+            "efficiency": 93,
+            "latency": 97,
+            "rem_sleep": 48,
+            "restfulness": 63,
             "timing": 100,
-            "total_sleep": 23
+            "total_sleep": 30
           },
           "day": "2026-08-03",
-          "score": 44,
+          "score": 55,
           "timestamp": "2026-08-03T00:00:00.000+00:00"
         }
       ],
@@ -35930,19 +35930,19 @@
           "id": "c8338388-2915-4a52-a32b-920eec8346ec",
           "contributors": {
             "activity_balance": 82,
-            "body_temperature": 88,
+            "body_temperature": 91,
             "hrv_balance": null,
-            "previous_day_activity": 90,
-            "previous_night": 40,
-            "recovery_index": 45,
+            "previous_day_activity": 89,
+            "previous_night": 54,
+            "recovery_index": 57,
             "resting_heart_rate": 100,
             "sleep_balance": null,
             "sleep_regularity": null
           },
           "day": "2026-08-03",
-          "score": 71,
-          "temperature_deviation": -0.52,
-          "temperature_trend_deviation": -0.32,
+          "score": 77,
+          "temperature_deviation": -0.42,
+          "temperature_trend_deviation": -0.27,
           "timestamp": "2026-08-03T00:00:00.000+00:00"
         }
       ],
@@ -45462,10 +45462,10 @@
         },
         {
           "id": "66c85f36-0d25-48c3-a43e-08526c731b05",
-          "breathing_disturbance_index": 2,
+          "breathing_disturbance_index": 1,
           "day": "2026-08-03",
           "spo2_percentage": {
-            "average": 98.608
+            "average": 98.635
           }
         }
       ],
