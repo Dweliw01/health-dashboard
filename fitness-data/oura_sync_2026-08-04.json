@@ -35507,7 +35507,7 @@
               0.9,
               0.9,
               0.9,
-              0.9,
+              1.2,
               0.9,
               0.9,
               0.9,
@@ -35696,6 +35696,21 @@
           "day": "2026-08-03",
           "score": 55,
           "timestamp": "2026-08-03T00:00:00.000+00:00"
+        },
+        {
+          "id": "e9732104-51b8-4521-b083-cc2f31d40bfc",
+          "contributors": {
+            "deep_sleep": 17,
+            "efficiency": 96,
+            "latency": 91,
+            "rem_sleep": 46,
+            "restfulness": 72,
+            "timing": 100,
+            "total_sleep": 37
+          },
+          "day": "2026-08-04",
+          "score": 59,
+          "timestamp": "2026-08-04T00:00:00.000+00:00"
         }
       ],
       "next_token": null
@@ -35910,6 +35925,25 @@
           "temperature_deviation": -0.42,
           "temperature_trend_deviation": -0.27,
           "timestamp": "2026-08-03T00:00:00.000+00:00"
+        },
+        {
+          "id": "d8d84908-d0b7-43a4-92ed-5f36b9989a44",
+          "contributors": {
+            "activity_balance": 81,
+            "body_temperature": 99,
+            "hrv_balance": 90,
+            "previous_day_activity": 84,
+            "previous_night": 59,
+            "recovery_index": 56,
+            "resting_heart_rate": 94,
+            "sleep_balance": 33,
+            "sleep_regularity": null
+          },
+          "day": "2026-08-04",
+          "score": 71,
+          "temperature_deviation": -0.16,
+          "temperature_trend_deviation": -0.05,
+          "timestamp": "2026-08-04T00:00:00.000+00:00"
         }
       ],
       "next_token": null
@@ -45366,6 +45400,14 @@
           "day": "2026-08-03",
           "spo2_percentage": {
             "average": 98.635
+          }
+        },
+        {
+          "id": "8718176a-4b58-4880-a93b-1f4651c2c59d",
+          "breathing_disturbance_index": 8,
+          "day": "2026-08-04",
+          "spo2_percentage": {
+            "average": 98.229
           }
         }
       ],
