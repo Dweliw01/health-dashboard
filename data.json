@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-07T16:04:33.462Z",
+  "lastUpdated": "2026-08-07T17:53:25.000Z",
   "today": {
     "steps": 7209,
     "avgHeartRate": 80,
@@ -179,6 +179,13 @@
     },
     {
       "type": "warning",
+      "title": "High Stress Day",
+      "message": "6h in high stress",
+      "severity": "medium",
+      "category": "stress"
+    },
+    {
+      "type": "warning",
       "title": "HR Spike Detected",
       "message": "Wed: 120 bpm peak",
       "severity": "medium",
@@ -190,13 +197,6 @@
       "message": "Thu: 117 bpm peak",
       "severity": "medium",
       "category": "activity"
-    },
-    {
-      "type": "warning",
-      "title": "Sleep Quality Low",
-      "message": "Average sleep score: 57%",
-      "severity": "medium",
-      "category": "sleep"
     }
   ],
   "hrv": {
@@ -529,9 +529,9 @@
   "stress": {
     "available": true,
     "today": {
-      "stressMinutes": 0,
+      "stressMinutes": 345,
       "recoveryMinutes": 0,
-      "summary": "unknown"
+      "summary": "stressful"
     },
     "trend7Days": [
       "unknown",
@@ -540,10 +540,10 @@
       "unknown",
       "unknown",
       "stressful",
-      "unknown"
+      "stressful"
     ],
-    "avgStressMinutes": 51,
-    "avgRecoveryMinutes": 0,
+    "avgStressMinutes": 103,
+    "avgRecoveryMinutes": 6,
     "records": [
       {
         "day": "2026-07-09",
@@ -715,15 +715,15 @@
       },
       {
         "day": "2026-08-06",
-        "stressHigh": 21600,
-        "recoveryHigh": 0,
+        "stressHigh": 22500,
+        "recoveryHigh": 2700,
         "daySummary": "stressful"
       },
       {
         "day": "2026-08-07",
-        "stressHigh": 0,
+        "stressHigh": 20700,
         "recoveryHigh": 0,
-        "daySummary": "unknown"
+        "daySummary": "stressful"
       }
     ]
   },
