@@ -1,8 +1,8 @@
 {
-  "lastUpdated": "2026-08-09T23:37:57.023Z",
+  "lastUpdated": "2026-08-10T02:18:38.756Z",
   "today": {
     "steps": 5214,
-    "avgHeartRate": 90,
+    "avgHeartRate": 87,
     "calories": 235
   },
   "todayScores": {
@@ -40,16 +40,16 @@
   },
   "heartRateTrends": {
     "labels": [
-      "Fri"
+      "Sat"
     ],
     "values": [
-      90
+      87
     ],
     "max": [
-      135
+      126
     ],
     "min": [
-      48
+      55
     ]
   },
   "workoutDistribution": {
@@ -64,10 +64,10 @@
       "This Week"
     ],
     "steps": [
-      7757,
-      1736,
-      8657,
-      8339
+      5327,
+      2978,
+      8445,
+      8905
     ],
     "workouts": [
       0,
@@ -76,10 +76,10 @@
       0
     ],
     "calories": [
-      640,
-      349,
-      598,
-      493
+      609,
+      374,
+      591,
+      409
     ]
   },
   "projection": {
@@ -97,9 +97,9 @@
     ],
     "projected": [
       8374,
-      8207,
-      8123,
-      8039
+      8583,
+      8688,
+      8793
     ]
   },
   "timeOfDay": {
@@ -128,7 +128,7 @@
   },
   "metrics": {
     "dailyAvgSteps": 8374,
-    "avgHeartRate": 90,
+    "avgHeartRate": 87,
     "restingHR": 61,
     "activeDays": 7,
     "totalWorkouts": 0,
@@ -137,20 +137,20 @@
     "caloriesPerDay": 541,
     "currentStreak": 0,
     "longestStreak": 1,
-    "fitnessScore": 55,
+    "fitnessScore": 54,
     "activityScore": 67,
     "sleepScore": 53,
     "readinessScore": 68,
-    "consistency": 21,
-    "totalSteps30Days": 152068,
-    "totalCalories30Days": 12587,
-    "daysTracked": 24
+    "consistency": 17,
+    "totalSteps30Days": 135059,
+    "totalCalories30Days": 11830,
+    "daysTracked": 23
   },
   "insights": {
     "performance": {
-      "weekChange": -4,
-      "monthChange": 32,
-      "trend": "declining"
+      "weekChange": 5,
+      "monthChange": 43,
+      "trend": "improving"
     },
     "recovery": {
       "readinessScore": 68,
@@ -169,7 +169,7 @@
     {
       "type": "warning",
       "title": "HR Spike Detected",
-      "message": "Fri: 135 bpm peak",
+      "message": "Sat: 126 bpm peak",
       "severity": "medium",
       "category": "activity"
     },
@@ -193,7 +193,6 @@
       126
     ],
     "trend30Days": [
-      161,
       121,
       168,
       87,
@@ -211,15 +210,10 @@
       126
     ],
     "avg7Days": 115,
-    "avg30Days": 124,
-    "baseline": 124,
+    "avg30Days": 122,
+    "baseline": 122,
     "status": "normal",
     "records": [
-      {
-        "day": "2026-07-10",
-        "avgHrv": 161,
-        "lowestHR": 48
-      },
       {
         "day": "2026-07-11",
         "avgHrv": 121,
