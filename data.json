@@ -1,35 +1,35 @@
 {
-  "lastUpdated": "2026-08-17T08:52:10.887Z",
+  "lastUpdated": "2026-08-17T09:50:37.088Z",
   "today": {
     "steps": 0,
     "avgHeartRate": 92,
-    "calories": 638
+    "calories": 0
   },
   "todayScores": {
     "sleep": 42,
     "readiness": 54,
-    "activity": 72,
+    "activity": 70,
     "sleepDate": "2026-08-08",
     "readinessDate": "2026-08-08",
-    "activityDate": "2026-08-15"
+    "activityDate": "2026-08-16"
   },
   "thisWeek": {
     "workouts": 0,
-    "avgSteps": 745,
-    "avgCalories": 156
+    "avgSteps": 0,
+    "avgCalories": 122
   },
   "last7Days": {
     "labels": [
-      "Sat",
       "Mon",
       "Tue",
       "Wed",
       "Thu",
       "Fri",
-      "Sat"
+      "Sat",
+      "Sun"
     ],
     "values": [
-      5214,
+      0,
       0,
       0,
       0,
@@ -87,7 +87,7 @@
       374,
       591,
       148,
-      638
+      319
     ]
   },
   "projection": {
@@ -98,15 +98,15 @@
       "Day 30"
     ],
     "actual": [
-      745,
+      0,
       null,
       null,
       null
     ],
     "projected": [
-      745,
-      373,
-      186,
+      0,
+      0,
+      0,
       0
     ]
   },
@@ -123,8 +123,8 @@
       "10pm"
     ],
     "values": [
-      12,
-      12,
+      10,
+      10,
       10,
       10,
       10,
@@ -135,29 +135,29 @@
     ]
   },
   "metrics": {
-    "dailyAvgSteps": 745,
+    "dailyAvgSteps": 0,
     "avgHeartRate": 83,
     "restingHR": 61,
-    "activeDays": 1,
+    "activeDays": 0,
     "totalWorkouts": 0,
-    "bestDaySteps": 5214,
-    "bestDayLabel": "Sat",
-    "caloriesPerDay": 156,
+    "bestDaySteps": 0,
+    "bestDayLabel": "N/A",
+    "caloriesPerDay": 122,
     "currentStreak": 0,
     "longestStreak": 1,
     "fitnessScore": 53,
     "activityScore": 67,
     "sleepScore": 53,
     "readinessScore": 68,
-    "consistency": 14,
+    "consistency": 13,
     "totalSteps30Days": 97770,
     "totalCalories30Days": 8424,
-    "daysTracked": 22
+    "daysTracked": 23
   },
   "insights": {
     "performance": {
       "weekChange": -100,
-      "monthChange": -83,
+      "monthChange": -100,
       "trend": "declining"
     },
     "recovery": {
