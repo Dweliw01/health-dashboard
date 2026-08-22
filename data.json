@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-22T20:30:25.994Z",
+  "lastUpdated": "2026-08-22T21:28:10.382Z",
   "today": {
     "steps": 0,
     "avgHeartRate": 89,
@@ -629,7 +629,16 @@
     ]
   },
   "spo2": {
-    "available": false
+    "available": true,
+    "current": 97.378,
+    "trend7Days": [
+      96.896,
+      98.635,
+      98.229,
+      97.746,
+      97.378
+    ],
+    "baseline": 97.8
   },
   "readinessBreakdown": {
     "day": "2026-08-08",
