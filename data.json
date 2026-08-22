@@ -1,32 +1,32 @@
 {
-  "lastUpdated": "2026-08-21T23:30:32.048Z",
+  "lastUpdated": "2026-08-22T01:37:44.983Z",
   "today": {
     "steps": 0,
-    "avgHeartRate": 92,
-    "calories": 0
+    "avgHeartRate": 89,
+    "calories": 317
   },
   "todayScores": {
     "sleep": 42,
     "readiness": 54,
-    "activity": 67,
+    "activity": 73,
     "sleepDate": "2026-08-08",
     "readinessDate": "2026-08-08",
-    "activityDate": "2026-08-20"
+    "activityDate": "2026-08-21"
   },
   "thisWeek": {
     "workouts": 0,
     "avgSteps": 0,
-    "avgCalories": 140
+    "avgCalories": 185
   },
   "last7Days": {
     "labels": [
-      "Fri",
       "Sat",
       "Sun",
       "Mon",
       "Tue",
       "Wed",
-      "Thu"
+      "Thu",
+      "Fri"
     ],
     "values": [
       0,
@@ -40,20 +40,20 @@
   },
   "heartRateTrends": {
     "labels": [
-      "Wed",
-      "Thu"
+      "Thu",
+      "Fri"
     ],
     "values": [
-      82,
-      92
+      95,
+      89
     ],
     "max": [
-      122,
-      126
+      126,
+      108
     ],
     "min": [
-      51,
-      54
+      54,
+      55
     ]
   },
   "workoutDistribution": {
@@ -68,8 +68,8 @@
       "This Week"
     ],
     "steps": [
-      5312,
-      8374,
+      6295,
+      7124,
       0,
       0
     ],
@@ -80,10 +80,10 @@
       0
     ],
     "calories": [
-      468,
-      541,
-      122,
-      86
+      467,
+      506,
+      91,
+      165
     ]
   },
   "projection": {
@@ -132,22 +132,22 @@
   },
   "metrics": {
     "dailyAvgSteps": 0,
-    "avgHeartRate": 87,
+    "avgHeartRate": 92,
     "restingHR": 61,
     "activeDays": 0,
     "totalWorkouts": 0,
     "bestDaySteps": 0,
     "bestDayLabel": "N/A",
-    "caloriesPerDay": 140,
+    "caloriesPerDay": 185,
     "currentStreak": 0,
     "longestStreak": 1,
-    "fitnessScore": 52,
-    "activityScore": 66,
+    "fitnessScore": 53,
+    "activityScore": 69,
     "sleepScore": 53,
     "readinessScore": 68,
     "consistency": 12,
-    "totalSteps30Days": 95803,
-    "totalCalories30Days": 8257,
+    "totalSteps30Days": 93933,
+    "totalCalories30Days": 8108,
     "daysTracked": 25
   },
   "insights": {
@@ -169,13 +169,6 @@
       "message": "14 min last night (target: 90+ min)",
       "severity": "medium",
       "category": "sleep"
-    },
-    {
-      "type": "warning",
-      "title": "HR Spike Detected",
-      "message": "Wed: 122 bpm peak",
-      "severity": "medium",
-      "category": "activity"
     },
     {
       "type": "warning",
