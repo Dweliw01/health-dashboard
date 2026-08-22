@@ -45855,55 +45855,9 @@
   },
   "extended": {
     "daily_spo2": {
-      "data": [
-        {
-          "id": "7580465e-e923-473c-b62d-a8beba39acc1",
-          "breathing_disturbance_index": 1,
-          "day": "2026-07-31",
-          "spo2_percentage": null
-        },
-        {
-          "id": "cec231fa-96db-4f20-a3cb-b6fda7367816",
-          "breathing_disturbance_index": 0,
-          "day": "2026-08-02",
-          "spo2_percentage": {
-            "average": 96.896
-          }
-        },
-        {
-          "id": "66c85f36-0d25-48c3-a43e-08526c731b05",
-          "breathing_disturbance_index": 1,
-          "day": "2026-08-03",
-          "spo2_percentage": {
-            "average": 98.635
-          }
-        },
-        {
-          "id": "8718176a-4b58-4880-a93b-1f4651c2c59d",
-          "breathing_disturbance_index": 8,
-          "day": "2026-08-04",
-          "spo2_percentage": {
-            "average": 98.229
-          }
-        },
-        {
-          "id": "10987fa3-69ad-4949-a847-640b8dfe782f",
-          "breathing_disturbance_index": 0,
-          "day": "2026-08-05",
-          "spo2_percentage": {
-            "average": 97.746
-          }
-        },
-        {
-          "id": "4093f9d1-56d3-46fd-99df-862d01a7fc11",
-          "breathing_disturbance_index": 1,
-          "day": "2026-08-07",
-          "spo2_percentage": {
-            "average": 97.378
-          }
-        }
-      ],
-      "next_token": null
+      "data": [],
+      "unavailable": true,
+      "error": "read ECONNRESET"
     },
     "daily_stress": {
       "data": [
