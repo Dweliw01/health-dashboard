@@ -1,8 +1,8 @@
 {
-  "lastUpdated": "2026-08-31T23:42:20.564Z",
+  "lastUpdated": "2026-09-01T04:39:47.101Z",
   "today": {
     "steps": 0,
-    "avgHeartRate": 82,
+    "avgHeartRate": 86,
     "calories": 317
   },
   "todayScores": {
@@ -40,16 +40,16 @@
   },
   "heartRateTrends": {
     "labels": [
-      "Sat"
+      "Sun"
     ],
     "values": [
-      82
+      86
     ],
     "max": [
       107
     ],
     "min": [
-      51
+      48
     ]
   },
   "workoutDistribution": {
@@ -64,8 +64,8 @@
       "This Week"
     ],
     "steps": [
-      9139,
-      745,
+      8374,
+      0,
       0,
       0
     ],
@@ -76,9 +76,9 @@
       0
     ],
     "calories": [
-      579,
-      156,
-      110,
+      541,
+      122,
+      132,
       0
     ]
   },
@@ -128,7 +128,7 @@
   },
   "metrics": {
     "dailyAvgSteps": 0,
-    "avgHeartRate": 82,
+    "avgHeartRate": 86,
     "restingHR": 61,
     "activeDays": 0,
     "totalWorkouts": 0,
@@ -137,14 +137,14 @@
     "caloriesPerDay": 185,
     "currentStreak": 0,
     "longestStreak": 1,
-    "fitnessScore": 54,
+    "fitnessScore": 53,
     "activityScore": 69,
     "sleepScore": 53,
     "readinessScore": 68,
-    "consistency": 15,
-    "totalSteps30Days": 69186,
-    "totalCalories30Days": 5799,
-    "daysTracked": 20
+    "consistency": 11,
+    "totalSteps30Days": 58617,
+    "totalCalories30Days": 5299,
+    "daysTracked": 19
   },
   "insights": {
     "performance": {
@@ -165,13 +165,6 @@
       "message": "14 min last night (target: 90+ min)",
       "severity": "medium",
       "category": "sleep"
-    },
-    {
-      "type": "warning",
-      "title": "HR Spike Detected",
-      "message": "Sat: 107 bpm peak",
-      "severity": "medium",
-      "category": "activity"
     },
     {
       "type": "warning",
@@ -414,12 +407,6 @@
     "avgStressMinutes": 0,
     "avgRecoveryMinutes": 0,
     "records": [
-      {
-        "day": "2026-08-01",
-        "stressHigh": 0,
-        "recoveryHigh": 0,
-        "daySummary": "unknown"
-      },
       {
         "day": "2026-08-02",
         "stressHigh": 0,
