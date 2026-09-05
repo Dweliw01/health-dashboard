@@ -1,8 +1,8 @@
 {
-  "lastUpdated": "2026-09-04T23:53:04.523Z",
+  "lastUpdated": "2026-09-05T03:59:49.633Z",
   "today": {
     "steps": 0,
-    "avgHeartRate": 88,
+    "avgHeartRate": 92,
     "calories": 317
   },
   "todayScores": {
@@ -40,16 +40,16 @@
   },
   "heartRateTrends": {
     "labels": [
-      "Wed"
+      "Thu"
     ],
     "values": [
-      88
+      92
     ],
     "max": [
-      131
+      137
     ],
     "min": [
-      45
+      49
     ]
   },
   "workoutDistribution": {
@@ -64,7 +64,7 @@
       "This Week"
     ],
     "steps": [
-      4463,
+      3574,
       0,
       0,
       0
@@ -76,9 +76,9 @@
       0
     ],
     "calories": [
-      329,
+      242,
       140,
-      159,
+      317,
       0
     ]
   },
@@ -128,8 +128,8 @@
   },
   "metrics": {
     "dailyAvgSteps": 0,
-    "avgHeartRate": 88,
-    "restingHR": 62,
+    "avgHeartRate": 92,
+    "restingHR": 65,
     "activeDays": 0,
     "totalWorkouts": 0,
     "bestDaySteps": 0,
@@ -137,14 +137,14 @@
     "caloriesPerDay": 185,
     "currentStreak": 0,
     "longestStreak": 1,
-    "fitnessScore": 50,
+    "fitnessScore": 49,
     "activityScore": 69,
-    "sleepScore": 48,
-    "readinessScore": 63,
-    "consistency": 6,
-    "totalSteps30Days": 31243,
-    "totalCalories30Days": 3603,
-    "daysTracked": 16
+    "sleepScore": 46,
+    "readinessScore": 60,
+    "consistency": 7,
+    "totalSteps30Days": 25018,
+    "totalCalories30Days": 2992,
+    "daysTracked": 15
   },
   "insights": {
     "performance": {
@@ -153,9 +153,9 @@
       "trend": "improving"
     },
     "recovery": {
-      "readinessScore": 63,
-      "restingHR": 62,
-      "sleepScore": 48
+      "readinessScore": 60,
+      "restingHR": 65,
+      "sleepScore": 46
     }
   },
   "alerts": [
@@ -169,14 +169,14 @@
     {
       "type": "warning",
       "title": "HR Spike Detected",
-      "message": "Wed: 131 bpm peak",
+      "message": "Thu: 137 bpm peak",
       "severity": "medium",
       "category": "activity"
     },
     {
       "type": "warning",
       "title": "Sleep Quality Low",
-      "message": "Average sleep score: 48%",
+      "message": "Average sleep score: 46%",
       "severity": "medium",
       "category": "sleep"
     }
@@ -184,29 +184,22 @@
   "hrv": {
     "current": 126,
     "trend7Days": [
-      160,
       61,
       130,
       86,
       126
     ],
     "trend30Days": [
-      160,
       61,
       130,
       86,
       126
     ],
-    "avg7Days": 113,
-    "avg30Days": 113,
-    "baseline": 113,
-    "status": "normal",
+    "avg7Days": 101,
+    "avg30Days": 101,
+    "baseline": 101,
+    "status": "high",
     "records": [
-      {
-        "day": "2026-08-05",
-        "avgHrv": 160,
-        "lowestHR": 45
-      },
       {
         "day": "2026-08-06",
         "avgHrv": 61,
@@ -243,17 +236,6 @@
     },
     "last7Days": [
       {
-        "day": "2026-08-05",
-        "deep": 28,
-        "rem": 50,
-        "light": 152,
-        "awake": 45,
-        "total": 229,
-        "efficiency": 84,
-        "latency": 23,
-        "breathRate": 14.625
-      },
-      {
         "day": "2026-08-07",
         "deep": 14,
         "rem": 54,
@@ -267,17 +249,6 @@
     ],
     "last30Days": [
       {
-        "day": "2026-08-05",
-        "deep": 28,
-        "rem": 50,
-        "light": 152,
-        "awake": 45,
-        "total": 229,
-        "efficiency": 84,
-        "latency": 23,
-        "breathRate": 14.625
-      },
-      {
         "day": "2026-08-07",
         "deep": 14,
         "rem": 54,
@@ -289,13 +260,13 @@
         "breathRate": 14.75
       }
     ],
-    "avgDeep": 21,
-    "avgRem": 52,
-    "avgLight": 164,
-    "avgTotal": 236,
-    "avgEfficiency": 85,
-    "avgLatency": 16,
-    "avgBreathRate": 14.7
+    "avgDeep": 14,
+    "avgRem": 54,
+    "avgLight": 176,
+    "avgTotal": 243,
+    "avgEfficiency": 86,
+    "avgLatency": 8,
+    "avgBreathRate": 14.8
   },
   "stress": {
     "available": true,
@@ -316,12 +287,6 @@
     "avgStressMinutes": 0,
     "avgRecoveryMinutes": 0,
     "records": [
-      {
-        "day": "2026-08-05",
-        "stressHigh": 0,
-        "recoveryHigh": 0,
-        "daySummary": "unknown"
-      },
       {
         "day": "2026-08-06",
         "stressHigh": 22500,
@@ -502,10 +467,9 @@
     "available": true,
     "current": 97.378,
     "trend7Days": [
-      97.746,
       97.378
     ],
-    "baseline": 97.6
+    "baseline": 97.4
   },
   "readinessBreakdown": {
     "day": "2026-08-08",
