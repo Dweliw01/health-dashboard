@@ -1,8 +1,8 @@
 {
-  "lastUpdated": "2026-09-13T21:22:08.257Z",
+  "lastUpdated": "2026-09-14T00:02:18.968Z",
   "today": {
     "steps": 0,
-    "avgHeartRate": 116,
+    "avgHeartRate": 60,
     "calories": 317
   },
   "todayScores": {
@@ -39,18 +39,10 @@
     ]
   },
   "heartRateTrends": {
-    "labels": [
-      "Fri"
-    ],
-    "values": [
-      116
-    ],
-    "max": [
-      126
-    ],
-    "min": [
-      107
-    ]
+    "labels": [],
+    "values": [],
+    "max": [],
+    "min": []
   },
   "workoutDistribution": {
     "labels": [],
@@ -76,8 +68,8 @@
       0
     ],
     "calories": [
-      140,
-      317,
+      185,
+      0,
       0,
       0
     ]
@@ -128,7 +120,7 @@
   },
   "metrics": {
     "dailyAvgSteps": 0,
-    "avgHeartRate": 116,
+    "avgHeartRate": 60,
     "restingHR": 60,
     "activeDays": 0,
     "totalWorkouts": 0,
@@ -144,7 +136,7 @@
     "consistency": 0,
     "totalSteps30Days": 0,
     "totalCalories30Days": 1298,
-    "daysTracked": 8
+    "daysTracked": 7
   },
   "insights": {
     "performance": {
@@ -200,12 +192,6 @@
     "avgStressMinutes": 0,
     "avgRecoveryMinutes": 0,
     "records": [
-      {
-        "day": "2026-08-14",
-        "stressHigh": 0,
-        "recoveryHigh": 0,
-        "daySummary": "unknown"
-      },
       {
         "day": "2026-08-15",
         "stressHigh": 0,
