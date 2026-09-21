@@ -1,0 +1,257 @@
+{
+  "sync_date": "2026-09-21",
+  "date_range": {
+    "start": "2026-08-22",
+    "end": "2026-09-21"
+  },
+  "data": {
+    "daily_activity": {
+      "data": [],
+      "next_token": null
+    },
+    "daily_sleep": {
+      "data": [],
+      "next_token": null
+    },
+    "daily_readiness": {
+      "data": [],
+      "next_token": null
+    },
+    "heartrate": {
+      "data": [],
+      "next_token": null
+    },
+    "sleep": {
+      "data": [],
+      "next_token": null
+    },
+    "workout": {
+      "data": [],
+      "next_token": null
+    },
+    "session": {
+      "data": [],
+      "next_token": null
+    },
+    "tag": {
+      "data": [],
+      "next_token": null
+    }
+  },
+  "extended": {
+    "daily_spo2": {
+      "data": [],
+      "next_token": null
+    },
+    "daily_stress": {
+      "data": [
+        {
+          "id": "6bb3c514-4aad-493f-b38e-5e74c02cf22d",
+          "day": "2026-08-22",
+          "day_summary": null,
+          "recovery_high": 0,
+          "stress_high": 0
+        },
+        {
+          "id": "735a8b7d-817a-423d-a823-1d7b42f6e0fd",
+          "day": "2026-08-23",
+          "day_summary": null,
+          "recovery_high": 0,
+          "stress_high": 0
+        },
+        {
+          "id": "e159710b-989c-4bfe-9b20-86962782932d",
+          "day": "2026-08-24",
+          "day_summary": null,
+          "recovery_high": 0,
+          "stress_high": 0
+        },
+        {
+          "id": "c6fb33dc-8957-4aad-ada9-eaae9dd724ff",
+          "day": "2026-08-25",
+          "day_summary": null,
+          "recovery_high": 0,
+          "stress_high": 0
+        },
+        {
+          "id": "a3e4d2ce-8b17-4bbf-8611-6aa1a1238176",
+          "day": "2026-08-26",
+          "day_summary": null,
+          "recovery_high": 0,
+          "stress_high": 0
+        },
+        {
+          "id": "9a7ba099-f6a4-49ce-8ee2-cad5611befa9",
+          "day": "2026-08-27",
+          "day_summary": null,
+          "recovery_high": 0,
+          "stress_high": 0
+        },
+        {
+          "id": "279e9e80-57ff-430e-a007-f4153694dce2",
+          "day": "2026-08-28",
+          "day_summary": null,
+          "recovery_high": 0,
+          "stress_high": 0
+        },
+        {
+          "id": "8d9145da-9e9b-47cc-aa1a-a9a7dafa34e5",
+          "day": "2026-08-30",
+          "day_summary": null,
+          "recovery_high": 0,
+          "stress_high": 0
+        },
+        {
+          "id": "f7372a61-6224-45b1-a3e9-093e5fc2868e",
+          "day": "2026-08-31",
+          "day_summary": null,
+          "recovery_high": 0,
+          "stress_high": 0
+        },
+        {
+          "id": "8e63ec82-99c8-4fe3-a635-f4ba557f7f03",
+          "day": "2026-09-01",
+          "day_summary": null,
+          "recovery_high": 0,
+          "stress_high": 0
+        },
+        {
+          "id": "bbd7a263-c7dc-4b7c-aa16-be8dfff4d4b0",
+          "day": "2026-09-02",
+          "day_summary": null,
+          "recovery_high": 0,
+          "stress_high": 0
+        },
+        {
+          "id": "374a3bfc-cf50-4c2e-94fc-b0b408ae3d18",
+          "day": "2026-09-03",
+          "day_summary": null,
+          "recovery_high": 0,
+          "stress_high": 0
+        },
+        {
+          "id": "604b1f7f-da8c-494b-a405-7fb4dbc878d6",
+          "day": "2026-09-04",
+          "day_summary": null,
+          "recovery_high": 0,
+          "stress_high": 0
+        },
+        {
+          "id": "2dc61899-b027-430b-903c-8895137a2718",
+          "day": "2026-09-05",
+          "day_summary": null,
+          "recovery_high": 0,
+          "stress_high": 0
+        },
+        {
+          "id": "a45dcacd-910f-4e51-8890-23358e076786",
+          "day": "2026-09-06",
+          "day_summary": null,
+          "recovery_high": 0,
+          "stress_high": 0
+        },
+        {
+          "id": "63c12a5f-1ebf-4f97-806d-ec18384be32e",
+          "day": "2026-09-07",
+          "day_summary": null,
+          "recovery_high": 0,
+          "stress_high": 0
+        },
+        {
+          "id": "213811d9-6068-47fd-a13b-51db27fc4108",
+          "day": "2026-09-08",
+          "day_summary": null,
+          "recovery_high": 0,
+          "stress_high": 0
+        },
+        {
+          "id": "2f13fcc2-9075-4b9a-905f-50dc9fd39e8e",
+          "day": "2026-09-09",
+          "day_summary": null,
+          "recovery_high": 0,
+          "stress_high": 0
+        },
+        {
+          "id": "9d36e230-30e4-4c78-b9c1-3d7db37e0715",
+          "day": "2026-09-10",
+          "day_summary": null,
+          "recovery_high": 0,
+          "stress_high": 0
+        },
+        {
+          "id": "970b680c-bb51-439c-a2b3-73069706168d",
+          "day": "2026-09-11",
+          "day_summary": null,
+          "recovery_high": 0,
+          "stress_high": 0
+        },
+        {
+          "id": "3fa64b6b-d090-4e15-b09d-a67ab94562a1",
+          "day": "2026-09-12",
+          "day_summary": null,
+          "recovery_high": 0,
+          "stress_high": 0
+        },
+        {
+          "id": "e488fea2-ecda-4f3f-a953-520f91eaef8d",
+          "day": "2026-09-14",
+          "day_summary": null,
+          "recovery_high": 0,
+          "stress_high": 0
+        },
+        {
+          "id": "f9bddba5-6aca-4aa1-8f61-e3c15b4de9aa",
+          "day": "2026-09-15",
+          "day_summary": null,
+          "recovery_high": 0,
+          "stress_high": 0
+        },
+        {
+          "id": "5aa2e6ae-b5c5-4699-bd67-1c3f6a8ce062",
+          "day": "2026-09-16",
+          "day_summary": null,
+          "recovery_high": 0,
+          "stress_high": 0
+        },
+        {
+          "id": "86290278-a400-428e-8de5-c790bc211e44",
+          "day": "2026-09-17",
+          "day_summary": null,
+          "recovery_high": 0,
+          "stress_high": 0
+        },
+        {
+          "id": "e4edc38b-7d65-401a-aaf4-29bbaa6a2605",
+          "day": "2026-09-18",
+          "day_summary": null,
+          "recovery_high": 0,
+          "stress_high": 0
+        },
+        {
+          "id": "2f936680-73a6-4629-80c4-ff74fece1d43",
+          "day": "2026-09-19",
+          "day_summary": null,
+          "recovery_high": 0,
+          "stress_high": 0
+        },
+        {
+          "id": "87328d09-4df2-43bd-81af-d4f37f1755e2",
+          "day": "2026-09-20",
+          "day_summary": null,
+          "recovery_high": 0,
+          "stress_high": 0
+        }
+      ],
+      "next_token": null
+    },
+    "daily_resilience": {
+      "data": [],
+      "next_token": null
+    },
+    "vo2_max": {
+      "data": [],
+      "unavailable": true,
+      "error": "HTTP 404: {\"detail\":\"Not Found\"}"
+    }
+  }
+}
